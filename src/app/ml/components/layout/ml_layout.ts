@@ -8,9 +8,9 @@ import * as ml from "../../lib/ml_lib";
 @Component({
 selector: 'ml-layout',
 moduleId: module.id.toString(),
-styleUrls: ['./ml_layout.css', './fonts.css', './ml_ripple.css'],
-encapsulation: ViewEncapsulation.None,
+styleUrls: ['./ml_layout.css', './ml_ripple.css'],
 host: {class: 'mdl-layout'},
+encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 template: '<ng-content></ng-content>'
 })

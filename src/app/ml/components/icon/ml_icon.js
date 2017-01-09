@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 // ICON NAMES: http://google.github.io/web-starter-kit/latest/styleguide/icons/demo.html
 // NOTE: change middle dash (-) for lower dash (_) in icon name for using ICON NAMES from the above url
-//todo: incluir google fonts en local
 var core_1 = require("@angular/core");
 var MlIcon = (function () {
     function MlIcon() {
@@ -19,9 +18,6 @@ var MlIcon = (function () {
     MlIcon = __decorate([
         core_1.Component({
             selector: 'ml-icon',
-            moduleId: module.id.toString(),
-            encapsulation: core_1.ViewEncapsulation.None,
-            styles: ["\n.material-icons {\n  font-family: 'Material Icons';\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;\n  line-height: 1;\n  letter-spacing: normal;\n  text-transform: none;\n  display: inline-block;\n  word-wrap: normal;\n  /*vertical-align: middle;*/\n  -moz-font-feature-settings: 'liga';\n  font-feature-settings: 'liga';\n  -webkit-font-feature-settings: 'liga';\n  -webkit-font-smoothing: antialiased;}\n"],
             template: '<ng-content></ng-content>',
             host: { class: 'material-icons' } }), 
         __metadata('design:paramtypes', [])

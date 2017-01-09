@@ -1,8 +1,8 @@
-import {Component, ChangeDetectionStrategy} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
 selector: 'ml-demo-app',
-changeDetection: ChangeDetectionStrategy.OnPush,
+// changeDetection: ChangeDetectionStrategy.OnPush,
 template: `
 
 <ml-layout>

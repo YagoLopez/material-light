@@ -69,9 +69,9 @@ var MlRadio = (function () {
     MlRadio = __decorate([
         core_1.Component({
             selector: 'ml-radio',
+            moduleId: module.id.toString(),
             styleUrls: ['./ml_radio.css'],
             encapsulation: core_1.ViewEncapsulation.None,
-            moduleId: module.id.toString(),
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlRadio; }), multi: true }],
             template: "\n\n<label [attr.for]=\"id+'mdl'\" class=\"mdl-radio\" [ngClass]=\"{'is-checked': isChecked()}\" #label>\n  <input type=\"radio\" class=\"mdl-radio__button\" \n          [attr.id]=\"id+'mdl'\" \n          [name]=\"name\" \n          [value]=\"value\" \n          [(ngModel)]=\"model\">\n  <span class=\"mdl-radio__label\"><ng-content></ng-content></span>\n</label>\n\n" //template
         }), 

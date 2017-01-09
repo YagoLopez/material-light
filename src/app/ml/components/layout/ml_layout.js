@@ -44,9 +44,9 @@ var MlLayoutContainer = (function () {
         core_1.Component({
             selector: 'ml-layout',
             moduleId: module.id.toString(),
-            styleUrls: ['./ml_layout.css', './fonts.css', './ml_ripple.css'],
-            encapsulation: core_1.ViewEncapsulation.None,
+            styleUrls: ['./ml_layout.css', './ml_ripple.css'],
             host: { class: 'mdl-layout' },
+            encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             template: '<ng-content></ng-content>'
         }), 

@@ -4,9 +4,9 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
 selector: 'ml-radio',
+moduleId: module.id.toString(),
 styleUrls: ['./ml_radio.css'],
 encapsulation: ViewEncapsulation.None,
-moduleId: module.id.toString(),
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlRadio), multi: true}],
 template:`
 
