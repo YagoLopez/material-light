@@ -1,20 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
+import {NgModule} from "@angular/core";
+import {BrowserModule} from "@angular/platform-browser";
+import {RouterModule} from "@angular/router";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MlModule} from "./ml/ml_module";
+import {AppRoot} from "./app.root";
+import {AppPages} from "./pages/app.pages.list";
+import {APP_ROUTES} from "./app.routes";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+
   imports: [
     BrowserModule,
+    RouterModule.forRoot(APP_ROUTES, {useHash: true}),
     FormsModule,
-    HttpModule
+    ReactiveFormsModule,
+    MlModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+
+  declarations: [
+    AppRoot,
+    AppPages,
+  ],
+
+  bootstrap: [AppRoot]
+
 })
-export class AppModule { }
+export class AppModule {}

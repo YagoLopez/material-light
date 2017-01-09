@@ -1,0 +1,27 @@
+//todo: documentar funciones
+//todo: hacer una funcion factoria (mdlConstructor) que elimine repeticion de codigo en los constructores
+
+import {Renderer, ElementRef} from "@angular/core";
+
+export function isDefined(value: any): boolean { return typeof value !== 'undefined' }
+
+export function setClass(
+  elementRef: ElementRef,
+  className: string,
+  renderer: Renderer): void { renderer.setElementClass(elementRef.nativeElement, className, true) }
+
+export function setAttribute(
+  elementRef: ElementRef,
+  attrName: string,
+  attrValue: string,
+  renderer: Renderer): void { renderer.setElementAttribute(elementRef.nativeElement, attrName, attrValue) }
+
+export function randomStr(): string{ return Math.random().toString(36).substr(2, 5) }
+
+export function isSubstring(subStr:string, bigStr:string): boolean {
+  if (bigStr)
+    return bigStr.indexOf(subStr) > -1;
+  else
+    return false;
+}
+

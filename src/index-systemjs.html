@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Material Light Demo - Material Design UI Framework for Angular 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/styles/app-loader.css">
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">-->
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+  </head>
+
+  <body>
+    <ml-demo-app>
+      <div class="loading-text">Loading Material Light Demo systemjs version</div>
+    </ml-demo-app>
+
+
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <!-- Polyfill(s) for older browsers -->
+    <!--<script src="../node_modules/core-js/client/shim.min.js"></script>-->
+    <!--<script src="../node_modules/zone.js/dist/zone.js"></script>-->
+    <!--<script src="../node_modules/reflect-metadata/Reflect.js"></script>-->
+
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </body>
+</html>
