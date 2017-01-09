@@ -1,4 +1,6 @@
-#  <img src="src/assets/img/logo.png">Material Light  
+#  <img src="src/assets/img/logo.png">  
+
+#  Material Light  
 
 **Material Designt UI Components for Angular 2.**
 
