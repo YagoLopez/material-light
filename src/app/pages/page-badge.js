@@ -21,4 +21,4 @@ var PageBadge = (function () {
     return PageBadge;
 }());
 exports.PageBadge = PageBadge;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-badge.js.map
+//# sourceMappingURL=page-badge.js.map

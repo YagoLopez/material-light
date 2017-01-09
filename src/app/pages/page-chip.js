@@ -27,4 +27,4 @@ var PageChip = (function () {
     return PageChip;
 }());
 exports.PageChip = PageChip;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-chip.js.map
+//# sourceMappingURL=page-chip.js.map

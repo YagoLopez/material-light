@@ -73,4 +73,4 @@ var MlTableAlphanumericCell = (function () {
 exports.MlTableAlphanumericCell = MlTableAlphanumericCell;
 // ---------------------------------------------------------------------------------------------------------------------
 exports.MlTable = [MlTableContainer, MlTableAlphanumericCell];
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/table/ml_table.js.map
+//# sourceMappingURL=ml_table.js.map

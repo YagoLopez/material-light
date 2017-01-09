@@ -1,7 +1,5 @@
-// import './polyfills';
-// Polyfills needed by Angular 2 loaded before
-// the app. You can add your own extra polyfills to this file.
 "use strict";
+// Polyfills needed by Angular 2 loaded before the app
 require('core-js/es6/symbol');
 require('core-js/es6/object');
 require('core-js/es6/function');
@@ -26,4 +24,4 @@ if (PRODUCTION_MODE) {
     core_1.enableProdMode();
 }
 platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/main.js.map
+//# sourceMappingURL=main.js.map

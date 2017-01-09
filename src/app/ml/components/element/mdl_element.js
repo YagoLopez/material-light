@@ -8,4 +8,4 @@ var MdlElement = (function () {
 }());
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = MdlElement;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/element/mdl_element.js.map
+//# sourceMappingURL=mdl_element.js.map

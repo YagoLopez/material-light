@@ -42,4 +42,4 @@ exports.APP_ROUTES = [
     { path: 'dialog', component: page_dialog_1.PageDialog },
     { path: 'table', component: page_table_1.PageTable }
 ];
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/app.routes.js.map
+//# sourceMappingURL=app.routes.js.map

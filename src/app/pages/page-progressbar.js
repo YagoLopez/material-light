@@ -21,4 +21,4 @@ var PageProgressBar = (function () {
     return PageProgressBar;
 }());
 exports.PageProgressBar = PageProgressBar;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-progressbar.js.map
+//# sourceMappingURL=page-progressbar.js.map

@@ -1,7 +1,4 @@
-// import './polyfills';
-// Polyfills needed by Angular 2 loaded before
-// the app. You can add your own extra polyfills to this file.
-
+// Polyfills needed by Angular 2 loaded before the app
 import 'core-js/es6/symbol';
 import 'core-js/es6/object';
 import 'core-js/es6/function';

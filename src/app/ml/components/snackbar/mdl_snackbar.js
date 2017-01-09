@@ -118,4 +118,4 @@ MdlSnackbar.prototype.setActionHidden_ = function (value) {
         this.actionElement_.removeAttribute('aria-hidden');
     }
 };
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/snackbar/mdl_snackbar.js.map
+//# sourceMappingURL=mdl_snackbar.js.map

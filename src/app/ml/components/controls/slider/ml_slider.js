@@ -37,4 +37,4 @@ var MlSlider = (function () {
     return MlSlider;
 }());
 exports.MlSlider = MlSlider;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/controls/slider/ml_slider.js.map
+//# sourceMappingURL=ml_slider.js.map

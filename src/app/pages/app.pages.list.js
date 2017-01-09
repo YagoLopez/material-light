@@ -41,4 +41,4 @@ exports.AppPages = [
     page_menu_1.PageMenu,
     page_dialog_1.PageDialog
 ];
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/app.pages.list.js.map
+//# sourceMappingURL=app.pages.list.js.map

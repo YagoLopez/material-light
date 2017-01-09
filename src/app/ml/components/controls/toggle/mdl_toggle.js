@@ -154,4 +154,4 @@ MdlToggle.prototype.init = function () {
         this.element_.classList.add('is-upgraded');
     }
 };
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/controls/toggle/mdl_toggle.js.map
+//# sourceMappingURL=mdl_toggle.js.map

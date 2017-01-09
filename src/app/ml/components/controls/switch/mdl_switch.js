@@ -161,4 +161,4 @@ MdlSwitch.prototype.init = function () {
         this.element_.classList.add('is-upgraded');
     }
 };
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/controls/switch/mdl_switch.js.map
+//# sourceMappingURL=mdl_switch.js.map

@@ -21,4 +21,4 @@ var PageTabs = (function () {
     return PageTabs;
 }());
 exports.PageTabs = PageTabs;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-tabs.js.map
+//# sourceMappingURL=page-tabs.js.map

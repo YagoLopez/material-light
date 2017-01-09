@@ -50,4 +50,4 @@ var MlSpinner = (function () {
     return MlSpinner;
 }());
 exports.MlSpinner = MlSpinner;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/spinner/ml_spinner.js.map
+//# sourceMappingURL=ml_spinner.js.map

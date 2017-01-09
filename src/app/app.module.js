@@ -39,4 +39,4 @@ var AppModule = (function () {
     return AppModule;
 }());
 exports.AppModule = AppModule;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/app.module.js.map
+//# sourceMappingURL=app.module.js.map

@@ -30,4 +30,4 @@ var PageSwitch = (function () {
     return PageSwitch;
 }());
 exports.PageSwitch = PageSwitch;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-switch.js.map
+//# sourceMappingURL=page-switch.js.map

@@ -21,4 +21,4 @@ var PageGrid = (function () {
     return PageGrid;
 }());
 exports.PageGrid = PageGrid;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-grid.js.map
+//# sourceMappingURL=page-grid.js.map

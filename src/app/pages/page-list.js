@@ -23,4 +23,4 @@ var PageList = (function () {
     return PageList;
 }());
 exports.PageList = PageList;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-list.js.map
+//# sourceMappingURL=page-list.js.map

@@ -70,4 +70,4 @@ var MlDialogActions = (function () {
 }());
 exports.MlDialogActions = MlDialogActions;
 exports.MlDialog = [MlDialogContainer, MlDialogContent, MlDialogActions, MlDialogTitle];
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/dialog/ml_dialog.js.map
+//# sourceMappingURL=ml_dialog.js.map

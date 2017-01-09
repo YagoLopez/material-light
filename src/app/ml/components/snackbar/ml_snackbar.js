@@ -35,4 +35,4 @@ var MlSnackBar = (function () {
     return MlSnackBar;
 }());
 exports.MlSnackBar = MlSnackBar;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/snackbar/ml_snackbar.js.map
+//# sourceMappingURL=ml_snackbar.js.map

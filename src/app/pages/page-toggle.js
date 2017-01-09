@@ -32,4 +32,4 @@ var PageToggle = (function () {
     return PageToggle;
 }());
 exports.PageToggle = PageToggle;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-toggle.js.map
+//# sourceMappingURL=page-toggle.js.map

@@ -21,4 +21,4 @@ var PageTable = (function () {
     return PageTable;
 }());
 exports.PageTable = PageTable;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-table.js.map
+//# sourceMappingURL=page-table.js.map

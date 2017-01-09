@@ -21,4 +21,4 @@ var PageSlider = (function () {
     return PageSlider;
 }());
 exports.PageSlider = PageSlider;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-slider.js.map
+//# sourceMappingURL=page-slider.js.map

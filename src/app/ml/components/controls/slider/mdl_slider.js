@@ -158,4 +158,4 @@ MdlSlider.prototype.init = function () {
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
     }
 };
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/controls/slider/mdl_slider.js.map
+//# sourceMappingURL=mdl_slider.js.map

@@ -35,4 +35,4 @@ var MlRipple = (function () {
     return MlRipple;
 }());
 exports.MlRipple = MlRipple;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/ripple/ml_ripple.js.map
+//# sourceMappingURL=ml_ripple.js.map

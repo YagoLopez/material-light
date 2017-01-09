@@ -47,4 +47,4 @@ var MlChip = (function () {
     return MlChip;
 }());
 exports.MlChip = MlChip;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/chip/ml_chip.js.map
+//# sourceMappingURL=ml_chip.js.map

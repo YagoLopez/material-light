@@ -90,4 +90,4 @@ function MaterialTab(tab, ctx) {
         });
     }
 }
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/tabs/mdl_tabs.js.map
+//# sourceMappingURL=mdl_tabs.js.map

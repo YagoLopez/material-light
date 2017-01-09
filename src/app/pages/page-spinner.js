@@ -21,4 +21,4 @@ var PageSpinner = (function () {
     return PageSpinner;
 }());
 exports.PageSpinner = PageSpinner;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-spinner.js.map
+//# sourceMappingURL=page-spinner.js.map
