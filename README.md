@@ -13,7 +13,7 @@ Developed by Yago López:
 
 ## Demo
 
-- <a href="https://yagolopez.github.io/material-light/iframe/iframe.html" target="_blank">For viewing from desktop PC</a>
+- <a href="http://yagolopez.github.io/material-light/iframe/iframe.html" target="_blank">For viewing from desktop PC</a>
 - <a href="https://yagolopez.github.io/material-light/dist/" target="_blank">For viewing from mobile browser</a>
 
 ## Use
