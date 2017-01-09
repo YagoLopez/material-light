@@ -72,4 +72,4 @@ var MlSwitch = (function () {
     return MlSwitch;
 }());
 exports.MlSwitch = MlSwitch;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/controls/switch/ml_switch.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/controls/switch/ml_switch.js.map

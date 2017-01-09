@@ -22,4 +22,4 @@ var PageMenu = (function () {
     return PageMenu;
 }());
 exports.PageMenu = PageMenu;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/pages/page-menu.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-menu.js.map

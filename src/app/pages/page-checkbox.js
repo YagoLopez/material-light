@@ -30,4 +30,4 @@ var PageCheckbox = (function () {
     return PageCheckbox;
 }());
 exports.PageCheckbox = PageCheckbox;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/pages/page-checkbox.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-checkbox.js.map

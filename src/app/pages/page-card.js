@@ -21,4 +21,4 @@ var PageCard = (function () {
     return PageCard;
 }());
 exports.PageCard = PageCard;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/pages/page-card.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-card.js.map

@@ -77,4 +77,4 @@ MdlSpinner.prototype.init = function () {
         this.element_.classList.add('is-upgraded');
     }
 };
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/spinner/mdl_spinner.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/spinner/mdl_spinner.js.map

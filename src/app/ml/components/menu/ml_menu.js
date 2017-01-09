@@ -140,4 +140,4 @@ var MlMenuItem = (function () {
 exports.MlMenuItem = MlMenuItem;
 // ---------------------------------------------------------------------------------------------------------------------
 exports.MlMenu = [MlMenuContainer, MlMenuItem];
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/menu/ml_menu.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/menu/ml_menu.js.map

@@ -159,4 +159,4 @@ MdlCheckbox.prototype.init = function () {
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
     }
 };
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/controls/checkbox/mdl_checkbox.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/controls/checkbox/mdl_checkbox.js.map

@@ -21,4 +21,4 @@ var PageButton = (function () {
     return PageButton;
 }());
 exports.PageButton = PageButton;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/pages/page-button.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-button.js.map

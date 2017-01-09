@@ -22,4 +22,4 @@ var PageToolTip = (function () {
     return PageToolTip;
 }());
 exports.PageToolTip = PageToolTip;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/pages/page-tooltip.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-tooltip.js.map

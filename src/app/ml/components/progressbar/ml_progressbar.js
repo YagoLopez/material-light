@@ -65,4 +65,4 @@ var MlProgressBar = (function () {
     return MlProgressBar;
 }());
 exports.MlProgressBar = MlProgressBar;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/progressbar/ml_progressbar.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/progressbar/ml_progressbar.js.map

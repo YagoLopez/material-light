@@ -29,4 +29,4 @@ var MlIcon = (function () {
     return MlIcon;
 }());
 exports.MlIcon = MlIcon;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/icon/ml_icon.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/icon/ml_icon.js.map

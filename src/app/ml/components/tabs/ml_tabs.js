@@ -77,4 +77,4 @@ var MlTabPanel = (function () {
 exports.MlTabPanel = MlTabPanel;
 // ---------------------------------------------------------------------------------------------------------------------
 exports.MlTabs = [MlTabsContainer, MlTabsBar, MlTab, MlTabPanel];
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/tabs/ml_tabs.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/tabs/ml_tabs.js.map

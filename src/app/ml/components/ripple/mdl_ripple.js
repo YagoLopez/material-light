@@ -205,4 +205,4 @@ MdlRipple.prototype.init = function () {
         }
     }
 };
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/ripple/mdl_ripple.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/ripple/mdl_ripple.js.map

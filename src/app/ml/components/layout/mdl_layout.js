@@ -427,4 +427,4 @@ function MaterialLayoutTab(tab, tabs, panels, layout) {
     });
     tab.show = selectTab;
 }
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/layout/mdl_layout.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/layout/mdl_layout.js.map

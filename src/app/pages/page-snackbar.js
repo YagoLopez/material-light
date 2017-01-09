@@ -30,4 +30,4 @@ var PageSnackBar = (function () {
     return PageSnackBar;
 }());
 exports.PageSnackBar = PageSnackBar;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/pages/page-snackbar.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/pages/page-snackbar.js.map

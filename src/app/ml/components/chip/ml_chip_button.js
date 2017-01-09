@@ -24,4 +24,4 @@ var MlChipButton = (function () {
     return MlChipButton;
 }());
 exports.MlChipButton = MlChipButton;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/chip/ml_chip_button.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/chip/ml_chip_button.js.map

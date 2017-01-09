@@ -26,4 +26,4 @@ if (PRODUCTION_MODE) {
     core_1.enableProdMode();
 }
 platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/main.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/main.js.map

@@ -23,4 +23,4 @@ var AppRoot = (function () {
     return AppRoot;
 }());
 exports.AppRoot = AppRoot;
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/app.root.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/app.root.js.map

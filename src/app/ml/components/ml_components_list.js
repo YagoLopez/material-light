@@ -63,4 +63,4 @@ exports.MlComponentsList = [
     ml_chip_button_1.MlChipButton,
     debug_form_1.DebugForm
 ];
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/ml_components_list.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/ml_components_list.js.map

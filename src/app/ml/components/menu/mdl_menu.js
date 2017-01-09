@@ -369,4 +369,4 @@ MdlMenu.prototype.toggle = function (evt) {
         this.show(evt);
     }
 };
-//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light-demo-webpack/src/app/ml/components/menu/mdl_menu.js.map
+//# sourceMappingURL=C:/Users/Yago/WebstormProjects/material-light/src/app/ml/components/menu/mdl_menu.js.map
