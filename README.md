@@ -1,1 +1,41 @@
-# Material Light. UI components for Angular 2
+#  Material Light  <img src="src/assets/img/logo.png">
+
+**Material Designt UI Components for Angular 2.**
+
+This library of components has been carefully designied to bring high performance and optimization to Angular 2 and to be as light as possible.
+
+Developed by Yago López:
+
+- Website: <a href="https://yagolopez.github.io" target="_blank">https://yagolopez.github.io</a>
+- Email: yago.lopez (at) gmail.com
+
+## Use
+
+- Clone or download the repository.
+- Copy the `ml` folder (where the components are) in your project and
+  import `ml_module.ts` in your root module.
+- Use the components following the examples in the `pages` directory. The components use `ml` as namespace. For example: `<ml-icon>email</ml-icon>`places an email icon component in a template.
+- For **WEBPACK**: Load a demo using the angular-cli command`ng serve`. This should load `index.html` file at `localhost://4600`. (Webpack is used for compatibility with `angular-cli` projects)
+- For **SYSTEMJS**: Load a demo pointing a web server to`index-systemjs.html`. (Systemjs is used as module loader during development)
+
+
+
+
+
+## Requirements:
+
+- Angular 2
+- Angular 2 Command Line Interface (angular-cli)
+- Typescript (included in Angular 2)
+- Webpack (included as dependency)
+- Systemjs (included as dependency)
+
+## Credits:
+
+This project is based on <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>
+
+Material Design is a registred trade mark by Google likely.
+
+License: <a href="LICENSE.txt">MIT</a>.
+
+*Disclaimer: This is an open source project without commercial profit intentions.*
