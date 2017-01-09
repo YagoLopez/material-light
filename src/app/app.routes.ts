@@ -21,7 +21,7 @@ import {PageDialog} from "./pages/page-dialog";
 
 export const APP_ROUTES = [
 
-{ path: '',             component: PageRadio, pathMatch: 'full' },
+{ path: '',             component: PageButton, pathMatch: 'full' },
 { path: 'snackbar',     component: PageSnackBar },
 { path: 'tooltip',      component: PageToolTip },
 { path: 'slider',       component: PageSlider },

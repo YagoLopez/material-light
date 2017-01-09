@@ -20,7 +20,7 @@ var page_textfield_1 = require("./pages/page-textfield");
 var page_menu_1 = require("./pages/page-menu");
 var page_dialog_1 = require("./pages/page-dialog");
 exports.APP_ROUTES = [
-    { path: '', component: page_radio_1.PageRadio, pathMatch: 'full' },
+    { path: '', component: page_button_1.PageButton, pathMatch: 'full' },
     { path: 'snackbar', component: page_snackbar_1.PageSnackBar },
     { path: 'tooltip', component: page_tooltip_1.PageToolTip },
     { path: 'slider', component: page_slider_1.PageSlider },
