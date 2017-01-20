@@ -6,33 +6,30 @@
 
 'use strict';
 
-debugger;
 var precacheConfig = [[
-  "assets/fonts/fonts.css", "4a80a2ddc653736f9aad71a32f208059"],
-  ["assets/fonts/material-icons.css","0cf04de9603333a9f11177c54cf3d36a"],
 
-  ["assets/fonts/material-icons.woff2","8661ec807b7ef443666919b921c58211"],
-  ["assets/fonts/roboto-v15-latin-500.woff","57af64fc644194101c1593abea164433"],
-  ["assets/fonts/roboto-v15-latin-500.woff2","bb474f16c9f76f522d656d66aa4a220e"],
-  ["assets/fonts/roboto-v15-latin-500italic.woff","b670694ba39f55b5ab9b6022eb09d9ef"],
-  ["assets/fonts/roboto-v15-latin-500italic.woff2","9e7beee5510fcd9cbc4dd37f2c721f14"],
-  ["assets/fonts/roboto-v15-latin-regular.woff","16e1d930cf13fb7a956372044b6d02d0"],
-  ["assets/fonts/roboto-v15-latin-regular.woff2","7e367be02cd17a96d513ab74846bafb3"],
+"assets/fonts/fonts.css", "4a80a2ddc653736f9aad71a32f208059"],
+["assets/fonts/material-icons.css","0cf04de9603333a9f11177c54cf3d36a"],
 
-  ["assets/img/logo.png","cc420173e45fa9d2c049d823e88be901"],
-  ["assets/img/logo.psd","7a1f2927c76c1266a84dc8c6d51d6144"],
-  ["assets/img/transparent.jpg","f17853017415f4def9d23508feff521a"],
-  ["assets/img/user.jpg","01b46903dd0c2cb3b0abc908f3095d93"],
-  ["assets/img/welcome_card.jpg","810f0185586b37951e07c25376663834"],
-  ["assets/styles/app-loader.css","2815614795b12669258cb99a97981a7d"],
-  ["favicon.ico","b9aa7c338693424aae99599bec875b5f"],
-  ["index.html","1a2358d2c213bca52cb365802039b9d2"],
-  ["main.708c16106474c1fb3674.bundle.js","08d11bad477c2724ed562612ae1d5b18"],
-  ["inline.d41d8cd98f00b204e980.bundle.js","027d404cf6d424f2dc590c266eb47687"],
-  // ["main.708c16106474c1fb3674.bundle.js.gz","94ea6764b7ae8ad96d11d2115ca30451"],
-  ["vendor.bf5dda6f310fec820727.bundle.js","6fc0ccf99d1dbf432da1ad5bceb6fd16"],
-  // ["vendor.bf5dda6f310fec820727.bundle.js.gz","06a7c26f33d697bc9daafef24c3d167c"],
-  ["ml-service-worker.js","ebada424e87a49cfe7fedef348762a51"]
+["assets/fonts/material-icons.woff2","8661ec807b7ef443666919b921c58211"],
+["assets/fonts/roboto-v15-latin-500.woff2","bb474f16c9f76f522d656d66aa4a220e"],
+["assets/fonts/roboto-v15-latin-regular.woff","16e1d930cf13fb7a956372044b6d02d0"],
+["assets/fonts/roboto-v15-latin-regular.woff2","7e367be02cd17a96d513ab74846bafb3"],
+
+["assets/img/logo.png","cc420173e45fa9d2c049d823e88be901"],
+["assets/img/logo.psd","7a1f2927c76c1266a84dc8c6d51d6144"],
+["assets/img/transparent.jpg","f17853017415f4def9d23508feff521a"],
+["assets/img/user.jpg","01b46903dd0c2cb3b0abc908f3095d93"],
+["assets/img/welcome_card.jpg","810f0185586b37951e07c25376663834"],
+["assets/styles/app-loader.css","2815614795b12669258cb99a97981a7d"],
+["favicon.ico","b9aa7c338693424aae99599bec875b5f"],
+["index.html","1a2358d2c213bca52cb365802039b9d2"],
+["main.708c16106474c1fb3674.bundle.js","08d11bad477c2724ed562612ae1d5b18"],
+["inline.d41d8cd98f00b204e980.bundle.js","027d404cf6d424f2dc590c266eb47687"],
+// ["main.708c16106474c1fb3674.bundle.js.gz","94ea6764b7ae8ad96d11d2115ca30451"],
+["vendor.bf5dda6f310fec820727.bundle.js","6fc0ccf99d1dbf432da1ad5bceb6fd16"],
+// ["vendor.bf5dda6f310fec820727.bundle.js.gz","06a7c26f33d697bc9daafef24c3d167c"],
+["ml-service-worker.js","ebada424e87a49cfe7fedef348762a51"]
 
 ];
 
