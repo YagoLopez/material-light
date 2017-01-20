@@ -1,6 +1,6 @@
 {
-  "name": "test-webpack",
-  "version": "0.0.0",
+  "name": "material-light",
+  "version": "1.0.0 Beta",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {

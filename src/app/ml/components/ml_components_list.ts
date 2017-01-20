@@ -22,7 +22,17 @@ import {MlChip} from "./chip/ml_chip";
 import {MlSlider} from "./controls/slider/ml_slider";
 import {MlList} from "./list/ml_list";
 import {MlTable} from "./table/ml_table";
+
+
 import {MlCard} from "./card/ml_card";
+import {MlCardTitle} from "./card/ml_card";
+import {MlCardSubtitle} from "./card/ml_card";
+import {MlCardMedia} from "./card/ml_card";
+import {MlCardText} from "./card/ml_card";
+import {MlCardActions} from "./card/ml_card";
+
+
+
 import {MlToggle} from "./controls/toggle/ml_toggle";
 import {MlError} from "./controls/error/ml_error";
 import {MlButtonSubmit} from "./controls/button/ml_button_submit";
@@ -31,6 +41,7 @@ import {MlChipButton} from "./chip/ml_chip_button";
 import {DebugForm} from "../lib/debug_form/debug_form";
 
 export const MlComponentsList = [
+
 MlLayout,
 MlRipple,
 MlBadge,
@@ -57,9 +68,15 @@ MlSlider,
 MlList,
 MlTable,
 MlCard,
+MlCardTitle,
+MlCardSubtitle,
+MlCardMedia,
+MlCardText,
+MlCardActions,
 MlToggle,
 MlError,
 MlChip,
 MlChipButton,
 DebugForm
+
 ];

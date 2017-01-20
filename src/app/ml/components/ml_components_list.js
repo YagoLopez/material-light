@@ -24,6 +24,11 @@ var ml_slider_1 = require("./controls/slider/ml_slider");
 var ml_list_1 = require("./list/ml_list");
 var ml_table_1 = require("./table/ml_table");
 var ml_card_1 = require("./card/ml_card");
+var ml_card_2 = require("./card/ml_card");
+var ml_card_3 = require("./card/ml_card");
+var ml_card_4 = require("./card/ml_card");
+var ml_card_5 = require("./card/ml_card");
+var ml_card_6 = require("./card/ml_card");
 var ml_toggle_1 = require("./controls/toggle/ml_toggle");
 var ml_error_1 = require("./controls/error/ml_error");
 var ml_button_submit_1 = require("./controls/button/ml_button_submit");
@@ -57,6 +62,11 @@ exports.MlComponentsList = [
     ml_list_1.MlList,
     ml_table_1.MlTable,
     ml_card_1.MlCard,
+    ml_card_2.MlCardTitle,
+    ml_card_3.MlCardSubtitle,
+    ml_card_4.MlCardMedia,
+    ml_card_5.MlCardText,
+    ml_card_6.MlCardActions,
     ml_toggle_1.MlToggle,
     ml_error_1.MlError,
     ml_chip_1.MlChip,

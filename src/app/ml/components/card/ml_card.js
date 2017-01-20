@@ -14,12 +14,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var ml = require("../../lib/ml_lib");
 // ---------------------------------------------------------------------------------------------------------------------
-var MlCardContainer = (function () {
-    function MlCardContainer(host, ren) {
+var MlCard = (function () {
+    function MlCard(host, ren) {
         this.host = host;
         this.ren = ren;
     }
-    MlCardContainer.prototype.ngOnInit = function () {
+    MlCard.prototype.ngOnInit = function () {
         if (this.shadow) {
             this.shadow = "mdl-shadow--" + this.shadow + "dp";
             ml.setClass(this.host, this.shadow, this.ren);
@@ -28,8 +28,8 @@ var MlCardContainer = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlCardContainer.prototype, "shadow", void 0);
-    MlCardContainer = __decorate([
+    ], MlCard.prototype, "shadow", void 0);
+    MlCard = __decorate([
         core_1.Component({
             selector: 'ml-card',
             styleUrls: ['./ml_card.css'],
@@ -39,10 +39,10 @@ var MlCardContainer = (function () {
             template: '<ng-content></ng-content>'
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
-    ], MlCardContainer);
-    return MlCardContainer;
+    ], MlCard);
+    return MlCard;
 }());
-exports.MlCardContainer = MlCardContainer;
+exports.MlCard = MlCard;
 // ---------------------------------------------------------------------------------------------------------------------
 var MlCardTitle = (function () {
     function MlCardTitle() {
@@ -119,12 +119,12 @@ var MlCardActions = (function () {
 }());
 exports.MlCardActions = MlCardActions;
 // ---------------------------------------------------------------------------------------------------------------------
-exports.MlCard = [
-    MlCardContainer,
-    MlCardTitle,
-    MlCardSubtitle,
-    MlCardMedia,
-    MlCardText,
-    MlCardActions
-];
+// export const MlCard = [
+//   MlCardContainer,
+//   MlCardTitle,
+//   MlCardSubtitle,
+//   MlCardMedia,
+//   MlCardText,
+//   MlCardActions
+// ];
 //# sourceMappingURL=ml_card.js.map

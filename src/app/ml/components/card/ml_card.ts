@@ -13,7 +13,7 @@ encapsulation: ViewEncapsulation.None,
 host: {class: 'mdl-card'},
 template: '<ng-content></ng-content>'
 })
-export class MlCardContainer{
+export class MlCard{
 
   @Input() shadow: string;
 
@@ -65,13 +65,3 @@ template: '<ng-content></ng-content>'
 })
 export class MlCardActions {}
 // ---------------------------------------------------------------------------------------------------------------------
-
-export const MlCard = [
-  MlCardContainer,
-  MlCardTitle,
-  MlCardSubtitle,
-  MlCardMedia,
-  MlCardText,
-  MlCardActions
-];
-
