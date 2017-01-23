@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
+    "target": "es5",
+    "lib": ["es2015", "dom"],
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "lib": ["es6", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,

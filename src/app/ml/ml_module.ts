@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MlComponentsList} from "./components/ml_components_list";
+import {MlLayout} from "./components/layout/ml_layout";
 
 @NgModule({
 
@@ -14,11 +15,12 @@ imports: [
 ],
 
 declarations: [
-  MlComponentsList
+    MlComponentsList
 ],
   
 exports: [
-  MlComponentsList
+  MlComponentsList,
+  MlLayout
 ]
 
 })

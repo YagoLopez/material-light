@@ -13,6 +13,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var ml_components_list_1 = require("./components/ml_components_list");
+var ml_layout_1 = require("./components/layout/ml_layout");
 var MlModule = (function () {
     function MlModule() {
     }
@@ -27,7 +28,8 @@ var MlModule = (function () {
                 ml_components_list_1.MlComponentsList
             ],
             exports: [
-                ml_components_list_1.MlComponentsList
+                ml_components_list_1.MlComponentsList,
+                ml_layout_1.MlLayout
             ]
         }), 
         __metadata('design:paramtypes', [])

@@ -4,7 +4,7 @@ import {Component, Input} from "@angular/core";
 selector: 'ml-error',
 template: '<div *ngIf="showError()"><ng-content></ng-content></div>'
 })
-export class MlError {
+export class MlValidatorError {
 
   @Input() control: any;
   @Input() validator: string;   // validator name

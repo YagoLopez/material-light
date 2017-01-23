@@ -9,33 +9,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var MlError = (function () {
-    function MlError() {
+var MlValidatorError = (function () {
+    function MlValidatorError() {
     }
-    MlError.prototype.showError = function () {
+    MlValidatorError.prototype.showError = function () {
         if (this.control) {
             return this.control.hasError(this.validator);
         }
     };
-    MlError.prototype.ngOnInit = function () {
+    MlValidatorError.prototype.ngOnInit = function () {
         this.validator = this.validator.toLowerCase(); // control.errors.minLength != control.errors['minLength'] for example
     };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
-    ], MlError.prototype, "control", void 0);
+    ], MlValidatorError.prototype, "control", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlError.prototype, "validator", void 0);
-    MlError = __decorate([
+    ], MlValidatorError.prototype, "validator", void 0);
+    MlValidatorError = __decorate([
         core_1.Component({
             selector: 'ml-error',
             template: '<div *ngIf="showError()"><ng-content></ng-content></div>'
         }), 
         __metadata('design:paramtypes', [])
-    ], MlError);
-    return MlError;
+    ], MlValidatorError);
+    return MlValidatorError;
 }());
-exports.MlError = MlError;
+exports.MlValidatorError = MlValidatorError;
 //# sourceMappingURL=ml_error.js.map
