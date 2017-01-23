@@ -6,7 +6,7 @@ var cacheName = 'material-light';
 var filesToCache = [
 
   // infrastructure files
-  // '/manifest.json',
+  '/manifest.json',
   'index.html',
   'favicon.ico',
 

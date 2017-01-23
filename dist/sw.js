@@ -13,10 +13,9 @@ var filesToCache = [
   // app files
   'inline.d41d8cd98f00b204e980.bundle.js',
   'vendor.bf5dda6f310fec820727.bundle.js',
-  'main.708c16106474c1fb3674.bundle.js',
+  'main.763340a3ac15e33287bf.bundle.js',
   'assets/styles/app-loader.css',
   'assets/img/logo.png',
-  'assets/fonts/material-icons.css',
   'assets/fonts/material-icons.woff2',
   'assets/fonts/roboto-v15-latin-regular.woff2',
   'assets/fonts/roboto-v15-latin-500.woff2',
