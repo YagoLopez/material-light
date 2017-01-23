@@ -119,12 +119,4 @@ var MlCardActions = (function () {
 }());
 exports.MlCardActions = MlCardActions;
 // ---------------------------------------------------------------------------------------------------------------------
-// export const MlCard = [
-//   MlCardContainer,
-//   MlCardTitle,
-//   MlCardSubtitle,
-//   MlCardMedia,
-//   MlCardText,
-//   MlCardActions
-// ];
 //# sourceMappingURL=ml_card.js.map

@@ -13,7 +13,7 @@ moduleId: module.id.toString(),
 host: {class: 'mdl-data-table'},
 template: '<ng-content></ng-content>'
 })
-export class MlTableContainer {
+export class MlTable {
 
   @Input() shadow: string;
   @Input() selectable: string;
@@ -45,10 +45,7 @@ export class MlTableContainer {
 }
 // ---------------------------------------------------------------------------------------------------------------------
 @Directive({
-selector: '[alphanumeric]',
+selector: '[text-cell]',
 host: {class: 'mdl-data-table__cell--non-numeric'}
 })
-export class MlTableAlphanumericCell {}
-// ---------------------------------------------------------------------------------------------------------------------
-
-export const MlTable = [MlTableContainer, MlTableAlphanumericCell];
+export class MlTableTextCell {}

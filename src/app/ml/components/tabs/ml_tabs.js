@@ -11,14 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var mdl_tabs_1 = require("./mdl_tabs");
 // ---------------------------------------------------------------------------------------------------------------------
-var MlTabsContainer = (function () {
-    function MlTabsContainer(host) {
+var MlTabs = (function () {
+    function MlTabs(host) {
         this.host = host;
     }
-    MlTabsContainer.prototype.ngAfterViewInit = function () {
+    MlTabs.prototype.ngAfterViewInit = function () {
         new mdl_tabs_1.default(this.host.nativeElement);
     };
-    MlTabsContainer = __decorate([
+    MlTabs = __decorate([
         core_1.Component({
             selector: 'ml-tabs',
             styleUrls: ['./ml_tabs.css'],
@@ -29,10 +29,10 @@ var MlTabsContainer = (function () {
             template: '<ng-content></ng-content>'
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
-    ], MlTabsContainer);
-    return MlTabsContainer;
+    ], MlTabs);
+    return MlTabs;
 }());
-exports.MlTabsContainer = MlTabsContainer;
+exports.MlTabs = MlTabs;
 // ---------------------------------------------------------------------------------------------------------------------
 var MlTabsBar = (function () {
     function MlTabsBar() {
@@ -75,6 +75,4 @@ var MlTabPanel = (function () {
     return MlTabPanel;
 }());
 exports.MlTabPanel = MlTabPanel;
-// ---------------------------------------------------------------------------------------------------------------------
-exports.MlTabs = [MlTabsContainer, MlTabsBar, MlTab, MlTabPanel];
 //# sourceMappingURL=ml_tabs.js.map

@@ -8,13 +8,13 @@ import * as ml from "../../lib/ml_lib";
 @Component({
 selector: 'ml-layout',
 moduleId: module.id.toString(),
-styleUrls: ['./ml_layout.css', './ml_ripple.css'],
+styleUrls: ['./ml_layout.css', './ml_ripple.css', './ml_icon.css'],
 host: {class: 'mdl-layout'},
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 template: '<ng-content></ng-content>'
 })
-export class MlLayoutContainer {
+export class MlLayout {
 
   @Input() drawer: string;
   @Input() tabs: string;
@@ -149,32 +149,15 @@ export class MlHeaderTabs {}
 @Directive({
 selector: '[tab-bar]',
 host: {class: 'mdl-layout__tab'}})
-export class MlTabBar {}
+export class MlHeaderTabBar {}
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-tab-content',
 host: {class: 'mdl-layout__tab-panel'},
 template: '<ng-content></ng-content>'})
-export class MlTabContent {}
+export class MlHeaderTabContent {}
 // ---------------------------------------------------------------------------------------------------------------------
 @Directive({
 selector: '[active]',
 host: {class: 'is-active'}})
-export class MlTabActive {}
-// ---------------------------------------------------------------------------------------------------------------------
-export const MlLayout = [
-  MlLayoutContainer,
-  MlHeader,
-  MlHeaderRow,
-  MlDrawer,
-  MlSpacer,
-  MlNav,
-  MlNavItem,
-  MlLargeScreenOnly,
-  MlSmallScreenOnly,
-  MlContent,
-  MlHeaderTabs,
-  MlTabContent,
-  MlTabBar,
-  MlTabActive
-];
+export class MlHeaderTabActive {}

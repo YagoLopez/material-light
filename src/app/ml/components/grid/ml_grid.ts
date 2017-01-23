@@ -13,7 +13,7 @@ template: `
 
 `//template
 })
-export class MlGridContainer {
+export class MlGrid {
 
   @Input('no-space') public noSpace: string;
 
@@ -72,5 +72,3 @@ export class MlCell{
       ml.setClass(host, desktopWidthClass, this.ren);
   }
 }
-
-export const MlGrid = [MlGridContainer, MlCell];

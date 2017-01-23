@@ -14,16 +14,16 @@ var core_1 = require("@angular/core");
 var mdl_layout_1 = require("./mdl_layout");
 var ml = require("../../lib/ml_lib");
 // ---------------------------------------------------------------------------------------------------------------------
-var MlLayoutContainer = (function () {
-    function MlLayoutContainer(host, ren) {
+var MlLayout = (function () {
+    function MlLayout(host, ren) {
         this.host = host;
         this.ren = ren;
     }
-    MlLayoutContainer.prototype.hideDrawer = function () {
+    MlLayout.prototype.hideDrawer = function () {
         this.mdlLayout.drawer_.classList.remove('is-visible');
         this.mdlLayout.obfuscator_.classList.remove('is-visible');
     };
-    MlLayoutContainer.prototype.ngAfterViewInit = function () {
+    MlLayout.prototype.ngAfterViewInit = function () {
         if (this.drawer === 'fixed')
             ml.setClass(this.host, 'mdl-layout--fixed-drawer', this.ren);
         if (this.tabs === 'fixed') {
@@ -35,26 +35,26 @@ var MlLayoutContainer = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlLayoutContainer.prototype, "drawer", void 0);
+    ], MlLayout.prototype, "drawer", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlLayoutContainer.prototype, "tabs", void 0);
-    MlLayoutContainer = __decorate([
+    ], MlLayout.prototype, "tabs", void 0);
+    MlLayout = __decorate([
         core_1.Component({
             selector: 'ml-layout',
             moduleId: module.id.toString(),
-            styleUrls: ['./ml_layout.css', './ml_ripple.css'],
+            styleUrls: ['./ml_layout.css', './ml_ripple.css', './ml_icon.css'],
             host: { class: 'mdl-layout' },
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             template: '<ng-content></ng-content>'
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
-    ], MlLayoutContainer);
-    return MlLayoutContainer;
+    ], MlLayout);
+    return MlLayout;
 }());
-exports.MlLayoutContainer = MlLayoutContainer;
+exports.MlLayout = MlLayout;
 // ---------------------------------------------------------------------------------------------------------------------
 var MlHeader = (function () {
     function MlHeader(host, ren) {
@@ -235,60 +235,43 @@ var MlHeaderTabs = (function () {
 }());
 exports.MlHeaderTabs = MlHeaderTabs;
 // ---------------------------------------------------------------------------------------------------------------------
-var MlTabBar = (function () {
-    function MlTabBar() {
+var MlHeaderTabBar = (function () {
+    function MlHeaderTabBar() {
     }
-    MlTabBar = __decorate([
+    MlHeaderTabBar = __decorate([
         core_1.Directive({
             selector: '[tab-bar]',
             host: { class: 'mdl-layout__tab' } }), 
         __metadata('design:paramtypes', [])
-    ], MlTabBar);
-    return MlTabBar;
+    ], MlHeaderTabBar);
+    return MlHeaderTabBar;
 }());
-exports.MlTabBar = MlTabBar;
+exports.MlHeaderTabBar = MlHeaderTabBar;
 // ---------------------------------------------------------------------------------------------------------------------
-var MlTabContent = (function () {
-    function MlTabContent() {
+var MlHeaderTabContent = (function () {
+    function MlHeaderTabContent() {
     }
-    MlTabContent = __decorate([
+    MlHeaderTabContent = __decorate([
         core_1.Component({
             selector: 'ml-tab-content',
             host: { class: 'mdl-layout__tab-panel' },
             template: '<ng-content></ng-content>' }), 
         __metadata('design:paramtypes', [])
-    ], MlTabContent);
-    return MlTabContent;
+    ], MlHeaderTabContent);
+    return MlHeaderTabContent;
 }());
-exports.MlTabContent = MlTabContent;
+exports.MlHeaderTabContent = MlHeaderTabContent;
 // ---------------------------------------------------------------------------------------------------------------------
-var MlTabActive = (function () {
-    function MlTabActive() {
+var MlHeaderTabActive = (function () {
+    function MlHeaderTabActive() {
     }
-    MlTabActive = __decorate([
+    MlHeaderTabActive = __decorate([
         core_1.Directive({
             selector: '[active]',
             host: { class: 'is-active' } }), 
         __metadata('design:paramtypes', [])
-    ], MlTabActive);
-    return MlTabActive;
+    ], MlHeaderTabActive);
+    return MlHeaderTabActive;
 }());
-exports.MlTabActive = MlTabActive;
-// ---------------------------------------------------------------------------------------------------------------------
-exports.MlLayout = [
-    MlLayoutContainer,
-    MlHeader,
-    MlHeaderRow,
-    MlDrawer,
-    MlSpacer,
-    MlNav,
-    MlNavItem,
-    MlLargeScreenOnly,
-    MlSmallScreenOnly,
-    MlContent,
-    MlHeaderTabs,
-    MlTabContent,
-    MlTabBar,
-    MlTabActive
-];
+exports.MlHeaderTabActive = MlHeaderTabActive;
 //# sourceMappingURL=ml_layout.js.map

@@ -1,4 +1,5 @@
 "use strict";
+// All Material Light elements (Ml elements) inherit form and are based in a base MdlElement 
 var MdlElement = (function () {
     function MdlElement(el) {
         this.element_ = el;

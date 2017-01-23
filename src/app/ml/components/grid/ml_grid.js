@@ -10,20 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var ml = require("../../lib/ml_lib");
-var MlGridContainer = (function () {
-    function MlGridContainer(host, ren) {
+var MlGrid = (function () {
+    function MlGrid(host, ren) {
         this.host = host;
         this.ren = ren;
     }
-    MlGridContainer.prototype.ngOnInit = function () {
+    MlGrid.prototype.ngOnInit = function () {
         if (this.noSpace === '')
             ml.setClass(this.host, 'mdl-grid--no-spacing', this.ren);
     };
     __decorate([
         core_1.Input('no-space'), 
         __metadata('design:type', String)
-    ], MlGridContainer.prototype, "noSpace", void 0);
-    MlGridContainer = __decorate([
+    ], MlGrid.prototype, "noSpace", void 0);
+    MlGrid = __decorate([
         core_1.Component({
             selector: 'ml-grid',
             moduleId: module.id.toString(),
@@ -33,10 +33,10 @@ var MlGridContainer = (function () {
             template: "\n\n<ng-content></ng-content>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
-    ], MlGridContainer);
-    return MlGridContainer;
+    ], MlGrid);
+    return MlGrid;
 }());
-exports.MlGridContainer = MlGridContainer;
+exports.MlGrid = MlGrid;
 // ---------------------------------------------------------------------------------------------------------------------
 var MlCell = (function () {
     function MlCell(host, ren) {
@@ -85,5 +85,4 @@ var MlCell = (function () {
     return MlCell;
 }());
 exports.MlCell = MlCell;
-exports.MlGrid = [MlGridContainer, MlCell];
 //# sourceMappingURL=ml_grid.js.map

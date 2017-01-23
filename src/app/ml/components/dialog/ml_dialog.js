@@ -9,16 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var MlDialogContainer = (function () {
-    function MlDialogContainer() {
+var MlDialog = (function () {
+    function MlDialog() {
     }
-    MlDialogContainer.prototype.open = function () {
-        this.mdlDialog.nativeElement.showModal();
-    };
-    MlDialogContainer.prototype.close = function () {
-        this.mdlDialog.nativeElement.close();
-    };
-    MlDialogContainer.prototype.ngOnInit = function () {
+    MlDialog.prototype.open = function () { this.mdlDialog.nativeElement.showModal(); };
+    MlDialog.prototype.close = function () { this.mdlDialog.nativeElement.close(); };
+    MlDialog.prototype.ngOnInit = function () {
         if (typeof HTMLDialogElement !== 'function') {
             window.alert('HTML5 Dialog component not supported by browser');
         }
@@ -26,8 +22,8 @@ var MlDialogContainer = (function () {
     __decorate([
         core_1.ViewChild('mdlDialog'), 
         __metadata('design:type', core_1.ElementRef)
-    ], MlDialogContainer.prototype, "mdlDialog", void 0);
-    MlDialogContainer = __decorate([
+    ], MlDialog.prototype, "mdlDialog", void 0);
+    MlDialog = __decorate([
         core_1.Component({
             selector: 'ml-dialog',
             styleUrls: ['./ml_dialog.css'],
@@ -35,10 +31,10 @@ var MlDialogContainer = (function () {
             template: "\n  \n<dialog class=\"mdl-dialog\" #mdlDialog>\n  <h6 class=\"mdl-dialog__title\">\n    <ng-content select=\"ml-dialog-title\"></ng-content>\n  </h6>\n  <div class=\"mdl-dialog__content\">\n    <ng-content select=\"ml-dialog-content\"></ng-content>\n  </div>\n  <div class=\"mdl-dialog__actions\">\n    <ng-content select=\"ml-dialog-actions\"></ng-content>\n  </div>\n</dialog>    \n  \n " //template
         }), 
         __metadata('design:paramtypes', [])
-    ], MlDialogContainer);
-    return MlDialogContainer;
+    ], MlDialog);
+    return MlDialog;
 }());
-exports.MlDialogContainer = MlDialogContainer;
+exports.MlDialog = MlDialog;
 var MlDialogTitle = (function () {
     function MlDialogTitle() {
     }
@@ -69,5 +65,4 @@ var MlDialogActions = (function () {
     return MlDialogActions;
 }());
 exports.MlDialogActions = MlDialogActions;
-exports.MlDialog = [MlDialogContainer, MlDialogContent, MlDialogActions, MlDialogTitle];
 //# sourceMappingURL=ml_dialog.js.map

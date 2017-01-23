@@ -21,7 +21,7 @@ template:`
 
 `//template
 })
-export class MlMenuContainer{
+export class MlMenu{
 
   @ViewChild('menuList') menuList: ElementRef;
   @ViewChild('mdlButton') mdlButton: MlButton;
@@ -109,5 +109,3 @@ export class MlMenuItem {
     }
   }
 }
-// ---------------------------------------------------------------------------------------------------------------------
-export const MlMenu = [MlMenuContainer, MlMenuItem];

@@ -15,45 +15,44 @@ template: `
 }
 </style>
 
-<mdl-list class="demo-list">
+<ml-list class="demo-list">
 
-  <mdl-item>
-    <mdl-item-content>
-      <mdl-item-icon type="normal">person</mdl-item-icon>
+  <ml-item>
+    <ml-item-content>
+      <ml-item-icon type="normal">person</ml-item-icon>
       Bryan Cranston
-    </mdl-item-content>
-    <mdl-item-action>
+    </ml-item-content>
+    <ml-item-action>
       <a href="#"><ml-icon>star</ml-icon></a>
-    </mdl-item-action>
-  </mdl-item>
+    </ml-item-action>
+  </ml-item>
   
-  <mdl-item lines="2">
-    <mdl-item-content>
-      <mdl-item-icon type="normal">person</mdl-item-icon>
-      <mdl-item-title>Aaron Paul</mdl-item-title>
-      <mdl-item-subtitle>62 Episodes</mdl-item-subtitle>
-    </mdl-item-content>
-    <mdl-item-action>
+  <ml-item lines="2">
+    <ml-item-content>
+      <ml-item-icon type="normal">person</ml-item-icon>
+      <ml-item-title>Aaron Paul</ml-item-title>
+      <ml-item-subtitle>62 Episodes</ml-item-subtitle>
+    </ml-item-content>
+    <ml-item-action>
       <a href="#"><ml-icon>star</ml-icon></a>
-    </mdl-item-action>
-  </mdl-item>
+    </ml-item-action>
+  </ml-item>
   
-  <mdl-item lines="3">
-    <mdl-item-content>
-      <mdl-item-icon type="avatar">person</mdl-item-icon>
-      <mdl-item-title>Bryan Cranston</mdl-item-title>
-      <mdl-item-desc>
+  <ml-item lines="3">
+    <ml-item-content>
+      <ml-item-icon type="avatar">person</ml-item-icon>
+      <ml-item-title>Bryan Cranston</ml-item-title>
+      <ml-item-desc>
         Bryan Cranston played the role of Walter in Breaking Bad. He is also known
         for playing Hal in Malcom in the Middle.
-      </mdl-item-desc>
-    </mdl-item-content>
-    <mdl-item-action>
+      </ml-item-desc>
+    </ml-item-content>
+    <ml-item-action>
       <a href="#"><ml-icon>star</ml-icon></a>
-    </mdl-item-action>
-  </mdl-item>
+    </ml-item-action>
+  </ml-item>
   
-  
-</mdl-list>
+</ml-list>
         
 `//template
 })

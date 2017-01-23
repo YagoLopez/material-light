@@ -11,7 +11,7 @@ template: `
   
   <thead>
     <tr>
-      <th alphanumeric>Material</th>
+      <th text-cell>Material</th>
       <th>Quantity</th>
       <th>Unit price</th>
     </tr>
@@ -21,17 +21,17 @@ template: `
 
   <tbody>
     <tr>
-      <td alphanumeric>Acrylic (Transparent)</td>
+      <td text-cell>Acrylic (Transparent)</td>
       <td>25</td>
       <td>$2.90</td>
     </tr>
     <tr>
-      <td alphanumeric>Plywood (Birch)</td>
+      <td text-cell>Plywood (Birch)</td>
       <td>50</td>
       <td>$1.25</td>
     </tr>
     <tr>
-      <td alphanumeric>Laminate (Gold on Blue)</td>
+      <td text-cell>Laminate (Gold on Blue)</td>
       <td>10</td>
       <td>$2.35</td>
     </tr>      

@@ -14,8 +14,8 @@ var core_1 = require("@angular/core");
 var ml_button_1 = require("../controls/button/ml_button");
 var mdl_menu_1 = require("./mdl_menu");
 var ml = require("../../lib/ml_lib");
-var MlMenuContainer = (function () {
-    function MlMenuContainer(ren) {
+var MlMenu = (function () {
+    function MlMenu(ren) {
         this.ren = ren;
         this.icon = 'more_vert';
         this.className = {
@@ -25,7 +25,7 @@ var MlMenuContainer = (function () {
             TOP_RIGHT: 'mdl-menu--top-right',
         };
     }
-    MlMenuContainer.prototype.ngOnInit = function () {
+    MlMenu.prototype.ngOnInit = function () {
         if (!this.id) {
             this.id = ml.randomStr();
         }
@@ -34,7 +34,7 @@ var MlMenuContainer = (function () {
             ml.setClass(this.menuList, 'mdl-js-ripple-effect', this.ren);
         }
     };
-    MlMenuContainer.prototype.ngAfterViewInit = function () {
+    MlMenu.prototype.ngAfterViewInit = function () {
         if (this.position) {
             var positionClass = this.getMenuPosition(this.position);
             ml.setClass(this.menuList, positionClass, this.ren);
@@ -49,7 +49,7 @@ var MlMenuContainer = (function () {
      *
      * Allowed values: [top-left, top-right, bottom-left, bottom, right] (in lower case)
      */
-    MlMenuContainer.prototype.getMenuPosition = function (position) {
+    MlMenu.prototype.getMenuPosition = function (position) {
         // todo: class names are wrong?
         var mdlClassName = "";
         if (position === 'top-left') {
@@ -69,28 +69,28 @@ var MlMenuContainer = (function () {
     __decorate([
         core_1.ViewChild('menuList'), 
         __metadata('design:type', core_1.ElementRef)
-    ], MlMenuContainer.prototype, "menuList", void 0);
+    ], MlMenu.prototype, "menuList", void 0);
     __decorate([
         core_1.ViewChild('mdlButton'), 
         __metadata('design:type', ml_button_1.MlButton)
-    ], MlMenuContainer.prototype, "mdlButton", void 0);
+    ], MlMenu.prototype, "mdlButton", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlMenuContainer.prototype, "icon", void 0);
+    ], MlMenu.prototype, "icon", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlMenuContainer.prototype, "position", void 0);
+    ], MlMenu.prototype, "position", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlMenuContainer.prototype, "ripple", void 0);
+    ], MlMenu.prototype, "ripple", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlMenuContainer.prototype, "id", void 0);
-    MlMenuContainer = __decorate([
+    ], MlMenu.prototype, "id", void 0);
+    MlMenu = __decorate([
         core_1.Component({
             selector: 'ml-menu',
             styleUrls: ['./ml_menu.css'],
@@ -99,10 +99,10 @@ var MlMenuContainer = (function () {
             template: "\n\n<ml-button [attr.id]=\"id\" type=\"icon\" #mdlButton><ml-icon>{{icon}}</ml-icon></ml-button>\n\n<ul class=\"mdl-menu\" [attr.for]=\"id\" #menuList>\n  <ng-content select=\"ml-menu-item\"></ng-content>\n</ul>         \n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])
-    ], MlMenuContainer);
-    return MlMenuContainer;
+    ], MlMenu);
+    return MlMenu;
 }());
-exports.MlMenuContainer = MlMenuContainer;
+exports.MlMenu = MlMenu;
 // ---------------------------------------------------------------------------------------------------------------------
 var MlMenuItem = (function () {
     function MlMenuItem(ren) {
@@ -138,6 +138,4 @@ var MlMenuItem = (function () {
     return MlMenuItem;
 }());
 exports.MlMenuItem = MlMenuItem;
-// ---------------------------------------------------------------------------------------------------------------------
-exports.MlMenu = [MlMenuContainer, MlMenuItem];
 //# sourceMappingURL=ml_menu.js.map

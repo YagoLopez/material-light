@@ -22,17 +22,13 @@ template:`
   
  `//template
 })
-export class MlDialogContainer{
+export class MlDialog{
 
   @ViewChild('mdlDialog') mdlDialog: ElementRef;
 
-  open(){
-    this.mdlDialog.nativeElement.showModal();
-  }
+  open(){ this.mdlDialog.nativeElement.showModal() }
 
-  close(){
-    this.mdlDialog.nativeElement.close();
-  }
+  close(){ this.mdlDialog.nativeElement.close() }
 
   ngOnInit(){
     if (typeof HTMLDialogElement !== 'function') {
@@ -44,5 +40,3 @@ export class MlDialogContainer{
 @Directive({ selector: 'ml-dialog-title' }) export class MlDialogTitle{}
 @Directive({ selector: 'ml-dialog-content' }) export class MlDialogContent{}
 @Directive({ selector: 'ml-dialog-actions' }) export class MlDialogActions{}
-
-export const MlDialog = [MlDialogContainer, MlDialogContent, MlDialogActions, MlDialogTitle];

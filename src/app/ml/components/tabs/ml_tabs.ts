@@ -12,7 +12,7 @@ moduleId: module.id.toString(),
 host: {class: 'mdl-tabs'},
 template: '<ng-content></ng-content>'
 })
-export class MlTabsContainer {
+export class MlTabs {
 
   constructor(
     private host: ElementRef){
@@ -39,6 +39,3 @@ selector: 'ml-tab-panel',
 host: {class: 'mdl-tabs__panel'},
 template: '<ng-content></ng-content>'})
 export class MlTabPanel{}
-// ---------------------------------------------------------------------------------------------------------------------
-
-export const MlTabs = [MlTabsContainer, MlTabsBar, MlTab, MlTabPanel];

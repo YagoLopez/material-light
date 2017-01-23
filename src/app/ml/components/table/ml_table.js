@@ -13,15 +13,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var ml = require('../../lib/ml_lib');
 // ---------------------------------------------------------------------------------------------------------------------
-var MlTableContainer = (function () {
-    function MlTableContainer(host, ren) {
+var MlTable = (function () {
+    function MlTable(host, ren) {
         this.host = host;
         this.ren = ren;
     }
-    MlTableContainer.prototype.shadowClassName = function (shadowValue) {
+    MlTable.prototype.shadowClassName = function (shadowValue) {
         return 'mdl-shadow--' + shadowValue + 'dp';
     };
-    MlTableContainer.prototype.ngOnInit = function () {
+    MlTable.prototype.ngOnInit = function () {
         ml.setClass(this.host, this.shadowClassName(this.shadow), this.ren);
         if (this.selectable === "")
             ml.setClass(this.host, 'mdl-data-table--selectable', this.ren);
@@ -34,16 +34,16 @@ var MlTableContainer = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlTableContainer.prototype, "shadow", void 0);
+    ], MlTable.prototype, "shadow", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlTableContainer.prototype, "selectable", void 0);
+    ], MlTable.prototype, "selectable", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlTableContainer.prototype, "order", void 0);
-    MlTableContainer = __decorate([
+    ], MlTable.prototype, "order", void 0);
+    MlTable = __decorate([
         core_1.Component({
             selector: 'table.[ml-table]',
             styleUrls: ['./ml_table.css'],
@@ -53,24 +53,22 @@ var MlTableContainer = (function () {
             template: '<ng-content></ng-content>'
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
-    ], MlTableContainer);
-    return MlTableContainer;
+    ], MlTable);
+    return MlTable;
 }());
-exports.MlTableContainer = MlTableContainer;
+exports.MlTable = MlTable;
 // ---------------------------------------------------------------------------------------------------------------------
-var MlTableAlphanumericCell = (function () {
-    function MlTableAlphanumericCell() {
+var MlTableTextCell = (function () {
+    function MlTableTextCell() {
     }
-    MlTableAlphanumericCell = __decorate([
+    MlTableTextCell = __decorate([
         core_1.Directive({
-            selector: '[alphanumeric]',
+            selector: '[text-cell]',
             host: { class: 'mdl-data-table__cell--non-numeric' }
         }), 
         __metadata('design:paramtypes', [])
-    ], MlTableAlphanumericCell);
-    return MlTableAlphanumericCell;
+    ], MlTableTextCell);
+    return MlTableTextCell;
 }());
-exports.MlTableAlphanumericCell = MlTableAlphanumericCell;
-// ---------------------------------------------------------------------------------------------------------------------
-exports.MlTable = [MlTableContainer, MlTableAlphanumericCell];
+exports.MlTableTextCell = MlTableTextCell;
 //# sourceMappingURL=ml_table.js.map

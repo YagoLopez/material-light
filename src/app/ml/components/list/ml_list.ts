@@ -1,16 +1,15 @@
-import {Component, ViewEncapsulation, ElementRef, Renderer, ViewChild, Input, ChangeDetectionStrategy} from '@angular/core';
+import {Component, ViewEncapsulation, ElementRef, Renderer, ViewChild, Input} from '@angular/core';
 import * as ml from "../../lib/ml_lib";
 
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
-selector: 'mdl-list',
+selector: 'ml-list',
 encapsulation: ViewEncapsulation.None,
-changeDetection: ChangeDetectionStrategy.OnPush,
 moduleId: module.id.toString(),
 styleUrls: ['./ml_list.css'],
 template: '<ul class="mdl-list" #ulElement><ng-content></ng-content></ul>'
 })
-export class MdlListContainer {
+export class MlList {
 
   @ViewChild('ulElement') ulElement: ElementRef;
 
@@ -25,13 +24,12 @@ export class MdlListContainer {
   }
 }
 // ---------------------------------------------------------------------------------------------------------------------
-
 @Component({
-selector: 'mdl-item',
+selector: 'ml-item',
 moduleId: module.id.toString(),
 template: '<li class="mdl-list__item" #liElement><ng-content></ng-content></li>'
 })
-export class MdlItem {
+export class MlItem {
 
   @ViewChild('liElement') liElement: ElementRef;
   @Input() lines: string = '';
@@ -49,24 +47,24 @@ export class MdlItem {
 }
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
-selector: 'mdl-item-content',
+selector: 'ml-item-content',
 host: {class: 'mdl-list__item-primary-content'},
 template: '<span class="mdl-list__item-primary-content"><ng-content></ng-content></span>'
 })
-export class MdlItemContent {}
+export class MlItemContent {}
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
-selector: 'mdl-item-action',
+selector: 'ml-item-action',
 host: {class: 'mdl-list__item-secondary-action'},
 template: '<ng-content></ng-content>'
 })
-export class MdlItemAction {}
+export class MlItemAction {}
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
-selector: 'mdl-item-icon',
+selector: 'ml-item-icon',
 template: '<i class="material-icons" #icon><ng-content></ng-content></i>'
 })
-export class MdlItemIcon {
+export class MlItemIcon {
 
   @ViewChild('icon') private icon: ElementRef;
   @Input() type: string;
@@ -86,30 +84,20 @@ export class MdlItemIcon {
 }
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
-selector: 'mdl-item-title',
+selector: 'ml-item-title',
 template: '<span><ng-content></ng-content></span>'
 })
-export class MdlItemTitle {}
+export class MlItemTitle {}
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
-selector: 'mdl-item-subtitle',
+selector: 'ml-item-subtitle',
 template: '<span class="mdl-list__item-sub-title"><ng-content></ng-content></span>'
 })
-export class MdlItemSubtitle {}
+export class MlItemSubtitle {}
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
-selector: 'mdl-item-desc',
+selector: 'ml-item-desc',
 template: '<span class="mdl-list__item-text-body"><ng-content></ng-content></span>'
 })
-export class MdlItemDesc {}
+export class MlItemDesc {}
 // ---------------------------------------------------------------------------------------------------------------------
-export const MlList: any = [
-  MdlListContainer,
-  MdlItem,
-  MdlItemContent,
-  MdlItemAction,
-  MdlItemIcon,
-  MdlItemTitle,
-  MdlItemSubtitle,
-  MdlItemDesc
-];
