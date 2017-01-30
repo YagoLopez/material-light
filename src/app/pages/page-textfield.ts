@@ -56,15 +56,15 @@ template: `
 })
 export class PageTextfield {
 
-  textfield1: FormControl = new FormControl('', [Validators.required,
-                                                 Validators.minLength(2),
-                                                 Validators.maxLength(4)]);
+  textfield1 = new FormControl('', [Validators.required,
+                                    Validators.minLength(2),
+                                    Validators.maxLength(4)]);
                                                  
-  textfield2: FormControl = new FormControl('', Validators.required);
-  textfield3: FormControl = new FormControl();
-  textfieldArea: FormControl = new FormControl('', [Validators.required, Validators.minLength(2)]);
+  textfield2 = new FormControl('', Validators.required);
+  textfield3 = new FormControl();
+  textfieldArea = new FormControl('', [Validators.required, Validators.minLength(2)]);
 
-  controlsReactiveForm: FormGroup = new FormGroup({
+  controlsReactiveForm = new FormGroup({
     textfield1: this.textfield1,
     textfield2: this.textfield2,
     textfield3: this.textfield3,

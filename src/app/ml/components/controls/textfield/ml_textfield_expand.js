@@ -30,8 +30,14 @@ var MlTextfieldExpand = (function () {
             this.showError = false;
         }
     };
-    MlTextfieldExpand.prototype.onFocus = function () { this.checkValidity(); };
-    MlTextfieldExpand.prototype.onKeyup = function () { this.checkValidity(); };
+    MlTextfieldExpand.prototype.onFocus = function () {
+        this.formControl.markAsTouched(true);
+        this.checkValidity();
+    };
+    MlTextfieldExpand.prototype.onKeyup = function () {
+        this.formControl.markAsTouched(true);
+        this.checkValidity();
+    };
     Object.defineProperty(MlTextfieldExpand.prototype, "model", {
         get: function () { return this._model; },
         set: function (value) {

@@ -14,11 +14,11 @@ var MlValidatorError = (function () {
     }
     MlValidatorError.prototype.showError = function () {
         if (this.control) {
-            return this.control.hasError(this.validator);
+            return (this.control.hasError(this.validator) && this.control.touched);
         }
     };
     MlValidatorError.prototype.ngOnInit = function () {
-        this.validator = this.validator.toLowerCase(); // control.errors.minLength != control.errors['minLength'] for example
+        this.validator = this.validator.toLowerCase(); // hack cause: control.errors.minLength != control.errors['minLength'] for example
     };
     __decorate([
         core_1.Input(), 
@@ -31,7 +31,7 @@ var MlValidatorError = (function () {
     MlValidatorError = __decorate([
         core_1.Component({
             selector: 'ml-error',
-            template: '<div *ngIf="showError()"><ng-content></ng-content></div>'
+            template: '<div *ngIf="showError()" style="display: block"><ng-content></ng-content></div>'
         }), 
         __metadata('design:paramtypes', [])
     ], MlValidatorError);

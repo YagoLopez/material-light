@@ -29,8 +29,14 @@ var MlTextfieldArea = (function () {
             this.showError = false;
         }
     };
-    MlTextfieldArea.prototype.onFocus = function () { this.checkValidity(); };
-    MlTextfieldArea.prototype.onKeyup = function () { this.checkValidity(); };
+    MlTextfieldArea.prototype.onFocus = function () {
+        this.formControl.markAsTouched(true);
+        this.checkValidity();
+    };
+    MlTextfieldArea.prototype.onKeyup = function () {
+        this.formControl.markAsTouched(true);
+        this.checkValidity();
+    };
     MlTextfieldArea.prototype.ngOnInit = function () {
         if (!this.id)
             this.id = ml.randomStr();

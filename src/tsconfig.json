@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es2015", "dom"],
+    "target": "ES5",
+    "lib": ["ES6", "DOM"],
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
@@ -11,6 +11,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
+//    "outDir": "../ts-outdir",
     "typeRoots": ["../node_modules/@types"]
   },
   "exclude": [

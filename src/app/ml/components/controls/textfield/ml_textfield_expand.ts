@@ -64,8 +64,15 @@ export class MlTextfieldExpand implements ControlValueAccessor{
     }
   }
 
-  onFocus(){ this.checkValidity() }
-  onKeyup(){ this.checkValidity() }
+  onFocus(){
+    this.formControl.markAsTouched(true);
+    this.checkValidity();
+  }
+  onKeyup(){
+    this.formControl.markAsTouched(true);
+    this.checkValidity();
+  }
+  
   get model() { return this._model }
 
   ngOnInit() {

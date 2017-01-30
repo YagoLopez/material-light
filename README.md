@@ -15,8 +15,8 @@ Developed by Yago López:
 
 ## Demo
 
-- <a href="http://yagolopez.github.io/material-light/iframe/iframe.html" target="_blank">Desktop PC (with mobile simulator)</a>
-- <a href="https://yagolopez.github.io/material-light/dist/" target="_blank">For mobile (full screen)</a>
+- <a href="http://yagolopez.github.io/material-light/iframe/iframe.html" target="_blank">Desktop PC</a>
+- <a href="https://yagolopez.github.io/material-light/dist/" target="_blank">Mobile (full screen)</a>
 
 ## Use
 
@@ -25,7 +25,7 @@ Developed by Yago López:
   import `ml_module.ts` in your root module.
 - Copy and paste the `assets` folder in the exact path in your project.
 - Use the components following the examples in the `pages` directory. The components use `ml` as namespace. For example: `<ml-icon>email</ml-icon>`places an email icon component in a template.
-- For **WEBPACK**: Load the demo using the angular-cli command`npm ng serve`. This should serve`index.html` at `localhost://4600`. (Webpack is used in this project for compatibility with `angular-cli` projects)
+- For **WEBPACK**: Load the demo using the angular-cli command`npm ng serve`. This should serve`index.html` at `localhost://4600`.
 - For **SYSTEMJS**: Load the demo pointing a web server to`index-systemjs.html`. (Systemjs can be used as module loader during development instead of compile all files width Webpack)
 
 
@@ -37,8 +37,8 @@ Developed by Yago López:
 - Angular 2
 - Angular 2 Command Line (angular-cli)
 - Typescript (included in Angular 2)
-- Webpack (included as dependency)
-- Systemjs (included as dependency)
+- Webpack (included as a dependency using angular-cli projects)
+- Systemjs (included as dependency in this project)
 - Npm
 
 ## Credits:

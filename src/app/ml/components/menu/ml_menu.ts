@@ -96,9 +96,7 @@ export class MlMenuItem {
   @Input() divider: string;
   @Input() disabled: string;
 
-  constructor(
-    private ren: Renderer){
-  }
+  constructor(private ren: Renderer){}
 
   ngOnInit() {
     if (this.divider === ''){

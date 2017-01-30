@@ -73,8 +73,14 @@ export class MlTextfield implements ControlValueAccessor{
     }
   }
 
-  onFocus(){ this.checkValidity() }
-  onKeyup(){ this.checkValidity() }
+  onFocus(){
+    this.formControl.markAsTouched(true);
+    this.checkValidity();
+  }
+  onKeyup(){
+    this.formControl.markAsTouched(true);
+    this.checkValidity();
+  }
 
   ngOnInit() {
     if (!this.id)

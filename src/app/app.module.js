@@ -13,8 +13,8 @@ var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var ml_module_1 = require("./ml/ml_module");
-var app_root_1 = require("./app.root");
-var app_pages_list_1 = require("./pages/app.pages.list");
+var app_1 = require("./app");
+var pages_list_1 = require("./pages/pages-list");
 var app_routes_1 = require("./app.routes");
 var AppModule = (function () {
     function AppModule() {
@@ -29,10 +29,10 @@ var AppModule = (function () {
                 ml_module_1.MlModule
             ],
             declarations: [
-                app_root_1.AppRoot,
-                app_pages_list_1.AppPages,
+                app_1.App,
+                pages_list_1.PagesList,
             ],
-            bootstrap: [app_root_1.AppRoot]
+            bootstrap: [app_1.App]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

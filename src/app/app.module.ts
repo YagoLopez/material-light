@@ -3,8 +3,8 @@ import {BrowserModule} from "@angular/platform-browser";
 import {RouterModule} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MlModule} from "./ml/ml_module";
-import {AppRoot} from "./app.root";
-import {AppPages} from "./pages/app.pages.list";
+import {App} from "./app";
+import {PagesList} from "./pages/pages-list";
 import {APP_ROUTES} from "./app.routes";
 
 @NgModule({
@@ -18,11 +18,11 @@ import {APP_ROUTES} from "./app.routes";
   ],
 
   declarations: [
-    AppRoot,
-    AppPages,
+    App,
+    PagesList,
   ],
 
-  bootstrap: [AppRoot]
+  bootstrap: [App]
 
 })
 export class AppModule {}

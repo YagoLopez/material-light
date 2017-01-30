@@ -2,7 +2,7 @@ import {Component, Input} from "@angular/core";
 
 @Component({
 selector: 'ml-error',
-template: '<div *ngIf="showError()"><ng-content></ng-content></div>'
+template: '<div *ngIf="showError()" style="display: block"><ng-content></ng-content></div>'
 })
 export class MlValidatorError {
 
@@ -11,11 +11,11 @@ export class MlValidatorError {
 
   showError(): boolean | undefined{
     if (this.control){
-      return this.control.hasError(this.validator);
+      return ( this.control.hasError(this.validator) && this.control.touched );
     }
   }
 
   ngOnInit() {
-    this.validator = this.validator.toLowerCase(); // control.errors.minLength != control.errors['minLength'] for example
+    this.validator = this.validator.toLowerCase(); // hack cause: control.errors.minLength != control.errors['minLength'] for example
   }
 }

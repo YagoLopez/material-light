@@ -19,8 +19,10 @@ var page_toggle_1 = require("./pages/page-toggle");
 var page_textfield_1 = require("./pages/page-textfield");
 var page_menu_1 = require("./pages/page-menu");
 var page_dialog_1 = require("./pages/page-dialog");
+var page_selectfield_1 = require("./pages/page-selectfield");
 exports.APP_ROUTES = [
-    { path: '', component: page_button_1.PageButton, pathMatch: 'full' },
+    // {path: '',             component: PageButton, pathMatch: 'full' },
+    { path: '', component: page_selectfield_1.PageSelectfield, pathMatch: 'full' },
     { path: 'snackbar', component: page_snackbar_1.PageSnackBar },
     { path: 'tooltip', component: page_tooltip_1.PageToolTip },
     { path: 'slider', component: page_slider_1.PageSlider },
@@ -40,6 +42,7 @@ exports.APP_ROUTES = [
     { path: 'textfield', component: page_textfield_1.PageTextfield },
     { path: 'menu', component: page_menu_1.PageMenu },
     { path: 'dialog', component: page_dialog_1.PageDialog },
-    { path: 'table', component: page_table_1.PageTable }
+    { path: 'table', component: page_table_1.PageTable },
+    { path: 'selectfield', component: page_selectfield_1.PageSelectfield }
 ];
 //# sourceMappingURL=app.routes.js.map

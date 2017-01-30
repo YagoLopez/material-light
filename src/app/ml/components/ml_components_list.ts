@@ -33,6 +33,10 @@ import {MlTextfieldExpand} from "./controls/textfield/ml_textfield_expand";
 import {MlTextfieldArea} from "./controls/textfield/ml_textfield_area";
 import {MlTextfieldLabel} from "./controls/textfield/ml_textfield_label";
 // ------------
+
+// Controls
+import {MlSelectfield} from "./controls/selectfield/ml_selectfield";
+import {MlSelectfieldItem} from "./controls/selectfield/ml_selectfield";
 import {MlCheckbox} from "./controls/checkbox/ml_checkbox";
 import {MlRadio} from "./controls/radio/ml_radio";
 import {MlIcon} from "./icon/ml_icon";
@@ -110,6 +114,8 @@ MlDialogActions,
 MlMenu,
 MlMenuItem,
 MlTextfield,
+MlSelectfield,
+MlSelectfieldItem,
 MlTextfieldExpand,
 MlTextfieldArea,
 MlTextfieldLabel,
@@ -150,5 +156,4 @@ MlValidatorError,
 MlChip,
 MlChipButton,
 DebugForm
-
-];
+]

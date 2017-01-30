@@ -34,6 +34,9 @@ var ml_textfield_expand_1 = require("./controls/textfield/ml_textfield_expand");
 var ml_textfield_area_1 = require("./controls/textfield/ml_textfield_area");
 var ml_textfield_label_1 = require("./controls/textfield/ml_textfield_label");
 // ------------
+// Controls
+var ml_selectfield_1 = require("./controls/selectfield/ml_selectfield");
+var ml_selectfield_2 = require("./controls/selectfield/ml_selectfield");
 var ml_checkbox_1 = require("./controls/checkbox/ml_checkbox");
 var ml_radio_1 = require("./controls/radio/ml_radio");
 var ml_icon_1 = require("./icon/ml_icon");
@@ -109,6 +112,8 @@ exports.MlComponentsList = [
     ml_menu_1.MlMenu,
     ml_menu_2.MlMenuItem,
     ml_textfield_1.MlTextfield,
+    ml_selectfield_1.MlSelectfield,
+    ml_selectfield_2.MlSelectfieldItem,
     ml_textfield_expand_1.MlTextfieldExpand,
     ml_textfield_area_1.MlTextfieldArea,
     ml_textfield_label_1.MlTextfieldLabel,
