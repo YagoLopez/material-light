@@ -1,5 +1,7 @@
-//todo: hacer el icono fijo
-//todo: arreglar id de input, por ejemplo ahora esta asi: id="sample1"
+//todo: arreglar id de input, ahora esta asi: id="sample1"
+//todo: ripple effect
+//todo: probar template forms
+//todo: deberia haber attr name en input
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20,12 +22,6 @@ var ml = require("../../../lib/ml_lib");
 var MlSelectfield = (function () {
     function MlSelectfield(ren) {
         this.ren = ren;
-        this.className = {
-            BOTTOM_LEFT: 'mdl-menu--bottom-left',
-            BOTTOM_RIGHT: 'mdl-menu--bottom-right',
-            TOP_LEFT: 'mdl-menu--top-left',
-            TOP_RIGHT: 'mdl-menu--top-right',
-        };
     }
     MlSelectfield.prototype.itemSelected = function ($event) {
         this.labelField.nativeElement.textContent = '';
@@ -35,7 +31,6 @@ var MlSelectfield = (function () {
     };
     MlSelectfield.prototype.onClickSelect = function ($event) {
         this.mdlMenu.show();
-        // this.formControl.markAsTouched(true);
     };
     MlSelectfield.prototype.ngOnInit = function () {
         if (!this.id) {
@@ -47,44 +42,14 @@ var MlSelectfield = (function () {
         }
     };
     MlSelectfield.prototype.ngAfterViewInit = function () {
-        if (this.position) {
-            var positionClass = this.getMenuPosition(this.position);
-            ml.setClass(this.menuList, positionClass, this.ren);
-        }
         this.mdlMenu = new mdl_menu_1.default(this.menuList.nativeElement);
         this.mdlTextfield = new mdl_textfield_1.default(this.inputField.nativeElement);
-    };
-    /**
-     * Get menu position from input attribute POSITION.
-     *
-     * @param position {string} Input Menu position relative to screen corners.
-     * @returns {string} Class name defining position
-     *
-     * Allowed values: [top-left, top-right, bottom-left, bottom, right] (in lower case)
-     */
-    MlSelectfield.prototype.getMenuPosition = function (position) {
-        // todo: class names are wrong?
-        var mdlClassName = "";
-        if (position === 'top-left') {
-            mdlClassName = this.className.BOTTOM_LEFT;
-        }
-        if (position === 'top-right') {
-            mdlClassName = this.className.BOTTOM_RIGHT;
-        }
-        if (position === 'bottom-left') {
-            mdlClassName = this.className.TOP_LEFT;
-        }
-        if (position === 'bottom-right') {
-            mdlClassName = this.className.TOP_RIGHT;
-        }
-        return mdlClassName;
     };
     MlSelectfield.prototype.writeValue = function (value) {
         if (value) {
             this.labelField.nativeElement.textContent = '';
             this.inputField.nativeElement.value = value;
         }
-        console.log('writing value:', value);
     };
     MlSelectfield.prototype.registerOnChange = function (fn) { };
     MlSelectfield.prototype.registerOnTouched = function (fn) { };
@@ -111,11 +76,6 @@ var MlSelectfield = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlSelectfield.prototype, "position", void 0);
-    __decorate([
-        //todo: eliminar
-        core_1.Input(), 
-        __metadata('design:type', String)
     ], MlSelectfield.prototype, "ripple", void 0);
     __decorate([
         core_1.Input(), 
@@ -128,7 +88,7 @@ var MlSelectfield = (function () {
             encapsulation: core_1.ViewEncapsulation.None,
             moduleId: module.id.toString(),
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlSelectfield; }), multi: true }],
-            template: "\n\n<style>\n  .select-field{padding-left: 33px !important; cursor: pointer;}\n  .select-label{padding-left: 33px !important; cursor: pointer;}\n</style>\n\n<div class=\"mdl-textfield getmdl-select\">\n  <input #inputField class=\"mdl-textfield__input select-field\" type=\"text\" id=\"sample1\"\n         (click)=\"onClickSelect($event)\" readonly>\n  <label #labelField class=\"mdl-textfield__label select-label\" \n         for=\"sample1\">Choose one option...</label>\n  <ml-button [attr.id]=\"id\" type=\"icon\" #mdlButton><ml-icon>keyboard_arrow_down</ml-icon></ml-button>\n  <ul class=\"mdl-menu\" [attr.for]=\"id\" #menuList (click)=\"itemSelected($event)\">\n    <ng-content select=\"ml-sf-item\"></ng-content>\n  </ul>         \n</div>\n\n" //template
+            template: "\n\n<style>\n  .input-field{padding-left: 33px !important; cursor: pointer;}\n  .input-label{padding-left: 33px !important; cursor: pointer;}\n</style>\n\n<div class=\"mdl-textfield getmdl-select\">\n  <input #inputField class=\"mdl-textfield__input input-field\" type=\"text\" id=\"sample1\"\n         (click)=\"onClickSelect($event)\" readonly>\n  <label #labelField class=\"mdl-textfield__label input-label\"for=\"sample1\">Choose one option...</label>\n  <ml-button [attr.id]=\"id\" type=\"icon\" #mdlButton><ml-icon>keyboard_arrow_down</ml-icon></ml-button>\n  <ul class=\"mdl-menu\" [attr.for]=\"id\" #menuList (click)=\"itemSelected($event)\">\n    <ng-content select=\"ml-sf-item\"></ng-content>\n  </ul>         \n</div>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])
     ], MlSelectfield);

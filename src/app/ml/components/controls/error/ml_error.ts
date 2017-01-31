@@ -6,16 +6,17 @@ template: '<div *ngIf="showError()" style="display: block"><ng-content></ng-cont
 })
 export class MlValidatorError {
 
-  @Input() control: any;
+  @Input() validateControl: any;
   @Input() validator: string;   // validator name
 
   showError(): boolean | undefined{
-    if (this.control){
-      return ( this.control.hasError(this.validator) && this.control.touched );
+    if (this.validateControl){
+      return ( this.validateControl.hasError(this.validator) && this.validateControl.touched );
     }
   }
 
   ngOnInit() {
-    this.validator = this.validator.toLowerCase(); // hack cause: control.errors.minLength != control.errors['minLength'] for example
+    // hack cause: validateControl.errors.minLength != validateControl.errors['minLength'] for example
+    this.validator = this.validator.toLowerCase();
   }
 }

@@ -13,17 +13,18 @@ var MlValidatorError = (function () {
     function MlValidatorError() {
     }
     MlValidatorError.prototype.showError = function () {
-        if (this.control) {
-            return (this.control.hasError(this.validator) && this.control.touched);
+        if (this.validateControl) {
+            return (this.validateControl.hasError(this.validator) && this.validateControl.touched);
         }
     };
     MlValidatorError.prototype.ngOnInit = function () {
-        this.validator = this.validator.toLowerCase(); // hack cause: control.errors.minLength != control.errors['minLength'] for example
+        // hack cause: validateControl.errors.minLength != validateControl.errors['minLength'] for example
+        this.validator = this.validator.toLowerCase();
     };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
-    ], MlValidatorError.prototype, "control", void 0);
+    ], MlValidatorError.prototype, "validateControl", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)

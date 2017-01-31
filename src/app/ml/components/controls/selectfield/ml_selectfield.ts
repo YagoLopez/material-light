@@ -1,5 +1,7 @@
-//todo: hacer el icono fijo
-//todo: arreglar id de input, por ejemplo ahora esta asi: id="sample1"
+//todo: arreglar id de input, ahora esta asi: id="sample1"
+//todo: ripple effect
+//todo: probar template forms
+//todo: deberia haber attr name en input
 
 import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation, forwardRef} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
@@ -17,15 +19,14 @@ providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlSelectf
 template:`
 
 <style>
-  .select-field{padding-left: 33px !important; cursor: pointer;}
-  .select-label{padding-left: 33px !important; cursor: pointer;}
+  .input-field{padding-left: 33px !important; cursor: pointer;}
+  .input-label{padding-left: 33px !important; cursor: pointer;}
 </style>
 
 <div class="mdl-textfield getmdl-select">
-  <input #inputField class="mdl-textfield__input select-field" type="text" id="sample1"
+  <input #inputField class="mdl-textfield__input input-field" type="text" id="sample1"
          (click)="onClickSelect($event)" readonly>
-  <label #labelField class="mdl-textfield__label select-label" 
-         for="sample1">Choose one option...</label>
+  <label #labelField class="mdl-textfield__label input-label"for="sample1">Choose one option...</label>
   <ml-button [attr.id]="id" type="icon" #mdlButton><ml-icon>keyboard_arrow_down</ml-icon></ml-button>
   <ul class="mdl-menu" [attr.for]="id" #menuList (click)="itemSelected($event)">
     <ng-content select="ml-sf-item"></ng-content>
@@ -41,19 +42,12 @@ export class MlSelectfield implements ControlValueAccessor{
   @ViewChild('inputField') inputField: ElementRef;
   @ViewChild('labelField') labelField: ElementRef;
   @Input() formControl: FormControl;
-  @Input() position: string; //todo: eliminar
+  // @Input() position: string; //todo: eliminar
   @Input() ripple: string;
   @Input() id: string; //todo: mejorar
 
   mdlTextfield: MdlTextfield;
   mdlMenu: MdlMenu;
-
-  private className = {
-    BOTTOM_LEFT: 'mdl-menu--bottom-left',
-    BOTTOM_RIGHT: 'mdl-menu--bottom-right',
-    TOP_LEFT: 'mdl-menu--top-left',
-    TOP_RIGHT: 'mdl-menu--top-right',
-  };
 
   constructor(private ren: Renderer){}
 
@@ -63,12 +57,9 @@ export class MlSelectfield implements ControlValueAccessor{
     this.formControl.setValue($event.target.textContent);
     this.formControl.markAsTouched(true);
   }
-
   onClickSelect($event){
     this.mdlMenu.show();
-    // this.formControl.markAsTouched(true);
   }
-
   ngOnInit(){
     if (!this.id){
       this.id = ml.randomStr();
@@ -76,55 +67,21 @@ export class MlSelectfield implements ControlValueAccessor{
     if (this.ripple === ''){
       ml.setClass(this.mdlButton.host, 'mdl-js-ripple-effect', this.ren);
       ml.setClass(this.menuList, 'mdl-js-ripple-effect', this.ren);
-
       // ml.setClass(this.inputField, 'mdl-js-ripple-effect', this.ren);
     }
   }
-
   ngAfterViewInit(){
-    if (this.position){
-      const positionClass = this.getMenuPosition(this.position);
-      ml.setClass(this.menuList, positionClass, this.ren);
-    }
     this.mdlMenu = new MdlMenu(this.menuList.nativeElement);
     this.mdlTextfield = new MdlTextfield(this.inputField.nativeElement);
   }
-
-  /**
-   * Get menu position from input attribute POSITION.
-   * 
-   * @param position {string} Input Menu position relative to screen corners.
-   * @returns {string} Class name defining position
-   *
-   * Allowed values: [top-left, top-right, bottom-left, bottom, right] (in lower case)
-   */
-  private getMenuPosition(position: string): string{
-    // todo: class names are wrong?
-    let mdlClassName: string = "";
-    if(position === 'top-left'){
-      mdlClassName = this.className.BOTTOM_LEFT;
-    }
-    if(position === 'top-right'){
-      mdlClassName = this.className.BOTTOM_RIGHT;
-    }
-    if(position === 'bottom-left'){
-      mdlClassName = this.className.TOP_LEFT;
-    }
-    if(position === 'bottom-right'){
-      mdlClassName = this.className.TOP_RIGHT;
-    }
-    return mdlClassName;
-  }
-
   writeValue(value: any): void {
     if(value){
       this.labelField.nativeElement.textContent = '';
       this.inputField.nativeElement.value = value;
     }
-    console.log('writing value:', value);
   }
-  registerOnChange(fn: any): void { /* this.onChange = fn */ }
-  registerOnTouched(fn: any): void { /* this.onTouch = fn */ }
+  registerOnChange(fn: any): void {}
+  registerOnTouched(fn: any): void {}
 }
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({

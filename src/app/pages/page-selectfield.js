@@ -14,8 +14,7 @@ var forms_1 = require("@angular/forms");
 var PageSelectfield = (function () {
     function PageSelectfield() {
         this.minLength = 4;
-        this.selectfield1 = new forms_1.FormControl('', [forms_1.Validators.required,
-            forms_1.Validators.minLength(this.minLength)]);
+        this.selectfield1 = new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(this.minLength)]);
         this.selectForm = new forms_1.FormGroup({
             selectfield1: this.selectfield1
         });
@@ -25,7 +24,7 @@ var PageSelectfield = (function () {
     };
     PageSelectfield = __decorate([
         core_1.Component({
-            template: "\n\n<style>\n  .validationError{display: block; color: red;padding-bottom: 20px;}\n</style>\n\n<h5>Select Field</h5>\n<span>Reactive Forms only</span>\n<form [formGroup]=\"selectForm\" (ngSubmit)=\"onSubmit()\" autocomplete=\"off\">\n  <ml-selectfield [formControl]=\"selectfield1\">\n    <ml-sf-item></ml-sf-item>\n    <ml-sf-item>uno</ml-sf-item>\n    <ml-sf-item>dos</ml-sf-item>\n    <ml-sf-item>tres</ml-sf-item>\n    <ml-sf-item>cuatro</ml-sf-item>\n    <ml-sf-item>cinco</ml-sf-item>\n    <ml-sf-item>seis</ml-sf-item>\n    <ml-sf-item>siete</ml-sf-item>\n    <ml-sf-item>ocho</ml-sf-item>\n  </ml-selectfield>\n  <div class=\"validationError\">\n    <ml-error [control]=\"selectfield1\" validator=\"required\">Required field</ml-error>\n    <ml-error [control]=\"selectfield1\" validator=\"minLength\">Min length: {{ minLength }}</ml-error>  \n  </div>\n  <ml-button-submit [disabled]=\"selectForm.invalid\" value=\"Submit to console\" aspect=\"raised\"></ml-button-submit>\n</form>\n<br>\n<div><debug-form [name]=\"selectForm\"></debug-form></div>\n\n" //template
+            template: "\n\n<style>\n  .validationError{color: red;padding-bottom: 20px;}\n</style>\n\n<h5>Select Field</h5>\n<span>Reactive Forms only</span>\n<form [formGroup]=\"selectForm\" (ngSubmit)=\"onSubmit()\" autocomplete=\"off\">\n  <ml-selectfield [formControl]=\"selectfield1\">\n    <ml-sf-item>one</ml-sf-item>\n    <ml-sf-item>two</ml-sf-item>\n    <ml-sf-item>three</ml-sf-item>\n    <ml-sf-item></ml-sf-item>\n    <ml-sf-item>four</ml-sf-item>\n    <ml-sf-item>five</ml-sf-item>\n    <ml-sf-item>six</ml-sf-item>\n    <ml-sf-item>seven</ml-sf-item>\n    <ml-sf-item>eight</ml-sf-item>\n  </ml-selectfield>\n  <ml-error [validateControl]=\"selectfield1\" validator=\"required\" class=\"validationError\">\n    Required field\n  </ml-error>\n  <ml-error [validateControl]=\"selectfield1\" validator=\"minLength\" class=\"validationError\">\n    Min length: {{ minLength }}\n  </ml-error>  \n  <br>\n  <ml-button-submit [disabled]=\"selectForm.invalid\" value=\"Submit to console\" aspect=\"raised\"></ml-button-submit>\n</form>\n<br>\n<div><debug-form [name]=\"selectForm\"></debug-form></div>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PageSelectfield);
