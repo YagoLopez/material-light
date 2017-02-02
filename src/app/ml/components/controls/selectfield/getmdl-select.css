@@ -11,6 +11,13 @@
 .getmdl-select .mdl-menu__container {
 	width: 100% !important;
 	overflow: hidden;
+
+  border: 1px solid #e3e2f1 !important;
+  left: 0 !important;
+  top: 47px !important;
+  box-shadow: 2px 5px 5px #888888 !important;
+
+
 }
 
 .getmdl-select .mdl-menu__container .mdl-menu .mdl-menu__item {

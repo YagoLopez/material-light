@@ -1,7 +1,4 @@
-//todo: arreglar id de input, ahora esta asi: id="sample1"
 //todo: ripple effect
-//todo: probar template forms
-//todo: deberia haber attr name en input
 
 import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation, forwardRef} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
@@ -19,16 +16,18 @@ providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlSelectf
 template:`
 
 <style>
-  .input-field{padding-left: 33px !important; cursor: pointer;}
-  .input-label{padding-left: 33px !important; cursor: pointer;}
+  .input-field{padding-left: 33px !important; cursor: pointer}
+  .input-label{padding-left: 33px !important; cursor: pointer}
+  .menu-btn{height: 27px !important}
 </style>
 
 <div class="mdl-textfield getmdl-select">
-  <input #inputField class="mdl-textfield__input input-field" type="text" id="sample1"
-         (click)="onClickSelect($event)" readonly>
-  <label #labelField class="mdl-textfield__label input-label"for="sample1">Choose one option...</label>
-  <ml-button [attr.id]="id" type="icon" #mdlButton><ml-icon>keyboard_arrow_down</ml-icon></ml-button>
-  <ul class="mdl-menu" [attr.for]="id" #menuList (click)="itemSelected($event)">
+  <input #input class="mdl-textfield__input input-field" type="text" (click)="clickInput()" readonly>
+  <label #label class="mdl-textfield__label input-label"[attr.for]="idInput">{{ labelText }}</label>
+  <ml-button #mdlButton [attr.id]="idBtn" type="icon" class="menu-btn">
+    <ml-icon>keyboard_arrow_down</ml-icon>
+  </ml-button>
+  <ul #menuList class="mdl-menu" [attr.for]="idBtn" (click)="itemSelected($event)">
     <ng-content select="ml-sf-item"></ng-content>
   </ul>         
 </div>
@@ -39,45 +38,42 @@ export class MlSelectfield implements ControlValueAccessor{
 
   @ViewChild('menuList') menuList: ElementRef;
   @ViewChild('mdlButton') mdlButton: MlButton;
-  @ViewChild('inputField') inputField: ElementRef;
-  @ViewChild('labelField') labelField: ElementRef;
+  @ViewChild('input') input: ElementRef;
+  @ViewChild('label') label: ElementRef;
   @Input() formControl: FormControl;
-  // @Input() position: string; //todo: eliminar
   @Input() ripple: string;
-  @Input() id: string; //todo: mejorar
-
+  @Input('label') labelText = 'Choose one option...';
+  idBtn: string;
   mdlTextfield: MdlTextfield;
   mdlMenu: MdlMenu;
 
-  constructor(private ren: Renderer){}
+  constructor( private ren: Renderer, private host: ElementRef ){}
 
   itemSelected($event){
-    this.labelField.nativeElement.textContent = '';
-    this.inputField.nativeElement.value = $event.target.textContent;
+    this.label.nativeElement.textContent = '';
+    this.input.nativeElement.value = $event.target.textContent;
     this.formControl.setValue($event.target.textContent);
     this.formControl.markAsTouched(true);
   }
-  onClickSelect($event){
-    this.mdlMenu.show();
+  clickInput(){
+    this.mdlMenu.toggle();
   }
   ngOnInit(){
-    if (!this.id){
-      this.id = ml.randomStr();
-    }
+    this.idBtn = ml.randomStr();
     if (this.ripple === ''){
       ml.setClass(this.mdlButton.host, 'mdl-js-ripple-effect', this.ren);
       ml.setClass(this.menuList, 'mdl-js-ripple-effect', this.ren);
-      // ml.setClass(this.inputField, 'mdl-js-ripple-effect', this.ren);
+      // ml.setClass(this.input, 'mdl-js-ripple-effect', this.ren);
     }
   }
   ngAfterViewInit(){
     this.mdlMenu = new MdlMenu(this.menuList.nativeElement);
-    this.mdlTextfield = new MdlTextfield(this.inputField.nativeElement);
+    this.mdlTextfield = new MdlTextfield(this.input.nativeElement);
   }
   writeValue(value: any): void {
     if(value){
-      this.labelField.nativeElement.textContent = '';
-      this.inputField.nativeElement.value = value;
+      this.label.nativeElement.textContent = '';
+      this.input.nativeElement.value = value;
     }
   }
   registerOnChange(fn: any): void {}

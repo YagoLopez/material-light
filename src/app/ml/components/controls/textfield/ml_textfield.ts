@@ -58,10 +58,7 @@ export class MlTextfield implements ControlValueAccessor{
   private onTouch = () => {};
   private onChange = (_: any) => {};
 
-  constructor(
-    private host: ElementRef,
-    private ren: Renderer){
-  }
+  constructor( private host: ElementRef, private ren: Renderer ){}
 
   checkValidity(){
     if (this.formControl && this.formControl.invalid){
