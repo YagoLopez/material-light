@@ -41,7 +41,6 @@ template: `
   
 </table>
 
-
 `//template
 })
 export class PageTable {}

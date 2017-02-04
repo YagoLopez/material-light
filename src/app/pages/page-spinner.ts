@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 
 @Component({
 template: `
@@ -6,7 +6,7 @@ template: `
 <h5>Spinner</h5>
 
 Multi-color:
-<ml-spinner active #spinner1></ml-spinner>
+<ml-spinner #spinner1 active></ml-spinner>
 
 <br><br>
 
@@ -16,9 +16,23 @@ Single color:
 <br><br>
 
 <p>SPINNER API:</p>
-<p><ml-button aspect="raised" (click)="spinner1.stop()">Disable spinner 1</ml-button></p>
-<p><ml-button aspect="raised" (click)="spinner1.start()">Enable spinner 1</ml-button></p>
+<p><ml-button #btn1 aspect="raised" (click)="clickBtn1()">Stop spinner 1</ml-button></p>
+<p><ml-button aspect="raised" (click)="clickBtn2()">Start spinner 1</ml-button></p>
         
 `//template
 })
-export class PageSpinner {}
+export class PageSpinner {
+
+  @ViewChild('btn1') btn1;
+  @ViewChild('spinner1') spinner1;
+
+  clickBtn1(){
+    this.spinner1.stop();
+    this.btn1.disable()
+  }
+
+  clickBtn2(){
+    this.spinner1.start();
+    this.btn1.enable();
+  }
+}

@@ -20,10 +20,7 @@ export class MlButton{
   @Input() aspect: string; // Admited values: [rised, colored, accent]* (* in lowercase)
   @Input() type: string;   // Admited values: [fav, minifab, icon]*
 
-  constructor(
-    public host: ElementRef,
-    private ren: Renderer){
-  }
+  constructor( public host: ElementRef, private ren: Renderer){}
 
   ngOnInit(){
    // Input "aspect" ---------------------------------------------------------------------------------------------------
@@ -54,4 +51,10 @@ export class MlButton{
     new MdlButton(this.host.nativeElement);
   }
 
+  disable(){
+    this.host.nativeElement.setAttribute('disabled', true);
+  }
+  enable(){
+    this.host.nativeElement.removeAttribute('disabled');
+  }
 }

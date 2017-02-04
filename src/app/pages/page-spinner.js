@@ -12,9 +12,25 @@ var core_1 = require('@angular/core');
 var PageSpinner = (function () {
     function PageSpinner() {
     }
+    PageSpinner.prototype.clickBtn1 = function () {
+        this.spinner1.stop();
+        this.btn1.disable();
+    };
+    PageSpinner.prototype.clickBtn2 = function () {
+        this.spinner1.start();
+        this.btn1.enable();
+    };
+    __decorate([
+        core_1.ViewChild('btn1'), 
+        __metadata('design:type', Object)
+    ], PageSpinner.prototype, "btn1", void 0);
+    __decorate([
+        core_1.ViewChild('spinner1'), 
+        __metadata('design:type', Object)
+    ], PageSpinner.prototype, "spinner1", void 0);
     PageSpinner = __decorate([
         core_1.Component({
-            template: "\n\n<h5>Spinner</h5>\n\nMulti-color:\n<ml-spinner active #spinner1></ml-spinner>\n\n<br><br>\n\nSingle color:\n<ml-spinner active single-color></ml-spinner>\n\n<br><br>\n\n<p>SPINNER API:</p>\n<p><ml-button aspect=\"raised\" (click)=\"spinner1.stop()\">Disable spinner 1</ml-button></p>\n<p><ml-button aspect=\"raised\" (click)=\"spinner1.start()\">Enable spinner 1</ml-button></p>\n        \n" //template
+            template: "\n\n<h5>Spinner</h5>\n\nMulti-color:\n<ml-spinner #spinner1 active></ml-spinner>\n\n<br><br>\n\nSingle color:\n<ml-spinner active single-color></ml-spinner>\n\n<br><br>\n\n<p>SPINNER API:</p>\n<p><ml-button #btn1 aspect=\"raised\" (click)=\"clickBtn1()\">Stop spinner 1</ml-button></p>\n<p><ml-button aspect=\"raised\" (click)=\"clickBtn2()\">Start spinner 1</ml-button></p>\n        \n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PageSpinner);

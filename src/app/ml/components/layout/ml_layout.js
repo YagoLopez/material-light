@@ -1,3 +1,4 @@
+//todo: mdl-layout__content hace que la cabecera se quede fija o no
 //todo: poder definir colores, temas, fuentes, etc
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
 "use strict";

@@ -22,8 +22,7 @@ import {PageSelectfield} from "./pages/page-selectfield";
 
 export const APP_ROUTES = [
 
-// {path: '',             component: PageButton, pathMatch: 'full' },
-{path: '',             component: PageSelectfield, pathMatch: 'full' },
+{path: '',             component: PageButton, pathMatch: 'full' },
 {path: 'snackbar',     component: PageSnackBar},
 {path: 'tooltip',      component: PageToolTip},
 {path: 'slider',       component: PageSlider},
@@ -41,9 +40,11 @@ export const APP_ROUTES = [
 {path: 'switch',       component: PageSwitch},
 {path: 'toggle',       component: PageToggle},
 {path: 'textfield',    component: PageTextfield},
+{path: 'selectfiled',  component: PageSelectfield },
 {path: 'menu',         component: PageMenu},
 {path: 'dialog',       component: PageDialog},
 {path: 'table',        component: PageTable},
-{path: 'selectfield',  component: PageSelectfield}
+{path: 'selectfield',  component: PageSelectfield},
+{path: '**',           component: PageButton}
 
 ];

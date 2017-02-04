@@ -21,8 +21,7 @@ var page_menu_1 = require("./pages/page-menu");
 var page_dialog_1 = require("./pages/page-dialog");
 var page_selectfield_1 = require("./pages/page-selectfield");
 exports.APP_ROUTES = [
-    // {path: '',             component: PageButton, pathMatch: 'full' },
-    { path: '', component: page_selectfield_1.PageSelectfield, pathMatch: 'full' },
+    { path: '', component: page_button_1.PageButton, pathMatch: 'full' },
     { path: 'snackbar', component: page_snackbar_1.PageSnackBar },
     { path: 'tooltip', component: page_tooltip_1.PageToolTip },
     { path: 'slider', component: page_slider_1.PageSlider },
@@ -40,9 +39,11 @@ exports.APP_ROUTES = [
     { path: 'switch', component: page_switch_1.PageSwitch },
     { path: 'toggle', component: page_toggle_1.PageToggle },
     { path: 'textfield', component: page_textfield_1.PageTextfield },
+    { path: 'selectfiled', component: page_selectfield_1.PageSelectfield },
     { path: 'menu', component: page_menu_1.PageMenu },
     { path: 'dialog', component: page_dialog_1.PageDialog },
     { path: 'table', component: page_table_1.PageTable },
-    { path: 'selectfield', component: page_selectfield_1.PageSelectfield }
+    { path: 'selectfield', component: page_selectfield_1.PageSelectfield },
+    { path: '**', component: page_button_1.PageButton }
 ];
 //# sourceMappingURL=app.routes.js.map

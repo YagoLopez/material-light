@@ -5,7 +5,10 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 template: `
 
 <style>
-.aligned{vertical-align: middle;}
+.ico-aligned{
+  vertical-align: middle;
+  margin-top: -4px;
+}
 </style>
 
 <h5>Text Controls</h5>
@@ -15,7 +18,7 @@ template: `
 
   <p>
     <mdl-textfield [formControl]="textfield1" floating>
-      <mdl-textfield-label><ml-icon class="aligned">email</ml-icon>Label 1 (floating + icon)</mdl-textfield-label>
+      <mdl-textfield-label><ml-icon class="ico-aligned">email</ml-icon>Label 1 (floating + icon)</mdl-textfield-label>
       <ml-error [validateControl]="textfield1" validator="required">Required field</ml-error>
       <ml-error [validateControl]="textfield1" validator="minLength">Minimum length is 2</ml-error>
       <ml-error [validateControl]="textfield1" validator="maxLength">Maximum length is 4</ml-error>

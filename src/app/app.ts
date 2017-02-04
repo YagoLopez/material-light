@@ -1,10 +1,15 @@
-//todo: cambiar nombre de app a ml-app y en ficheros relacionados
 import {Component} from '@angular/core';
 
 @Component({
 selector: 'ml-demo-app',
 // changeDetection: ChangeDetectionStrategy.OnPush,
 template: `
+
+<style>
+  a[nav-item]{padding-top: 5px !important; padding-bottom: 5px !important}
+  .bg-grey{background: lightgrey}
+  .content-pad{padding: 10px}
+</style>
 
 <ml-layout>
 
@@ -21,7 +26,7 @@ template: `
         <a nav-item href="">Link</a>
       </ml-nav>
     </ml-header-row>
-    <ml-header-tabs>
+    <ml-header-tabs *ngIf="headerTabs">
       <a tab-bar href="#tab1" active>Tab 1</a>
       <a tab-bar href="#tab2">Tab 2</a>
       <a tab-bar href="#tab3">Tab 3</a>
@@ -33,16 +38,8 @@ template: `
 
   <!-- Drawer ------------------------------------------------------------------------------------------------------ -->
   
-<!--
-  <style>
-    a[nav-item]{
-      padding: 0 !important;
-    }
-  </style>
--->
-
   <ml-drawer>
-    <ml-title>Material Light</ml-title>
+    <ml-title class="bg-grey">Material Light</ml-title>
     <ml-nav>
       <a nav-item routerLink="/button">Button</a>
       <a nav-item routerLink="/grid">Grid</a>
@@ -65,18 +62,19 @@ template: `
       <a nav-item routerLink="/slider">Slider</a>
       <a nav-item routerLink="/dialog">Dialog</a>
       <a nav-item routerLink="/table">Table</a>
+      <a nav-item href="#" (click)="toggleHeaderTabs()">Header Tabs</a>
     </ml-nav>
   </ml-drawer>
   
   <!-- Content ----------------------------------------------------------------------------------------------------- -->
   
-  <ml-content style="padding:10px"> 
+  <ml-content class="content-pad"> 
     <ml-tab-content id="tab1" active><router-outlet></router-outlet></ml-tab-content>
-    <ml-tab-content id="tab2"><ml-title>Tab 2</ml-title></ml-tab-content>
-    <ml-tab-content id="tab3"><ml-title>Tab 3</ml-title></ml-tab-content>
-    <ml-tab-content id="tab4"><ml-title>Tab 4</ml-title></ml-tab-content>
-    <ml-tab-content id="tab5"><ml-title>Tab 5</ml-title></ml-tab-content>
-    <ml-tab-content id="tab6"><ml-title>Tab 6</ml-title></ml-tab-content>
+    <ml-tab-content id="tab2"><ml-title>Empty tab 2. Back to tab 1</ml-title></ml-tab-content>
+    <ml-tab-content id="tab3"><ml-title>Empty tab 3. Back to tab 1</ml-title></ml-tab-content>
+    <ml-tab-content id="tab4"><ml-title>Empty tab 4. Back to tab 1</ml-title></ml-tab-content>
+    <ml-tab-content id="tab5"><ml-title>Empty tab 5. Back to tab 1</ml-title></ml-tab-content>
+    <ml-tab-content id="tab6"><ml-title>Empty tab 6. Back to tab 1</ml-title></ml-tab-content>
   </ml-content>
     
   <!-- End --------------------------------------------------------------------------------------------------------- -->
@@ -86,4 +84,27 @@ template: `
 `//template
 
 })
-export class App {}
+export class App {
+
+  /* This code is ony to show/hide header tabs */
+
+  private headerTabs: boolean = false;
+
+  getUrlParameter(name: string): null | string {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  };
+
+  toggleHeaderTabs(){
+    this.headerTabs = !this.headerTabs;
+    // console.log('this.headertabs', headertabs);
+    window.location.href = '?headertabs=' + this.headerTabs;
+  }
+
+  ngOnInit(){
+    const temp: string | any = this.getUrlParameter('headertabs');
+    temp.toLowerCase() === 'true' ? this.headerTabs = true : this.headerTabs = false;
+  }
+}

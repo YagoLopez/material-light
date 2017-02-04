@@ -44,6 +44,12 @@ var MlButton = (function () {
         // End --------------------------------------------------------------------------------------------------------------
         new mdl_button_1.default(this.host.nativeElement);
     };
+    MlButton.prototype.disable = function () {
+        this.host.nativeElement.setAttribute('disabled', true);
+    };
+    MlButton.prototype.enable = function () {
+        this.host.nativeElement.removeAttribute('disabled');
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
