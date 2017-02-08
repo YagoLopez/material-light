@@ -1,5 +1,6 @@
 // todo: menu items
 // todo: revisar si usar o no componentHandler
+// todo: revisar encapsulacion.none. los componentes debrian estar encapsulados
 
 import { Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation } from "@angular/core";
 import {MlButton} from "../controls/button/ml_button";
@@ -9,7 +10,7 @@ import * as ml from "../../lib/ml_lib";
 @Component({
 selector: 'ml-menu',
 styleUrls: ['./ml_menu.css'],
-encapsulation: ViewEncapsulation.None, 
+encapsulation: ViewEncapsulation.None,
 moduleId: module.id.toString(),
 template:`
 

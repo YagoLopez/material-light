@@ -10,8 +10,8 @@ template: `
 
 <form #formSwitchTemplate="ngForm">
 
-  <ml-switch id="switch1" name="option1" [ngModel]="model_1">Option 1 (Enabled)</ml-switch>
-  <ml-switch id="switch2" name="option2" [ngModel]="model_2">Option 2 (Undefined)</ml-switch>
+  <ml-switch id="switch1" name="option1" [ngModel]="model_1">Option 1 (Enabled on load)</ml-switch>
+  <ml-switch id="switch2" name="option2" [ngModel]="model_2">Option 2 (Undefined on load)</ml-switch>
   <ml-switch id="switch3" name="option3" disabled="true">Option 3 (Disabled)</ml-switch>
 
 </form>
@@ -24,8 +24,8 @@ template: `
 
 <form [formGroup]="formSwitchReactive">
 
-  <ml-switch id="switch4" formControlName="option4">Option 4 (Enabled)</ml-switch>
-  <ml-switch id="switch5" formControlName="option5">Option 5 (Undefined)</ml-switch>
+  <ml-switch id="switch4" formControlName="option4">Option 4 (Enabled on load)</ml-switch>
+  <ml-switch id="switch5" formControlName="option5">Option 5 (Undefined on load)</ml-switch>
   <ml-switch id="switch6" formControlName="option6" disabled="true">Option 6 (Disabled)</ml-switch>
 
 </form>

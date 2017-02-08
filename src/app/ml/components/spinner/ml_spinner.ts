@@ -4,7 +4,7 @@
 //todo: [attributo]="valor". Si no hay valor puede que haya problemas
 //todo: parece que sobra la clase mdl-js-*
 
-import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angular/core";
+import {Component, ElementRef, Input, Renderer, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
 import MdlSpinner from "./mdl_spinner";
 import * as ml from "../../lib/ml_lib";
 
@@ -12,6 +12,7 @@ import * as ml from "../../lib/ml_lib";
 selector: 'ml-spinner',
 styleUrls: ['./ml_spinner.css'],
 encapsulation: ViewEncapsulation.None,
+changeDetection: ChangeDetectionStrategy.OnPush,
 moduleId: module.id.toString(),
 host: {class: 'mdl-spinner'},
 template: ''

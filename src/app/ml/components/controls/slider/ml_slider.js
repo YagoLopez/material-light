@@ -16,11 +16,8 @@ var MlSlider = (function () {
         this.hostElement = hostElement;
         this.ren = ren;
     }
-    MlSlider.prototype.change = function (value) {
-        this.mdlSlider.change(value);
-    };
+    MlSlider.prototype.change = function (value) { this.mdlSlider.change(value); };
     MlSlider.prototype.ngOnInit = function () {
-        ml.setClass(this.hostElement, 'mdl-slider', this.ren);
         ml.setAttribute(this.hostElement, 'type', 'range', this.ren);
         this.mdlSlider = new mdl_slider_1.default(this.hostElement.nativeElement);
     };
@@ -28,9 +25,11 @@ var MlSlider = (function () {
         core_1.Component({
             selector: 'input.[ml-slider]',
             styleUrls: ['./ml_slider.css'],
+            host: { class: 'mdl-slider' },
             moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
-            template: '' // no inner html
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            template: '' // no template
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlSlider);

@@ -12,15 +12,23 @@ var core_1 = require('@angular/core');
 var forms_1 = require("@angular/forms");
 var PageRadio = (function () {
     function PageRadio() {
-        // model for template driven form (form1)
         this.model_1 = 'option1';
-        this.form2 = new forms_1.FormGroup({
-            optionsGroup2: new forms_1.FormControl('option3')
-        });
+        this.options = new forms_1.FormControl('option3');
     }
+    PageRadio.prototype.ngOnInit = function () {
+        this.form2 = new forms_1.FormGroup({
+            options: this.options
+        });
+    };
+    PageRadio.prototype.onSubmit1 = function (form) {
+        console.log(form.value);
+    };
+    PageRadio.prototype.onSubmit2 = function () {
+        console.log(this.form2.value);
+    };
     PageRadio = __decorate([
         core_1.Component({
-            template: "\n\n<h5>Radio</h5>\n\n<h6>Template forms:</h6>\n<form #form1=\"ngForm\">\n  <ml-radio id=\"radio1\" name=\"optionsGroup1\" [ngModel]=\"model_1\" value=\"option1\">Option 1</ml-radio>\n  <ml-radio id=\"radio2\" name=\"optionsGroup1\" [ngModel]=\"model_1\" value=\"option2\">Option 2</ml-radio>\n</form>\n<br>\n<debug-form [name]=\"form1\"></debug-form>\n\n<hr>\n\n<h6>Reactive forms:</h6>\n<form [formGroup]=\"form2\">\n  <ml-radio id=\"radio3\" formControlName=\"optionsGroup2\" value=\"option3\">Option 3</ml-radio>\n  <ml-radio id=\"radio4\" formControlName=\"optionsGroup2\" value=\"option4\">Option 4</ml-radio>\n</form>\n<br>\n<debug-form [name]=\"form2\"></debug-form>\n\n\n" //template
+            template: "\n\n<h5>Radio Button</h5>\n\n<h6>(Only for reactive forms)</h6>\n<form [formGroup]=\"form2\" (ngSubmit)=\"onSubmit2()\">\n  <p><ml-radio id=\"radio3\" formControlName=\"options\" value=\"option3\" ripple>Option 3 (ripple)</ml-radio></p>\n  <p><ml-radio id=\"radio4\" formControlName=\"options\" value=\"option4\">Option 4 (no ripple)</ml-radio></p>\n  <p><ml-radio id=\"radio5\" formControlName=\"options\" value=\"option5\" disabled>Option 5 (disabled)</ml-radio></p>\n  <p><ml-button-submit aspect=\"raised\" value=\"Submit to console\"></ml-button-submit></p>\n</form>\n<br>\n<debug-form [name]=\"form2\"></debug-form>\n\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PageRadio);

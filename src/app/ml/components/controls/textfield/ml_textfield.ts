@@ -14,7 +14,10 @@
 //todo: para posteriores versiones tratar de evitar el js de los ficheros *.lib.js
 //es posible que se puedan sustituir por logica de templates de component
 
-import {Component, ViewEncapsulation, ElementRef, Renderer, Input, forwardRef} from "@angular/core";
+//todo: intentar simplificar tomando como referencia MlSelectfield, aunque igual no funcionan template forms
+
+import {Component, ViewEncapsulation, ElementRef, Renderer, Input, forwardRef,
+  ChangeDetectionStrategy} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import MdlTextfield from "./mdl_textfield";
 import * as ml from "../../../lib/ml_lib";
@@ -24,6 +27,7 @@ selector: 'mdl-textfield',
 moduleId: module.id.toString(),
 styleUrls: ['./ml_textfield.css'],
 encapsulation: ViewEncapsulation.None,
+changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlTextfield), multi: true}],
 template: `
 

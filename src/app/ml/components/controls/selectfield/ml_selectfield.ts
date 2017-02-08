@@ -1,16 +1,22 @@
 //todo: ripple effect
+//todo: (general) nombrar todos los componentes terminando en "C" para distinguirlos de otros ficheros
 
-import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation, forwardRef} from "@angular/core";
+// NOTE: this component "MlSelectfield" is based on "MlButton", "MdlMenu" and "MdlTextfield"
+// For this reason uses files from these components
+
+import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation, forwardRef,
+ ChangeDetectionStrategy} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import {MlButton} from "../../controls/button/ml_button";
-import MdlMenu from "./mdl_menu";
-import MdlTextfield from "./mdl_textfield";
+import MdlMenu from "../../menu/mdl_menu";
+import MdlTextfield from "../textfield/mdl_textfield";
 import * as ml from "../../../lib/ml_lib";
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-selectfield',
-styleUrls: ['./ml_menu.css', './ml_textfield.css', './getmdl-select.css'],
+styleUrls: ['../../menu/ml_menu.css', '../textfield/ml_textfield.css', './ml_selectfield.css'],
 encapsulation: ViewEncapsulation.None,
+changeDetection: ChangeDetectionStrategy.OnPush,
 moduleId: module.id.toString(),
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlSelectfield), multi: true}],
 template:`
@@ -27,7 +33,7 @@ template:`
   <ml-button #mdlButton [attr.id]="idBtn" type="icon" class="menu-btn">
     <ml-icon>keyboard_arrow_down</ml-icon>
   </ml-button>
-  <ul #menuList class="mdl-menu" [attr.for]="idBtn" (click)="itemSelected($event)">
+  <ul #menuList class="getmdl-select__fullwidth mdl-menu" [attr.for]="idBtn" (click)="itemSelected($event)">
     <ng-content select="ml-sf-item"></ng-content>
   </ul>         
 </div>
@@ -82,6 +88,7 @@ export class MlSelectfield implements ControlValueAccessor{
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-sf-item',
+changeDetection: ChangeDetectionStrategy.OnPush,
 template: '<li class="mdl-menu__item" #selectfieldItem><ng-content></ng-content></li>'
 })
 export class MlSelectfieldItem {

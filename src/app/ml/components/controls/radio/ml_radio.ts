@@ -1,7 +1,10 @@
-import {Component, ElementRef, ViewChild, Input, forwardRef, ViewEncapsulation} from "@angular/core";
-import MdlRadio from "./mdl_radio";
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
+//todo: enable/disable
 
+import {Component, ElementRef, ViewChild, Input, forwardRef, ViewEncapsulation} from "@angular/core";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
+import * as ml from "../../../lib/ml_lib";
+
+// ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-radio',
 moduleId: module.id.toString(),
@@ -10,13 +13,20 @@ encapsulation: ViewEncapsulation.None,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlRadio), multi: true}],
 template:`
 
-<label [attr.for]="id+'mdl'" class="mdl-radio" [ngClass]="{'is-checked': isChecked()}" #label>
-  <input type="radio" class="mdl-radio__button" 
+<label #label [attr.for]="id+'mdl'" class="mdl-radio is-upgraded" [ngClass]="{'is-checked': isChecked()}" [attr.ripple]>
+  <input #input type="radio" class="mdl-radio__button"
           [attr.id]="id+'mdl'" 
-          [name]="name" 
-          [value]="value" 
-          [(ngModel)]="model">
+          [attr.disabled] 
+          [name]="formControlName"
+          [value]="value"
+          [checked]="checked"
+          (click)="onClick($event)">
   <span class="mdl-radio__label"><ng-content></ng-content></span>
+  <span class="mdl-radio__outer-circle"></span> 
+  <span class="mdl-radio__inner-circle"></span>
+  <span class="mdl-radio__ripple-container mdl-ripple--center">
+    <span class="mdl-ripple"></span>
+  </span>  
 </label>
 
 `//template
@@ -24,48 +34,35 @@ template:`
 export class MlRadio implements ControlValueAccessor {
 
   @ViewChild('label') label: ElementRef;
-  @Input() id: string;
+  @ViewChild('input') input: ElementRef;
+  @Input() id: string = this.id || ml.randomStr();
   @Input() name: string;
   @Input() value: string;
   @Input() disabled: string;
-
-  private mdlRadio: MdlRadio;
-  private _model: any;
-
-  isChecked(): boolean{
-    return this.mdlRadio.btnElement_.checked;
-  }
+  @Input() formControlName: string;
+  checked: boolean;
 
   ngOnInit(){
-    this.mdlRadio = new MdlRadio(this.label.nativeElement);
-    if (this.disabled && (this.disabled.toLowerCase() === 'true'))
-      this.mdlRadio.disable();
-  }
-
-  private onTouched = () => {};
-  private onChanged = (_: any) => {};
-
-  get model() {
-    return this._model;
-  }
-  
-  set model(v: any) {
-    if (v !== this._model){
-      this._model = v;
+    if (this.disabled === ''){
+      this.input.nativeElement.disabled= 'true';
+      this.label.nativeElement.classList.add('is-disabled');
     }
-    this.onChanged(v);
   }
+
+  onClick($event) {this.onChanged($event.target.value)}
+
+  isChecked(): boolean {return this.input.nativeElement.checked}
 
   writeValue(value: any): void {
-    this._model = value;
+    if (value === this.value){
+      this.value = value;
+      this.checked = true;
+      this.input.nativeElement.checked = true;
+    }
   }
-
-  registerOnChange(fn: any): void {
-    this.onChanged = fn;
-  }
-
-  registerOnTouched(fn: any): void {
-    this.onTouched = fn;
-  }
+  private onTouched = () => {};
+  private onChanged = (_: any) => {};
+  registerOnChange(fn: any): void {this.onChanged = fn}
+  registerOnTouched(fn: any): void {this.onTouched = fn}
 
 }

@@ -1,4 +1,5 @@
-import {Component, ViewEncapsulation, ElementRef, Renderer, Input, forwardRef} from "@angular/core";
+import {Component, ViewEncapsulation, ElementRef, Renderer, Input, forwardRef,
+  ChangeDetectionStrategy} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import MdlTextfield from "./mdl_textfield";
 import * as ml from "../../../lib/ml_lib";
@@ -8,6 +9,7 @@ selector: 'mdl-textfield-area',
 styleUrls: ['./ml_textfield.css'],
 moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
+changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlTextfieldArea), multi: true}],
 template: `
 

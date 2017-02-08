@@ -18,6 +18,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 //abstracto y heredando de él
 //todo: para posteriores versiones tratar de evitar el js de los ficheros *.lib.js
 //es posible que se puedan sustituir por logica de templates de component
+//todo: intentar simplificar tomando como referencia MlSelectfield, aunque igual no funcionan template forms
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var mdl_textfield_1 = require("./mdl_textfield");
@@ -104,6 +105,7 @@ var MlTextfield = (function () {
             moduleId: module.id.toString(),
             styleUrls: ['./ml_textfield.css'],
             encapsulation: core_1.ViewEncapsulation.None,
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlTextfield; }), multi: true }],
             template: "\n\n<input type=\"text\" class=\"mdl-textfield__input\" \n  [attr.id]=\"id\" \n  [name]=\"name\"\n  [(ngModel)]=\"model\" \n  (focus)=\"onFocus()\" \n  (keyup)=\"onKeyup()\">\n<label class=\"mdl-textfield__label\" [attr.for]=\"id\">\n  <ng-content select=\"mdl-textfield-label\"></ng-content>\n</label>\n\n<div *ngIf=\"showError\" class=\"mdl-textfield__error\">\n  <ng-content select=\"ml-error\"></ng-content>\n</div>\n\n" //template
         }), 

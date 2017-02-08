@@ -1,4 +1,5 @@
 //todo: ripple effect
+//todo: (general) nombrar todos los componentes terminando en "C" para distinguirlos de otros ficheros
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,11 +10,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// NOTE: this component "MlSelectfield" is based on "MlButton", "MdlMenu" and "MdlTextfield"
+// For this reason uses files from these components
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var ml_button_1 = require("../../controls/button/ml_button");
-var mdl_menu_1 = require("./mdl_menu");
-var mdl_textfield_1 = require("./mdl_textfield");
+var mdl_menu_1 = require("../../menu/mdl_menu");
+var mdl_textfield_1 = require("../textfield/mdl_textfield");
 var ml = require("../../../lib/ml_lib");
 // ---------------------------------------------------------------------------------------------------------------------
 var MlSelectfield = (function () {
@@ -81,11 +84,12 @@ var MlSelectfield = (function () {
     MlSelectfield = __decorate([
         core_1.Component({
             selector: 'ml-selectfield',
-            styleUrls: ['./ml_menu.css', './ml_textfield.css', './getmdl-select.css'],
+            styleUrls: ['../../menu/ml_menu.css', '../textfield/ml_textfield.css', './ml_selectfield.css'],
             encapsulation: core_1.ViewEncapsulation.None,
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             moduleId: module.id.toString(),
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlSelectfield; }), multi: true }],
-            template: "\n\n<style>\n  .input-field{padding-left: 33px !important; cursor: pointer}\n  .input-label{padding-left: 33px !important; cursor: pointer}\n  .menu-btn{height: 27px !important}\n</style>\n\n<div class=\"mdl-textfield getmdl-select\">\n  <input #input class=\"mdl-textfield__input input-field\" type=\"text\" (click)=\"clickInput()\" readonly>\n  <label #label class=\"mdl-textfield__label input-label\"[attr.for]=\"idInput\">{{ labelText }}</label>\n  <ml-button #mdlButton [attr.id]=\"idBtn\" type=\"icon\" class=\"menu-btn\">\n    <ml-icon>keyboard_arrow_down</ml-icon>\n  </ml-button>\n  <ul #menuList class=\"mdl-menu\" [attr.for]=\"idBtn\" (click)=\"itemSelected($event)\">\n    <ng-content select=\"ml-sf-item\"></ng-content>\n  </ul>         \n</div>\n\n" //template
+            template: "\n\n<style>\n  .input-field{padding-left: 33px !important; cursor: pointer}\n  .input-label{padding-left: 33px !important; cursor: pointer}\n  .menu-btn{height: 27px !important}\n</style>\n\n<div class=\"mdl-textfield getmdl-select\">\n  <input #input class=\"mdl-textfield__input input-field\" type=\"text\" (click)=\"clickInput()\" readonly>\n  <label #label class=\"mdl-textfield__label input-label\"[attr.for]=\"idInput\">{{ labelText }}</label>\n  <ml-button #mdlButton [attr.id]=\"idBtn\" type=\"icon\" class=\"menu-btn\">\n    <ml-icon>keyboard_arrow_down</ml-icon>\n  </ml-button>\n  <ul #menuList class=\"getmdl-select__fullwidth mdl-menu\" [attr.for]=\"idBtn\" (click)=\"itemSelected($event)\">\n    <ng-content select=\"ml-sf-item\"></ng-content>\n  </ul>         \n</div>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.Renderer, core_1.ElementRef])
     ], MlSelectfield);
@@ -120,6 +124,7 @@ var MlSelectfieldItem = (function () {
     MlSelectfieldItem = __decorate([
         core_1.Component({
             selector: 'ml-sf-item',
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             template: '<li class="mdl-menu__item" #selectfieldItem><ng-content></ng-content></li>'
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])

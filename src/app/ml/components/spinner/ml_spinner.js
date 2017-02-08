@@ -41,6 +41,7 @@ var MlSpinner = (function () {
             selector: 'ml-spinner',
             styleUrls: ['./ml_spinner.css'],
             encapsulation: core_1.ViewEncapsulation.None,
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             moduleId: module.id.toString(),
             host: { class: 'mdl-spinner' },
             template: ''

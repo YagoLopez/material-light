@@ -1,3 +1,4 @@
+//todo: toggles no funionan bien en edge
 //todo: en vez de renderer usar @HostBinding(class.classname) para poner clases en el host de una directiva
 
 import {Component, ViewChild, ElementRef, Input, ViewEncapsulation, forwardRef} from '@angular/core';
@@ -12,7 +13,7 @@ encapsulation: ViewEncapsulation.None,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlToggle), multi: true}],
 template: `
 
-<label [attr.for]="id+'mdl'" class="mdl-icon-toggle" [ngClass]="{'is-checked': isChecked()}" #label>
+<label #label [attr.for]="id+'mdl'" class="mdl-icon-toggle" [ngClass]="{'is-checked': isChecked()}">
   <input type="checkbox"  class="mdl-icon-toggle__input" 
          [attr.id]="id+'mdl'"
          [(ngModel)]="model" 

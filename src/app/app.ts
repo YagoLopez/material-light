@@ -1,12 +1,12 @@
-import {Component} from '@angular/core';
+import {Component, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
 selector: 'ml-demo-app',
-// changeDetection: ChangeDetectionStrategy.OnPush,
+changeDetection: ChangeDetectionStrategy.OnPush,
 template: `
 
 <style>
-  a[nav-item]{padding-top: 5px !important; padding-bottom: 5px !important}
+  a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}
   .bg-grey{background: lightgrey}
   .content-pad{padding: 10px}
 </style>

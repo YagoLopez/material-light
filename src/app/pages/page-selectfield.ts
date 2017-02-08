@@ -18,10 +18,10 @@ template: `
     <ml-sf-item>three</ml-sf-item>
     <ml-sf-item></ml-sf-item>
     <ml-sf-item>four</ml-sf-item>
-    <ml-sf-item>five</ml-sf-item>
+    <ml-sf-item divider>with divider</ml-sf-item>
     <ml-sf-item>six</ml-sf-item>
+    <ml-sf-item disabled>disabled</ml-sf-item>
     <ml-sf-item>seven</ml-sf-item>
-    <ml-sf-item>eight</ml-sf-item>
   </ml-selectfield>
   <ml-error [validateControl]="selectfield1" validator="required" class="validationError">
     Required field

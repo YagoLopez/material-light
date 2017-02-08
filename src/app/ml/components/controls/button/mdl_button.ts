@@ -1,11 +1,8 @@
-//todo: borrar comentarios
 import {ElementRef} from "@angular/core";
 import MdlElement from "../../element/mdl_element";
 
 export default class MdlButton extends MdlElement{
   blurHandler_: Function;
-  // disable: Function;
-  // enable: Function;
   constructor(el: ElementRef){
     super(el);
   }
@@ -15,21 +12,11 @@ MdlButton.prototype.CssClasses_ = {
     RIPPLE_CONTAINER: 'mdl-button__ripple-container',
     RIPPLE: 'mdl-ripple'
 };
-/**
-   * Handle blur of element.
-   * @param {Event} event The event that fired.
-   */
 MdlButton.prototype.blurHandler_ = function (event: any) {
     if (event) {
         this.element_.blur();
     }
 };
-// MdlButton.prototype.disable = function () {
-//     this.element_.disabled = true;
-// };
-// MdlButton.prototype.enable = function () {
-//     this.element_.disabled = false;
-// };
 MdlButton.prototype.init = function () {
     if (this.element_) {
         if (this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT)) {
