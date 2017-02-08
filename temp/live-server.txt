@@ -1,0 +1,5 @@
+CONFIGURACION Live Server:
+==========================
+
+file = C:\Users\Yago\AppData\Roaming\npm\node_modules\live-server\live-server.js
+parameters = --ignore='/node_modules/,/dist/,/backup/,/e2e/' --ignorePattern=.*\.ts --open=/src/index-systemjs.html --watch=src

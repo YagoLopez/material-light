@@ -1,5 +1,3 @@
-//todo: enable/disable
-
 import {Component, ElementRef, ViewChild, Input, forwardRef, ViewEncapsulation} from "@angular/core";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import * as ml from "../../../lib/ml_lib";

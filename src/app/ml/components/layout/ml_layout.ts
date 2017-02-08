@@ -9,7 +9,7 @@ import * as ml from "../../lib/ml_lib";
 @Component({
 selector: 'ml-layout',
 moduleId: module.id.toString(),
-styleUrls: ['./ml_layout.css', './ml_ripple.css', './ml_icon.css'],
+styleUrls: ['./ml_layout.css', './ml_ripple.css', '../icon/ml_icon.css'],
 host: {class: 'mdl-layout'},
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
