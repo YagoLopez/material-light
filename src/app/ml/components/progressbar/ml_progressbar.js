@@ -15,22 +15,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var mdl_progress_1 = require("./mdl_progress");
 var ml = require("../../lib/ml_lib");
-var MlProgressBar = (function () {
-    function MlProgressBar(host, ren) {
+var MlProgressbar = (function () {
+    function MlProgressbar(host, ren) {
         this.host = host;
         this.ren = ren;
         this.progressValue = '0';
         this.mdlProgress = new mdl_progress_1.default(this.host.nativeElement);
     }
-    MlProgressBar.prototype.setProgress = function (value) {
+    MlProgressbar.prototype.setProgress = function (value) {
         this.progressValue = value;
         this.mdlProgress.setProgress(value);
     };
-    MlProgressBar.prototype.setBuffer = function (value) {
+    MlProgressbar.prototype.setBuffer = function (value) {
         this.progressValue = value;
         this.mdlProgress.setBuffer(value);
     };
-    MlProgressBar.prototype.ngOnInit = function () {
+    MlProgressbar.prototype.ngOnInit = function () {
         if (this.progressValue)
             this.setProgress(this.progressValue);
         if (this.bufferValue)
@@ -41,28 +41,28 @@ var MlProgressBar = (function () {
     __decorate([
         core_1.Input('progress'), 
         __metadata('design:type', String)
-    ], MlProgressBar.prototype, "progressValue", void 0);
+    ], MlProgressbar.prototype, "progressValue", void 0);
     __decorate([
         core_1.Input('buffer'), 
         __metadata('design:type', String)
-    ], MlProgressBar.prototype, "bufferValue", void 0);
+    ], MlProgressbar.prototype, "bufferValue", void 0);
     __decorate([
         // BUFFER must be greater than PROGRESS to be visible
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlProgressBar.prototype, "indeterminate", void 0);
-    MlProgressBar = __decorate([
+    ], MlProgressbar.prototype, "indeterminate", void 0);
+    MlProgressbar = __decorate([
         core_1.Component({
             selector: 'ml-progressbar',
             styleUrls: ['./ml_progressbar.css'],
-            moduleId: module.id.toString(),
+            // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             host: { class: 'mdl-progress' },
             template: ''
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
-    ], MlProgressBar);
-    return MlProgressBar;
+    ], MlProgressbar);
+    return MlProgressbar;
 }());
-exports.MlProgressBar = MlProgressBar;
+exports.MlProgressbar = MlProgressbar;
 //# sourceMappingURL=ml_progressbar.js.map

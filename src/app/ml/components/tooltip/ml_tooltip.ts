@@ -7,11 +7,11 @@ import * as ml from "../../lib/ml_lib";
 
 @Component({
 selector: 'ml-tooltip',
-moduleId: module.id.toString(),
+// moduleId: module.id.toString(),
 styleUrls: ['./ml_tooltip.css'],
 template: '<span [attr.for]="for" class="mdl-tooltip" #spanTooltip><ng-content></ng-content></span>'
 })
-export class MlToolTip {
+export class MlTooltip {
 
   @ViewChild('spanTooltip') spanTooltip: ElementRef;
   @Input() for: string;

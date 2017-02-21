@@ -11,14 +11,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
-//    "outDir": "../ts-outdir",
     "typeRoots": ["../node_modules/@types"]
   },
-  "exclude": [
-      "../node_modules",
-      "../e2e",
-      "../dist",
-      "../src/assets",
-      "../backup"
-  ]
+  "include": ["**/*.ts"],
+  "exclude": ["/assets"]
 }

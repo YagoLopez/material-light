@@ -13,11 +13,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var mdl_tooltip_1 = require("./mdl_tooltip");
 var ml = require("../../lib/ml_lib");
-var MlToolTip = (function () {
-    function MlToolTip(ren) {
+var MlTooltip = (function () {
+    function MlTooltip(ren) {
         this.ren = ren;
     }
-    MlToolTip.prototype.ngAfterViewInit = function () {
+    MlTooltip.prototype.ngAfterViewInit = function () {
         if (this.large === '')
             ml.setClass(this.spanTooltip, 'mdl-tooltip--large', this.ren);
         if (this.position === 'right')
@@ -33,30 +33,30 @@ var MlToolTip = (function () {
     __decorate([
         core_1.ViewChild('spanTooltip'), 
         __metadata('design:type', core_1.ElementRef)
-    ], MlToolTip.prototype, "spanTooltip", void 0);
+    ], MlTooltip.prototype, "spanTooltip", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlToolTip.prototype, "for", void 0);
+    ], MlTooltip.prototype, "for", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlToolTip.prototype, "position", void 0);
+    ], MlTooltip.prototype, "position", void 0);
     __decorate([
         // Position values: [right, left, top, bottom]
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlToolTip.prototype, "large", void 0);
-    MlToolTip = __decorate([
+    ], MlTooltip.prototype, "large", void 0);
+    MlTooltip = __decorate([
         core_1.Component({
             selector: 'ml-tooltip',
-            moduleId: module.id.toString(),
+            // moduleId: module.id.toString(),
             styleUrls: ['./ml_tooltip.css'],
             template: '<span [attr.for]="for" class="mdl-tooltip" #spanTooltip><ng-content></ng-content></span>'
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])
-    ], MlToolTip);
-    return MlToolTip;
+    ], MlTooltip);
+    return MlTooltip;
 }());
-exports.MlToolTip = MlToolTip;
+exports.MlTooltip = MlTooltip;
 //# sourceMappingURL=ml_tooltip.js.map

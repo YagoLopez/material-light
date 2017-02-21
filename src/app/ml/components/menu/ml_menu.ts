@@ -3,7 +3,7 @@
 // todo: revisar encapsulacion.none. los componentes debrian estar encapsulados
 
 import { Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation } from "@angular/core";
-import {MlButton} from "../controls/button/ml_button";
+import {MlButton} from "../controls/button/mlButton";
 import MdlMenu from "./mdl_menu";
 import * as ml from "../../lib/ml_lib";
 
@@ -11,14 +11,12 @@ import * as ml from "../../lib/ml_lib";
 selector: 'ml-menu',
 styleUrls: ['./ml_menu.css'],
 encapsulation: ViewEncapsulation.None,
-moduleId: module.id.toString(),
+// moduleId: module.id.toString(),
 template:`
 
 <ml-button [attr.id]="id" type="icon" #mdlButton><ml-icon>{{icon}}</ml-icon></ml-button>
 
-<ul class="mdl-menu" [attr.for]="id" #menuList>
-  <ng-content select="ml-menu-item"></ng-content>
-</ul>         
+<ul class="mdl-menu" [attr.for]="id" #menuList><ng-content select="ml-menu-item"></ng-content></ul>         
 
 `//template
 })

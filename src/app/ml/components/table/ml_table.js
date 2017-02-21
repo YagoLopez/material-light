@@ -48,7 +48,7 @@ var MlTable = (function () {
             selector: 'table.[ml-table]',
             styleUrls: ['./ml_table.css'],
             encapsulation: core_1.ViewEncapsulation.None,
-            moduleId: module.id.toString(),
+            // moduleId: module.id.toString(),
             host: { class: 'mdl-data-table' },
             template: '<ng-content></ng-content>'
         }), 

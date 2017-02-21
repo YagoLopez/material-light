@@ -1,0 +1,12 @@
+import {NgModule} from "@angular/core";
+import {RouterModule} from "@angular/router";
+import {ReactiveFormsModule, FormsModule} from "@angular/forms";
+import {MlCheckboxMod} from "../../ml/components/controls/checkbox/mlCheckboxMod";
+import {DebugFormMod} from "../../ml/lib/debug_form/debugFormMod";
+import {PagCheckbox} from "./pagCheckbox";
+import {MlRippleMod} from "../../ml/components/ripple/mlRippleMod";
+@NgModule({
+imports: [MlRippleMod, FormsModule, ReactiveFormsModule, MlCheckboxMod, DebugFormMod,
+RouterModule.forChild( [{path: '', component: PagCheckbox}] )],
+declarations: [PagCheckbox]})
+export default class PagCheckboxMod{}

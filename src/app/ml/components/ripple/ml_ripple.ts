@@ -8,15 +8,12 @@ import * as ml from "../../lib/ml_lib";
 @Directive({ selector: '[ripple]' })
 export class MlRipple{
 
-  constructor(
-    private host: ElementRef,
-    private ren: Renderer) {
-  }
+  constructor(private host: ElementRef, private ren: Renderer) {}
 
   ngOnInit(){
     ml.setClass(this.host, 'mdl-js-ripple-effect', this.ren);
 
-    // Ripple effect must be applied without blocking the main thread. Other way, it will throw exceptions
+    // Ripple effect must be applied without blocking the main thread. Other way, it will throw exception
     setTimeout(()=> {
       //todo: aqui se podria buscar el elemento donde aplicar el efecto ripple. Hay casos donde no basta con
       // aplicarlo a this.host.nativeElement

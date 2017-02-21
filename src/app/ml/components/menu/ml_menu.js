@@ -12,7 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var ml_button_1 = require("../controls/button/ml_button");
+var mlButton_1 = require("../controls/button/mlButton");
 var mdl_menu_1 = require("./mdl_menu");
 var ml = require("../../lib/ml_lib");
 var MlMenu = (function () {
@@ -73,7 +73,7 @@ var MlMenu = (function () {
     ], MlMenu.prototype, "menuList", void 0);
     __decorate([
         core_1.ViewChild('mdlButton'), 
-        __metadata('design:type', ml_button_1.MlButton)
+        __metadata('design:type', mlButton_1.MlButton)
     ], MlMenu.prototype, "mdlButton", void 0);
     __decorate([
         core_1.Input(), 
@@ -96,8 +96,8 @@ var MlMenu = (function () {
             selector: 'ml-menu',
             styleUrls: ['./ml_menu.css'],
             encapsulation: core_1.ViewEncapsulation.None,
-            moduleId: module.id.toString(),
-            template: "\n\n<ml-button [attr.id]=\"id\" type=\"icon\" #mdlButton><ml-icon>{{icon}}</ml-icon></ml-button>\n\n<ul class=\"mdl-menu\" [attr.for]=\"id\" #menuList>\n  <ng-content select=\"ml-menu-item\"></ng-content>\n</ul>         \n\n" //template
+            // moduleId: module.id.toString(),
+            template: "\n\n<ml-button [attr.id]=\"id\" type=\"icon\" #mdlButton><ml-icon>{{icon}}</ml-icon></ml-button>\n\n<ul class=\"mdl-menu\" [attr.for]=\"id\" #menuList><ng-content select=\"ml-menu-item\"></ng-content></ul>         \n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])
     ], MlMenu);

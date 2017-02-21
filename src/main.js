@@ -19,7 +19,7 @@ require('core-js/es7/reflect');
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 var core_1 = require('@angular/core');
 var app_module_1 = require("./app/app.module");
-var PRODUCTION_MODE = true;
+var PRODUCTION_MODE = false;
 if (PRODUCTION_MODE) {
     core_1.enableProdMode();
 }

@@ -10,29 +10,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var mdl_snackbar_1 = require("./mdl_snackbar");
-var MlSnackBar = (function () {
-    function MlSnackBar(hostElm) {
+var MlSnackbar = (function () {
+    function MlSnackbar(hostElm) {
         this.hostElm = hostElm;
     }
-    MlSnackBar.prototype.show = function () { this.mdlSnackbar.showSnackbar(this.config); };
-    MlSnackBar.prototype.close = function () { this.mdlSnackbar.cleanup_(); };
-    MlSnackBar.prototype.ngAfterViewInit = function () { this.mdlSnackbar = new mdl_snackbar_1.default(this.hostElm.nativeElement); };
+    MlSnackbar.prototype.show = function () { this.mdlSnackbar.showSnackbar(this.config); };
+    MlSnackbar.prototype.close = function () { this.mdlSnackbar.cleanup_(); };
+    MlSnackbar.prototype.ngAfterViewInit = function () { this.mdlSnackbar = new mdl_snackbar_1.default(this.hostElm.nativeElement); };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
-    ], MlSnackBar.prototype, "config", void 0);
-    MlSnackBar = __decorate([
+    ], MlSnackbar.prototype, "config", void 0);
+    MlSnackbar = __decorate([
         core_1.Component({
             selector: 'ml-snackbar',
             styleUrls: ['./ml_snackbar.css'],
-            moduleId: module.id.toString(),
+            // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             host: { class: 'mdl-snackbar' },
             template: "\n\n<div class=\"mdl-snackbar__text\"></div>\n<button type=\"button\" class=\"mdl-snackbar__action\" (click)=\"close()\"></button>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
-    ], MlSnackBar);
-    return MlSnackBar;
+    ], MlSnackbar);
+    return MlSnackbar;
 }());
-exports.MlSnackBar = MlSnackBar;
+exports.MlSnackbar = MlSnackbar;
 //# sourceMappingURL=ml_snackbar.js.map

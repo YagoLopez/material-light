@@ -1,8 +1,6 @@
 //todo: hay que revisar como se pueden añadir estilos al componnente. por ejemplo definir el añcho de la barra globalmente
-//todo: revisar lo de la clase active
 //todo: repensar lo de las atributos sin valor especifico de cara al comportamiento de angular en data-binding:
 //todo: [attributo]="valor". Si no hay valor puede que haya problemas
-//todo: parece que sobra la clase mdl-js-*
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -27,6 +25,9 @@ var MlSpinner = (function () {
         if (this.singleColor === '')
             ml.setClass(this.host, 'mdl-spinner--single-color', this.ren);
         this.mdlSpinner = new mdl_spinner_1.default(this.host.nativeElement);
+        if (this.inactive === '') {
+            this.mdlSpinner.stop();
+        }
     };
     __decorate([
         core_1.Input('single-color'), 
@@ -36,15 +37,19 @@ var MlSpinner = (function () {
         core_1.Input('multicolor'), 
         __metadata('design:type', String)
     ], MlSpinner.prototype, "multicolor", void 0);
+    __decorate([
+        core_1.Input('inactive'), 
+        __metadata('design:type', String)
+    ], MlSpinner.prototype, "inactive", void 0);
     MlSpinner = __decorate([
         core_1.Component({
             selector: 'ml-spinner',
             styleUrls: ['./ml_spinner.css'],
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            moduleId: module.id.toString(),
-            host: { class: 'mdl-spinner' },
-            template: ''
+            // moduleId: module.id.toString(),
+            host: { class: 'mdl-spinner is-active' },
+            template: ""
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlSpinner);

@@ -9,7 +9,7 @@ import * as ml from '../../lib/ml_lib'
 selector: 'table.[ml-table]',
 styleUrls: ['./ml_table.css'],
 encapsulation: ViewEncapsulation.None,
-moduleId: module.id.toString(),
+// moduleId: module.id.toString(),
 host: {class: 'mdl-data-table'},
 template: '<ng-content></ng-content>'
 })

@@ -16,8 +16,7 @@ var MlTitle = (function () {
         core_1.Component({
             selector: 'ml-title',
             host: { class: 'mdl-layout-title' },
-            template: "<ng-content></ng-content>"
-        }), 
+            template: "<ng-content></ng-content>" }), 
         __metadata('design:paramtypes', [])
     ], MlTitle);
     return MlTitle;

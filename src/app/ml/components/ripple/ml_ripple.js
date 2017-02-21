@@ -21,7 +21,7 @@ var MlRipple = (function () {
     MlRipple.prototype.ngOnInit = function () {
         var _this = this;
         ml.setClass(this.host, 'mdl-js-ripple-effect', this.ren);
-        // Ripple effect must be applied without blocking the main thread. Other way, it will throw exceptions
+        // Ripple effect must be applied without blocking the main thread. Other way, it will throw exception
         setTimeout(function () {
             //todo: aqui se podria buscar el elemento donde aplicar el efecto ripple. Hay casos donde no basta con
             // aplicarlo a this.host.nativeElement

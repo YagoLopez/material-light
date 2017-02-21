@@ -10,12 +10,12 @@ import * as ml from "../../lib/ml_lib";
 @Component({
 selector: 'ml-progressbar',
 styleUrls: ['./ml_progressbar.css'],
-moduleId: module.id.toString(),
+// moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
 host: {class: 'mdl-progress'},
 template: ''
 })
-export class MlProgressBar {
+export class MlProgressbar {
 
   @Input('progress') progressValue: string = '0';
   @Input('buffer') bufferValue: string; // BUFFER must be greater than PROGRESS to be visible
