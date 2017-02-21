@@ -46,8 +46,8 @@ export class MlToggle implements ControlValueAccessor {
     this.onChange(value);
   }
   get model() { return this._model }
-  writeValue(value: any): void { this._model = value }
+  writeValue(value: any): void { this.model = value }
   registerOnChange(fn: any): void { this.onChange = fn }
   registerOnTouched(fn: any): void { this.onTouch = fn }
-  isChecked(){ return this._model == true }
+  isChecked(){ return this.model == true }
 }

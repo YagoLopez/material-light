@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var ml_spinner_1 = require("./ml_spinner");
+var mlSpinner_1 = require("./mlSpinner");
 var MlSpinnerMod = (function () {
     function MlSpinnerMod() {
     }
     MlSpinnerMod = __decorate([
-        core_1.NgModule({ declarations: [ml_spinner_1.MlSpinner], exports: [ml_spinner_1.MlSpinner] }), 
+        core_1.NgModule({ declarations: [mlSpinner_1.MlSpinner], exports: [mlSpinner_1.MlSpinner] }), 
         __metadata('design:paramtypes', [])
     ], MlSpinnerMod);
     return MlSpinnerMod;

@@ -12,8 +12,7 @@ var core_1 = require('@angular/core');
 var forms_1 = require("@angular/forms");
 var PagToggle = (function () {
     function PagToggle() {
-        // Models for reactive form (formToggleReactive)
-        this.formToggleReactive = new forms_1.FormGroup({
+        this.formToggle = new forms_1.FormGroup({
             option4: new forms_1.FormControl(true),
             option5: new forms_1.FormControl(),
             option6: new forms_1.FormControl({ value: true, disabled: true })
@@ -22,7 +21,7 @@ var PagToggle = (function () {
     PagToggle = __decorate([
         core_1.Component({
             selector: 'page-toggle',
-            template: "\n\n<h5>Icon Toggle</h5>\n<h6>Only for reactive forms:</h6>\n\n<form [formGroup]=\"formToggleReactive\">\n  <ml-toggle id=\"toggle4\" formControlName=\"option4\">\n    <ml-icon>email</ml-icon>\n  </ml-toggle>Option 4 (Enabled by default)<br>\n  \n  <ml-toggle id=\"toggle5\" formControlName=\"option5\">\n    <ml-icon>email</ml-icon>  \n  </ml-toggle>Option 5 (Undefined by default)<br>\n  \n  <ml-toggle id=\"toggle6\" formControlName=\"option6\" disabled=\"true\">\n    <ml-icon>email</ml-icon>\n  </ml-toggle>Option 6 (Disabled by default)\n</form>\n\n<debug-form [name]=\"formToggleReactive\"></debug-form>\n\n" //template
+            template: "\n\n<h5>Icon Toggle</h5>\n<h6>Only for reactive forms:</h6>\n\n<form [formGroup]=\"formToggle\">\n  <ml-toggle id=\"toggle4\" formControlName=\"option4\">\n    <ml-icon>email</ml-icon>\n  </ml-toggle>Option 4 (Enabled by default)<br>\n  \n  <ml-toggle id=\"toggle5\" formControlName=\"option5\">\n    <ml-icon>email</ml-icon>  \n  </ml-toggle>Option 5 (Undefined by default)<br>\n  \n  <ml-toggle id=\"toggle6\" formControlName=\"option6\" disabled=\"true\">\n    <ml-icon>email</ml-icon>\n  </ml-toggle>Option 6 (Disabled by default)\n</form>\n\n<debug-form [name]=\"formToggle\"></debug-form>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagToggle);

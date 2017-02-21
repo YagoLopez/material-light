@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var ml_progressbar_1 = require("./ml_progressbar");
+var mlProgressbar_1 = require("./mlProgressbar");
 var MlProgressbarMod = (function () {
     function MlProgressbarMod() {
     }
     MlProgressbarMod = __decorate([
-        core_1.NgModule({ declarations: [ml_progressbar_1.MlProgressbar], exports: [ml_progressbar_1.MlProgressbar] }), 
+        core_1.NgModule({ declarations: [mlProgressbar_1.MlProgressbar], exports: [mlProgressbar_1.MlProgressbar] }), 
         __metadata('design:paramtypes', [])
     ], MlProgressbarMod);
     return MlProgressbarMod;

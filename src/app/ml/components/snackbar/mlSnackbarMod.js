@@ -9,14 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var ml_snackbar_1 = require("./ml_snackbar");
+var mlSnackbar_1 = require("./mlSnackbar");
 var MlSnackbarMod = (function () {
     function MlSnackbarMod() {
     }
     MlSnackbarMod = __decorate([
         core_1.NgModule({
-            declarations: [ml_snackbar_1.MlSnackbar],
-            exports: [ml_snackbar_1.MlSnackbar]
+            declarations: [mlSnackbar_1.MlSnackbar],
+            exports: [mlSnackbar_1.MlSnackbar]
         }), 
         __metadata('design:paramtypes', [])
     ], MlSnackbarMod);

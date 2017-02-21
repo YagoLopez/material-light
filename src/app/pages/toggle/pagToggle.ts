@@ -9,7 +9,7 @@ template: `
 <h5>Icon Toggle</h5>
 <h6>Only for reactive forms:</h6>
 
-<form [formGroup]="formToggleReactive">
+<form [formGroup]="formToggle">
   <ml-toggle id="toggle4" formControlName="option4">
     <ml-icon>email</ml-icon>
   </ml-toggle>Option 4 (Enabled by default)<br>
@@ -23,14 +23,13 @@ template: `
   </ml-toggle>Option 6 (Disabled by default)
 </form>
 
-<debug-form [name]="formToggleReactive"></debug-form>
+<debug-form [name]="formToggle"></debug-form>
 
 `//template
 })
 export class PagToggle {
 
-  // Models for reactive form (formToggleReactive)
-  formToggleReactive: FormGroup = new FormGroup({
+  formToggle: FormGroup = new FormGroup({
     option4: new FormControl(true),
     option5: new FormControl(),
     option6: new FormControl({value: true,  disabled: true})

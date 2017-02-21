@@ -1,5 +1,5 @@
 import {NgModule} from "@angular/core";
-import {MlSnackbar} from "./ml_snackbar";
+import {MlSnackbar} from "./mlSnackbar";
 @NgModule({
 declarations: [MlSnackbar],
 exports: [MlSnackbar]

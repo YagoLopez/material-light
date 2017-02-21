@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IConfigSnackbar} from "../../ml/components/snackbar/ml_snackbar";
+import {IConfigSnackbar} from "../../ml/components/snackbar/mlSnackbar";
 
 @Component({
 template: `

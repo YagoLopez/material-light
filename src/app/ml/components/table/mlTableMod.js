@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var ml_table_1 = require("./ml_table");
+var mlTable_1 = require("./mlTable");
 var MlTableMod = (function () {
     function MlTableMod() {
     }
     MlTableMod = __decorate([
-        core_1.NgModule({ declarations: [ml_table_1.MlTable, ml_table_1.MlTableTextCell], exports: [ml_table_1.MlTable, ml_table_1.MlTableTextCell] }), 
+        core_1.NgModule({ declarations: [mlTable_1.MlTable, mlTable_1.MlTableTextCell], exports: [mlTable_1.MlTable, mlTable_1.MlTableTextCell] }), 
         __metadata('design:paramtypes', [])
     ], MlTableMod);
     return MlTableMod;

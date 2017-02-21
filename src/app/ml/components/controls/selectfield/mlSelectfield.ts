@@ -8,13 +8,13 @@ import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation, fo
  ChangeDetectionStrategy} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import {MlButton} from "../button/mlButton";
-import MdlMenu from "../../menu/mdl_menu";
+import MdlMenu from "../../menu/mlMenuLib";
 import MdlTextfield from "../textfield/mlTextfieldLib";
 import * as ml from "../../../lib/ml_lib";
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-selectfield',
-styleUrls: ['../../menu/ml_menu.css', '../textfield/mlTextfield.css', './mlSelectfield.css'],
+styleUrls: ['../../menu/mlMenu.css', '../textfield/mlTextfield.css', './mlSelectfield.css'],
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 // moduleId: module.id.toString(),

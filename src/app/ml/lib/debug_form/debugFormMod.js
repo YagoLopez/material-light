@@ -9,13 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var debug_form_1 = require("./debug_form");
+var debugForm_1 = require("./debugForm");
 var common_1 = require("@angular/common");
 var DebugFormMod = (function () {
     function DebugFormMod() {
     }
     DebugFormMod = __decorate([
-        core_1.NgModule({ imports: [common_1.CommonModule], declarations: [debug_form_1.DebugForm], exports: [debug_form_1.DebugForm] }), 
+        core_1.NgModule({ imports: [common_1.CommonModule], declarations: [debugForm_1.DebugForm], exports: [debugForm_1.DebugForm] }), 
         __metadata('design:paramtypes', [])
     ], DebugFormMod);
     return DebugFormMod;

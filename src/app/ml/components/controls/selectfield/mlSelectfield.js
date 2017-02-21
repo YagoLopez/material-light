@@ -15,7 +15,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var mlButton_1 = require("../button/mlButton");
-var mdl_menu_1 = require("../../menu/mdl_menu");
+var mlMenuLib_1 = require("../../menu/mlMenuLib");
 var mlTextfieldLib_1 = require("../textfield/mlTextfieldLib");
 var ml = require("../../../lib/ml_lib");
 // ---------------------------------------------------------------------------------------------------------------------
@@ -42,7 +42,7 @@ var MlSelectfield = (function () {
         }
     };
     MlSelectfield.prototype.ngAfterViewInit = function () {
-        this.mdlMenu = new mdl_menu_1.default(this.menuList.nativeElement);
+        this.mdlMenu = new mlMenuLib_1.default(this.menuList.nativeElement);
         this.mdlTextfield = new mlTextfieldLib_1.default(this.input.nativeElement);
     };
     MlSelectfield.prototype.writeValue = function (value) {
@@ -84,7 +84,7 @@ var MlSelectfield = (function () {
     MlSelectfield = __decorate([
         core_1.Component({
             selector: 'ml-selectfield',
-            styleUrls: ['../../menu/ml_menu.css', '../textfield/mlTextfield.css', './mlSelectfield.css'],
+            styleUrls: ['../../menu/mlMenu.css', '../textfield/mlTextfield.css', './mlSelectfield.css'],
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             // moduleId: module.id.toString(),

@@ -1,4 +1,4 @@
 import {NgModule} from "@angular/core";
-import {MlTitle} from "./ml_title";
+import {MlTitle} from "./mlTitle";
 @NgModule({ declarations: [MlTitle], exports: [MlTitle] })
 export class MlTitleMod{}

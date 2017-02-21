@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var ml_ripple_1 = require("./ml_ripple");
+var mlRipple_1 = require("./mlRipple");
 var MlRippleMod = (function () {
     function MlRippleMod() {
     }
     MlRippleMod = __decorate([
-        core_1.NgModule({ declarations: [ml_ripple_1.MlRipple], exports: [ml_ripple_1.MlRipple] }), 
+        core_1.NgModule({ declarations: [mlRipple_1.MlRipple], exports: [mlRipple_1.MlRipple] }), 
         __metadata('design:paramtypes', [])
     ], MlRippleMod);
     return MlRippleMod;

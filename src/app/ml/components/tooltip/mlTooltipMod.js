@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var ml_tooltip_1 = require("./ml_tooltip");
+var mlTooltip_1 = require("./mlTooltip");
 var MlTooltipMod = (function () {
     function MlTooltipMod() {
     }
     MlTooltipMod = __decorate([
-        core_1.NgModule({ declarations: [ml_tooltip_1.MlTooltip], exports: [ml_tooltip_1.MlTooltip] }), 
+        core_1.NgModule({ declarations: [mlTooltip_1.MlTooltip], exports: [mlTooltip_1.MlTooltip] }), 
         __metadata('design:paramtypes', [])
     ], MlTooltipMod);
     return MlTooltipMod;

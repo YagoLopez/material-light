@@ -32,10 +32,10 @@ var MlToggle = (function () {
         enumerable: true,
         configurable: true
     });
-    MlToggle.prototype.writeValue = function (value) { this._model = value; };
+    MlToggle.prototype.writeValue = function (value) { this.model = value; };
     MlToggle.prototype.registerOnChange = function (fn) { this.onChange = fn; };
     MlToggle.prototype.registerOnTouched = function (fn) { this.onTouch = fn; };
-    MlToggle.prototype.isChecked = function () { return this._model == true; };
+    MlToggle.prototype.isChecked = function () { return this.model == true; };
     __decorate([
         core_1.ViewChild('label'), 
         __metadata('design:type', core_1.ElementRef)

@@ -11,15 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var mlIconMod_1 = require("../icon/mlIconMod");
 var mlButtonMod_1 = require("../controls/button/mlButtonMod");
-var ml_menu_1 = require("./ml_menu");
+var mlMenu_1 = require("./mlMenu");
 var MlMenuMod = (function () {
     function MlMenuMod() {
     }
     MlMenuMod = __decorate([
         core_1.NgModule({
             imports: [mlIconMod_1.MlIconMod, mlButtonMod_1.MlButtonMod],
-            declarations: [ml_menu_1.MlMenu, ml_menu_1.MlMenuItem],
-            exports: [ml_menu_1.MlMenu, ml_menu_1.MlMenuItem]
+            declarations: [mlMenu_1.MlMenu, mlMenu_1.MlMenuItem],
+            exports: [mlMenu_1.MlMenu, mlMenu_1.MlMenuItem]
         }), 
         __metadata('design:paramtypes', [])
     ], MlMenuMod);

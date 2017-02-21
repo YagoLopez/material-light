@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var ml_title_1 = require("./ml_title");
+var mlTitle_1 = require("./mlTitle");
 var MlTitleMod = (function () {
     function MlTitleMod() {
     }
     MlTitleMod = __decorate([
-        core_1.NgModule({ declarations: [ml_title_1.MlTitle], exports: [ml_title_1.MlTitle] }), 
+        core_1.NgModule({ declarations: [mlTitle_1.MlTitle], exports: [mlTitle_1.MlTitle] }), 
         __metadata('design:paramtypes', [])
     ], MlTitleMod);
     return MlTitleMod;
