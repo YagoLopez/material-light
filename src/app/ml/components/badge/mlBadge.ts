@@ -24,10 +24,10 @@ export class MlBadge{
   ngOnInit() {
     ml.setAttribute(this.host, 'data-badge', this.value, this.ren);
 
-    if (this.background === 'false'){
+    if (this.background.toLowerCase() === 'false'){
       ml.setClass(this.host, 'mdl-badge--no-background', this.ren);
     }
-    if (this.overlap === 'true'){
+    if (this.overlap.toLowerCase() === 'true'){
       ml.setClass(this.host, 'mdl-badge--overlap', this.ren);
     }
     if (this.icon === ''){

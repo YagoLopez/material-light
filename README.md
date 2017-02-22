@@ -2,9 +2,9 @@
 
 # Material Light      
 
-**Material Designt UI components for Angular 2.**
+**Material Designt UI components for Angular 2 +.**
 
-This library of components has been carefully designed to be as light as possible and to bring high performance and optimization to Angular 2 user interfaces.
+This library of components has been carefully designed to create light and fast Angular 2 + user interfaces, mainly for mobile Angular user interfaces.
 
 ## Author
 
@@ -20,13 +20,13 @@ Developed by Yago López:
 
 ## Use
 
+- This project is meant to be used with a angular-cli generated project
 - Clone or download the repository.
-- Copy the `ml` folder (where the components are) to your project and
-  import `ml_module.ts` in your root module.
-- Copy and paste the `assets` folder in the exact path in your project.
+- Copy the `ml` folder (where the components are) to your project
+- Copy and paste the `assets` content in the exact same path in your project
 - Use the components following the examples in the `pages` directory. The components use `ml` as namespace. For example: `<ml-icon>email</ml-icon>`places an email icon component in a template.
-- For **WEBPACK**: Load the demo using the angular-cli command`npm ng serve`. This should serve`index.html` at `localhost://4600`.
-- For **SYSTEMJS**: Load the demo pointing a web server to`index-systemjs.html`. (Systemjs can be used as module loader during development instead of compile all files width Webpack)
+- If you are **not going** to use **lazy-loading modules**, import directily the components into your component. For example, if you are going to use a button with an icon you will need to import `MlButton` and `MlIcon` components.
+- If you are **going** to use **lazy-loading modules**, in this case you will need to import the modules. For example, `MlButtonMod` and `MlIconMod`, following the before mentioned case.
 
 
 
@@ -34,19 +34,16 @@ Developed by Yago López:
 
 ## Requirements:
 
-- Angular 2
-- Angular 2 Command Line (angular-cli)
-- Typescript (included in Angular 2)
-- Webpack (included as a dependency using angular-cli projects)
-- Systemjs (included as dependency in this project)
+- Angular 2 or above
+- Angular Command Line (angular-cli)
+- Typescript
+- Webpack
+- Systemjs
 - Npm
 
-## Credits:
+## Disclaimers:
 
-This project is based on <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>
-
-Material Design is a Google's registered trade mark, likely.
-
-License: <a href="LICENSE.txt">MIT</a>.
-
-*Disclaimer: This is an open source project without commercial or profit intentions.*
+- This project is based on <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>
+- Material Design is a Google's registered trade mark, likely.
+- License: <a href="LICENSE.txt">MIT</a>.
+- This is an open source project without commercial or profit intentions.

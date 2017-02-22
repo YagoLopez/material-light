@@ -42,6 +42,12 @@ template: `
     <ml-title class="bg-grey">Material Light</ml-title>
     <ml-nav>
       <a nav-item routerLink="button">Button</a>
+      <a nav-item routerLink="selectfield">SelectField</a>
+      <a nav-item routerLink="textfield">TextControls</a>
+      <a nav-item routerLink="checkbox">Checkbox</a>
+      <a nav-item routerLink="radio">RadioButton</a>
+      <a nav-item routerLink="switch">SwitchButton</a>
+      <a nav-item routerLink="toggle">IconToggle</a>
       <a nav-item routerLink="badge">Badge</a>
       <a nav-item routerLink="card">Card</a>
       <a nav-item routerLink="grid">Grid</a>
@@ -53,12 +59,6 @@ template: `
       <a nav-item routerLink="spinner">Spinner</a>
       <a nav-item routerLink="snackbar">SnackBar</a>
       <a nav-item routerLink="tooltip">Tooltip</a>
-      <a nav-item routerLink="checkbox">Checkbox</a>
-      <a nav-item routerLink="radio">RadioButton</a>
-      <a nav-item routerLink="switch">SwitchButton</a>
-      <a nav-item routerLink="toggle">IconToggle</a>
-      <a nav-item routerLink="textfield">TextControls</a>
-      <a nav-item routerLink="selectfield">SelectField</a>
       <a nav-item routerLink="slider">Slider</a>
       <a nav-item routerLink="dialog">Dialog</a>
       <a nav-item routerLink="table">Table</a>
@@ -88,12 +88,12 @@ export class App {
 
   // This code is ony to show/hide header tabs
 
-  private headerTabs: boolean = false;
+  private headerTabs = false;
 
   getUrlParameter(name: string): null | string {
       name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-      var results = regex.exec(location.search);
+      let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      let results = regex.exec(location.search);
       return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
   };
 
