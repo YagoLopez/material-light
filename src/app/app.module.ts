@@ -1,12 +1,15 @@
+//todo: voy por page radio
 //todo: habilitar webpack.config.js en angular-cli para poder usar local paths en router
 //todo: revisar default keyword y otras cosasa para compilacion aot
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {RouterModule} from "@angular/router";
+import {MlSpinnerMod} from "./ml/components/spinner/mlSpinnerMod";
 import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {MlTitleMod} from "./ml/components/title/mlTitleMod";
 import {App} from "./app.layout";
+import {MlRouterLoaderMod} from "./ml/components/router_loader/mlRouterLoaderMod";
 
 // Note: absolute paths are needed by webpack and lazy-load
 const APP_ROUTES = [
@@ -37,7 +40,8 @@ const APP_ROUTES = [
 
 @NgModule({
   imports: [
-    BrowserModule, MlTitleMod, MlLayoutMod, RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
+    MlRouterLoaderMod, BrowserModule, MlSpinnerMod, MlTitleMod, MlLayoutMod,
+    RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
   declarations: [App],
   bootstrap: [App]
 })

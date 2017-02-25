@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var mlIconMod_1 = require("../icon/mlIconMod");
 var mlButtonMod_1 = require("../controls/button/mlButtonMod");
 var mlMenu_1 = require("./mlMenu");
 var MlMenuMod = (function () {
@@ -17,9 +16,7 @@ var MlMenuMod = (function () {
     }
     MlMenuMod = __decorate([
         core_1.NgModule({
-            imports: [mlIconMod_1.MlIconMod, mlButtonMod_1.MlButtonMod],
-            declarations: [mlMenu_1.MlMenu, mlMenu_1.MlMenuItem],
-            exports: [mlMenu_1.MlMenu, mlMenu_1.MlMenuItem]
+            imports: [mlButtonMod_1.MlButtonMod], declarations: [mlMenu_1.MlMenu, mlMenu_1.MlMenuItem], exports: [mlButtonMod_1.MlButtonMod, mlMenu_1.MlMenu, mlMenu_1.MlMenuItem]
         }), 
         __metadata('design:paramtypes', [])
     ], MlMenuMod);

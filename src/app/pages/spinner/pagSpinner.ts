@@ -11,7 +11,7 @@ Multi-color:
 <br><br>
 
 Single color:
-<ml-spinner active single-color></ml-spinner>
+<ml-spinner single-color></ml-spinner>
 
 <br><br>
 

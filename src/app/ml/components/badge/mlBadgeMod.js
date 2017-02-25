@@ -10,11 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var mlBadge_1 = require("./mlBadge");
+var mlIconMod_1 = require("../icon/mlIconMod");
 var MlBadgeMod = (function () {
     function MlBadgeMod() {
     }
     MlBadgeMod = __decorate([
-        core_1.NgModule({ declarations: [mlBadge_1.MlBadge], exports: [mlBadge_1.MlBadge] }), 
+        core_1.NgModule({ imports: [mlIconMod_1.MlIconMod], declarations: [mlBadge_1.MlBadge], exports: [mlIconMod_1.MlIconMod, mlBadge_1.MlBadge] }), 
         __metadata('design:paramtypes', [])
     ], MlBadgeMod);
     return MlBadgeMod;

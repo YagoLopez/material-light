@@ -1,8 +1,10 @@
 import {NgModule} from "@angular/core";
+import {MlRippleMod} from "../../ripple/mlRippleMod";
+import {MlIconMod} from "../../icon/mlIconMod";
 import {MlButton} from "./mlButton";
 import {MlButtonSubmit} from "./mlButtonSubmit";
-import {MlIconMod} from "../../icon/mlIconMod";
 @NgModule({
-imports: [MlIconMod],
-declarations: [MlButton, MlButtonSubmit], exports: [MlButton, MlButtonSubmit]})
+imports: [MlRippleMod, MlIconMod],
+declarations: [MlButton, MlButtonSubmit],
+exports: [MlRippleMod, MlIconMod, MlButton, MlButtonSubmit]})
 export class MlButtonMod{}

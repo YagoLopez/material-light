@@ -9,14 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var mlButtonMod_1 = require("../controls/button/mlButtonMod");
 var mlDialog_1 = require("./mlDialog");
 var MlDialogMod = (function () {
     function MlDialogMod() {
     }
     MlDialogMod = __decorate([
         core_1.NgModule({
+            imports: [mlButtonMod_1.MlButtonMod],
             declarations: [mlDialog_1.MlDialog, mlDialog_1.MlDialogTitle, mlDialog_1.MlDialogContent, mlDialog_1.MlDialogActions],
-            exports: [mlDialog_1.MlDialog, mlDialog_1.MlDialogTitle, mlDialog_1.MlDialogContent, mlDialog_1.MlDialogActions] }), 
+            exports: [mlButtonMod_1.MlButtonMod, mlDialog_1.MlDialog, mlDialog_1.MlDialogTitle, mlDialog_1.MlDialogContent, mlDialog_1.MlDialogActions] }), 
         __metadata('design:paramtypes', [])
     ], MlDialogMod);
     return MlDialogMod;

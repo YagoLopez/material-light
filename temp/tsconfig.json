@@ -13,6 +13,6 @@
     "sourceMap": true,
     "typeRoots": ["../node_modules/@types"]
   },
-  "exclude": ["/assets, /temp"],
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts"],
+  "exclude": ["/assets"]
 }

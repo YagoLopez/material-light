@@ -9,8 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var mlRippleMod_1 = require("../../ml/components/ripple/mlRippleMod");
-var mlIconMod_1 = require("../../ml/components/icon/mlIconMod");
 var mlButtonMod_1 = require("../../ml/components/controls/button/mlButtonMod");
 var router_1 = require("@angular/router");
 var pagButton_1 = require("./pagButton");
@@ -19,9 +17,8 @@ var PagButtonModule = (function () {
     }
     PagButtonModule = __decorate([
         core_1.NgModule({
-            imports: [mlIconMod_1.MlIconMod, mlRippleMod_1.MlRippleMod, mlButtonMod_1.MlButtonMod, router_1.RouterModule.forChild([{ path: '', component: pagButton_1.PagButton }])],
-            declarations: [pagButton_1.PagButton]
-        }), 
+            imports: [mlButtonMod_1.MlButtonMod, router_1.RouterModule.forChild([{ path: '', component: pagButton_1.PagButton }])],
+            declarations: [pagButton_1.PagButton] }), 
         __metadata('design:paramtypes', [])
     ], PagButtonModule);
     return PagButtonModule;

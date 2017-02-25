@@ -10,14 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var mlIconMod_1 = require("../../ml/components/icon/mlIconMod");
 var mlBadgeMod_1 = require("../../ml/components/badge/mlBadgeMod");
 var pagBadge_1 = require("./pagBadge");
 var PagBadgeModule = (function () {
     function PagBadgeModule() {
     }
     PagBadgeModule = __decorate([
-        core_1.NgModule({ imports: [mlIconMod_1.MlIconMod, mlBadgeMod_1.MlBadgeMod, router_1.RouterModule.forChild([{ path: '', component: pagBadge_1.PagBadge }])],
+        core_1.NgModule({ imports: [mlBadgeMod_1.MlBadgeMod, router_1.RouterModule.forChild([{ path: '', component: pagBadge_1.PagBadge }])],
             declarations: [pagBadge_1.PagBadge] }), 
         __metadata('design:paramtypes', [])
     ], PagBadgeModule);

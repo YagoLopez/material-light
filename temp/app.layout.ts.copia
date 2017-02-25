@@ -1,4 +1,4 @@
-import {Component, ViewChild, ElementRef} from '@angular/core';
+import {Component} from '@angular/core';
 import {Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError} from '@angular/router';
 
 @Component({
@@ -77,10 +77,14 @@ template: `
   <!-- Content ----------------------------------------------------------------------------------------------------- -->
   
   <ml-content class="content-pad">
-    <ml-router-loader (isLoading)="onLoading($event)"></ml-router-loader>
-    <ml-tab-content id="tab1" active [hidden]="isLoading">
+         
+    <ml-tab-content id="tab1" active>
+      <div *ngIf="loading">
+        <!--<div class="loading-text">Loading...</div>-->
+        <div class="loading-icon"><ml-spinner single-color></ml-spinner></div>
+      </div>
       <router-outlet></router-outlet>
-    </ml-tab-content>
+   </ml-tab-content>
     <ml-tab-content id="tab2"><ml-title>Empty tab 2. Back to tab 1</ml-title></ml-tab-content>
     <ml-tab-content id="tab3"><ml-title>Empty tab 3. Back to tab 1</ml-title></ml-tab-content>
     <ml-tab-content id="tab4"><ml-title>Empty tab 4. Back to tab 1</ml-title></ml-tab-content>
@@ -96,13 +100,6 @@ template: `
 
 })
 export class App {
-
-  isLoading = false;
-
-  onLoading($event){
-    console.log('on start load event', $event);
-    this.isLoading = $event;
-  }
 
   // This code is ony to show/hide header tabs
 
@@ -120,8 +117,33 @@ export class App {
   //   window.location.href = '?headertabs=' + this.headerTabs;
   // }
 
+  // loader management
+  loading = false;
 
-  // ngAfterViewInit(){
+  constructor(private router: Router){
+    router.events.subscribe((event) =>{
+      // console.log('event router', event);
+      if (event instanceof NavigationStart){
+        this.loading = true;
+        console.log('navigation start. loading:', this.loading);
+      }
+      if (event instanceof NavigationEnd){
+        this.loading = false;
+        console.log('navigation end. loading', this.loading);
+      }
+      if (event instanceof NavigationCancel){
+        this.loading = false;
+        console.log('navigation end. loading', this.loading);
+      }
+      if (event instanceof NavigationError){
+        this.loading = false;
+        console.log('navigation end. loading', this.loading);
+      }
+    });
+
+  }
+
+  // ngOnInit(){
   //   const temp: string | any = this.getUrlParameter('headertabs');
   //   temp.toLowerCase() === 'true' ? this.headerTabs = true : this.headerTabs = false;
   // }

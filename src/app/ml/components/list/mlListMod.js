@@ -9,14 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var mlRippleMod_1 = require("../ripple/mlRippleMod");
+var mlIconMod_1 = require("../icon/mlIconMod");
 var mlList_1 = require("./mlList");
 var MlListMod = (function () {
     function MlListMod() {
     }
     MlListMod = __decorate([
         core_1.NgModule({
+            imports: [mlRippleMod_1.MlRippleMod, mlIconMod_1.MlIconMod],
             declarations: [mlList_1.MlList, mlList_1.MlItem, mlList_1.MlItemContent, mlList_1.MlItemAction, mlList_1.MlItemIcon, mlList_1.MlItemTitle, mlList_1.MlItemSubtitle, mlList_1.MlItemDesc],
-            exports: [mlList_1.MlList, mlList_1.MlItem, mlList_1.MlItemContent, mlList_1.MlItemAction, mlList_1.MlItemIcon, mlList_1.MlItemTitle, mlList_1.MlItemSubtitle, mlList_1.MlItemDesc] }), 
+            exports: [mlRippleMod_1.MlRippleMod, mlIconMod_1.MlIconMod, mlList_1.MlList, mlList_1.MlItem, mlList_1.MlItemContent, mlList_1.MlItemAction, mlList_1.MlItemIcon, mlList_1.MlItemTitle, mlList_1.MlItemSubtitle, mlList_1.MlItemDesc] }), 
         __metadata('design:paramtypes', [])
     ], MlListMod);
     return MlListMod;

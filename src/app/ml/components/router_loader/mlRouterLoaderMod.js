@@ -9,19 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var mlListMod_1 = require("../../ml/components/list/mlListMod");
-var pagList_1 = require("./pagList");
-var PagListModule = (function () {
-    function PagListModule() {
+var common_1 = require("@angular/common");
+var mlSpinnerMod_1 = require("../spinner/mlSpinnerMod");
+var mlRouterLoader_1 = require("./mlRouterLoader");
+var MlRouterLoaderMod = (function () {
+    function MlRouterLoaderMod() {
     }
-    PagListModule = __decorate([
-        core_1.NgModule({ imports: [mlListMod_1.MlListMod, router_1.RouterModule.forChild([{ path: '', component: pagList_1.PagList }])],
-            declarations: [pagList_1.PagList] }), 
+    MlRouterLoaderMod = __decorate([
+        core_1.NgModule({ imports: [common_1.CommonModule, mlSpinnerMod_1.MlSpinnerMod], declarations: [mlRouterLoader_1.MlRouterLoader], exports: [mlSpinnerMod_1.MlSpinnerMod, mlRouterLoader_1.MlRouterLoader]
+        }), 
         __metadata('design:paramtypes', [])
-    ], PagListModule);
-    return PagListModule;
+    ], MlRouterLoaderMod);
+    return MlRouterLoaderMod;
 }());
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = PagListModule;
-//# sourceMappingURL=pagListModule.js.map
+exports.MlRouterLoaderMod = MlRouterLoaderMod;
+//# sourceMappingURL=mlRouterLoaderMod.js.map

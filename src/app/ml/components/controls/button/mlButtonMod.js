@@ -9,16 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var mlRippleMod_1 = require("../../ripple/mlRippleMod");
+var mlIconMod_1 = require("../../icon/mlIconMod");
 var mlButton_1 = require("./mlButton");
 var mlButtonSubmit_1 = require("./mlButtonSubmit");
-var mlIconMod_1 = require("../../icon/mlIconMod");
 var MlButtonMod = (function () {
     function MlButtonMod() {
     }
     MlButtonMod = __decorate([
         core_1.NgModule({
-            imports: [mlIconMod_1.MlIconMod],
-            declarations: [mlButton_1.MlButton, mlButtonSubmit_1.MlButtonSubmit], exports: [mlButton_1.MlButton, mlButtonSubmit_1.MlButtonSubmit] }), 
+            imports: [mlRippleMod_1.MlRippleMod, mlIconMod_1.MlIconMod],
+            declarations: [mlButton_1.MlButton, mlButtonSubmit_1.MlButtonSubmit],
+            exports: [mlRippleMod_1.MlRippleMod, mlIconMod_1.MlIconMod, mlButton_1.MlButton, mlButtonSubmit_1.MlButtonSubmit] }), 
         __metadata('design:paramtypes', [])
     ], MlButtonMod);
     return MlButtonMod;

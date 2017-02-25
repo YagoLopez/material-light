@@ -1,3 +1,4 @@
+//todo: voy por page radio
 //todo: habilitar webpack.config.js en angular-cli para poder usar local paths en router
 //todo: revisar default keyword y otras cosasa para compilacion aot
 "use strict";
@@ -13,9 +14,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
+var mlSpinnerMod_1 = require("./ml/components/spinner/mlSpinnerMod");
 var mlLayoutMod_1 = require("./ml/components/layout/mlLayoutMod");
 var mlTitleMod_1 = require("./ml/components/title/mlTitleMod");
 var app_layout_1 = require("./app.layout");
+var mlRouterLoaderMod_1 = require("./ml/components/router_loader/mlRouterLoaderMod");
 // Note: absolute paths are needed by webpack and lazy-load
 var APP_ROUTES = [
     { path: '', loadChildren: 'C:/Users/Yago/WebstormProjects/material-light/src/app/pages/button/pagButtonModule' },
@@ -48,7 +51,8 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
-                platform_browser_1.BrowserModule, mlTitleMod_1.MlTitleMod, mlLayoutMod_1.MlLayoutMod, router_1.RouterModule.forRoot(APP_ROUTES, { enableTracing: false, useHash: true })],
+                mlRouterLoaderMod_1.MlRouterLoaderMod, platform_browser_1.BrowserModule, mlSpinnerMod_1.MlSpinnerMod, mlTitleMod_1.MlTitleMod, mlLayoutMod_1.MlLayoutMod,
+                router_1.RouterModule.forRoot(APP_ROUTES, { enableTracing: false, useHash: true })],
             declarations: [app_layout_1.App],
             bootstrap: [app_layout_1.App]
         }), 
