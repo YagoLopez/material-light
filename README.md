@@ -16,7 +16,7 @@ Yago López:
 ## Demo
 
 - <a href="http://yagolopez.github.io/material-light/iframe/iframe.html" target="_blank">Desktop PC</a>
-- <a href="https://yagolopez.github.io/material-light/dist/" target="_blank">Mobile (full screen)</a>
+- <a href="https://yagolopez.github.io/material-light/dist/index.html" target="_blank">Mobile (full screen)</a>
 
 ## Use
 
