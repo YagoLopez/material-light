@@ -100,7 +100,7 @@ export class App {
   isLoading = false;
 
   onLoading($event){
-    console.log('on start load event', $event);
+    // console.log('on start load event', $event);
     this.isLoading = $event;
   }
 

@@ -14,7 +14,7 @@ var PagCard = (function () {
     }
     PagCard = __decorate([
         core_1.Component({
-            template: "\n\n<h5>Card</h5>\n\n<ml-card shadow=\"2\">\n  <ml-card-title>title</ml-card-title>\n  <ml-card-media>\n    <img src=\"assets/img/welcome_card.jpg\" style=\"height:150px\">\n  </ml-card-media>\n  <ml-card-text>\n    text\n  </ml-card-text>\n  <ml-card-actions>\n    <a href=\"#\">Related Action</a>\n  </ml-card-actions>\n</ml-card>\n\n" //template
+            template: "\n\n<style>\n.ml-card {width: 100%; height: 350px}\n.menu-btn {color: white}\n</style>\n\n<h5>Card</h5>\n\n<ml-card shadow=\"3\" img=\"assets/img/welcome_card.jpg\" class=\"ml-card\">\n    <ml-card-title>Title</ml-card-title>\n    <ml-card-text>\n        Card text content\n    </ml-card-text>\n    <ml-card-actions>\n        <ml-button aspect=\"colored\">Card Action 1</ml-button>\n    </ml-card-actions>\n    <ml-card-menu>\n        <ml-menu icon=\"share\" position=\"top-right\" class=\"menu-btn\">\n            <ml-menu-item>item 1</ml-menu-item>\n            <ml-menu-item>item 2</ml-menu-item>\n        </ml-menu>\n    </ml-card-menu>\n</ml-card>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagCard);

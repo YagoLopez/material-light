@@ -13,7 +13,7 @@ template: `
 
 <form [formGroup]="textfieldForm" (ngSubmit)="onSubmit()" autocomplete="off">
 
-  <p><strong><u>Textfields:</u></strong></p>
+  <p><strong>Textfields:</strong></p>
   
   <!-- textfield1  ------------------------------------------------------------------------------------------------- -->
 
@@ -25,24 +25,24 @@ template: `
     <ml-error [validateControl]="textfield1" validator="minLength">Minimum length is 2</ml-error>
     <ml-error [validateControl]="textfield1" validator="maxLength">Maximum length is 4</ml-error>
   </mdl-textfield>
+  <br>
 
   <!-- textfield2  ------------------------------------------------------------------------------------------------- -->
     
   <mdl-textfield id="textfield2" [formControl]="textfield2">
-    <mdl-textfield-label>Label 2 (no icon, no floating, no validation)</mdl-textfield-label>
+    <mdl-textfield-label>Label 2 (no icon, no floating, validation)</mdl-textfield-label>
     <ml-error [validateControl]="textfield2" validator="required">Required field</ml-error>
   </mdl-textfield>
   <br><br>
 
   <!-- textfield expandable  --------------------------------------------------------------------------------------- -->
   
-  <strong><u>Textfield expandable:</u></strong> (No validation)
+  <strong>Textfield expandable:</strong> (No validation)
   <mdl-textfield-expand [formControl]="textfield3" icon="search"></mdl-textfield-expand>
-  <br>
-
+    
   <!-- textfield area  --------------------------------------------------------------------------------------------- -->
   
-  <strong><u>Textfield Area:</u></strong> (Validated)
+  <div><strong>Textfield Area:</strong> (Validated)</div>
   <mdl-textfield-area rows="3" maxrows="6" [formControl]="txtArea">
     <mdl-textfield-label>Text Area</mdl-textfield-label>
     <ml-error [validateControl]="txtArea" validator="required">Required</ml-error>
@@ -66,8 +66,8 @@ template: `
 export class PagTextfield {
 
   textfield1 = new FormControl('', [Validators.required,
-                                   Validators.minLength(2),
-                                   Validators.maxLength(4)]);
+                                    Validators.minLength(2),
+                                    Validators.maxLength(4)]);
                                                  
   textfield2 = new FormControl('', Validators.required);
   textfield3 = new FormControl();
@@ -81,6 +81,6 @@ export class PagTextfield {
   });
 
   onSubmit(){
-    console.log('on submit', this.textfieldForm.value);
+    console.log('on submit form', this.textfieldForm.value);
   }
 }

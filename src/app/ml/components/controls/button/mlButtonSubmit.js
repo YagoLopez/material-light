@@ -26,6 +26,11 @@ var MlButtonSubmit = (function () {
         if (ml.isSubstring('accent', this.aspect)) {
             ml.setClass(this.input, 'mdl-button--accent', this.ren);
         }
+        if (ml.isDefined(this.ripple)) {
+            // this.input.nativeElement.setAttribute('ripple', null);
+            // ml.setAttribute(this.input, 'ripple', '', this.ren);
+            console.log('submit button', this.input);
+        }
         new mdButtonLib_1.default(this.input.nativeElement);
     };
     __decorate([
@@ -45,12 +50,17 @@ var MlButtonSubmit = (function () {
         core_1.Input(), 
         __metadata('design:type', String)
     ], MlButtonSubmit.prototype, "disabled", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], MlButtonSubmit.prototype, "ripple", void 0);
     MlButtonSubmit = __decorate([
         core_1.Component({
             selector: 'ml-button-submit',
             // moduleId: module.id.toString(),
             styleUrls: ['./mlButton.css'],
-            template: '<input type="submit" class="mdl-button" [attr.value]="value" [disabled]="disabled" #input>'
+            // template: '<div><input #input type="submit" class="mdl-button mdl-ripple" [attr.value]="value" [disabled]="disabled"></div>'
+            template: "\n<input #input type=\"submit\" class=\"mdl-button\" [attr.value]=\"value\" [disabled]=\"disabled\">\n\n<!--\n<span class=\"mdl-button__ripple-container\">\n  <span class=\"mdl-ripple\"></span>\n</span>\n-->\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])
     ], MlButtonSubmit);

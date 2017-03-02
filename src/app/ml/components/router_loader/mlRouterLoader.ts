@@ -1,3 +1,6 @@
+//todo: revisar el controlador
+//todo: hacer componente MlRouterProgressbar
+
 import {Component, Output, EventEmitter} from '@angular/core';
 import {Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError} from "@angular/router";
 
@@ -34,10 +37,10 @@ export class MlRouterLoader {
   constructor(private router: Router) {}
   @Output() isLoading: EventEmitter<boolean> = new EventEmitter();
 
-  loadingState(state: boolean): void{
-    this.loading = state;
-    this.isLoading.emit(state);
-  }
+  // loadingState(state: boolean): void{
+  //   this.loading = state;
+  //   this.isLoading.emit(state);
+  // }
 
   public ngOnInit() {
     this.router.events.subscribe(event => {

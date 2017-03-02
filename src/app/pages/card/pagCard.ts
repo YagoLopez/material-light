@@ -3,19 +3,27 @@ import {Component} from '@angular/core';
 @Component({
 template: `
 
+<style>
+.ml-card {width: 100%; height: 350px}
+.menu-btn {color: white}
+</style>
+
 <h5>Card</h5>
 
-<ml-card shadow="2">
-  <ml-card-title>title</ml-card-title>
-  <ml-card-media>
-    <img src="assets/img/welcome_card.jpg" style="height:150px">
-  </ml-card-media>
-  <ml-card-text>
-    text
-  </ml-card-text>
-  <ml-card-actions>
-    <a href="#">Related Action</a>
-  </ml-card-actions>
+<ml-card shadow="3" img="assets/img/welcome_card.jpg" class="ml-card">
+    <ml-card-title>Title</ml-card-title>
+    <ml-card-text>
+        Card text content
+    </ml-card-text>
+    <ml-card-actions>
+        <ml-button aspect="colored">Card Action 1</ml-button>
+    </ml-card-actions>
+    <ml-card-menu>
+        <ml-menu icon="share" position="top-right" class="menu-btn">
+            <ml-menu-item>item 1</ml-menu-item>
+            <ml-menu-item>item 2</ml-menu-item>
+        </ml-menu>
+    </ml-card-menu>
 </ml-card>
 
 `//template

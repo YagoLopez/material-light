@@ -8,7 +8,17 @@ import * as ml from "../../../lib/ml_lib";
 selector: 'ml-button-submit',
 // moduleId: module.id.toString(),
 styleUrls: ['./mlButton.css'],
-template: '<input type="submit" class="mdl-button" [attr.value]="value" [disabled]="disabled" #input>'
+// template: '<div><input #input type="submit" class="mdl-button mdl-ripple" [attr.value]="value" [disabled]="disabled"></div>'
+template: `
+<input #input type="submit" class="mdl-button" [attr.value]="value" [disabled]="disabled">
+
+<!--
+<span class="mdl-button__ripple-container">
+  <span class="mdl-ripple"></span>
+</span>
+-->
+
+`//template
 })
 export class MlButtonSubmit{
 
@@ -16,6 +26,7 @@ export class MlButtonSubmit{
   @Input() aspect: string; // Possible values: [rised, colored, accent] (in lowercase)
   @Input() value: string;
   @Input() disabled: string;
+  @Input() ripple: string;
 
   constructor(private ren: Renderer){}
 
@@ -28,6 +39,11 @@ export class MlButtonSubmit{
     }
     if (ml.isSubstring('accent', this.aspect)){
       ml.setClass(this.input, 'mdl-button--accent', this.ren);
+    }
+    if (ml.isDefined(this.ripple)){
+      // this.input.nativeElement.setAttribute('ripple', null);
+      // ml.setAttribute(this.input, 'ripple', '', this.ren);
+      console.log('submit button', this.input);
     }
     new MdlButton(this.input.nativeElement);
   }

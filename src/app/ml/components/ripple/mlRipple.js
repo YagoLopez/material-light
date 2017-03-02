@@ -12,25 +12,51 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var mlRippleLib_1 = require("./mlRippleLib");
-var ml = require("../../lib/ml_lib");
 var MlRipple = (function () {
     function MlRipple(host, ren) {
         this.host = host;
         this.ren = ren;
+        this.rippleClassName = 'mdl-js-ripple-effect';
     }
-    MlRipple.prototype.ngOnInit = function () {
-        var _this = this;
+    /*
+      ngOnInit(){
         ml.setClass(this.host, 'mdl-js-ripple-effect', this.ren);
-        // Ripple effect must be applied without blocking the main thread. Other way, it will throw exception
+    
+        // Ripple effect must be applied after the element creation.
+        // Using setTimeout() the html element where the ripple effect is applied is created by the main thread
+        // and the ripple efect is created in a secondary thread
+        setTimeout(()=> {
+          //todo: aqui se podria buscar el elemento donde aplicar el efecto ripple.
+          new MdlRipple(this.host.nativeElement);
+        }, 0)
+      }
+    */
+    MlRipple.prototype.ngOnInit = function () {
+        // ml.setClass(this.host, 'mdl-js-ripple-effect', this.ren);
+        // debugger;
+        var elementWithRipple;
+        // if (this.host.nativeElement.firstElementChild){
+        //   // The element where ripple effect will be applied will be host's first element child
+        //   console.log('first child existe', this.host.nativeElement.firstElementChild);
+        //   elementWithRipple = this.host.nativeElement.firstElementChild;
+        // } else {
+        //   // There is no child elements. The element where ripple effect will be applied will be host
+        //   console.log('first child no existe', this.host.nativeElement);
+        //   elementWithRipple = this.host.nativeElement;
+        // }
+        elementWithRipple = this.host.nativeElement;
+        this.ren.setElementClass(elementWithRipple, 'mdl-js-ripple-effect', true);
+        // Ripple effect must be applied after the element creation.
+        // Using setTimeout() the html element where the ripple effect is applied is created by the main thread
+        // and the ripple efect is created in a secondary thread
         setTimeout(function () {
-            //todo: aqui se podria buscar el elemento donde aplicar el efecto ripple. Hay casos donde no basta con
-            // aplicarlo a this.host.nativeElement
-            new mlRippleLib_1.default(_this.host.nativeElement);
+            //todo: aqui se podria buscar el elemento donde aplicar el efecto ripple.
+            new mlRippleLib_1.default(elementWithRipple);
         }, 0);
     };
     MlRipple = __decorate([
         core_1.Directive({
-            selector: '[ripple]'
+            selector: '[ripple]',
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlRipple);

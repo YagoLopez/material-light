@@ -1,3 +1,5 @@
+//todo: revisar el controlador
+//todo: hacer componente MlRouterProgressbar
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -16,10 +18,10 @@ var MlRouterLoader = (function () {
         this.loading = true;
         this.isLoading = new core_1.EventEmitter();
     }
-    MlRouterLoader.prototype.loadingState = function (state) {
-        this.loading = state;
-        this.isLoading.emit(state);
-    };
+    // loadingState(state: boolean): void{
+    //   this.loading = state;
+    //   this.isLoading.emit(state);
+    // }
     MlRouterLoader.prototype.ngOnInit = function () {
         var _this = this;
         this.router.events.subscribe(function (event) {

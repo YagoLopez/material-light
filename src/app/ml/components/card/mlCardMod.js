@@ -15,8 +15,8 @@ var MlCardMod = (function () {
     }
     MlCardMod = __decorate([
         core_1.NgModule({
-            declarations: [mlCard_1.MlCard, mlCard_1.MlCardTitle, mlCard_1.MlCardSubtitle, mlCard_1.MlCardMedia, mlCard_1.MlCardText, mlCard_1.MlCardActions],
-            exports: [mlCard_1.MlCard, mlCard_1.MlCardTitle, mlCard_1.MlCardSubtitle, mlCard_1.MlCardMedia, mlCard_1.MlCardText, mlCard_1.MlCardActions]
+            declarations: [mlCard_1.MlCard, mlCard_1.MlCardTitle, mlCard_1.MlCardSubtitle, mlCard_1.MlCardMedia, mlCard_1.MlCardText, mlCard_1.MlCardActions, mlCard_1.MlCardMenu],
+            exports: [mlCard_1.MlCard, mlCard_1.MlCardTitle, mlCard_1.MlCardSubtitle, mlCard_1.MlCardMedia, mlCard_1.MlCardText, mlCard_1.MlCardActions, mlCard_1.MlCardMenu]
         }), 
         __metadata('design:paramtypes', [])
     ], MlCardMod);

@@ -20,7 +20,8 @@ var MlButton = (function () {
         this.ren = ren;
     }
     MlButton.prototype.ngOnInit = function () {
-        // Input "aspect" ---------------------------------------------------------------------------------------------------
+        // Button "aspect" --------------------------------------------------------------------------------------------------
+        //todo: poner explicaciones de colores
         if (ml.isSubstring('raised', this.aspect)) {
             ml.setClass(this.host, 'mdl-button--raised', this.ren);
         }
@@ -30,7 +31,7 @@ var MlButton = (function () {
         if (ml.isSubstring('accent', this.aspect)) {
             ml.setClass(this.host, 'mdl-button--accent', this.ren);
         }
-        // Input "type" -----------------------------------------------------------------------------------------------------
+        // Button "type" ----------------------------------------------------------------------------------------------------
         if (ml.isSubstring('fab', this.type)) {
             ml.setClass(this.host, 'mdl-button--fab', this.ren);
         }

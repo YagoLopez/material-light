@@ -30,6 +30,7 @@ MdlRipple.prototype.CssClasses_ = {
    * @private
    */
 MdlRipple.prototype.downHandler_ = function (event: any) {
+
     // modificaciones
     if (!this.rippleElement_){
       console.warn('Ripple effect: applied to incorrect HTML element');
@@ -82,6 +83,7 @@ MdlRipple.prototype.downHandler_ = function (event: any) {
    * @private
    */
 MdlRipple.prototype.upHandler_ = function (event: any) {
+
     // modificaciones
     if (!this.rippleElement_){
       console.warn('Ripple effect: applied to incorrect HTML element');
@@ -103,6 +105,7 @@ MdlRipple.prototype.upHandler_ = function (event: any) {
    * Initialize element.
    */
 MdlRipple.prototype.init = function () {
+    debugger;
     if (this.element_) {
         var recentering = this.element_.classList.contains(this.CssClasses_.RIPPLE_CENTER);
         if (!this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT_IGNORE_EVENTS)) {

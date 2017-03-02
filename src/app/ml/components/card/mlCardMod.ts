@@ -1,7 +1,7 @@
 import {NgModule} from "@angular/core";
-import {MlCard, MlCardTitle, MlCardSubtitle, MlCardMedia, MlCardText, MlCardActions} from "./mlCard";
+import {MlCard, MlCardTitle, MlCardSubtitle, MlCardMedia, MlCardText, MlCardActions, MlCardMenu} from "./mlCard";
 @NgModule({
-declarations: [MlCard, MlCardTitle, MlCardSubtitle, MlCardMedia, MlCardText, MlCardActions],
-exports: [MlCard, MlCardTitle, MlCardSubtitle, MlCardMedia, MlCardText, MlCardActions]
+declarations: [MlCard, MlCardTitle, MlCardSubtitle, MlCardMedia, MlCardText, MlCardActions, MlCardMenu],
+exports: [MlCard, MlCardTitle, MlCardSubtitle, MlCardMedia, MlCardText, MlCardActions, MlCardMenu]
 })
 export class MlCardMod{}

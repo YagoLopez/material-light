@@ -14,7 +14,7 @@ var App = (function () {
         this.isLoading = false;
     }
     App.prototype.onLoading = function ($event) {
-        console.log('on start load event', $event);
+        // console.log('on start load event', $event);
         this.isLoading = $event;
     };
     App = __decorate([

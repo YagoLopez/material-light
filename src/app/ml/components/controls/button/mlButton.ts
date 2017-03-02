@@ -23,8 +23,9 @@ export class MlButton{
   constructor(public host: ElementRef, private ren: Renderer){}
 
   ngOnInit(){
-   // Input "aspect" ---------------------------------------------------------------------------------------------------
-
+   // Button "aspect" --------------------------------------------------------------------------------------------------
+    
+    //todo: poner explicaciones de colores
     if (ml.isSubstring('raised', this.aspect)){
       ml.setClass(this.host, 'mdl-button--raised', this.ren);
     }
@@ -34,7 +35,7 @@ export class MlButton{
     if (ml.isSubstring('accent', this.aspect)){
       ml.setClass(this.host, 'mdl-button--accent', this.ren);
     }
-   // Input "type" -----------------------------------------------------------------------------------------------------
+   // Button "type" ----------------------------------------------------------------------------------------------------
 
     if (ml.isSubstring('fab', this.type)){
       ml.setClass(this.host, 'mdl-button--fab', this.ren);

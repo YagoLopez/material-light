@@ -108,6 +108,7 @@ MdlRipple.prototype.upHandler_ = function (event) {
    * Initialize element.
    */
 MdlRipple.prototype.init = function () {
+    debugger;
     if (this.element_) {
         var recentering = this.element_.classList.contains(this.CssClasses_.RIPPLE_CENTER);
         if (!this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT_IGNORE_EVENTS)) {

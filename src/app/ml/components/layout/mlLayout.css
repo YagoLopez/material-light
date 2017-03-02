@@ -2863,3 +2863,77 @@ ul, ol {
   .mdl-layout.is-upgraded .mdl-layout__tab-panel.is-active {
     display: block; }
 
+/* ANIMATIONS ============================================================================= */
+
+/* scaleUpDown */
+/*
+.pt-page-scaleUpDown {
+    -webkit-animation: scaleUpDown .15s ease both;
+    animation: scaleUpDown .15s ease both;
+}
+
+@-webkit-keyframes scaleUpDown {
+    from { opacity: 0; -webkit-transform: scale(1.2); }
+}
+@keyframes scaleUpDown {
+    from { opacity: 0; -webkit-transform: scale(1.2); transform: scale(1.2); }
+}
+*/
+
+/* fade */
+/*
+.pt-page-fade {
+    -webkit-animation: fade .15s ease both;
+    animation: fade .15s ease both;
+}
+@-webkit-keyframes fade {
+    from {opacity: 0.3; }
+    to { opacity: 1 }
+}
+@keyframes fade {
+    from {opacity: 0.3; }
+    to { opacity: 1 }
+}
+*/
+
+/* move from left */
+/*
+.pt-page-moveFromLeft {
+    -webkit-animation: moveFromLeft .3s ease both;
+    animation: moveFromLeft .3s ease both;
+}
+@-webkit-keyframes moveFromLeft {
+    from { -webkit-transform: translateX(-100%); }
+}
+@keyframes moveFromLeft {
+    from { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+*/
+
+/* move from right */
+/*
+.pt-page-moveFromRight {
+    -webkit-animation: moveFromRight .3s ease both;
+    animation: moveFromRight .3s ease both;
+}
+@-webkit-keyframes moveFromRight {
+    from { -webkit-transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+    from { -webkit-transform: translateX(100%); transform: translateX(100%); }
+}
+*/
+
+/* scale-up */
+/*
+.pt-page-scaleUp {
+    -webkit-animation: scaleUp .25s ease both;
+    animation: scaleUp .25s ease both;
+}
+@-webkit-keyframes scaleUp {
+    from { opacity: 0; -webkit-transform: scale(.8); }
+}
+@keyframes scaleUp {
+    from { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+}
+*/
