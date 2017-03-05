@@ -10,4 +10,4 @@ import {PagSelectfield} from "./pagSelectfield";
 imports: [DebugFormMod, MlButtonMod, MlValidationErrorMod, MlSelectfieldMod, ReactiveFormsModule,
 RouterModule.forChild([{path: '', component: PagSelectfield}])],
 declarations: [PagSelectfield]})
-export default class PagSelectfieldMod{}
+export default class PagSelectfieldModule{}

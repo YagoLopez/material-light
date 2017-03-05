@@ -54,7 +54,7 @@ template: `
   
   <p> 
     <ml-button-submit [disabled]="textfieldForm.invalid" 
-      value="Submit to console" aspect="raised"></ml-button-submit>
+      text="Submit to console" aspect="raised"></ml-button-submit>
   </p>                      
                       
 </form>

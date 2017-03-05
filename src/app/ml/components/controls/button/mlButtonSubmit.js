@@ -1,4 +1,3 @@
-//todo: intentar funsionar ambos tipos de botones: normal y submit
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -26,11 +25,6 @@ var MlButtonSubmit = (function () {
         if (ml.isSubstring('accent', this.aspect)) {
             ml.setClass(this.input, 'mdl-button--accent', this.ren);
         }
-        if (ml.isDefined(this.ripple)) {
-            // this.input.nativeElement.setAttribute('ripple', null);
-            // ml.setAttribute(this.input, 'ripple', '', this.ren);
-            console.log('submit button', this.input);
-        }
         new mdButtonLib_1.default(this.input.nativeElement);
     };
     __decorate([
@@ -45,22 +39,17 @@ var MlButtonSubmit = (function () {
         // Possible values: [rised, colored, accent] (in lowercase)
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlButtonSubmit.prototype, "value", void 0);
+    ], MlButtonSubmit.prototype, "text", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
     ], MlButtonSubmit.prototype, "disabled", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], MlButtonSubmit.prototype, "ripple", void 0);
     MlButtonSubmit = __decorate([
         core_1.Component({
             selector: 'ml-button-submit',
             // moduleId: module.id.toString(),
             styleUrls: ['./mlButton.css'],
-            // template: '<div><input #input type="submit" class="mdl-button mdl-ripple" [attr.value]="value" [disabled]="disabled"></div>'
-            template: "\n<input #input type=\"submit\" class=\"mdl-button\" [attr.value]=\"value\" [disabled]=\"disabled\">\n\n<!--\n<span class=\"mdl-button__ripple-container\">\n  <span class=\"mdl-ripple\"></span>\n</span>\n-->\n\n" //template
+            template: "\n\n<div class=\"mdl-button\" style=\"padding: 3px\">\n<input #input type=\"submit\" class=\"mdl-button\" [attr.value]=\"text\" [disabled]=\"disabled\" />\n<span class=\"mdl-button__ripple-container\" style=\"z-index: -10\">\n  <span class=\"mdl-ripple\"></span>\n</span>\n</div>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])
     ], MlButtonSubmit);

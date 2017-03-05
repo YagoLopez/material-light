@@ -1,4 +1,3 @@
-//todo: ripple effect
 //todo: (general) nombrar todos los componentes terminando en "C" para distinguirlos de otros ficheros
 
 // NOTE: this component "MlSelectfield" is based on "MlButton", "MdlMenu" and "MdlTextfield"
@@ -69,7 +68,6 @@ export class MlSelectfield implements ControlValueAccessor{
     if (this.ripple === ''){
       ml.setClass(this.mdlButton.host, 'mdl-js-ripple-effect', this.ren);
       ml.setClass(this.menuList, 'mdl-js-ripple-effect', this.ren);
-      // ml.setClass(this.input, 'mdl-js-ripple-effect', this.ren);
     }
   }
   ngAfterViewInit(){

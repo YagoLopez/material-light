@@ -35,12 +35,12 @@ template: `
   <br>
   
 
-  <ml-selectfield [formControl]="selectfield2" label="Choose another option...">
-    <ml-sf-item>alpha</ml-sf-item>
-    <ml-sf-item>beta</ml-sf-item>
-    <ml-sf-item>gamma</ml-sf-item>
+  <ml-selectfield [formControl]="selectfield2" label="Choose another option..." ripple>
+    <ml-sf-item ripple>alpha</ml-sf-item>
+    <ml-sf-item ripple>beta</ml-sf-item>
+    <ml-sf-item ripple>gamma</ml-sf-item>
   </ml-selectfield>
-  <p>(Without validators &uarr;)</p>
+  <p>(No validators + ripple &uarr;)</p>
   
   <br>
   <ml-button-submit [disabled]="selectForm.invalid" value="Submit to console" aspect="raised"></ml-button-submit>

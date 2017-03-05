@@ -1,3 +1,5 @@
+//todo: intentar funsionar ambos tipos de botones: normal y submit
+
 import {Component, ElementRef, Input, Renderer, ViewEncapsulation, ViewChild} from "@angular/core";
 import MdlButton from "./mdButtonLib";
 import * as ml from "../../../lib/ml_lib";
@@ -8,12 +10,15 @@ selector: 'ml-button-submit',
 styleUrls: ['./mlButton.css'],
 template: `
 
-<div class="mdl-button" style="padding: 3px">
-<input #input type="submit" class="mdl-button" [attr.value]="text" [disabled]="disabled" />
-<span class="mdl-button__ripple-container" style="z-index: -10">
+<!--<div><input #input type="submit" class="mdl-button mdl-ripple" [attr.value]="value" [disabled]="disabled"></div>-->
+
+<ml-button style="padding:3px" (click)="onBtnClick($event)">
+<input #input type="submit" class="mdl-button" [attr.value]="value" [disabled]="disabled">
+<span class="mdl-button__ripple-container">
   <span class="mdl-ripple"></span>
 </span>
-</div>
+</ml-button>
+
 
 `//template
 })
@@ -21,8 +26,9 @@ export class MlButtonSubmit{
 
   @ViewChild('input') input: ElementRef;
   @Input() aspect: string; // Possible values: [rised, colored, accent] (in lowercase)
-  @Input() text: string;
+  @Input() value: string;
   @Input() disabled: string;
+  @Input() ripple: string;
 
   constructor(private ren: Renderer){}
 
@@ -36,6 +42,18 @@ export class MlButtonSubmit{
     if (ml.isSubstring('accent', this.aspect)){
       ml.setClass(this.input, 'mdl-button--accent', this.ren);
     }
+    if (ml.isDefined(this.ripple)){
+      // this.input.nativeElement.setAttribute('ripple', null);
+      // ml.setAttribute(this.input, 'ripple', '', this.ren);
+      console.log('submit button', this.input);
+    }
     new MdlButton(this.input.nativeElement);
   }
+
+  onBtnClick(event){
+    event.stopPropagation();
+    console.log('btn click', event);
+    return false;
+  }
+
 }

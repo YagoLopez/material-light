@@ -16,18 +16,18 @@ var mlValidationErrorMod_1 = require("../../ml/components/controls/error/mlValid
 var mlButtonMod_1 = require("../../ml/components/controls/button/mlButtonMod");
 var debugFormMod_1 = require("../../ml/lib/debug_form/debugFormMod");
 var pagSelectfield_1 = require("./pagSelectfield");
-var PagSelectfieldMod = (function () {
-    function PagSelectfieldMod() {
+var PagSelectfieldModule = (function () {
+    function PagSelectfieldModule() {
     }
-    PagSelectfieldMod = __decorate([
+    PagSelectfieldModule = __decorate([
         core_1.NgModule({
             imports: [debugFormMod_1.DebugFormMod, mlButtonMod_1.MlButtonMod, mlValidationErrorMod_1.MlValidationErrorMod, mlSelectfieldMod_1.MlSelectfieldMod, forms_1.ReactiveFormsModule,
                 router_1.RouterModule.forChild([{ path: '', component: pagSelectfield_1.PagSelectfield }])],
             declarations: [pagSelectfield_1.PagSelectfield] }), 
         __metadata('design:paramtypes', [])
-    ], PagSelectfieldMod);
-    return PagSelectfieldMod;
+    ], PagSelectfieldModule);
+    return PagSelectfieldModule;
 }());
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = PagSelectfieldMod;
-//# sourceMappingURL=pagSelectfieldMod.js.map
+exports.default = PagSelectfieldModule;
+//# sourceMappingURL=pagSelectfieldModule.js.map

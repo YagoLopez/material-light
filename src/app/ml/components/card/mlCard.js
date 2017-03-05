@@ -1,6 +1,3 @@
-//todo: arreglar subtitulo
-//todo: hacer una forma facil de poner imagen de fondo con titulo en letras blancas
-//todo: añadir la clase 'expand' para imagenes
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -46,7 +43,7 @@ var MlCard = (function () {
             // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             host: { class: 'mdl-card' },
-            template: "\n\n<div #cardTitle class=\"mdl-card__title mdl-card--expand\">\n    <h2 class=\"mdl-card__title-text\">\n        <ng-content select=\"ml-card-title\"></ng-content>\n    </h2>\n</div>\n\n<div class=\"mdl-card__supporting-text\">\n  <ng-content select=\"ml-card-text\"></ng-content>\n</div>\n<div class=\"mdl-card__actions mdl-card&#45;&#45;border\">\n  <ng-content select=\"ml-card-actions\"></ng-content>\n</div>\n<div class=\"mdl-card__menu\">\n  <ng-content select=\"ml-card-menu\"></ng-content>\n</div>\n\n" //template
+            template: "\n\n<div #cardTitle class=\"mdl-card__title mdl-card--expand\">\n  <h2 class=\"mdl-card__title-text\">\n    <ng-content select=\"ml-card-title\"></ng-content>\n  </h2>\n</div>\n<div class=\"mdl-card__supporting-text\">\n  <ng-content select=\"ml-card-text\"></ng-content>\n</div>\n<div class=\"mdl-card__actions mdl-card&#45;&#45;border\">\n  <ng-content select=\"ml-card-actions\"></ng-content>\n</div>\n<div class=\"mdl-card__menu\">\n  <ng-content select=\"ml-card-menu\"></ng-content>\n</div>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlCard);

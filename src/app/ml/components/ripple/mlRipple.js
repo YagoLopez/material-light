@@ -32,20 +32,31 @@ var MlRipple = (function () {
       }
     */
     MlRipple.prototype.ngOnInit = function () {
-        // ml.setClass(this.host, 'mdl-js-ripple-effect', this.ren);
         // debugger;
         var elementWithRipple;
-        // if (this.host.nativeElement.firstElementChild){
-        //   // The element where ripple effect will be applied will be host's first element child
-        //   console.log('first child existe', this.host.nativeElement.firstElementChild);
-        //   elementWithRipple = this.host.nativeElement.firstElementChild;
-        // } else {
-        //   // There is no child elements. The element where ripple effect will be applied will be host
-        //   console.log('first child no existe', this.host.nativeElement);
-        //   elementWithRipple = this.host.nativeElement;
-        // }
+        /*
+            if (this.host.nativeElement.firstElementChild){
+              // The element where ripple effect will be applied will be host's first element child
+              console.log('first child existe', this.host.nativeElement.firstElementChild);
+              elementWithRipple = this.host.nativeElement.firstElementChild;
+            } else {
+              // There is no child elements. The element where ripple effect will be applied will be host
+              console.log('first child no existe', this.host.nativeElement);
+              elementWithRipple = this.host.nativeElement;
+            }
+        */
         elementWithRipple = this.host.nativeElement;
         this.ren.setElementClass(elementWithRipple, 'mdl-js-ripple-effect', true);
+        /*
+            elementWithRipple = this.host.nativeElement.getElementsByClassName('ripple-element')[0];
+            if(!elementWithRipple){
+              console.warn('Ripple element not found');
+              return;
+            }
+            this.ren.setElementClass(elementWithRipple, 'mdl-js-ripple-effect', true);
+            
+            console.log('ripple element', elementWithRipple);
+        */
         // Ripple effect must be applied after the element creation.
         // Using setTimeout() the html element where the ripple effect is applied is created by the main thread
         // and the ripple efect is created in a secondary thread

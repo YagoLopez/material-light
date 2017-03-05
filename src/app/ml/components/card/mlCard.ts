@@ -1,7 +1,3 @@
-//todo: arreglar subtitulo
-//todo: hacer una forma facil de poner imagen de fondo con titulo en letras blancas
-//todo: añadir la clase 'expand' para imagenes
-
 import {Component, Directive, ElementRef, Input, Renderer, ViewEncapsulation, ViewChild} from "@angular/core";
 import * as ml from "../../lib/ml_lib";
 
@@ -14,11 +10,10 @@ host: {class: 'mdl-card'},
 template: `
 
 <div #cardTitle class="mdl-card__title mdl-card--expand">
-    <h2 class="mdl-card__title-text">
-        <ng-content select="ml-card-title"></ng-content>
-    </h2>
+  <h2 class="mdl-card__title-text">
+    <ng-content select="ml-card-title"></ng-content>
+  </h2>
 </div>
-
 <div class="mdl-card__supporting-text">
   <ng-content select="ml-card-text"></ng-content>
 </div>
@@ -40,7 +35,7 @@ export class MlCard{
   constructor(private host: ElementRef, private ren: Renderer){}
 
   ngOnInit(){
-      this.cardTitle.nativeElement.style.background = "url('" +this.img+ "')";
+      this.cardTitle.nativeElement.style.background = `url('${this.img}')`;
       this.cardTitle.nativeElement.style.color= "#fff";
       this.cardTitle.nativeElement.style.backgroundSize = "cover";
 

@@ -33,7 +33,7 @@ MdlRipple.prototype.downHandler_ = function (event: any) {
 
     // modificaciones
     if (!this.rippleElement_){
-      console.warn('Ripple effect: applied to incorrect HTML element');
+      console.warn('Ripple element does not exists');
       return;
     }
     // fin modificaciones
@@ -86,7 +86,7 @@ MdlRipple.prototype.upHandler_ = function (event: any) {
 
     // modificaciones
     if (!this.rippleElement_){
-      console.warn('Ripple effect: applied to incorrect HTML element');
+      console.warn('Ripple element does not exists');
       return;
     }
     //fin modificaciones
@@ -105,7 +105,7 @@ MdlRipple.prototype.upHandler_ = function (event: any) {
    * Initialize element.
    */
 MdlRipple.prototype.init = function () {
-    debugger;
+    // debugger;
     if (this.element_) {
         var recentering = this.element_.classList.contains(this.CssClasses_.RIPPLE_CENTER);
         if (!this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT_IGNORE_EVENTS)) {
@@ -167,6 +167,7 @@ MdlRipple.prototype.init = function () {
                     var scale: any;
                     var size: any;
                     var offset = 'translate(' + this.x_ + 'px, ' + this.y_ + 'px)';
+                    // debugger;
                     if (start) {
                         scale = this.Constant_.INITIAL_SCALE;
                         size = this.Constant_.INITIAL_SIZE;

@@ -2,66 +2,57 @@
 //todo: hacer una forma facil de poner imagen de fondo con titulo en letras blancas
 //todo: añadir la clase 'expand' para imagenes
 
-import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angular/core";
+import {Component, Directive, ElementRef, Input, Renderer, ViewEncapsulation, ViewChild} from "@angular/core";
 import * as ml from "../../lib/ml_lib";
-// ---------------------------------------------------------------------------------------------------------------------
+
 @Component({
 selector: 'ml-card',
 styleUrls: ['./mlCard.css'],
 // moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
 host: {class: 'mdl-card'},
-template: '<ng-content></ng-content>'
+template: `
+
+<div #cardTitle class="mdl-card__title mdl-card--expand">
+    <h2 class="mdl-card__title-text">
+        <ng-content select="ml-card-title"></ng-content>
+    </h2>
+</div>
+
+<div class="mdl-card__supporting-text">
+  <ng-content select="ml-card-text"></ng-content>
+</div>
+<div class="mdl-card__actions mdl-card&#45;&#45;border">
+  <ng-content select="ml-card-actions"></ng-content>
+</div>
+<div class="mdl-card__menu">
+  <ng-content select="ml-card-menu"></ng-content>
+</div>
+
+`//template
 })
 export class MlCard{
 
   @Input() shadow: string;
+  @Input() img: string;
+  @ViewChild('cardTitle') cardTitle: ElementRef;
 
-  constructor(
-    private host: ElementRef,
-    private ren: Renderer){
-  }
+  constructor(private host: ElementRef, private ren: Renderer){}
 
   ngOnInit(){
-     if (this.shadow){
+      this.cardTitle.nativeElement.style.background = "url('" +this.img+ "')";
+      this.cardTitle.nativeElement.style.color= "#fff";
+      this.cardTitle.nativeElement.style.backgroundSize = "cover";
+
+      if (this.shadow){
         this.shadow = `mdl-shadow--${this.shadow}dp`;
         ml.setClass(this.host, this.shadow, this.ren);
      }
   }
 }
-// ---------------------------------------------------------------------------------------------------------------------
-@Component({
-selector: 'ml-card-title',
-host: {class: 'mdl-card__title'},
-template: '<div class="mdl-card__title-text"><ng-content></ng-content></div>'
-})
-export class MlCardTitle{}
-// ---------------------------------------------------------------------------------------------------------------------
-@Component({
-selector: 'ml-card-subtitle',
-host: {class: 'mdl-card__subtitle-text'},
-template: '<ng-content></ng-content>'
-})
-export class MlCardSubtitle{}
-// ---------------------------------------------------------------------------------------------------------------------
-@Component({
-selector: 'ml-card-media',
-host: {class: 'mdl-card__media'},
-template: '<ng-content></ng-content>'
-})
-export class MlCardMedia {}
-// ---------------------------------------------------------------------------------------------------------------------
-@Component({
-selector: 'ml-card-text',
-host: {class: 'mdl-card__supporting-text'},
-template: '<ng-content></ng-content>'
-})
-export class MlCardText {}
-// ---------------------------------------------------------------------------------------------------------------------
-@Component({
-selector: 'ml-card-actions',
-host: {class: 'mdl-card__actions'},
-template: '<ng-content></ng-content>'
-})
-export class MlCardActions {}
-// ---------------------------------------------------------------------------------------------------------------------
+@Directive({selector: 'ml-card-title'}) export class MlCardTitle{}
+@Directive({selector: 'ml-card-subtitle'})export class MlCardSubtitle{}
+@Directive({selector: 'ml-card-media'}) export class MlCardMedia {}
+@Directive({selector: 'ml-card-text'}) export class MlCardText {}
+@Directive({selector: 'ml-card-actions'}) export class MlCardActions {}
+@Directive({selector: 'ml-card-menu'}) export class MlCardMenu{}

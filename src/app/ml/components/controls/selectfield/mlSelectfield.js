@@ -1,4 +1,3 @@
-//todo: ripple effect
 //todo: (general) nombrar todos los componentes terminando en "C" para distinguirlos de otros ficheros
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
