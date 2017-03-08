@@ -1,5 +1,5 @@
+//todo: no crear el contenedor ripple (span) cuando no se usa la directiva ripple
 //todo: toggles no funionan bien en edge
-//todo: en vez de renderer usar @HostBinding(class.classname) para poner clases en el host de una directiva
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55,7 +55,7 @@ var MlToggle = (function () {
             // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlToggle; }), multi: true }],
-            template: "\n\n<label #label [attr.for]=\"id+'mdl'\" class=\"mdl-icon-toggle\" [ngClass]=\"{'is-checked': isChecked()}\">\n  <input type=\"checkbox\"  class=\"mdl-icon-toggle__input\" \n         [attr.id]=\"id+'mdl'\"\n         [(ngModel)]=\"model\" \n         [disabled]=\"disabled\">\n  <span class=\"mdl-icon-toggle__label\"><ng-content></ng-content></span>\n</label>\n\n\n" //template
+            template: "\n\n<label #label [attr.for]=\"id+'mdl'\" class=\"mdl-icon-toggle\" [ngClass]=\"{'is-checked': isChecked()}\">\n  <input type=\"checkbox\"  class=\"mdl-icon-toggle__input\" \n         [attr.id]=\"id+'mdl'\"\n         [(ngModel)]=\"model\" \n         [disabled]=\"disabled\">\n  <span class=\"mdl-icon-toggle__label\"><ng-content></ng-content></span>\n  <span class=\"mdl-icon-toggle__ripple-container\">\n    <span class=\"mdl-ripple\"></span>\n  </span>\n</label>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], MlToggle);

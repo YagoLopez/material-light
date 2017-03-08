@@ -11,16 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var mlSpinnerMod_1 = require("../spinner/mlSpinnerMod");
-var mlRouterLoader_1 = require("./mlRouterLoader");
-var MlRouterLoaderMod = (function () {
-    function MlRouterLoaderMod() {
+var mlLoaderRouter_1 = require("./mlLoaderRouter");
+var MlLoaderRouterMod = (function () {
+    function MlLoaderRouterMod() {
     }
-    MlRouterLoaderMod = __decorate([
-        core_1.NgModule({ imports: [common_1.CommonModule, mlSpinnerMod_1.MlSpinnerMod], declarations: [mlRouterLoader_1.MlRouterLoader], exports: [mlSpinnerMod_1.MlSpinnerMod, mlRouterLoader_1.MlRouterLoader]
+    MlLoaderRouterMod = __decorate([
+        core_1.NgModule({ imports: [common_1.CommonModule, mlSpinnerMod_1.MlSpinnerMod], declarations: [mlLoaderRouter_1.MlLoaderRouter], exports: [mlSpinnerMod_1.MlSpinnerMod, mlLoaderRouter_1.MlLoaderRouter]
         }), 
         __metadata('design:paramtypes', [])
-    ], MlRouterLoaderMod);
-    return MlRouterLoaderMod;
+    ], MlLoaderRouterMod);
+    return MlLoaderRouterMod;
 }());
-exports.MlRouterLoaderMod = MlRouterLoaderMod;
-//# sourceMappingURL=mlRouterLoaderMod.js.map
+exports.MlLoaderRouterMod = MlLoaderRouterMod;
+//# sourceMappingURL=mlLoaderRouterMod.js.map

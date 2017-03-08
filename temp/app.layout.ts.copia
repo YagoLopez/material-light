@@ -35,12 +35,18 @@ template: `
     </ml-header-row>
     <!--<ml-header-tabs *ngIf="headerTabs">-->
     <ml-header-tabs>
-      <a header-tab href="#tab1" ripple active>Tab 1</a>
-      <a header-tab href="#tab2" ripple>Tab 2</a>
-      <a header-tab href="#tab3" ripple>Tab 3</a>
-      <a header-tab href="#tab4" ripple>Tab 4</a>
-      <a header-tab href="#tab5" ripple>Tab 5</a>
-      <a header-tab href="#tab6" ripple>Tab 6</a>
+      <a tab-bar href="#tab1" active>Tab 1</a>
+      <a tab-bar href="#tab2" ripple>
+        Tab 2
+        <!--<span class="mdl-layout__tab-ripple-container">-->
+          <!--<span class="mdl-ripple"></span>-->
+        <!--</span>-->
+
+      </a>
+      <a tab-bar href="#tab3">Tab 3</a>
+      <a tab-bar href="#tab4">Tab 4</a>
+      <a tab-bar href="#tab5">Tab 5</a>
+      <a tab-bar href="#tab6">Tab 6</a>
     </ml-header-tabs>
   </ml-header>
 
@@ -70,22 +76,22 @@ template: `
       <a nav-item routerLink="slider">Slider</a>
       <a nav-item routerLink="dialog">Dialog</a>
       <a nav-item routerLink="table">Table</a>
-      <!--<a nav-item href="#" (click)="toggleHeaderTabs()">Header Tabs</a>-->
+      <a nav-item href="#" (click)="toggleHeaderTabs()">Header Tabs</a>
     </ml-nav>
   </ml-drawer>
   
   <!-- Content ----------------------------------------------------------------------------------------------------- -->
   
   <ml-content class="content-pad">
-    <ml-loader-router (isLoading)="onLoading($event)"></ml-loader-router>
-    <ml-header-tab-content id="tab1" active [hidden]="isLoading">
+    <ml-router-loader (isLoading)="onLoading($event)"></ml-router-loader>
+    <ml-tab-content id="tab1" active [hidden]="isLoading">
       <router-outlet></router-outlet>
-    </ml-header-tab-content>
-    <ml-header-tab-content id="tab2"><ml-title>Empty tab 2. Back to tab 1</ml-title></ml-header-tab-content>
-    <ml-header-tab-content id="tab3"><ml-title>Empty tab 3. Back to tab 1</ml-title></ml-header-tab-content>
-    <ml-header-tab-content id="tab4"><ml-title>Empty tab 4. Back to tab 1</ml-title></ml-header-tab-content>
-    <ml-header-tab-content id="tab5"><ml-title>Empty tab 5. Back to tab 1</ml-title></ml-header-tab-content>
-    <ml-header-tab-content id="tab6"><ml-title>Empty tab 6. Back to tab 1</ml-title></ml-header-tab-content>
+    </ml-tab-content>
+    <ml-tab-content id="tab2"><ml-title>Empty tab 2. Back to tab 1</ml-title></ml-tab-content>
+    <ml-tab-content id="tab3"><ml-title>Empty tab 3. Back to tab 1</ml-title></ml-tab-content>
+    <ml-tab-content id="tab4"><ml-title>Empty tab 4. Back to tab 1</ml-title></ml-tab-content>
+    <ml-tab-content id="tab5"><ml-title>Empty tab 5. Back to tab 1</ml-title></ml-tab-content>
+    <ml-tab-content id="tab6"><ml-title>Empty tab 6. Back to tab 1</ml-title></ml-tab-content>
   </ml-content>
     
   <!-- End --------------------------------------------------------------------------------------------------------- -->
@@ -125,5 +131,6 @@ export class App {
   //   const temp: string | any = this.getUrlParameter('headertabs');
   //   temp.toLowerCase() === 'true' ? this.headerTabs = true : this.headerTabs = false;
   // }
+
 
 }

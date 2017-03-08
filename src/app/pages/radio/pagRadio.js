@@ -27,7 +27,7 @@ var PagRadio = (function () {
     };
     PagRadio = __decorate([
         core_1.Component({
-            template: "\n\n<h5>Radio Button</h5>\n\n<h6>(Only for reactive forms)</h6>\n<form [formGroup]=\"formRadio\" (ngSubmit)=\"onSubmit2()\">\n  <p><ml-radio id=\"radio3\" formControlName=\"options\" value=\"option3\" ripple>Option 3 (ripple)</ml-radio></p>\n  <p><ml-radio id=\"radio4\" formControlName=\"options\" value=\"option4\">Option 4 (no ripple)</ml-radio></p>\n  <p><ml-radio id=\"radio5\" formControlName=\"options\" value=\"option5\" disabled>Option 5 (disabled)</ml-radio></p>\n  <p><ml-button-submit aspect=\"raised\" text=\"Submit to console\" ripple></ml-button-submit></p>\n</form>\n\n<debug-form [name]=\"formRadio\"></debug-form>\n\n" //template
+            template: "\n\n<h5>Radio Button</h5>\n\n<h6>(Only for reactive forms)</h6>\n<form [formGroup]=\"formRadio\" (ngSubmit)=\"onSubmit2()\">\n  <p><ml-radio id=\"radio3\" formControlName=\"options\" value=\"option3\">Option 3</ml-radio></p>\n  <p><ml-radio id=\"radio4\" formControlName=\"options\" value=\"option4\" ripple>Option 4 (With ripple)</ml-radio></p>\n  <p><ml-radio id=\"radio5\" formControlName=\"options\" value=\"option5\" disabled>Option 5 (Disabled)</ml-radio></p>\n  <p><ml-button-submit aspect=\"raised\" text=\"Submit to console\" ripple></ml-button-submit></p>\n</form>\n\n<debug-form [name]=\"formRadio\"></debug-form>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagRadio);

@@ -102,7 +102,7 @@ var MlTextfieldExpand = (function () {
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlTextfieldExpand; }), multi: true }],
-            template: "\n\n<label class=\"mdl-button mdl-button--icon ripple-element\" [attr.for]=\"id\">\n  <ml-icon>{{icon}}</ml-icon>\n</label>\n    \n<div class=\"mdl-textfield__expandable-holder\">\n  <input type=\"text\" class=\"mdl-textfield__input\" \n    [attr.id]=\"id\" \n    [name]=\"name\"\n    [(ngModel)]=\"model\" \n    (focus)=\"onFocus()\" \n    (keyup)=\"onKeyup()\">\n  <label class=\"mdl-textfield__label\" [attr.for]=\"id\"></label>\n</div>\n\n<div *ngIf=\"showError\" class=\"mdl-textfield-expand-error\">\n  <ng-content select=\"ml-error\"></ng-content>\n</div>\n\n" //template
+            template: "\n\n<label class=\"mdl-button mdl-button--icon\" [attr.for]=\"id\">\n  <ml-icon>{{icon}}</ml-icon>\n</label>\n    \n<div class=\"mdl-textfield__expandable-holder\">\n  <input type=\"text\" class=\"mdl-textfield__input\" \n    [attr.id]=\"id\" \n    [name]=\"name\"\n    [(ngModel)]=\"model\" \n    (focus)=\"onFocus()\" \n    (keyup)=\"onKeyup()\">\n  <label class=\"mdl-textfield__label\" [attr.for]=\"id\"></label>\n</div>\n<div *ngIf=\"showError\" class=\"mdl-textfield-expand-error\">\n  <ng-content select=\"ml-error\"></ng-content>\n</div>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlTextfieldExpand);

@@ -60,7 +60,7 @@ var MlCheckbox = (function () {
             encapsulation: core_1.ViewEncapsulation.None,
             // moduleId: module.id.toString(),
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlCheckbox; }), multi: true }],
-            template: "\n\n<label #label [attr.for]=\"id+'mdl'\" class=\"mdl-checkbox\" [ngClass]=\"{'is-checked': isChecked()}\">\n  <input type=\"checkbox\" [attr.id]=\"id+'mdl'\" class=\"mdl-checkbox__input\" [(ngModel)]=\"model\" [disabled]=\"disabled\">\n  <span class=\"mdl-checkbox__label\"><ng-content></ng-content></span>\n</label>\n\n" //template
+            template: "\n\n<label #label [attr.for]=\"id+'mdl'\" class=\"mdl-checkbox\" [ngClass]=\"{'is-checked': isChecked()}\">\n  <input type=\"checkbox\" [attr.id]=\"id+'mdl'\" class=\"mdl-checkbox__input\" [(ngModel)]=\"model\" [disabled]=\"disabled\">\n  <span class=\"mdl-checkbox__label\"><ng-content></ng-content></span>\n  <span class=\"mdl-checkbox__ripple-container mdl-ripple--center\">\n    <span class=\"mdl-ripple is-animating\"></span>\n  </span>\n</label>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], MlCheckbox);

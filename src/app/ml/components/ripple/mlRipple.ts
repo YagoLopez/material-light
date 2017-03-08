@@ -3,68 +3,19 @@
 
 import {Directive, ElementRef, Renderer} from "@angular/core";
 import MdlRipple from "./mlRippleLib";
-//todo: revisar esto
-import * as ml from "../../lib/ml_lib";
 
 @Directive({
 selector: '[ripple]',
 })
+// Note: in complex elements where is not enough with using the "ripple" attribute, a "<label>" container must be used
 export class MlRipple{
-
-  rippleClassName = 'mdl-js-ripple-effect';
 
   constructor(private host: ElementRef, private ren: Renderer) {}
 
-/*
   ngOnInit(){
-    ml.setClass(this.host, 'mdl-js-ripple-effect', this.ren);
-
-    // Ripple effect must be applied after the element creation.
-    // Using setTimeout() the html element where the ripple effect is applied is created by the main thread
-    // and the ripple efect is created in a secondary thread
-    setTimeout(()=> {
-      //todo: aqui se podria buscar el elemento donde aplicar el efecto ripple.
-      new MdlRipple(this.host.nativeElement);
-    }, 0)
-  }
-*/
-  ngOnInit(){
-
-    // debugger;
-    let elementWithRipple: any;
-
-/*
-    if (this.host.nativeElement.firstElementChild){
-      // The element where ripple effect will be applied will be host's first element child
-      console.log('first child existe', this.host.nativeElement.firstElementChild);
-      elementWithRipple = this.host.nativeElement.firstElementChild;
-    } else {
-      // There is no child elements. The element where ripple effect will be applied will be host
-      console.log('first child no existe', this.host.nativeElement);
-      elementWithRipple = this.host.nativeElement;
-    }
-*/
-    
-    elementWithRipple = this.host.nativeElement;
+    const elementWithRipple = this.host.nativeElement;
     this.ren.setElementClass(elementWithRipple, 'mdl-js-ripple-effect', true);
-
-/*
-    elementWithRipple = this.host.nativeElement.getElementsByClassName('ripple-element')[0];
-    if(!elementWithRipple){
-      console.warn('Ripple element not found');
-      return;
-    }
-    this.ren.setElementClass(elementWithRipple, 'mdl-js-ripple-effect', true);
-    
-    console.log('ripple element', elementWithRipple);
-*/
-
-
-    // Ripple effect must be applied after the element creation.
-    // Using setTimeout() the html element where the ripple effect is applied is created by the main thread
-    // and the ripple efect is created in a secondary thread
     setTimeout(()=> {
-      //todo: aqui se podria buscar el elemento donde aplicar el efecto ripple.
       new MdlRipple(elementWithRipple);
     }, 0)
   }

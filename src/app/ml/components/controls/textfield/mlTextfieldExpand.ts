@@ -15,7 +15,7 @@ changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlTextfieldExpand), multi: true}],
 template: `
 
-<label class="mdl-button mdl-button--icon ripple-element" [attr.for]="id">
+<label class="mdl-button mdl-button--icon" [attr.for]="id">
   <ml-icon>{{icon}}</ml-icon>
 </label>
     
@@ -28,7 +28,6 @@ template: `
     (keyup)="onKeyup()">
   <label class="mdl-textfield__label" [attr.for]="id"></label>
 </div>
-
 <div *ngIf="showError" class="mdl-textfield-expand-error">
   <ng-content select="ml-error"></ng-content>
 </div>

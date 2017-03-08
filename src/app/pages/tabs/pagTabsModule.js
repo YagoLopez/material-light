@@ -13,16 +13,16 @@ var router_1 = require("@angular/router");
 var mlRippleMod_1 = require("../../ml/components/ripple/mlRippleMod");
 var mlTabsMod_1 = require("../../ml/components/tabs/mlTabsMod");
 var pagTabs_1 = require("./pagTabs");
-var PagTabsMod = (function () {
-    function PagTabsMod() {
+var PagTabsModule = (function () {
+    function PagTabsModule() {
     }
-    PagTabsMod = __decorate([
+    PagTabsModule = __decorate([
         core_1.NgModule({ imports: [mlRippleMod_1.MlRippleMod, mlTabsMod_1.MlTabsMod,
                 router_1.RouterModule.forChild([{ path: '', component: pagTabs_1.PagTabs }])], declarations: [pagTabs_1.PagTabs] }), 
         __metadata('design:paramtypes', [])
-    ], PagTabsMod);
-    return PagTabsMod;
+    ], PagTabsModule);
+    return PagTabsModule;
 }());
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = PagTabsMod;
-//# sourceMappingURL=pagTabsMod.js.map
+exports.default = PagTabsModule;
+//# sourceMappingURL=pagTabsModule.js.map

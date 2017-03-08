@@ -49,7 +49,11 @@ export class MlItem {
 @Component({
 selector: 'ml-item-content',
 host: {class: 'mdl-list__item-primary-content'},
-template: '<span class="mdl-list__item-primary-content"><ng-content></ng-content></span>'
+template: `
+<span class="mdl-list__item-primary-content">
+  <ng-content></ng-content>
+</span>
+`//template
 })
 export class MlItemContent {}
 // ---------------------------------------------------------------------------------------------------------------------

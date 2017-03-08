@@ -22,6 +22,9 @@ template:`
 <label #label [attr.for]="id+'mdl'" class="mdl-checkbox" [ngClass]="{'is-checked': isChecked()}">
   <input type="checkbox" [attr.id]="id+'mdl'" class="mdl-checkbox__input" [(ngModel)]="model" [disabled]="disabled">
   <span class="mdl-checkbox__label"><ng-content></ng-content></span>
+  <span class="mdl-checkbox__ripple-container mdl-ripple--center">
+    <span class="mdl-ripple is-animating"></span>
+  </span>
 </label>
 
 `//template
@@ -32,9 +35,10 @@ export class MlCheckbox implements ControlValueAccessor {
   @ViewChild('label') label: ElementRef;
   @Input() id: string;
   @Input() disabled: string;
- 
+
   _model: any; 
   mdlCheckbox: MdlCheckbox;
+  isRippleDefined: boolean;
   onTouch = () => {};
   onChange = (_: any) => {};
 

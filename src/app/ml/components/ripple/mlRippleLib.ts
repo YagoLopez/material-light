@@ -33,7 +33,7 @@ MdlRipple.prototype.downHandler_ = function (event: any) {
 
     // modificaciones
     if (!this.rippleElement_){
-      console.warn('Ripple element does not exists');
+      console.warn('Ripple element not found');
       return;
     }
     // fin modificaciones
@@ -86,7 +86,7 @@ MdlRipple.prototype.upHandler_ = function (event: any) {
 
     // modificaciones
     if (!this.rippleElement_){
-      console.warn('Ripple element does not exists');
+      console.warn('Ripple element not found');
       return;
     }
     //fin modificaciones
@@ -110,7 +110,6 @@ MdlRipple.prototype.init = function () {
         var recentering = this.element_.classList.contains(this.CssClasses_.RIPPLE_CENTER);
         if (!this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT_IGNORE_EVENTS)) {
             this.rippleElement_ = this.element_.querySelector('.' + this.CssClasses_.RIPPLE);
-            // this.rippleElement_ = this.element_;
             this.frameCount_ = 0;
             this.rippleSize_ = 0;
             this.x_ = 0;

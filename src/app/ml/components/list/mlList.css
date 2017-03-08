@@ -131,3 +131,11 @@
     color: rgba(0,0,0, 0.54);
     display: block;
     padding: 0; }
+
+.ml-item-link{
+  color: rgba(0,0,0, 0.87);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: normal;
+  display: block;
+  width: 100%;}

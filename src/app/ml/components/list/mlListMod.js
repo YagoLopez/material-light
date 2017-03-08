@@ -19,7 +19,8 @@ var MlListMod = (function () {
         core_1.NgModule({
             imports: [mlRippleMod_1.MlRippleMod, mlIconMod_1.MlIconMod],
             declarations: [mlList_1.MlList, mlList_1.MlItem, mlList_1.MlItemContent, mlList_1.MlItemAction, mlList_1.MlItemIcon, mlList_1.MlItemTitle, mlList_1.MlItemSubtitle, mlList_1.MlItemDesc],
-            exports: [mlRippleMod_1.MlRippleMod, mlIconMod_1.MlIconMod, mlList_1.MlList, mlList_1.MlItem, mlList_1.MlItemContent, mlList_1.MlItemAction, mlList_1.MlItemIcon, mlList_1.MlItemTitle, mlList_1.MlItemSubtitle, mlList_1.MlItemDesc] }), 
+            exports: [mlRippleMod_1.MlRippleMod, mlIconMod_1.MlIconMod, mlList_1.MlList, mlList_1.MlItem, mlList_1.MlItemContent, mlList_1.MlItemAction, mlList_1.MlItemIcon, mlList_1.MlItemTitle,
+                mlList_1.MlItemSubtitle, mlList_1.MlItemDesc] }), 
         __metadata('design:paramtypes', [])
     ], MlListMod);
     return MlListMod;

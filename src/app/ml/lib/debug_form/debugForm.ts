@@ -6,11 +6,11 @@ selector: 'debug-form',
 template: `
 <style>
 .code-block{
-  /*border: 1px solid cornflowerblue;*/
   background: aliceblue;
   font-size: 13px;
   margin: auto;
-  width: 95%;
+  border: 1px solid lightgray;
+  border-radius: 4px;  
 }
 .inner-div{margin-left: 10px;}
 .value{color: cornflowerblue;}
@@ -19,8 +19,8 @@ template: `
 <pre class="code-block">
   <div class="inner-div">
     <b>FORM DEBUGGER:</b>
-    - Form values: <span class="value">{{ formName.value | json }}</span>
-    - Form valid: <span class="value">{{ formName.valid }}</span>
+    ➜ Form values: <span class="value">{{ formName.value | json }}</span>
+    ➜ Form valid : <span class="value">{{ formName.valid }}</span>
   </div>
 </pre>
 `//template

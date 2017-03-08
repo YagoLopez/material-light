@@ -12,17 +12,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require("@angular/router");
-var MlRouterLoader = (function () {
-    function MlRouterLoader(router) {
+var MlLoaderRouter = (function () {
+    function MlLoaderRouter(router) {
         this.router = router;
         this.loading = true;
         this.isLoading = new core_1.EventEmitter();
     }
-    // loadingState(state: boolean): void{
-    //   this.loading = state;
-    //   this.isLoading.emit(state);
-    // }
-    MlRouterLoader.prototype.ngOnInit = function () {
+    MlLoaderRouter.prototype.ngOnInit = function () {
         var _this = this;
         this.router.events.subscribe(function (event) {
             if (event instanceof router_1.NavigationStart) {
@@ -40,21 +36,22 @@ var MlRouterLoader = (function () {
             if (event instanceof router_1.NavigationError) {
                 _this.loading = false;
                 _this.isLoading.emit(_this.loading);
+                console.error('MlLoaderRouter: navigation error');
             }
         });
     };
     __decorate([
         core_1.Output(), 
         __metadata('design:type', core_1.EventEmitter)
-    ], MlRouterLoader.prototype, "isLoading", void 0);
-    MlRouterLoader = __decorate([
+    ], MlLoaderRouter.prototype, "isLoading", void 0);
+    MlLoaderRouter = __decorate([
         core_1.Component({
-            selector: 'ml-router-loader',
+            selector: 'ml-loader-router',
             template: "\n<style>\n.router-loader-text{\n  position: absolute;\n  margin: auto;\n  left: 0;\n  right: 0;\n  top: 37%;\n  bottom: 0;\n  text-align: center;\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n  font-size: 14px;}\n.router-loader {\n  position: absolute;\n  margin: auto;\n  left: 0;\n  right: 0;\n  top: 44%;\n  text-align: center;}\n</style>\n<div class=\"router-loader\">\n<ml-spinner *ngIf=\"loading\" class=\"router-loader\" single-color></ml-spinner>\n</div>\n" //template
         }), 
         __metadata('design:paramtypes', [router_1.Router])
-    ], MlRouterLoader);
-    return MlRouterLoader;
+    ], MlLoaderRouter);
+    return MlLoaderRouter;
 }());
-exports.MlRouterLoader = MlRouterLoader;
-//# sourceMappingURL=mlRouterLoader.js.map
+exports.MlLoaderRouter = MlLoaderRouter;
+//# sourceMappingURL=mlLoaderRouter.js.map

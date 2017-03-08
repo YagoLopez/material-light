@@ -23,7 +23,7 @@ var PagSnackbar = (function () {
     }
     PagSnackbar = __decorate([
         core_1.Component({
-            template: "\n\n<h5>Snackbar</h5>\n\n<ml-button (click)=\"snackbar.show()\" aspect=\"raised, colored, accent\">Open SnackBar</ml-button>\n\n<ml-snackbar [config]=\"config\" #snackbar></ml-snackbar>\n\n" //template
+            template: "\n\n<h5>Snackbar</h5>\n\n<ml-button (click)=\"snackbar.show()\" aspect=\"raised, colored, accent\" ripple>Open SnackBar</ml-button>\n\n<ml-snackbar [config]=\"config\" #snackbar></ml-snackbar>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagSnackbar);

@@ -10,13 +10,13 @@ template: `
 <h6>Only for reactive forms:</h6>
 
 <form [formGroup]="formToggle">
-  <ml-toggle id="toggle4" formControlName="option4">
+  <ml-toggle id="toggle4" formControlName="option4" ripple>
     <ml-icon>email</ml-icon>
-  </ml-toggle>Option 4 (Enabled by default)<br>
+  </ml-toggle>Option 4 (Enabled by default + ripple)<br>
   
-  <ml-toggle id="toggle5" formControlName="option5">
+  <ml-toggle id="toggle5" formControlName="option5" ripple>
     <ml-icon>email</ml-icon>  
-  </ml-toggle>Option 5 (Undefined by default)<br>
+  </ml-toggle>Option 5 (Undefined by default + ripple)<br>
   
   <ml-toggle id="toggle6" formControlName="option6" disabled="true">
     <ml-icon>email</ml-icon>
@@ -34,5 +34,4 @@ export class PagToggle {
     option5: new FormControl(),
     option6: new FormControl({value: true,  disabled: true})
   })
-
 }

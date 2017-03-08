@@ -5,5 +5,6 @@ import {MlList, MlItem, MlItemContent, MlItemAction, MlItemTitle, MlItemIcon, Ml
 @NgModule({
 imports: [MlRippleMod, MlIconMod],
 declarations: [MlList, MlItem, MlItemContent, MlItemAction, MlItemIcon, MlItemTitle, MlItemSubtitle, MlItemDesc],
-exports: [MlRippleMod, MlIconMod, MlList, MlItem, MlItemContent, MlItemAction, MlItemIcon, MlItemTitle, MlItemSubtitle, MlItemDesc]})
+exports: [MlRippleMod, MlIconMod, MlList, MlItem, MlItemContent, MlItemAction, MlItemIcon, MlItemTitle,
+    MlItemSubtitle, MlItemDesc]})
 export class MlListMod{}

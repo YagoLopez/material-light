@@ -6,7 +6,7 @@ template: `
 
 <h5>Snackbar</h5>
 
-<ml-button (click)="snackbar.show()" aspect="raised, colored, accent">Open SnackBar</ml-button>
+<ml-button (click)="snackbar.show()" aspect="raised, colored, accent" ripple>Open SnackBar</ml-button>
 
 <ml-snackbar [config]="config" #snackbar></ml-snackbar>
 

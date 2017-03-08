@@ -12,6 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
+var mlRippleMod_1 = require("../../ml/components/ripple/mlRippleMod");
 var mlSwitchMod_1 = require("../../ml/components/controls/switch/mlSwitchMod");
 var debugFormMod_1 = require("../../ml/lib/debug_form/debugFormMod");
 var pagSwitch_1 = require("./pagSwitch");
@@ -20,7 +21,7 @@ var PagSwitchModule = (function () {
     }
     PagSwitchModule = __decorate([
         core_1.NgModule({
-            imports: [mlSwitchMod_1.MlSwitchMod, debugFormMod_1.DebugFormMod, forms_1.ReactiveFormsModule, router_1.RouterModule.forChild([{ path: '', component: pagSwitch_1.PagSwitch }])],
+            imports: [mlSwitchMod_1.MlSwitchMod, mlRippleMod_1.MlRippleMod, debugFormMod_1.DebugFormMod, forms_1.ReactiveFormsModule, router_1.RouterModule.forChild([{ path: '', component: pagSwitch_1.PagSwitch }])],
             declarations: [pagSwitch_1.PagSwitch] }), 
         __metadata('design:paramtypes', [])
     ], PagSwitchModule);

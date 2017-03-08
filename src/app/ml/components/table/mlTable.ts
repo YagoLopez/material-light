@@ -1,4 +1,3 @@
-//todo: ripple effect doesnt work on checkboxes
 //todo: quizas se pueda evitar la repeticion de codigo usando herencia (sobre todo con los constructores repetidos)
 
 import {Component, Renderer, ElementRef, ViewEncapsulation, Directive, Input} from '@angular/core';
@@ -25,7 +24,8 @@ export class MlTable {
   ) {}
 
   private shadowClassName(shadowValue: string): string {
-    return 'mdl-shadow--'+ shadowValue +'dp';
+    // return 'mdl-shadow--'+ shadowValue +'dp';
+    return `mdl-shadow--${shadowValue}dp`;
   }
 
   ngOnInit() {
@@ -39,8 +39,6 @@ export class MlTable {
 
     if (this.order === "desc")
       ml.setClass(this.host, 'mdl-data-table__header--sorted-descending', this.ren);
-
-    // new MaterialDataTable(this.host.nativeElement);
   }
 }
 // ---------------------------------------------------------------------------------------------------------------------

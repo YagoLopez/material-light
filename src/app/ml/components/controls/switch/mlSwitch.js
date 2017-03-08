@@ -1,3 +1,5 @@
+//todo: crear programaticamente el contenedor de ripple en otros componentes
+//      en lugar de crear el contenedor en la platilla. Parece mas eficiente.
 //todo: en vez de renderer usar @HostBinding(class.classname) para poner clases en el host de una directiva
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -13,7 +15,9 @@ var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var mlSwitchLib_1 = require("./mlSwitchLib");
 var MlSwitch = (function () {
-    function MlSwitch() {
+    function MlSwitch(host, ren) {
+        this.host = host;
+        this.ren = ren;
         this.onTouch = function () { };
         this.onChange = function (_) { };
     }
@@ -61,6 +65,10 @@ var MlSwitch = (function () {
         core_1.Input(), 
         __metadata('design:type', String)
     ], MlSwitch.prototype, "disabled", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], MlSwitch.prototype, "ripple", void 0);
     MlSwitch = __decorate([
         core_1.Component({
             selector: 'ml-switch',
@@ -68,9 +76,9 @@ var MlSwitch = (function () {
             // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlSwitch; }), multi: true }],
-            template: "\n\n<label #label [attr.for]=\"id+'mdl'\" class=\"mdl-switch\" [ngClass]=\"{'is-checked': isChecked()}\">\n  <input type=\"checkbox\" class=\"mdl-switch__input\" \n         [attr.id]=\"id+'mdl'\"\n         [(ngModel)]=\"model\" \n         [disabled]=\"disabled\">\n  <span class=\"mdl-switch__label\"><ng-content></ng-content></span>\n</label>\n\n" //template
+            template: "\n\n<label #label [attr.for]=\"id+'mdl'\" class=\"mdl-switch\" [ngClass]=\"{'is-checked': isChecked()}\">\n  <input type=\"checkbox\" class=\"mdl-switch__input\" \n         [attr.id]=\"id+'mdl'\"\n         [(ngModel)]=\"model\" \n         [disabled]=\"disabled\">\n  <span class=\"mdl-switch__label\"><ng-content></ng-content></span>\n  <span class=\"mdl-switch__ripple-container mdl-ripple--center\"><span class=\"mdl-ripple\"></span></span>\n</label>\n\n" //template
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlSwitch);
     return MlSwitch;
 }());

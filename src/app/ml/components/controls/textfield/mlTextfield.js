@@ -109,7 +109,7 @@ var MlTextfield = (function () {
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlTextfield; }), multi: true }],
-            template: "\n\n<input type=\"text\" class=\"mdl-textfield__input\" \n  [attr.id]=\"id\" \n  [name]=\"name\"\n  [(ngModel)]=\"model\" \n  (focus)=\"onFocus()\" \n  (keyup)=\"onKeyup()\">\n<label class=\"mdl-textfield__label\" [attr.for]=\"id\">\n  <ng-content select=\"mdl-textfield-label\"></ng-content>\n</label>\n\n<div *ngIf=\"showError\" class=\"mdl-textfield__error\">\n  <ng-content select=\"ml-error\"></ng-content>\n</div>\n\n" //template
+            template: "\n\n<input type=\"text\" class=\"mdl-textfield__input\" \n  [attr.id]=\"id\" \n  [name]=\"name\"\n  [(ngModel)]=\"model\" \n  (focus)=\"onFocus()\" \n  (keyup)=\"onKeyup()\">\n<label class=\"mdl-textfield__label\" [attr.for]=\"id\">\n  <ng-content select=\"mdl-textfield-label\"></ng-content>\n</label>\n<div *ngIf=\"showError\" class=\"mdl-textfield__error\">\n  <ng-content select=\"ml-error\"></ng-content>\n</div>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlTextfield);

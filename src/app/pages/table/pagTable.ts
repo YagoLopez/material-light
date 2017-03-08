@@ -5,7 +5,7 @@ template: `
 
 <h5>Table</h5>
 
-<table ml-table selectable shadow="2">
+<table ml-table selectable>
 
   <!-- Table head ------------------------------------------------------------------------------------------------ -->
   

@@ -1,4 +1,3 @@
-//todo: ripple effect doesnt work on checkboxes
 //todo: quizas se pueda evitar la repeticion de codigo usando herencia (sobre todo con los constructores repetidos)
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -19,7 +18,8 @@ var MlTable = (function () {
         this.ren = ren;
     }
     MlTable.prototype.shadowClassName = function (shadowValue) {
-        return 'mdl-shadow--' + shadowValue + 'dp';
+        // return 'mdl-shadow--'+ shadowValue +'dp';
+        return "mdl-shadow--" + shadowValue + "dp";
     };
     MlTable.prototype.ngOnInit = function () {
         ml.setClass(this.host, this.shadowClassName(this.shadow), this.ren);
@@ -29,7 +29,6 @@ var MlTable = (function () {
             ml.setClass(this.host, 'mdl-data-table__header--sorted-ascending', this.ren);
         if (this.order === "desc")
             ml.setClass(this.host, 'mdl-data-table__header--sorted-descending', this.ren);
-        // new MaterialDataTable(this.host.nativeElement);
     };
     __decorate([
         core_1.Input(), 

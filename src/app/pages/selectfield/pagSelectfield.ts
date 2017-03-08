@@ -43,7 +43,7 @@ template: `
   <p>(No validators + ripple &uarr;)</p>
   
   <br>
-  <ml-button-submit [disabled]="selectForm.invalid" value="Submit to console" aspect="raised"></ml-button-submit>
+  <ml-button-submit [disabled]="selectForm.invalid" text="Submit to console" aspect="raised"></ml-button-submit>
 </form>
 
 <br>

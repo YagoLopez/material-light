@@ -1,5 +1,4 @@
-//todo: mdl-layout__content hace que la cabecera se quede fija o no
-//todo: poder definir colores, temas, fuentes, etc
+//todo: poder definir colores, temas, fuentes, etc. Consultar colores en mlLayout.css
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -73,7 +72,8 @@ var MlHeader = (function () {
             ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
             ml.setClass(this.host, 'mdl-layout__header--waterfall-hide-top', this.ren);
         }
-        // todo: Header scroll doesnt work
+        // todo: Header scroll no funciona
+        // todo: mdl-layout__content hace que la cabecera se quede fija o no
         // ml.setClass(this.host,'mdl-layout__header--scroll', this.ren);
     };
     __decorate([
@@ -236,25 +236,29 @@ var MlHeaderTabs = (function () {
 }());
 exports.MlHeaderTabs = MlHeaderTabs;
 // ---------------------------------------------------------------------------------------------------------------------
-var MlHeaderTabBar = (function () {
-    function MlHeaderTabBar() {
+var MlHeaderTab = (function () {
+    function MlHeaderTab(host) {
+        this.host = host;
     }
-    MlHeaderTabBar = __decorate([
+    MlHeaderTab.prototype.ngOnInit = function () {
+        this.host.nativeElement.innerHTML += "\n      <span class=\"mdl-layout__tab-ripple-container\">\n        <span class=\"mdl-ripple\"></span>\n      </span>";
+    };
+    MlHeaderTab = __decorate([
         core_1.Directive({
-            selector: '[tab-bar]',
+            selector: '[header-tab]',
             host: { class: 'mdl-layout__tab' } }), 
-        __metadata('design:paramtypes', [])
-    ], MlHeaderTabBar);
-    return MlHeaderTabBar;
+        __metadata('design:paramtypes', [core_1.ElementRef])
+    ], MlHeaderTab);
+    return MlHeaderTab;
 }());
-exports.MlHeaderTabBar = MlHeaderTabBar;
+exports.MlHeaderTab = MlHeaderTab;
 // ---------------------------------------------------------------------------------------------------------------------
 var MlHeaderTabContent = (function () {
     function MlHeaderTabContent() {
     }
     MlHeaderTabContent = __decorate([
         core_1.Component({
-            selector: 'ml-tab-content',
+            selector: 'ml-header-tab-content',
             host: { class: 'mdl-layout__tab-panel' },
             template: '<ng-content></ng-content>' }), 
         __metadata('design:paramtypes', [])

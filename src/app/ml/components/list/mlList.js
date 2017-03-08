@@ -76,7 +76,7 @@ var MlItemContent = (function () {
         core_1.Component({
             selector: 'ml-item-content',
             host: { class: 'mdl-list__item-primary-content' },
-            template: '<span class="mdl-list__item-primary-content"><ng-content></ng-content></span>'
+            template: "\n<span class=\"mdl-list__item-primary-content\">\n  <ng-content></ng-content>\n</span>\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], MlItemContent);

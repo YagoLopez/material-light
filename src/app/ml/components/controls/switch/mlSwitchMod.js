@@ -16,8 +16,7 @@ var MlSwitchMod = (function () {
     function MlSwitchMod() {
     }
     MlSwitchMod = __decorate([
-        core_1.NgModule({
-            imports: [common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
+        core_1.NgModule({ imports: [common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
             declarations: [mlSwitch_1.MlSwitch],
             exports: [mlSwitch_1.MlSwitch]
         }), 

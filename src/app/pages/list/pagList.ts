@@ -10,7 +10,6 @@ template: `
 
 <style>
 .demo-list {
-  /*width: 600px;*/
   background: ghostwhite;
 }
 </style>
@@ -20,11 +19,12 @@ template: `
   <ml-item>
     <ml-item-content>
       <ml-item-icon type="normal">person</ml-item-icon>
-      Bryan Cranston
+      <a href="#" class="ml-item-link">Item with link</a>
     </ml-item-content>
     <ml-item-action>
       <a href="#"><ml-icon>star</ml-icon></a>
     </ml-item-action>
+    
   </ml-item>
   
   <ml-item lines="2">

@@ -41,7 +41,6 @@ template: `
 <label class="mdl-textfield__label" [attr.for]="id">
   <ng-content select="mdl-textfield-label"></ng-content>
 </label>
-
 <div *ngIf="showError" class="mdl-textfield__error">
   <ng-content select="ml-error"></ng-content>
 </div>

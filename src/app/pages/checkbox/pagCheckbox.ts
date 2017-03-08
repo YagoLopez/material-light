@@ -11,10 +11,12 @@ template: `
 
 <form [formGroup]="formCheckbox">
   <ml-checkbox id="checkbox3" formControlName="option3">Option 3</ml-checkbox>
-  <ml-checkbox id="checkbox4" formControlName="option4">Option 4</ml-checkbox>
+  <ml-checkbox id="checkbox4" formControlName="option4" ripple>Option 4 (With ripple)</ml-checkbox>
   <ml-checkbox id="checkbox5" formControlName="option5">Option 5 (Undefined by default)</ml-checkbox>
   <ml-checkbox id="checkbox6" formControlName="option6" disabled="true">Option 6 (Disabled by default)</ml-checkbox>
 </form>
+
+<br>
 
 <debug-form [name]="formCheckbox"></debug-form>
 

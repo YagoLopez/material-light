@@ -1,5 +1,5 @@
+//todo: no crear el contenedor ripple (span) cuando no se usa la directiva ripple
 //todo: toggles no funionan bien en edge
-//todo: en vez de renderer usar @HostBinding(class.classname) para poner clases en el host de una directiva
 
 import {Component, ViewChild, ElementRef, Input, ViewEncapsulation, forwardRef} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
@@ -19,8 +19,10 @@ template: `
          [(ngModel)]="model" 
          [disabled]="disabled">
   <span class="mdl-icon-toggle__label"><ng-content></ng-content></span>
+  <span class="mdl-icon-toggle__ripple-container">
+    <span class="mdl-ripple"></span>
+  </span>
 </label>
-
 
 `//template
 })

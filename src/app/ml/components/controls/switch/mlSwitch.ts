@@ -1,6 +1,8 @@
+//todo: crear programaticamente el contenedor de ripple en otros componentes
+//      en lugar de crear el contenedor en la platilla. Parece mas eficiente.
 //todo: en vez de renderer usar @HostBinding(class.classname) para poner clases en el host de una directiva
 
-import {Component, ViewChild, ElementRef, Input, ViewEncapsulation, forwardRef} from "@angular/core";
+import {Component, ViewChild, ElementRef, Input, ViewEncapsulation, forwardRef, Renderer} from "@angular/core";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import MdlSwitch from "./mlSwitchLib";
 
@@ -18,6 +20,7 @@ template: `
          [(ngModel)]="model" 
          [disabled]="disabled">
   <span class="mdl-switch__label"><ng-content></ng-content></span>
+  <span class="mdl-switch__ripple-container mdl-ripple--center"><span class="mdl-ripple"></span></span>
 </label>
 
 `//template
@@ -27,9 +30,12 @@ export class MlSwitch implements ControlValueAccessor {
   @ViewChild('label') label: ElementRef;
   @Input() id: string;
   @Input() disabled: string;
+  @Input() ripple: string;
   
   mdlSwitch: MdlSwitch;
   _model: any;
+
+  constructor(private host: ElementRef, private ren: Renderer){}
 
   ngOnInit() {
     this.mdlSwitch = new MdlSwitch(this.label.nativeElement);
@@ -68,5 +74,4 @@ export class MlSwitch implements ControlValueAccessor {
   off(){
     this.mdlSwitch.off();
   }
-
 }

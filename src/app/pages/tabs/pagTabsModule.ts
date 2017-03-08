@@ -5,4 +5,4 @@ import {MlTabsMod} from "../../ml/components/tabs/mlTabsMod";
 import {PagTabs} from "./pagTabs";
 @NgModule({imports: [MlRippleMod, MlTabsMod,
 RouterModule.forChild( [{path: '', component: PagTabs}] )], declarations: [PagTabs]})
-export default class PagTabsMod{}
+export default class PagTabsModule{}

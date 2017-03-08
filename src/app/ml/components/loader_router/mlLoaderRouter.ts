@@ -5,7 +5,7 @@ import {Component, Output, EventEmitter} from '@angular/core';
 import {Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError} from "@angular/router";
 
 @Component({
-selector: 'ml-router-loader',
+selector: 'ml-loader-router',
 template: `
 <style>
 .router-loader-text{
@@ -31,38 +31,30 @@ template: `
 </div>
 `//template
 })
-export class MlRouterLoader {
+export class MlLoaderRouter {
 
   loading = true;
   constructor(private router: Router) {}
   @Output() isLoading: EventEmitter<boolean> = new EventEmitter();
-
-  // loadingState(state: boolean): void{
-  //   this.loading = state;
-  //   this.isLoading.emit(state);
-  // }
 
   public ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart){
         this.loading = true;
         this.isLoading.emit(this.loading);
-        // this.loadingState(true);
       }
       if (event instanceof NavigationEnd){
         this.loading = false;
         this.isLoading.emit(this.loading);
-        // this.loadingState(false);
       }
       if (event instanceof NavigationCancel){
         this.loading = false;
         this.isLoading.emit(this.loading);
-        // this.loadingState(false);
       }
       if (event instanceof NavigationError){
         this.loading = false;
         this.isLoading.emit(this.loading);
-        // this.loadingState(false);
+        console.error('MlLoaderRouter: navigation error');
      }
     });
   }
