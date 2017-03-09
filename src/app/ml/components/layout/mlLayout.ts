@@ -1,5 +1,6 @@
 //todo: poder definir colores, temas, fuentes, etc. Consultar colores en mlLayout.css
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
+//todo: poner estilos a drawer scroll
 
 import {Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy} from "@angular/core";
 import MdlLayout from "./mlLayoutLib";
@@ -16,6 +17,7 @@ template: '<ng-content></ng-content>'
 })
 export class MlLayout {
 
+  // Input vales must be in lowercase
   @Input() drawer: string;
   @Input() tabs: string;
   mdlLayout: MdlLayout;
@@ -28,7 +30,7 @@ export class MlLayout {
   }
   
   ngAfterViewInit() {
-    if (this.drawer === 'fixed') // Input vales must be in lowercase
+    if (this.drawer === 'fixed')
       ml.setClass(this.host, 'mdl-layout--fixed-drawer', this.ren);
 
     if (this.tabs === 'fixed'){

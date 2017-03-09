@@ -24,7 +24,6 @@ export class MlTable {
   ) {}
 
   private shadowClassName(shadowValue: string): string {
-    // return 'mdl-shadow--'+ shadowValue +'dp';
     return `mdl-shadow--${shadowValue}dp`;
   }
 

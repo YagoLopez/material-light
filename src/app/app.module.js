@@ -18,9 +18,9 @@ var mlSpinnerMod_1 = require("./ml/components/spinner/mlSpinnerMod");
 var mlLayoutMod_1 = require("./ml/components/layout/mlLayoutMod");
 var mlTitleMod_1 = require("./ml/components/title/mlTitleMod");
 var app_layout_1 = require("./app.layout");
-// Note: absolute paths are needed by webpack and lazy-load
+// WEBPACK ROUTES: absolute paths are needed by webpack and lazy-load
 var APP_ROUTES = [
-    { path: '', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/switch/pagSwitchModule' },
+    { path: '', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/button/pagButtonModule' },
     { path: 'button', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/button/pagButtonModule' },
     { path: 'selectfield', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/selectfield/pagSelectfieldModule' },
     { path: 'textfield', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/textfield/pagTextfieldModule' },
@@ -44,6 +44,34 @@ var APP_ROUTES = [
     { path: 'table', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/table/pagTableModule' },
     { path: '**', redirectTo: 'button' }
 ];
+// SYSTEMJS ROUTES
+/*
+const APP_ROUTES = [
+  {path: '',           loadChildren: '.app/pages/switch/pagSwitchModule'},
+  {path: 'button',     loadChildren: '.app/pages/button/pagButtonModule'},
+  {path: 'selectfield',loadChildren: '.app/pages/selectfield/pagSelectfieldModule'},
+  {path: 'textfield',  loadChildren: '.app/pages/textfield/pagTextfieldModule'},
+  {path: 'checkbox',   loadChildren: '.app/pages/checkbox/pagCheckboxMod'},
+  {path: 'radio',      loadChildren: '.app/pages/radio/pagRadioModule'},
+  {path: 'switch',     loadChildren: '.app/pages/switch/pagSwitchModule'},
+  {path: 'toggle',     loadChildren: '.app/pages/toggle/pagToggleModule'},
+  {path: 'badge',      loadChildren: '.app/pages/badge/pagBadgeModule'},
+  {path: 'card',       loadChildren: '.app/pages/card/pagCardModule'},
+  {path: 'grid',       loadChildren: '.app/pages/grid/pagGridModule'},
+  {path: 'tabs',       loadChildren: '.app/pages/tabs/pagTabsModule'},
+  {path: 'snackbar',   loadChildren: '.app/pages/snackbar/pagSnackbarModule'},
+  {path: 'chip',       loadChildren: '.app/pages/chip/pagChipModule'},
+  {path: 'list',       loadChildren: '.app/pages/list/pagListModule'},
+  {path: 'menu',       loadChildren: '.app/pages/menu/pagMenuModule'},
+  {path: 'progressbar',loadChildren: '.app/pages/progressbar/pagProgressbarModule'},
+  {path: 'spinner',    loadChildren: '.app/pages/spinner/pagSpinnerModule'},
+  {path: 'tooltip',    loadChildren: '.app/pages/tooltip/pagTooltipModule'},
+  {path: 'slider',     loadChildren: '.app/pages/slider/pagSliderModule'},
+  {path: 'dialog',     loadChildren: '.app/pages/dialog/pagDialogModule'},
+  {path: 'table',      loadChildren: '.app/pages/table/pagTableModule'},
+  {path: '**',         redirectTo: 'button'}
+];
+*/
 var AppModule = (function () {
     function AppModule() {
     }

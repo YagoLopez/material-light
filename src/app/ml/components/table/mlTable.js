@@ -18,7 +18,6 @@ var MlTable = (function () {
         this.ren = ren;
     }
     MlTable.prototype.shadowClassName = function (shadowValue) {
-        // return 'mdl-shadow--'+ shadowValue +'dp';
         return "mdl-shadow--" + shadowValue + "dp";
     };
     MlTable.prototype.ngOnInit = function () {

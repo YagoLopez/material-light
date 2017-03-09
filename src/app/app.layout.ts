@@ -9,6 +9,7 @@ template: `
   a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}
   .bg-grey{background: lightgrey}
   .content-pad{padding: 10px}
+  .active-nav{background: darkgrey; color: white !important}
   .page-loader{
     width: 100%;
     height: 500px;
@@ -18,7 +19,7 @@ template: `
   }
 </style>
 
-<ml-layout>
+<ml-layout drawer="fixed">
 
   <!-- Header ------------------------------------------------------------------------------------------------------ -->
 
@@ -49,28 +50,28 @@ template: `
   <ml-drawer>
     <ml-title class="bg-grey">Material Light</ml-title>
     <ml-nav>
-      <a nav-item routerLink="button">Button</a>
-      <a nav-item routerLink="selectfield">SelectField</a>
-      <a nav-item routerLink="textfield">TextControls</a>
-      <a nav-item routerLink="checkbox">Checkbox</a>
-      <a nav-item routerLink="radio">RadioButton</a>
-      <a nav-item routerLink="switch">SwitchButton</a>
-      <a nav-item routerLink="toggle">IconToggle</a>
-      <a nav-item routerLink="badge">Badge</a>
-      <a nav-item routerLink="card">Card</a>
-      <a nav-item routerLink="grid">Grid</a>
-      <a nav-item routerLink="tabs">Tabs</a>
-      <a nav-item routerLink="chip">Chip</a>
-      <a nav-item routerLink="list">List</a>
-      <a nav-item routerLink="menu">Menu</a>
-      <a nav-item routerLink="progressbar">ProgressBar</a>
-      <a nav-item routerLink="spinner">Spinner</a>
-      <a nav-item routerLink="snackbar">SnackBar</a>
-      <a nav-item routerLink="tooltip">Tooltip</a>
-      <a nav-item routerLink="slider">Slider</a>
-      <a nav-item routerLink="dialog">Dialog</a>
-      <a nav-item routerLink="table">Table</a>
-      <!--<a nav-item href="#" (click)="toggleHeaderTabs()">Header Tabs</a>-->
+      <a nav-item routerLink="button" routerLinkActive="active-nav">Button</a>
+      <a nav-item routerLink="selectfield" routerLinkActive="active-nav">SelectField</a>
+      <a nav-item routerLink="textfield" routerLinkActive="active-nav">TextControls</a>
+      <a nav-item routerLink="checkbox" routerLinkActive="active-nav">Checkbox</a>
+      <a nav-item routerLink="radio" routerLinkActive="active-nav">RadioButton</a>
+      <a nav-item routerLink="switch" routerLinkActive="active-nav">SwitchButton</a>
+      <a nav-item routerLink="toggle" routerLinkActive="active-nav">IconToggle</a>
+      <a nav-item routerLink="badge" routerLinkActive="active-nav">Badge</a>
+      <a nav-item routerLink="card" routerLinkActive="active-nav">Card</a>
+      <a nav-item routerLink="grid" routerLinkActive="active-nav">Grid</a>
+      <a nav-item routerLink="tabs" routerLinkActive="active-nav">Tabs</a>
+      <a nav-item routerLink="chip" routerLinkActive="active-nav">Chip</a>
+      <a nav-item routerLink="list" routerLinkActive="active-nav">List</a>
+      <a nav-item routerLink="menu" routerLinkActive="active-nav">Menu</a>
+      <a nav-item routerLink="progressbar" routerLinkActive="active-nav">ProgressBar</a>
+      <a nav-item routerLink="spinner" routerLinkActive="active-nav">Spinner</a>
+      <a nav-item routerLink="snackbar" routerLinkActive="active-nav">SnackBar</a>
+      <a nav-item routerLink="tooltip" routerLinkActive="active-nav">Tooltip</a>
+      <a nav-item routerLink="slider" routerLinkActive="active-nav">Slider</a>
+      <a nav-item routerLink="dialog" routerLinkActive="active-nav">Dialog</a>
+      <a nav-item routerLink="table" routerLinkActive="active-nav">Table</a>
+      <!--<a nav-item href="#" (click)="toggleHeaderTabs()" routerLinkActive="active-nav">Header Tabs</a>-->
     </ml-nav>
   </ml-drawer>
   

@@ -1,5 +1,6 @@
 //todo: poder definir colores, temas, fuentes, etc. Consultar colores en mlLayout.css
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
+//todo: poner estilos a drawer scroll
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

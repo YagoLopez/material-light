@@ -19,8 +19,8 @@ template: `
 <pre class="code-block">
   <div class="inner-div">
     <b>FORM DEBUGGER:</b>
-    ➜ Form values: <span class="value">{{ formName.value | json }}</span>
-    ➜ Form valid : <span class="value">{{ formName.valid }}</span>
+    ➠ Form values: <span class="value">{{ formName.value | json }}</span>
+    ➠ Form valid : <span class="value">{{ formName.valid }}</span>
   </div>
 </pre>
 `//template
