@@ -27,7 +27,8 @@ var MlProgressbar = (function () {
         this.mdlProgress.setProgress(value);
     };
     MlProgressbar.prototype.setBuffer = function (value) {
-        this.progressValue = value;
+        // this.progressValue = value;
+        this.bufferValue = value;
         this.mdlProgress.setBuffer(value);
     };
     MlProgressbar.prototype.ngOnInit = function () {

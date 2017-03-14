@@ -1,5 +1,6 @@
-import {Component, ViewChild, ElementRef} from '@angular/core';
-import {Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError} from '@angular/router';
+// todo: contenido de pagina responsivo. (usar ml-grid)
+
+import {Component} from '@angular/core';
 
 @Component({
 selector: 'ml-demo-app',
@@ -10,13 +11,11 @@ template: `
   .bg-grey{background: lightgrey}
   .content-pad{padding: 10px}
   .active-nav{background: darkgrey; color: white !important}
-  .page-loader{
-    width: 100%;
-    height: 500px;
-    position: absolute;
-    text-align: center;
-    margin-top: 76%;  
-  }
+  .drawer-txt{color: white; text-align: center}
+  .drawer-top-container{
+    margin: auto; display: block; width: 100%;height: 150px; background: url('assets/img/bg1.jpg') 0 0 / cover;}
+  .drawer-img{width: 25%; text-align: center; margin: 30px auto auto; display: block;}
+  .page-loader{width: 100%; height: 500px; position: absolute; text-align: center; margin-top: 76%;}
 </style>
 
 <ml-layout drawer="fixed">
@@ -34,7 +33,6 @@ template: `
         <a nav-item href="">Link</a>
       </ml-nav>
     </ml-header-row>
-    <!--<ml-header-tabs *ngIf="headerTabs">-->
     <ml-header-tabs>
       <a header-tab href="#tab1" ripple active>Tab 1</a>
       <a header-tab href="#tab2" ripple>Tab 2</a>
@@ -48,7 +46,12 @@ template: `
   <!-- Drawer ------------------------------------------------------------------------------------------------------ -->
   
   <ml-drawer>
-    <ml-title class="bg-grey">Material Light</ml-title>
+
+    <div class="drawer-top-container">
+      <img src="assets/img/logo.png" class="drawer-img">
+      <div class="drawer-txt">Material Light</div>
+    </div>
+    
     <ml-nav>
       <a nav-item routerLink="button" routerLinkActive="active-nav">Button</a>
       <a nav-item routerLink="selectfield" routerLinkActive="active-nav">SelectField</a>
@@ -71,7 +74,6 @@ template: `
       <a nav-item routerLink="slider" routerLinkActive="active-nav">Slider</a>
       <a nav-item routerLink="dialog" routerLinkActive="active-nav">Dialog</a>
       <a nav-item routerLink="table" routerLinkActive="active-nav">Table</a>
-      <!--<a nav-item href="#" (click)="toggleHeaderTabs()" routerLinkActive="active-nav">Header Tabs</a>-->
     </ml-nav>
   </ml-drawer>
   
@@ -94,37 +96,12 @@ template: `
 </ml-layout>
 
 `//template
-
 })
-export class App {
 
+export class App {
   isLoading = false;
 
   onLoading($event){
-    // console.log('on start load event', $event);
     this.isLoading = $event;
   }
-
-  // This code is ony to show/hide header tabs
-
-  // private headerTabs = false;
-  //
-  // getUrlParameter(name: string): null | string {
-  //     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-  //     let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-  //     let results = regex.exec(location.search);
-  //     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-  // };
-  //
-  // toggleHeaderTabs(){
-  //   this.headerTabs = !this.headerTabs;
-  //   window.location.href = '?headertabs=' + this.headerTabs;
-  // }
-
-
-  // ngAfterViewInit(){
-  //   const temp: string | any = this.getUrlParameter('headertabs');
-  //   temp.toLowerCase() === 'true' ? this.headerTabs = true : this.headerTabs = false;
-  // }
-
 }

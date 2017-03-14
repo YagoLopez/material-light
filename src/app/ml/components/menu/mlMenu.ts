@@ -1,5 +1,4 @@
 // todo: menu items
-// todo: revisar si usar o no componentHandler
 // todo: revisar encapsulacion.none. los componentes debrian estar encapsulados
 
 import { Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation } from "@angular/core";

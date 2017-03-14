@@ -9,8 +9,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-// NOTE: this component "MlSelectfield" is based on "MlButton", "MdlMenu" and "MdlTextfield"
-// For this reason uses files from these components
+// NOTE: this component ("MlSelectfield") is based on "MlButton", "MdlMenu" and "MdlTextfield"
+// For this reason it uses files from these components
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var mlButton_1 = require("../button/mlButton");
@@ -83,7 +83,7 @@ var MlSelectfield = (function () {
     MlSelectfield = __decorate([
         core_1.Component({
             selector: 'ml-selectfield',
-            styleUrls: ['../../menu/mlMenu.css', '../textfield/mlTextfield.css', './mlSelectfield.css'],
+            styleUrls: ['../../menu/mlMenu.css', '../textfield/mlTextfield.css'],
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             // moduleId: module.id.toString(),

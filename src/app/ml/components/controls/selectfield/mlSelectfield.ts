@@ -1,7 +1,7 @@
 //todo: (general) nombrar todos los componentes terminando en "C" para distinguirlos de otros ficheros
 
-// NOTE: this component "MlSelectfield" is based on "MlButton", "MdlMenu" and "MdlTextfield"
-// For this reason uses files from these components
+// NOTE: this component ("MlSelectfield") is based on "MlButton", "MdlMenu" and "MdlTextfield"
+// For this reason it uses files from these components
 
 import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation, forwardRef,
  ChangeDetectionStrategy} from "@angular/core";
@@ -13,7 +13,7 @@ import * as ml from "../../../lib/ml_lib";
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-selectfield',
-styleUrls: ['../../menu/mlMenu.css', '../textfield/mlTextfield.css', './mlSelectfield.css'],
+styleUrls: ['../../menu/mlMenu.css', '../textfield/mlTextfield.css'],
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 // moduleId: module.id.toString(),

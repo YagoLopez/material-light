@@ -16,11 +16,11 @@ import 'zone.js/dist/zone';
 import 'core-js/es7/reflect';
 // import 'core-js/es6/regexp';
 
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { enableProdMode } from '@angular/core';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {enableProdMode} from '@angular/core';
 import {AppModule} from "./app/app.module";
 
-const PRODUCTION_MODE: boolean = false;
+const PRODUCTION_MODE: boolean = true;
 
 if (PRODUCTION_MODE) {
   enableProdMode();

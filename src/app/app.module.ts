@@ -11,7 +11,6 @@ import {MlTitleMod} from "./ml/components/title/mlTitleMod";
 import {App} from "./app.layout";
 
 // WEBPACK ROUTES: absolute paths are needed by webpack and lazy-load
-
 const APP_ROUTES = [
 {path: '',           loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/button/pagButtonModule'},
 {path: 'button',     loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/button/pagButtonModule'},

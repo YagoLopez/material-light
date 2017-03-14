@@ -2439,7 +2439,10 @@ ul, ol {
         -ms-flex-align: stretch;
                 -ms-grid-row-align: stretch;
             align-items: stretch;
-    padding-top: 16px; }
+    /* modificaciones */
+    /* padding-top: 16px; */
+    /* fin modificaciones */
+  }
     .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
       display: block;
       -webkit-flex-shrink: 0;
@@ -2862,6 +2865,26 @@ ul, ol {
     display: none; }
   .mdl-layout.is-upgraded .mdl-layout__tab-panel.is-active {
     display: block; }
+
+/* SCROLLBARS */
+
+body{
+  scrollbar-base-color: #C0C0C0;
+  scrollbar-face-color: darkgrey;
+  scrollbar-3dlight-color: #C0C0C0;
+  scrollbar-highlight-color: #C0C0C0;
+  scrollbar-track-color: #EBEBEB;
+  scrollbar-arrow-color: black;
+  scrollbar-shadow-color: #C0C0C0;
+  scrollbar-dark-shadow-color: #C0C0C0;
+}
+::-webkit-scrollbar { width: 5px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: darkgrey; }
+::-webkit-scrollbar-track {  background-color: lightgrey;}
+::-webkit-scrollbar-track-piece { background-color: lightgrey;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: darkgrey; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999;}
+::-webkit-resizer { background-color: #666;}
 
 /* ANIMATIONS ============================================================================= */
 

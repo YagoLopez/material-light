@@ -35,7 +35,8 @@ export class MlProgressbar {
   }
 
   setBuffer(value: string){
-    this.progressValue = value;
+    // this.progressValue = value;
+    this.bufferValue = value;
     this.mdlProgress.setBuffer(value);
   }
 

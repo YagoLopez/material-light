@@ -1,11 +1,11 @@
-<div style="margin: auto; width: 81px;"><img src="src/assets/img/logo.png"></div>       
+<div style="margin: auto; width: 81px;"><img src="src/assets/img/logo.png" style="margin: auto; width: 81px;"></div>
 
-#Material Light
+# Material Light
 
 **Material Designt UI components for Angular 2 +**
 
-This library of components has been carefully designed to create light, easy and fast Angular 2 + user interfaces
-(mostly for mobile graphic interfaces).
+This library of components has been carefully designed to create light, easy of use and fast Angular 2 + user interfaces
+(mostly for mobile interfaces).
 
 ## Author
 
@@ -29,8 +29,8 @@ Yago López:
 - There is two ways of use the components:
   - **Importing components**. For examle, if you want to put a button with an icon in your template you can import `MlButton` and `MlIcon` components directily in your component.
   - **Impoting modules**: Following the previous example, you will need to import `MlButtonMod` and `MlIconMod`. Use modules if you want to implement lazy-loading.
-- Note: At the moment AOT compilation is not supported.
-AOT impose a lot of particularities and restrictions on the angular/typescript code.
+- Note: At this moment AOT compilation is not supported.
+AOT code must be statically analizable which impose a lot of restrictions on the angular/typescript code.
 
 ## Requirements:
 

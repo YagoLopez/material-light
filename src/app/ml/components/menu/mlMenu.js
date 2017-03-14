@@ -1,5 +1,4 @@
 // todo: menu items
-// todo: revisar si usar o no componentHandler
 // todo: revisar encapsulacion.none. los componentes debrian estar encapsulados
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
