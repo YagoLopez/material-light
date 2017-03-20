@@ -11,15 +11,15 @@ template: `
 
 <form [formGroup]="formToggle">
   <ml-toggle id="toggle4" formControlName="option4" ripple>
-    <ml-icon>email</ml-icon>
+    <ml-icon>verified_user</ml-icon>
   </ml-toggle>Option 4 (Enabled by default + ripple)<br>
   
   <ml-toggle id="toggle5" formControlName="option5" ripple>
-    <ml-icon>email</ml-icon>  
+    <ml-icon>extension</ml-icon>  
   </ml-toggle>Option 5 (Undefined by default + ripple)<br>
   
   <ml-toggle id="toggle6" formControlName="option6" disabled="true">
-    <ml-icon>email</ml-icon>
+    <ml-icon>print</ml-icon>
   </ml-toggle>Option 6 (Disabled by default)
 </form>
 

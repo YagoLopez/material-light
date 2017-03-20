@@ -1,17 +1,13 @@
-//todo: intentar implementar mdl-textfield como el componente mdl-slider
+//todo: intentar implementar ml-textfield como el componente mdl-slider
 
 //todo: he visto que en algun ejemplo usan ngControl en template-driven forms. investigarlo
-//puede que sirva para que mdl-textfield funcione en template-driven forms
 
-//todo: revisar algunos inputs puede sobrar al no usar model-driven forms (ej: name)
+//todo: revisar algunos inputs, pueden sobrar al no usar model-driven forms (ej: name)
 
-//todo: que solo hay que usar una vez el input de form-control [control] -> pasarselo al componente hijo que muestra
+//todo: que solo haya que usar una vez el input de form-control [control] -> pasarselo al componente hijo que muestra
 //los errores.
 
-//todo: a lo mejor se puede resolver lo de la repeticion de codigo en componentes sencillos creando un componente
-//abstracto y heredando de él
-
-//todo: para posteriores versiones tratar de evitar el js de los ficheros *.lib.js
+//todo: para posteriores versiones tratar de evitar el js de los ficheros Lib.js
 //es posible que se puedan sustituir por logica de templates de component
 
 //todo: intentar simplificar tomando como referencia MlSelectfield, aunque igual no funcionan template forms
@@ -22,8 +18,11 @@ import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/for
 import MdlTextfield from "./mlTextfieldLib";
 import * as ml from "../../../lib/ml_lib";
 
+// <ml-textfield type> attribute must be restricted to the following values:
+const MlTextfieldTypes = ['text', 'password', 'date', 'datetime-local', 'month', 'time', 'week', 'url', 'tel', 'color'];
+
 @Component({
-selector: 'mdl-textfield',
+selector: 'ml-textfield',
 host: {class: 'mdl-textfield'},
 // moduleId: module.id.toString(),
 styleUrls: ['./mlTextfield.css'],
@@ -32,23 +31,16 @@ changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlTextfield), multi: true}],
 template: `
 
-<input type="text" class="mdl-textfield__input" 
-  [attr.id]="id" 
-  [name]="name"
-  [(ngModel)]="model" 
-  (focus)="onFocus()" 
-  (keyup)="onKeyup()">
-<label class="mdl-textfield__label" [attr.for]="id">
-  <ng-content select="mdl-textfield-label"></ng-content>
-</label>
-<div *ngIf="showError" class="mdl-textfield__error">
-  <ng-content select="ml-error"></ng-content>
-</div>
+<input [attr.type]="type" class="mdl-textfield__input" [attr.id]="id" [name]="name" [(ngModel)]="model" 
+(focus)="onFocus()" (keyup)="onKeyup()">
+<label class="mdl-textfield__label" [attr.for]="id"><ng-content select="ml-textfield-label"></ng-content></label>
+<div *ngIf="showError" class="mdl-textfield__error"><ng-content select="ml-error"></ng-content></div>
 
 `//template
 })
 export class MlTextfield implements ControlValueAccessor{
 
+  @Input() type: string = 'text';
   @Input() errors: any;
   @Input() disabled: string;
   @Input() name: string;
@@ -84,10 +76,13 @@ export class MlTextfield implements ControlValueAccessor{
   }
 
   ngOnInit() {
+    if( !ml.isAttributeValid(this.type.toLowerCase(), MlTextfieldTypes) ){
+        console.warn(`<ml-textfield> Wrong attribute: type="${this.type}"`);
+    }
     if (!this.id){
       this.id = ml.randomStr();
     }
-    if (this.floating === ''){
+    if (ml.isDefined(this.floating)){
       ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren);
     }
     if (this.disabled === 'true'){

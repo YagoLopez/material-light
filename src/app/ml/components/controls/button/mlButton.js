@@ -1,3 +1,4 @@
+//todo: comprobar validez atributos aspect
 //todo: control de excepciones en angular 2
 //todo: revisar con linting e inspections al maximo, hay cosas que se pueden quitar y mejorar
 "use strict";
@@ -13,7 +14,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var mdButtonLib_1 = require("./mdButtonLib");
 var ml = require("../../../lib/ml_lib");
-// NOTE: For incompatible attributes check: https://getmdl.io/components/index.html#buttons-section
+// aspect="colored" => background blue, font-color white
+// aspect="accent" => background magenta, font-color white
+var ML_BUTTON_ASPECTS = ['raised, colored, accent'];
+var ML_BUTTON_VARIANTS = ['fab', 'minifab', 'icon'];
 var MlButton = (function () {
     function MlButton(host, ren) {
         this.host = host;
@@ -21,7 +25,9 @@ var MlButton = (function () {
     }
     MlButton.prototype.ngOnInit = function () {
         // Button "aspect" --------------------------------------------------------------------------------------------------
-        //todo: poner explicaciones de colores
+        if (this.variant && !ml.isAttributeValid(this.variant.toLowerCase(), ML_BUTTON_VARIANTS)) {
+            console.warn("<ml-button> Wrong attribute: variant=\"" + this.variant + "\"");
+        }
         if (ml.isSubstring('raised', this.aspect)) {
             ml.setClass(this.host, 'mdl-button--raised', this.ren);
         }
@@ -31,15 +37,15 @@ var MlButton = (function () {
         if (ml.isSubstring('accent', this.aspect)) {
             ml.setClass(this.host, 'mdl-button--accent', this.ren);
         }
-        // Button "type" ----------------------------------------------------------------------------------------------------
-        if (ml.isSubstring('fab', this.type)) {
+        // Button "variant" ----------------------------------------------------------------------------------------------------
+        if (ml.isSubstring('fab', this.variant)) {
             ml.setClass(this.host, 'mdl-button--fab', this.ren);
         }
-        if (ml.isSubstring('minifab', this.type)) {
+        if (ml.isSubstring('minifab', this.variant)) {
             ml.setClass(this.host, 'mdl-button--fab', this.ren);
             ml.setClass(this.host, 'mdl-button--mini-fab', this.ren);
         }
-        if (ml.isSubstring('icon', this.type)) {
+        if (ml.isSubstring('icon', this.variant)) {
             ml.setClass(this.host, 'mdl-button--icon', this.ren);
         }
         // End --------------------------------------------------------------------------------------------------------------
@@ -56,10 +62,9 @@ var MlButton = (function () {
         __metadata('design:type', String)
     ], MlButton.prototype, "aspect", void 0);
     __decorate([
-        // Admited values: [rised, colored, accent]* (* in lowercase)
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlButton.prototype, "type", void 0);
+    ], MlButton.prototype, "variant", void 0);
     MlButton = __decorate([
         core_1.Component({
             selector: 'ml-button',

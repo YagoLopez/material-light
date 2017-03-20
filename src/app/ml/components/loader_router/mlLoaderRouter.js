@@ -15,8 +15,8 @@ var router_1 = require("@angular/router");
 var MlLoaderRouter = (function () {
     function MlLoaderRouter(router) {
         this.router = router;
-        this.loading = true;
         this.isLoading = new core_1.EventEmitter();
+        this.loading = true;
     }
     MlLoaderRouter.prototype.ngOnInit = function () {
         var _this = this;

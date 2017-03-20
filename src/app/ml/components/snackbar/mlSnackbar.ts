@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, ViewEncapsulation, Renderer} from "@angular/core";
+import {Component, ElementRef, Input, ViewEncapsulation} from "@angular/core";
 import MdlSnackbar from "./mlSnackbarLib";
 
 export interface IConfigSnackbar {
@@ -14,7 +14,7 @@ host: {class: 'mdl-snackbar'},
 template:`
 
 <div class="mdl-snackbar__text"></div>
-<button type="button" class="mdl-snackbar__action" (click)="close()"></button>
+<button class="mdl-snackbar__action" (click)="close()"></button>
 
 `//template
 })

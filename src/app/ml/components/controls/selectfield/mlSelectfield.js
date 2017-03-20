@@ -1,4 +1,5 @@
-//todo: (general) nombrar todos los componentes terminando en "C" para distinguirlos de otros ficheros
+//todo: testar textfield con tipo: file, color, etc.
+//todo: (general) nombrar todos los componentes empezando por "C" (Ej: CMlTextfield)
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -88,7 +89,7 @@ var MlSelectfield = (function () {
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             // moduleId: module.id.toString(),
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlSelectfield; }), multi: true }],
-            template: "\n\n<style>\n  .input-field{padding-left: 33px !important; cursor: pointer}\n  .input-label{padding-left: 33px !important; cursor: pointer}\n  .menu-btn{height: 27px !important}\n</style>\n\n<div class=\"mdl-textfield getmdl-select\">\n  <input #input class=\"mdl-textfield__input input-field\" type=\"text\" (click)=\"clickInput()\" readonly>\n  <label #label class=\"mdl-textfield__label input-label\"[attr.for]=\"idInput\">{{ labelText }}</label>\n  <ml-button #mdlButton [attr.id]=\"idBtn\" type=\"icon\" class=\"menu-btn\">\n    <ml-icon>keyboard_arrow_down</ml-icon>\n  </ml-button>\n  <ul #menuList class=\"getmdl-select__fullwidth mdl-menu\" [attr.for]=\"idBtn\" (click)=\"itemSelected($event)\">\n    <ng-content select=\"ml-sf-item\"></ng-content>\n  </ul>         \n</div>\n\n" //template
+            template: "\n\n<style>\n.input-field{padding-left: 33px !important; cursor: pointer}\n.input-label{padding-left: 33px !important; cursor: pointer}\n.menu-btn{height: 27px !important}\n</style>\n<div class=\"mdl-textfield getmdl-select\">\n  <input #input type=\"text\" class=\"mdl-textfield__input input-field\" (click)=\"clickInput()\" readonly>\n  <label #label class=\"mdl-textfield__label input-label\">{{ labelText }}</label>\n  <ml-button #mdlButton variant=\"icon\" [attr.id]=\"idBtn\" class=\"menu-btn\">\n    <ml-icon>keyboard_arrow_down</ml-icon>\n  </ml-button>\n  <ul #menuList [attr.for]=\"idBtn\" class=\"getmdl-select__fullwidth mdl-menu\" (click)=\"itemSelected($event)\">\n    <ng-content select=\"ml-sf-item\"></ng-content>\n  </ul>         \n</div>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.Renderer, core_1.ElementRef])
     ], MlSelectfield);

@@ -3,8 +3,6 @@ import {Component} from '@angular/core';
 @Component({
 template: `
 
-<!--For incompatible attributes check: https://getmdl.io/components/index.html#buttons-section-->
-
 <h5>Button</h5>
 
 <p><ml-button ripple>Flat Button With Ripple</ml-button></p>
@@ -17,15 +15,15 @@ template: `
 
 <p><ml-button aspect="raised, accent">Rised Accent</ml-button></p>
 
-<p><ml-button aspect="raised, accent" disabled>Disabled Button</ml-button></p>
+<p><ml-button aspect="raised" disabled>Disabled Button</ml-button></p>
 
-<p>Fab button: <ml-button type="fab"><ml-icon>add</ml-icon></ml-button></p>
+<p>Fab button: <ml-button variant="fab"><ml-icon>add</ml-icon></ml-button></p>
 
-<p>Fab colored: <ml-button type="fab" aspect="colored"><ml-icon>add</ml-icon></ml-button></p>
+<p>Fab colored: <ml-button variant="fab" aspect="colored"><ml-icon>add</ml-icon></ml-button></p>
 
-<p>Mini-fab button: <ml-button type="minifab"><ml-icon>add</ml-icon></ml-button></p>
+<p>Mini-fab button: <ml-button variant="minifab"><ml-icon>add</ml-icon></ml-button></p>
 
-<p>Icon button: <ml-button type="icon"><ml-icon>email</ml-icon></ml-button></p>
+<p>Icon button: <ml-button variant="icon"><ml-icon>email</ml-icon></ml-button></p>
 
 `//template
 })

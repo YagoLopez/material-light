@@ -14,7 +14,7 @@ var MlTextfieldLabel = (function () {
     }
     MlTextfieldLabel = __decorate([
         core_1.Component({
-            selector: 'mdl-textfield-label',
+            selector: 'ml-textfield-label',
             template: '<ng-content></ng-content>'
         }), 
         __metadata('design:paramtypes', [])

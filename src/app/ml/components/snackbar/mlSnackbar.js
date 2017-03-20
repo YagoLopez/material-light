@@ -28,7 +28,7 @@ var MlSnackbar = (function () {
             // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             host: { class: 'mdl-snackbar' },
-            template: "\n\n<div class=\"mdl-snackbar__text\"></div>\n<button type=\"button\" class=\"mdl-snackbar__action\" (click)=\"close()\"></button>\n\n" //template
+            template: "\n\n<div class=\"mdl-snackbar__text\"></div>\n<button class=\"mdl-snackbar__action\" (click)=\"close()\"></button>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
     ], MlSnackbar);

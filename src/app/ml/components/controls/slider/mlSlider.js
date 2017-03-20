@@ -16,7 +16,9 @@ var MlSlider = (function () {
         this.hostElement = hostElement;
         this.ren = ren;
     }
-    MlSlider.prototype.change = function (value) { this.mdlSlider.change(value); };
+    MlSlider.prototype.change = function (value) {
+        this.mdlSlider.change(value);
+    };
     MlSlider.prototype.ngOnInit = function () {
         ml.setAttribute(this.hostElement, 'type', 'range', this.ren);
         this.mdlSlider = new mlSliderLib_1.default(this.hostElement.nativeElement);

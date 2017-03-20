@@ -33,9 +33,9 @@ template: `
 })
 export class MlLoaderRouter {
 
-  loading = true;
-  constructor(private router: Router) {}
   @Output() isLoading: EventEmitter<boolean> = new EventEmitter();
+  loading = true;
+  constructor (private router: Router) {}
 
   public ngOnInit() {
     this.router.events.subscribe(event => {

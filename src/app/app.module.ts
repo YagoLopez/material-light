@@ -1,5 +1,8 @@
+//todo: usar ml-grid para obtener diseño responsivo
+//todo: mostrar ejemplos de codigo (mediante gists o iframes a paginas de github)
 //todo: habilitar webpack.config.js en angular-cli para poder usar local paths en router
 //todo: revisar default keyword y otras cosasa para compilacion aot
+//todo: usar un servicio en ml-loader-router
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
@@ -16,6 +19,7 @@ const APP_ROUTES = [
 {path: 'button',     loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/button/pagButtonModule'},
 {path: 'selectfield',loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/selectfield/pagSelectfieldModule'},
 {path: 'textfield',  loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/textfield/pagTextfieldModule'},
+{path: 'textfield2', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/textfield2/pagTextfieldModule2'},
 {path: 'checkbox',   loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/checkbox/pagCheckboxMod'},
 {path: 'radio',      loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/radio/pagRadioModule'},
 {path: 'switch',     loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/switch/pagSwitchModule'},
@@ -37,13 +41,14 @@ const APP_ROUTES = [
 {path: '**',         redirectTo: 'button'}
 ];
 
-// SYSTEMJS ROUTES
+// SYSTEMJS ROUTES: relative paths
 /*
 const APP_ROUTES = [
-  {path: '',           loadChildren: '.app/pages/switch/pagSwitchModule'},
+  {path: '',           loadChildren: '.app/pages/button/pagButtonModule'},
   {path: 'button',     loadChildren: '.app/pages/button/pagButtonModule'},
   {path: 'selectfield',loadChildren: '.app/pages/selectfield/pagSelectfieldModule'},
   {path: 'textfield',  loadChildren: '.app/pages/textfield/pagTextfieldModule'},
+  {path: 'textfield2', loadChildren: '.app/pages/textfield2/pagTextfieldModule2'},
   {path: 'checkbox',   loadChildren: '.app/pages/checkbox/pagCheckboxMod'},
   {path: 'radio',      loadChildren: '.app/pages/radio/pagRadioModule'},
   {path: 'switch',     loadChildren: '.app/pages/switch/pagSwitchModule'},
@@ -68,7 +73,7 @@ const APP_ROUTES = [
 
 @NgModule({
   imports: [
-    MlLoaderRouterMod, BrowserModule, MlSpinnerMod, MlTitleMod, MlLayoutMod,
+    BrowserModule, MlLoaderRouterMod, MlLayoutMod,
     RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
   declarations: [App],
   bootstrap: [App]

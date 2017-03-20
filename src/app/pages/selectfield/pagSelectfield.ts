@@ -11,7 +11,6 @@ template: `
 <h5>Select Field</h5>
 <p>Reactive Forms only</p>
 <form [formGroup]="selectForm" (ngSubmit)="onSubmit()" autocomplete="off">
-
   
   <ml-selectfield [formControl]="selectfield1">
     <ml-sf-item>one</ml-sf-item>
@@ -30,10 +29,8 @@ template: `
   <ml-error [validateControl]="selectfield1" validator="minLength" class="validationError">
     Min length: {{ minLength }}
   </ml-error>  
-  <p>(With validators &uarr;)</p>
+  <div>(With validators &uarr;)</div>
   
-  <br>
-
   <ml-selectfield [formControl]="selectfield2" label="Choose another option..." ripple>
     <ml-sf-item ripple>alpha</ml-sf-item>
     <ml-sf-item ripple>beta</ml-sf-item>

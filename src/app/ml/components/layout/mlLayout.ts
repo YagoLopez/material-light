@@ -1,8 +1,8 @@
+//todo: poder poner ml-header en cada pagina (como en ionic)
 //todo: poder definir colores, temas, fuentes, etc. Consultar colores en mlLayout.css
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
-//todo: poner estilos a drawer scroll
 
-import {Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy} from "@angular/core";
+import {Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive} from "@angular/core";
 import MdlLayout from "./mlLayoutLib";
 import * as ml from "../../lib/ml_lib";
 // ---------------------------------------------------------------------------------------------------------------------
@@ -12,7 +12,7 @@ selector: 'ml-layout',
 styleUrls: ['./mlLayout.css', '../ripple/mlRipple.css', '../icon/mlIicon.css'],
 host: {class: 'mdl-layout'},
 encapsulation: ViewEncapsulation.None,
-changeDetection: ChangeDetectionStrategy.OnPush,
+// changeDetection: ChangeDetectionStrategy.OnPush,
 template: '<ng-content></ng-content>'
 })
 export class MlLayout {

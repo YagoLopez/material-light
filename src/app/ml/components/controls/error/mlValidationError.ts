@@ -1,3 +1,5 @@
+//todo: eliminar @Input() validateControl, pasando el control padre
+
 import {Component, Input} from "@angular/core";
 
 @Component({

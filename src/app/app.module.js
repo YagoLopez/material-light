@@ -1,5 +1,8 @@
+//todo: usar ml-grid para obtener diseño responsivo
+//todo: mostrar ejemplos de codigo (mediante gists o iframes a paginas de github)
 //todo: habilitar webpack.config.js en angular-cli para poder usar local paths en router
 //todo: revisar default keyword y otras cosasa para compilacion aot
+//todo: usar un servicio en ml-loader-router
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -14,9 +17,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
 var mlLoaderRouterMod_1 = require("./ml/components/loader_router/mlLoaderRouterMod");
-var mlSpinnerMod_1 = require("./ml/components/spinner/mlSpinnerMod");
 var mlLayoutMod_1 = require("./ml/components/layout/mlLayoutMod");
-var mlTitleMod_1 = require("./ml/components/title/mlTitleMod");
 var app_layout_1 = require("./app.layout");
 // WEBPACK ROUTES: absolute paths are needed by webpack and lazy-load
 var APP_ROUTES = [
@@ -24,6 +25,7 @@ var APP_ROUTES = [
     { path: 'button', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/button/pagButtonModule' },
     { path: 'selectfield', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/selectfield/pagSelectfieldModule' },
     { path: 'textfield', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/textfield/pagTextfieldModule' },
+    { path: 'textfield2', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/textfield2/pagTextfieldModule2' },
     { path: 'checkbox', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/checkbox/pagCheckboxMod' },
     { path: 'radio', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/radio/pagRadioModule' },
     { path: 'switch', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/switch/pagSwitchModule' },
@@ -44,13 +46,14 @@ var APP_ROUTES = [
     { path: 'table', loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/table/pagTableModule' },
     { path: '**', redirectTo: 'button' }
 ];
-// SYSTEMJS ROUTES
+// SYSTEMJS ROUTES: relative paths
 /*
 const APP_ROUTES = [
-  {path: '',           loadChildren: '.app/pages/switch/pagSwitchModule'},
+  {path: '',           loadChildren: '.app/pages/button/pagButtonModule'},
   {path: 'button',     loadChildren: '.app/pages/button/pagButtonModule'},
   {path: 'selectfield',loadChildren: '.app/pages/selectfield/pagSelectfieldModule'},
   {path: 'textfield',  loadChildren: '.app/pages/textfield/pagTextfieldModule'},
+  {path: 'textfield2', loadChildren: '.app/pages/textfield2/pagTextfieldModule2'},
   {path: 'checkbox',   loadChildren: '.app/pages/checkbox/pagCheckboxMod'},
   {path: 'radio',      loadChildren: '.app/pages/radio/pagRadioModule'},
   {path: 'switch',     loadChildren: '.app/pages/switch/pagSwitchModule'},
@@ -78,7 +81,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
-                mlLoaderRouterMod_1.MlLoaderRouterMod, platform_browser_1.BrowserModule, mlSpinnerMod_1.MlSpinnerMod, mlTitleMod_1.MlTitleMod, mlLayoutMod_1.MlLayoutMod,
+                platform_browser_1.BrowserModule, mlLoaderRouterMod_1.MlLoaderRouterMod, mlLayoutMod_1.MlLayoutMod,
                 router_1.RouterModule.forRoot(APP_ROUTES, { enableTracing: false, useHash: true })],
             declarations: [app_layout_1.App],
             bootstrap: [app_layout_1.App]

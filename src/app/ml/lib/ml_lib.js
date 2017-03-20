@@ -16,4 +16,8 @@ function isSubstring(subStr, bigStr) {
         return false;
 }
 exports.isSubstring = isSubstring;
+function isAttributeValid(attribute, validValues) {
+    return validValues.indexOf(attribute) >= 0;
+}
+exports.isAttributeValid = isAttributeValid;
 //# sourceMappingURL=ml_lib.js.map

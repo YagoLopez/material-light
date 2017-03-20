@@ -16,8 +16,7 @@ var MlLoaderRouterMod = (function () {
     function MlLoaderRouterMod() {
     }
     MlLoaderRouterMod = __decorate([
-        core_1.NgModule({ imports: [common_1.CommonModule, mlSpinnerMod_1.MlSpinnerMod], declarations: [mlLoaderRouter_1.MlLoaderRouter], exports: [mlSpinnerMod_1.MlSpinnerMod, mlLoaderRouter_1.MlLoaderRouter]
-        }), 
+        core_1.NgModule({ imports: [common_1.CommonModule, mlSpinnerMod_1.MlSpinnerMod], declarations: [mlLoaderRouter_1.MlLoaderRouter], exports: [mlLoaderRouter_1.MlLoaderRouter] }), 
         __metadata('design:paramtypes', [])
     ], MlLoaderRouterMod);
     return MlLoaderRouterMod;

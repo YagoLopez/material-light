@@ -98,13 +98,13 @@ var MlTextfieldArea = (function () {
     ], MlTextfieldArea.prototype, "maxrows", void 0);
     MlTextfieldArea = __decorate([
         core_1.Component({
-            selector: 'mdl-textfield-area',
+            selector: 'ml-textfield-area',
             styleUrls: ['./mlTextfield.css'],
             // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlTextfieldArea; }), multi: true }],
-            template: "\n\n<textarea type=\"text\" class=\"mdl-textfield__input\" \n  [attr.rows]=\"rows\" \n  [attr.maxrows]=\"maxrows\" \n  [attr.id]=\"id\" \n  [name]=\"name\"\n  [(ngModel)]=\"model\" \n  (focus)=\"onFocus()\" \n  (keyup)=\"onKeyup()\"></textarea>\n<label class=\"mdl-textfield__label\" [attr.for]=\"id\">\n  <ng-content select=\"mdl-textfield-label\"></ng-content>\n</label>\n<div *ngIf=\"showError\" class=\"mdl-textfield__error\">\n  <ng-content select=\"ml-error\"></ng-content>\n</div>\n\n" //template
+            template: "\n\n<textarea type=\"text\" class=\"mdl-textfield__input\" [attr.rows]=\"rows\" [attr.maxrows]=\"maxrows\" [attr.id]=\"id\" \n[name]=\"name\" [(ngModel)]=\"model\" (focus)=\"onFocus()\" (keyup)=\"onKeyup()\"></textarea>\n<label class=\"mdl-textfield__label\" [attr.for]=\"id\"><ng-content select=\"mdl-textfield-label\"></ng-content></label>\n<div *ngIf=\"showError\" class=\"mdl-textfield__error\"><ng-content select=\"ml-error\"></ng-content></div>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlTextfieldArea);

@@ -11,11 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var mdButtonLib_1 = require("./mdButtonLib");
 var ml = require("../../../lib/ml_lib");
+//todo: <input type="image"> not tested
+var ML_BUTTON_SUBMIT_TYPES = ['submit', 'reset', 'button', 'color', 'file', 'image'];
+var ML_BUTTON_ASPECTS = ['raised', 'colored', 'accent'];
 var MlButtonSubmit = (function () {
     function MlButtonSubmit(ren) {
         this.ren = ren;
+        this.type = 'submit';
     }
     MlButtonSubmit.prototype.ngOnInit = function () {
+        if (!ml.isAttributeValid(this.type.toLowerCase(), ML_BUTTON_SUBMIT_TYPES)) {
+            console.warn("<ml-button-submit> Wrong attribute: type=\"" + this.type + "\"");
+        }
+        if (!ml.isAttributeValid(this.aspect.toLowerCase(), ML_BUTTON_ASPECTS)) {
+            console.warn("<ml-button-submit> Wrong attribute: aspect=\"" + this.aspect + "\"");
+        }
         if (ml.isSubstring('raised', this.aspect)) {
             ml.setClass(this.input, 'mdl-button--raised', this.ren);
         }
@@ -34,6 +44,10 @@ var MlButtonSubmit = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
+    ], MlButtonSubmit.prototype, "type", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], MlButtonSubmit.prototype, "aspect", void 0);
     __decorate([
         // Possible values: [rised, colored, accent] (in lowercase)
@@ -49,7 +63,7 @@ var MlButtonSubmit = (function () {
             selector: 'ml-button-submit',
             // moduleId: module.id.toString(),
             styleUrls: ['./mlButton.css'],
-            template: "\n\n<div class=\"mdl-button\" style=\"padding: 3px\">\n<input #input type=\"submit\" class=\"mdl-button\" [attr.value]=\"text\" [disabled]=\"disabled\" />\n<span class=\"mdl-button__ripple-container\" style=\"z-index: -10\">\n  <span class=\"mdl-ripple\"></span>\n</span>\n</div>\n\n" //template
+            template: "\n\n<div class=\"mdl-button\" style=\"padding: 3px\">\n<input #input [attr.type]=\"type\" [attr.value]=\"text\" [disabled]=\"disabled\" class=\"mdl-button\" />\n<span class=\"mdl-button__ripple-container\" style=\"z-index: -10\">\n  <span class=\"mdl-ripple\"></span>\n</span>\n</div>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])
     ], MlButtonSubmit);

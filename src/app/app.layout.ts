@@ -55,7 +55,8 @@ template: `
     <ml-nav>
       <a nav-item routerLink="button" routerLinkActive="active-nav">Button</a>
       <a nav-item routerLink="selectfield" routerLinkActive="active-nav">SelectField</a>
-      <a nav-item routerLink="textfield" routerLinkActive="active-nav">TextControls</a>
+      <a nav-item routerLink="textfield" routerLinkActive="active-nav">TextField</a>
+      <a nav-item routerLink="textfield2" routerLinkActive="active-nav">TextField2</a>
       <a nav-item routerLink="checkbox" routerLinkActive="active-nav">Checkbox</a>
       <a nav-item routerLink="radio" routerLinkActive="active-nav">RadioButton</a>
       <a nav-item routerLink="switch" routerLinkActive="active-nav">SwitchButton</a>

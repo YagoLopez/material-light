@@ -1,4 +1,5 @@
-//todo: (general) nombrar todos los componentes terminando en "C" para distinguirlos de otros ficheros
+//todo: testar textfield con tipo: file, color, etc.
+//todo: (general) nombrar todos los componentes empezando por "C" (Ej: CMlTextfield)
 
 // NOTE: this component ("MlSelectfield") is based on "MlButton", "MdlMenu" and "MdlTextfield"
 // For this reason it uses files from these components
@@ -21,18 +22,17 @@ providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlSelectf
 template:`
 
 <style>
-  .input-field{padding-left: 33px !important; cursor: pointer}
-  .input-label{padding-left: 33px !important; cursor: pointer}
-  .menu-btn{height: 27px !important}
+.input-field{padding-left: 33px !important; cursor: pointer}
+.input-label{padding-left: 33px !important; cursor: pointer}
+.menu-btn{height: 27px !important}
 </style>
-
 <div class="mdl-textfield getmdl-select">
-  <input #input class="mdl-textfield__input input-field" type="text" (click)="clickInput()" readonly>
-  <label #label class="mdl-textfield__label input-label"[attr.for]="idInput">{{ labelText }}</label>
-  <ml-button #mdlButton [attr.id]="idBtn" type="icon" class="menu-btn">
+  <input #input type="text" class="mdl-textfield__input input-field" (click)="clickInput()" readonly>
+  <label #label class="mdl-textfield__label input-label">{{ labelText }}</label>
+  <ml-button #mdlButton variant="icon" [attr.id]="idBtn" class="menu-btn">
     <ml-icon>keyboard_arrow_down</ml-icon>
   </ml-button>
-  <ul #menuList class="getmdl-select__fullwidth mdl-menu" [attr.for]="idBtn" (click)="itemSelected($event)">
+  <ul #menuList [attr.for]="idBtn" class="getmdl-select__fullwidth mdl-menu" (click)="itemSelected($event)">
     <ng-content select="ml-sf-item"></ng-content>
   </ul>         
 </div>

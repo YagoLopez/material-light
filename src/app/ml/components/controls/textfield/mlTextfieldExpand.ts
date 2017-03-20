@@ -7,7 +7,7 @@ import MdlTextfield from "./mlTextfieldLib";
 import * as ml from "../../../lib/ml_lib";
 
 @Component({
-selector: 'mdl-textfield-expand',
+selector: 'ml-textfield-expand',
 styleUrls: ['./mlTextfield.css', '../button/mlButton.css'],
 // moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
@@ -15,22 +15,13 @@ changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlTextfieldExpand), multi: true}],
 template: `
 
-<label class="mdl-button mdl-button--icon" [attr.for]="id">
-  <ml-icon>{{icon}}</ml-icon>
-</label>
-    
+<label class="mdl-button mdl-button--icon" [attr.for]="id"><ml-icon>{{icon}}</ml-icon></label>
 <div class="mdl-textfield__expandable-holder">
-  <input type="text" class="mdl-textfield__input" 
-    [attr.id]="id" 
-    [name]="name"
-    [(ngModel)]="model" 
-    (focus)="onFocus()" 
-    (keyup)="onKeyup()">
+  <input type="text" class="mdl-textfield__input" [attr.id]="id" [name]="name" [(ngModel)]="model" 
+    (focus)="onFocus()" (keyup)="onKeyup()">
   <label class="mdl-textfield__label" [attr.for]="id"></label>
 </div>
-<div *ngIf="showError" class="mdl-textfield-expand-error">
-  <ng-content select="ml-error"></ng-content>
-</div>
+<div *ngIf="showError" class="mdl-textfield-expand-error"><ng-content select="ml-error"></ng-content></div>
 
 `//template
 })
@@ -50,10 +41,7 @@ export class MlTextfieldExpand implements ControlValueAccessor{
   private onTouch = () => {};
   private onChange = (_: any) => {};
 
-  constructor(
-    private host: ElementRef,
-    private ren: Renderer){
-  }
+  constructor (private host: ElementRef, private ren: Renderer){}
 
   checkValidity(){
     if (this.formControl && this.formControl.invalid){
@@ -77,8 +65,9 @@ export class MlTextfieldExpand implements ControlValueAccessor{
   get model() { return this._model }
 
   ngOnInit() {
-    if (!this.id)
+    if (!this.id){
       this.id = ml.randomStr();
+    }
 
     ml.setClass(this.host, 'mdl-textfield', this.ren);
     ml.setClass(this.host, 'mdl-textfield--expandable', this.ren);

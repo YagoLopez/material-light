@@ -1,3 +1,4 @@
+//todo: comprobar validez atributos aspect
 //todo: control de excepciones en angular 2
 //todo: revisar con linting e inspections al maximo, hay cosas que se pueden quitar y mejorar
 
@@ -5,7 +6,10 @@ import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angula
 import MdlButton from "./mdButtonLib";
 import * as ml from "../../../lib/ml_lib";
 
-// NOTE: For incompatible attributes check: https://getmdl.io/components/index.html#buttons-section
+// aspect="colored" => background blue, font-color white
+// aspect="accent" => background magenta, font-color white
+const ML_BUTTON_ASPECTS = ['raised, colored, accent'];
+const ML_BUTTON_VARIANTS = ['fab', 'minifab', 'icon'];
 
 @Component({
 selector: 'ml-button',
@@ -17,15 +21,15 @@ template:'<ng-content></ng-content>'
 })
 export class MlButton{
 
-  @Input() aspect: string; // Admited values: [rised, colored, accent]* (* in lowercase)
-  @Input() type: string;   // Admited values: [fav, minifab, icon]*
-
+  @Input() aspect: string;
+  @Input() variant: string;
   constructor(public host: ElementRef, private ren: Renderer){}
 
   ngOnInit(){
-   // Button "aspect" --------------------------------------------------------------------------------------------------
-    
-    //todo: poner explicaciones de colores
+    // Button "aspect" --------------------------------------------------------------------------------------------------
+    if( this.variant && !ml.isAttributeValid(this.variant.toLowerCase(), ML_BUTTON_VARIANTS) ){
+      console.warn(`<ml-button> Wrong attribute: variant="${this.variant}"`);
+    }
     if (ml.isSubstring('raised', this.aspect)){
       ml.setClass(this.host, 'mdl-button--raised', this.ren);
     }
@@ -35,16 +39,15 @@ export class MlButton{
     if (ml.isSubstring('accent', this.aspect)){
       ml.setClass(this.host, 'mdl-button--accent', this.ren);
     }
-   // Button "type" ----------------------------------------------------------------------------------------------------
-
-    if (ml.isSubstring('fab', this.type)){
+   // Button "variant" ----------------------------------------------------------------------------------------------------
+    if (ml.isSubstring('fab', this.variant)){
       ml.setClass(this.host, 'mdl-button--fab', this.ren);
     }
-    if (ml.isSubstring('minifab', this.type)){
+    if (ml.isSubstring('minifab', this.variant)){
       ml.setClass(this.host, 'mdl-button--fab', this.ren);
       ml.setClass(this.host, 'mdl-button--mini-fab', this.ren);
     }
-    if (ml.isSubstring('icon', this.type)){
+    if (ml.isSubstring('icon', this.variant)){
       ml.setClass(this.host, 'mdl-button--icon', this.ren);
     }
    // End --------------------------------------------------------------------------------------------------------------

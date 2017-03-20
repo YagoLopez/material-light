@@ -11,17 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var mlRippleMod_1 = require("../ripple/mlRippleMod");
+var mlTitleMod_1 = require("../title/mlTitleMod");
 var mlLayout_1 = require("./mlLayout");
 var MlLayoutMod = (function () {
     function MlLayoutMod() {
     }
     MlLayoutMod = __decorate([
         core_1.NgModule({
-            imports: [common_1.CommonModule, mlRippleMod_1.MlRippleMod],
+            imports: [common_1.CommonModule, mlRippleMod_1.MlRippleMod, mlTitleMod_1.MlTitleMod],
             declarations: [mlLayout_1.MlLayout, mlLayout_1.MlHeader, mlLayout_1.MlHeaderRow, mlLayout_1.MlDrawer, mlLayout_1.MlSpacer, mlLayout_1.MlNav, mlLayout_1.MlNavItem, mlLayout_1.MlLargeScreenOnly,
                 mlLayout_1.MlSmallScreenOnly, mlLayout_1.MlContent, mlLayout_1.MlHeaderTabs, mlLayout_1.MlHeaderTab, mlLayout_1.MlHeaderTabContent, mlLayout_1.MlHeaderTabActive
             ],
-            exports: [mlLayout_1.MlLayout, mlRippleMod_1.MlRippleMod, mlLayout_1.MlHeader, mlLayout_1.MlHeaderRow, mlLayout_1.MlDrawer, mlLayout_1.MlSpacer, mlLayout_1.MlNav, mlLayout_1.MlNavItem, mlLayout_1.MlLargeScreenOnly,
+            exports: [mlRippleMod_1.MlRippleMod, mlTitleMod_1.MlTitleMod, mlLayout_1.MlLayout, mlLayout_1.MlHeader, mlLayout_1.MlHeaderRow, mlLayout_1.MlDrawer, mlLayout_1.MlSpacer, mlLayout_1.MlNav, mlLayout_1.MlNavItem, mlLayout_1.MlLargeScreenOnly,
                 mlLayout_1.MlSmallScreenOnly, mlLayout_1.MlContent, mlLayout_1.MlHeaderTabs, mlLayout_1.MlHeaderTab, mlLayout_1.MlHeaderTabContent, mlLayout_1.MlHeaderTabActive]
         }), 
         __metadata('design:paramtypes', [])

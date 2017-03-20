@@ -25,3 +25,7 @@ export function isSubstring(subStr:string, bigStr:string): boolean {
     return false;
 }
 
+export function isAttributeValid(attribute: string, validValues: string[]): boolean {
+  return validValues.indexOf(attribute) >= 0;
+}
+
