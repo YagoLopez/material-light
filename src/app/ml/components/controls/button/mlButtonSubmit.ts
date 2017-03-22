@@ -13,10 +13,9 @@ styleUrls: ['./mlButton.css'],
 template: `
 
 <div class="mdl-button" style="padding: 3px">
-<input #input [attr.type]="type" [attr.value]="text" [disabled]="disabled" class="mdl-button" />
-<span class="mdl-button__ripple-container" style="z-index: -10">
-  <span class="mdl-ripple"></span>
-</span>
+<input #input [attr.type]="type" [attr.value]="text" [disabled]="disabled" class="mdl-button" style="pointer-events: auto" />
+<!--<span class="mdl-button__ripple-container" style="z-index: -10;">-->
+<span class="mdl-button__ripple-container" style="pointer-events: none"><span class="mdl-ripple"></span></span>
 </div>
 
 `//template

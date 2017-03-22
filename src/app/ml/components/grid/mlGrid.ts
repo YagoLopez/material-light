@@ -15,16 +15,13 @@ template: `
 })
 export class MlGrid {
 
-  @Input('no-space') public noSpace: string;
+  @Input('no-space') noSpace: string;
+  constructor (private host: ElementRef, private ren: Renderer){}
 
-  public constructor(
-    private host: ElementRef,
-    private ren: Renderer
-  ){}
-
-  public ngOnInit(){
-    if (this.noSpace === '')
+  ngOnInit(){
+    if (this.noSpace === '') {
       ml.setClass(this.host, 'mdl-grid--no-spacing', this.ren);
+    }  
   }
 }
 // ---------------------------------------------------------------------------------------------------------------------
@@ -41,34 +38,31 @@ export class MlGridCell{
 
   // More CSS classes can be added directly to the cell: https://getmdl.io/components/index.html#layout-section/grid
 
-  @Input() public width: string;
-  @Input('phone-width') public phoneWith: string;
-  @Input('tablet-width') public tabletWidth: string;
-  @Input('desktop-width') public desktopWidth: string;
-
-  public constructor(
-    private host: ElementRef,
-    private ren: Renderer
-  ){}
+  @Input() width: string;
+  @Input('phone-width') phoneWith: string;
+  @Input('tablet-width') tabletWidth: string;
+  @Input('desktop-width') desktopWidth: string;
   
-  public ngOnInit(){
-
+  constructor (private host: ElementRef, private ren: Renderer){}
+  
+  ngOnInit(){
     let widthClass = 'mdl-cell--'+this.width+'-col';
     let phoneWidthClass = 'mdl-cell--'+this.phoneWith+'-col-phone';
     let tabletWidthClass = 'mdl-cell--'+this.tabletWidth+'-col-tablet';
     let desktopWidthClass = 'mdl-cell--'+this.desktopWidth+'-col-desktop';
     let host = this.host;
 
-    if(this.width)
+    if(this.width) {
       ml.setClass(host, widthClass, this.ren);
-      
-    if(this.phoneWith)
+    }  
+    if(this.phoneWith) {
       ml.setClass(host, phoneWidthClass, this.ren);
-
-    if(this.tabletWidth)
+    }
+    if(this.tabletWidth) {
       ml.setClass(host, tabletWidthClass, this.ren);
-
-    if(this.desktopWidth)
+    }
+    if(this.desktopWidth) {
       ml.setClass(host, desktopWidthClass, this.ren);
+    }
   }
 }

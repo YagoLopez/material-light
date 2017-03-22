@@ -11,8 +11,11 @@ template: `
 <h5>Text Controls</h5>
 
 <form [formGroup]="textfieldForm" (ngSubmit)="onSubmit()" autocomplete="off">
-  ➀ <strong>Textfields normal:</strong> (Validated)
+
+  <div>➀ <strong>Textfields normal:</strong> (Validated)</div>
+  
   <!-- textfield1  ------------------------------------------------------------------------------------------------- -->
+  
   <ml-textfield [formControl]="textfield1" floating>
     <ml-textfield-label>
       <ml-icon class="ico-aligned">email</ml-icon>Label: floating, icon, validated
@@ -22,28 +25,37 @@ template: `
     <ml-error [validateControl]="textfield1" validator="maxLength">Maximum length is 4</ml-error>
   </ml-textfield>
   <br>
+  
   <!-- textfield2  ------------------------------------------------------------------------------------------------- -->
+  
   <ml-textfield id="textfield2" [formControl]="textfield2">
     <ml-textfield-label>Label 2: no icon, no floating, validated</ml-textfield-label>
     <ml-error [validateControl]="textfield2" validator="required">Required field</ml-error>
   </ml-textfield>
   <br><br>
+  
   <!-- textfield expandable  --------------------------------------------------------------------------------------- -->
-  ➁ <strong>Textfield expandable:</strong> (No validation)
+  
+  <div>➁ <strong>Textfield expandable:</strong> (No validation)</div>
   <ml-textfield-expand [formControl]="textfield3" icon="search"></ml-textfield-expand>
+  
   <!-- textfield area  --------------------------------------------------------------------------------------------- -->
-  ➂ <strong>Textfield area:</strong> (Validated)
+  
+  <div>➂ <strong>Textfield area:</strong> (Validated)</div>
   <ml-textfield-area rows="3" maxrows="6" [formControl]="textArea">
     <ml-textfield-label>Text Area</ml-textfield-label>
     <ml-error [validateControl]="textArea" validator="required">Required</ml-error>
     <ml-error [validateControl]="textArea" validator="minLength">Min length 2</ml-error>
   </ml-textfield-area>
   <br><br>
-  <!-- /textfield area  -------------------------------------------------------------------------------------------- -->
+  
+  <!-- submit button ----------------------------------------------------------------------------------------------- -->
   <p> 
     <ml-button-submit [disabled]="textfieldForm.invalid" 
       text="Submit to console" aspect="raised" ripple></ml-button-submit>
   </p>                      
+  <!-- /submit button ---------------------------------------------------------------------------------------------- -->
+
 </form>
 
 <p><debug-form [name]="textfieldForm"></debug-form></p>

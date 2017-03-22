@@ -8,8 +8,25 @@ template: `
 
 <style>
   a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}
+  @media (min-width: 700px){
+    ml-content{
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: ghostwhite;
+    }
+    ml-content-tabheader{
+      background-color: white;
+      margin: auto;
+      width: 60%;
+      padding: 25px 50px 50px;
+      border: 1px solid lightgrey;
+      box-shadow: 1px 1px 5px lightgrey;
+    }
+  }
+  @media(max-width: 700px){
+    ml-content{padding: 10px;}
+  }
   .bg-grey{background: lightgrey}
-  .content-pad{padding: 10px}
   .active-nav{background: darkgrey; color: white !important}
   .drawer-txt{color: white; text-align: center}
   .drawer-top-container{
@@ -80,19 +97,19 @@ template: `
   
   <!-- Content ----------------------------------------------------------------------------------------------------- -->
   
-  <ml-content class="content-pad">
-    <ml-loader-router (isLoading)="onLoading($event)"></ml-loader-router>
-    <ml-header-tab-content id="tab1" active [hidden]="isLoading">
+  <ml-content>
+    <ml-loader (isLoading)="onLoading($event)"></ml-loader>
+    <ml-content-tabheader id="tab1" active [hidden]="isLoading">
       <router-outlet></router-outlet>
-    </ml-header-tab-content>
-    <ml-header-tab-content id="tab2"><ml-title>Empty tab 2. Back to tab 1</ml-title></ml-header-tab-content>
-    <ml-header-tab-content id="tab3"><ml-title>Empty tab 3. Back to tab 1</ml-title></ml-header-tab-content>
-    <ml-header-tab-content id="tab4"><ml-title>Empty tab 4. Back to tab 1</ml-title></ml-header-tab-content>
-    <ml-header-tab-content id="tab5"><ml-title>Empty tab 5. Back to tab 1</ml-title></ml-header-tab-content>
-    <ml-header-tab-content id="tab6"><ml-title>Empty tab 6. Back to tab 1</ml-title></ml-header-tab-content>
+    </ml-content-tabheader>
+    <ml-content-tabheader id="tab2"><ml-title>Empty tab 2. Back to tab 1</ml-title></ml-content-tabheader>
+    <ml-content-tabheader id="tab3"><ml-title>Empty tab 3. Back to tab 1</ml-title></ml-content-tabheader>
+    <ml-content-tabheader id="tab4"><ml-title>Empty tab 4. Back to tab 1</ml-title></ml-content-tabheader>
+    <ml-content-tabheader id="tab5"><ml-title>Empty tab 5. Back to tab 1</ml-title></ml-content-tabheader>
+    <ml-content-tabheader id="tab6"><ml-title>Empty tab 6. Back to tab 1</ml-title></ml-content-tabheader>
   </ml-content>
     
-  <!-- End --------------------------------------------------------------------------------------------------------- -->
+  <!-- /Content ---------------------------------------------------------------------------------------------------- -->
 
 </ml-layout>
 

@@ -36,5 +36,4 @@ export class PagRadio {
   onSubmit2(){
     console.log(this.formRadio.value);
   }
-
 }

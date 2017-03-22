@@ -14,6 +14,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var mdButtonLib_1 = require("./mdButtonLib");
 var ml = require("../../../lib/ml_lib");
+// Input attribute values are case-sensitive
 // aspect="colored" => background blue, font-color white
 // aspect="accent" => background magenta, font-color white
 var ML_BUTTON_ASPECTS = ['raised, colored, accent'];
@@ -24,8 +25,8 @@ var MlButton = (function () {
         this.ren = ren;
     }
     MlButton.prototype.ngOnInit = function () {
-        // Button "aspect" --------------------------------------------------------------------------------------------------
-        if (this.variant && !ml.isAttributeValid(this.variant.toLowerCase(), ML_BUTTON_VARIANTS)) {
+        // Input "aspect" --------------------------------------------------------------------------------------------------
+        if (this.variant && !ml.isAttributeValid(this.variant, ML_BUTTON_VARIANTS)) {
             console.warn("<ml-button> Wrong attribute: variant=\"" + this.variant + "\"");
         }
         if (ml.isSubstring('raised', this.aspect)) {
@@ -37,7 +38,7 @@ var MlButton = (function () {
         if (ml.isSubstring('accent', this.aspect)) {
             ml.setClass(this.host, 'mdl-button--accent', this.ren);
         }
-        // Button "variant" ----------------------------------------------------------------------------------------------------
+        // Input "variant" ----------------------------------------------------------------------------------------------------
         if (ml.isSubstring('fab', this.variant)) {
             ml.setClass(this.host, 'mdl-button--fab', this.ren);
         }
@@ -51,12 +52,8 @@ var MlButton = (function () {
         // End --------------------------------------------------------------------------------------------------------------
         new mdButtonLib_1.default(this.host.nativeElement);
     };
-    MlButton.prototype.disable = function () {
-        this.host.nativeElement.setAttribute('disabled', true);
-    };
-    MlButton.prototype.enable = function () {
-        this.host.nativeElement.removeAttribute('disabled');
-    };
+    MlButton.prototype.disable = function () { this.host.nativeElement.setAttribute('disabled', true); };
+    MlButton.prototype.enable = function () { this.host.nativeElement.removeAttribute('disabled'); };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)

@@ -6,6 +6,8 @@ import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angula
 import MdlButton from "./mdButtonLib";
 import * as ml from "../../../lib/ml_lib";
 
+// Input attribute values are case-sensitive
+
 // aspect="colored" => background blue, font-color white
 // aspect="accent" => background magenta, font-color white
 const ML_BUTTON_ASPECTS = ['raised, colored, accent'];
@@ -26,8 +28,8 @@ export class MlButton{
   constructor(public host: ElementRef, private ren: Renderer){}
 
   ngOnInit(){
-    // Button "aspect" --------------------------------------------------------------------------------------------------
-    if( this.variant && !ml.isAttributeValid(this.variant.toLowerCase(), ML_BUTTON_VARIANTS) ){
+    // Input "aspect" --------------------------------------------------------------------------------------------------
+    if( this.variant && !ml.isAttributeValid(this.variant, ML_BUTTON_VARIANTS) ){
       console.warn(`<ml-button> Wrong attribute: variant="${this.variant}"`);
     }
     if (ml.isSubstring('raised', this.aspect)){
@@ -39,7 +41,7 @@ export class MlButton{
     if (ml.isSubstring('accent', this.aspect)){
       ml.setClass(this.host, 'mdl-button--accent', this.ren);
     }
-   // Button "variant" ----------------------------------------------------------------------------------------------------
+   // Input "variant" ----------------------------------------------------------------------------------------------------
     if (ml.isSubstring('fab', this.variant)){
       ml.setClass(this.host, 'mdl-button--fab', this.ren);
     }
@@ -54,11 +56,6 @@ export class MlButton{
 
     new MdlButton(this.host.nativeElement);
   }
-
-  disable(){
-    this.host.nativeElement.setAttribute('disabled', true);
-  }
-  enable(){
-    this.host.nativeElement.removeAttribute('disabled');
-  }
+  disable(){ this.host.nativeElement.setAttribute('disabled', true); }
+  enable(){ this.host.nativeElement.removeAttribute('disabled'); }
 }

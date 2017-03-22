@@ -1,6 +1,7 @@
 //todo: poder poner ml-header en cada pagina (como en ionic)
 //todo: poder definir colores, temas, fuentes, etc. Consultar colores en mlLayout.css
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
+//todo: implementar MlLayout usando slots
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -45,10 +46,10 @@ var MlLayout = (function () {
         core_1.Component({
             selector: 'ml-layout',
             // moduleId: module.id.toString(),
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             styleUrls: ['./mlLayout.css', '../ripple/mlRipple.css', '../icon/mlIicon.css'],
             host: { class: 'mdl-layout' },
             encapsulation: core_1.ViewEncapsulation.None,
-            // changeDetection: ChangeDetectionStrategy.OnPush,
             template: '<ng-content></ng-content>'
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
@@ -194,7 +195,9 @@ var MlDrawer = (function () {
         this.ren.listen(this.host.nativeElement, 'click', function () {
             _this.host.nativeElement.classList.remove('is-visible');
             var obfuscator = document.querySelector('div.mdl-layout__obfuscator.is-visible');
-            obfuscator.classList.remove('is-visible');
+            if (obfuscator) {
+                obfuscator.classList.remove('is-visible');
+            }
         });
         ml.setClass(this.host, 'mdl-layout__drawer', this.ren);
     };
@@ -216,7 +219,7 @@ var MlContent = (function () {
         core_1.Component({
             selector: 'ml-content',
             host: { class: 'mdl-layout__content' },
-            template: '<div class="page-content"><ng-content></ng-content></div>' }), 
+            template: '<ng-content></ng-content>' }), 
         __metadata('design:paramtypes', [])
     ], MlContent);
     return MlContent;
@@ -259,7 +262,7 @@ var MlHeaderTabContent = (function () {
     }
     MlHeaderTabContent = __decorate([
         core_1.Component({
-            selector: 'ml-header-tab-content',
+            selector: 'ml-content-tabheader',
             host: { class: 'mdl-layout__tab-panel' },
             template: '<ng-content></ng-content>' }), 
         __metadata('design:paramtypes', [])

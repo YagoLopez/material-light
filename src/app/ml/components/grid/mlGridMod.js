@@ -14,10 +14,7 @@ var MlGridMod = (function () {
     function MlGridMod() {
     }
     MlGridMod = __decorate([
-        core_1.NgModule({
-            declarations: [mlGrid_1.MlGrid, mlGrid_1.MlGridCell],
-            exports: [mlGrid_1.MlGrid, mlGrid_1.MlGridCell]
-        }), 
+        core_1.NgModule({ declarations: [mlGrid_1.MlGrid, mlGrid_1.MlGridCell], exports: [mlGrid_1.MlGrid, mlGrid_1.MlGridCell] }), 
         __metadata('design:paramtypes', [])
     ], MlGridMod);
     return MlGridMod;

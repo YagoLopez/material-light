@@ -1,5 +1,4 @@
 "use strict";
-// Polyfills needed loaded before the app
 require('core-js/es6/symbol');
 require('core-js/es6/object');
 require('core-js/es6/function');

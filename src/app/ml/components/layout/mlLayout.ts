@@ -1,18 +1,19 @@
 //todo: poder poner ml-header en cada pagina (como en ionic)
 //todo: poder definir colores, temas, fuentes, etc. Consultar colores en mlLayout.css
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
+//todo: implementar MlLayout usando slots
 
-import {Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive} from "@angular/core";
+import {Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy} from "@angular/core";
 import MdlLayout from "./mlLayoutLib";
 import * as ml from "../../lib/ml_lib";
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-layout',
 // moduleId: module.id.toString(),
+changeDetection: ChangeDetectionStrategy.OnPush,
 styleUrls: ['./mlLayout.css', '../ripple/mlRipple.css', '../icon/mlIicon.css'],
 host: {class: 'mdl-layout'},
 encapsulation: ViewEncapsulation.None,
-// changeDetection: ChangeDetectionStrategy.OnPush,
 template: '<ng-content></ng-content>'
 })
 export class MlLayout {
@@ -121,7 +122,9 @@ export class MlDrawer {
    this.ren.listen(this.host.nativeElement, 'click', () => {
       this.host.nativeElement.classList.remove('is-visible');
       const obfuscator = document.querySelector('div.mdl-layout__obfuscator.is-visible');
-      obfuscator.classList.remove('is-visible');
+      if(obfuscator){
+        obfuscator.classList.remove('is-visible');
+      }
    });
    ml.setClass(this.host,'mdl-layout__drawer', this.ren);
   }
@@ -130,7 +133,7 @@ export class MlDrawer {
 @Component({
 selector: 'ml-content',
 host: {class: 'mdl-layout__content'},
-template: '<div class="page-content"><ng-content></ng-content></div>'})
+template: '<ng-content></ng-content>'})
 export class MlContent {}
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
@@ -143,9 +146,7 @@ export class MlHeaderTabs {}
 selector: '[header-tab]',
 host: {class: 'mdl-layout__tab'}})
 export class MlHeaderTab {
-
   constructor(private host: ElementRef){}
-
   ngOnInit(){
     this.host.nativeElement.innerHTML += `
       <span class="mdl-layout__tab-ripple-container">
@@ -155,7 +156,7 @@ export class MlHeaderTab {
 }
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
-selector: 'ml-header-tab-content',
+selector: 'ml-content-tabheader',
 host: {class: 'mdl-layout__tab-panel'},
 template: '<ng-content></ng-content>'})
 export class MlHeaderTabContent {}

@@ -2459,7 +2459,7 @@ ul, ol {
       .mdl-layout__drawer .mdl-navigation .mdl-navigation__link--current {
         background-color: rgb(224,224,224);
         color: rgb(0,0,0); }
-  @media screen and (min-width: 1025px) {
+   @media screen and (min-width: 1025px) {
     .mdl-layout--fixed-drawer > .mdl-layout__drawer {
       -webkit-transform: translateX(0);
               transform: translateX(0); } }

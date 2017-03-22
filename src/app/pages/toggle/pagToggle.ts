@@ -20,7 +20,7 @@ template: `
   
   <ml-toggle id="toggle6" formControlName="option6" disabled="true">
     <ml-icon>print</ml-icon>
-  </ml-toggle>Option 6 (Disabled by default)
+  </ml-toggle>Option 6 (Disabled)
 </form>
 
 <debug-form [name]="formToggle"></debug-form>

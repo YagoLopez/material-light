@@ -16,8 +16,9 @@ var MlGrid = (function () {
         this.ren = ren;
     }
     MlGrid.prototype.ngOnInit = function () {
-        if (this.noSpace === '')
+        if (this.noSpace === '') {
             ml.setClass(this.host, 'mdl-grid--no-spacing', this.ren);
+        }
     };
     __decorate([
         core_1.Input('no-space'), 
@@ -49,14 +50,18 @@ var MlGridCell = (function () {
         var tabletWidthClass = 'mdl-cell--' + this.tabletWidth + '-col-tablet';
         var desktopWidthClass = 'mdl-cell--' + this.desktopWidth + '-col-desktop';
         var host = this.host;
-        if (this.width)
+        if (this.width) {
             ml.setClass(host, widthClass, this.ren);
-        if (this.phoneWith)
+        }
+        if (this.phoneWith) {
             ml.setClass(host, phoneWidthClass, this.ren);
-        if (this.tabletWidth)
+        }
+        if (this.tabletWidth) {
             ml.setClass(host, tabletWidthClass, this.ren);
-        if (this.desktopWidth)
+        }
+        if (this.desktopWidth) {
             ml.setClass(host, desktopWidthClass, this.ren);
+        }
     };
     __decorate([
         core_1.Input(), 

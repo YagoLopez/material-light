@@ -13,24 +13,29 @@ template: `
 <form [formGroup]="textfieldForm2" (ngSubmit)="onSubmit()" autocomplete="off">
 
   <!-- Password ---------------------------------------------------------------------------------------------------- -->
-  ➃ <strong>Password field:</strong>
+  
+  ➃ <strong>Password field: </strong>
   <ml-textfield type="password" id="password" [formControl]="password" floating>
     <ml-textfield-label>Enter password</ml-textfield-label>
     <ml-error [validateControl]="password" validator="required">Required field</ml-error>
     <ml-error [validateControl]="password" validator="minLength">Minimum length: {{ passLength }}</ml-error>
   </ml-textfield>
   <br>
- <!-- Date --------------------------------------------------------------------------------------------------------- -->
+ 
+  <!-- Date -------------------------------------------------------------------------------------------------------- -->
+  
   <!-- todo: at this moment validation error classes doesnt work totally ok in date field-->
   <div class="date-field">
-    ➄ <strong>Date field:</strong>
+    ➄ <strong>Date field: </strong>
     <ml-textfield type="date" [formControl]="date" class="pad-top"></ml-textfield>
   </div>
-  <!-- /Date ------------------------------------------------------------------------------------------------------- -->
+  
+  <!-- Submit button ----------------------------------------------------------------------------------------------- -->
   <p> 
     <ml-button-submit [disabled]="textfieldForm2.invalid" 
       text="Submit to console" aspect="raised" ripple></ml-button-submit>
   </p>                      
+  <!-- /Submit button ---------------------------------------------------------------------------------------------- -->
                       
 </form>
 

@@ -19,8 +19,8 @@ template: `
 </p>
 <p><ml-button aspect="raised" (click)="progress2.setProgress(10)">Progress = 10%</ml-button></p>
 <p><ml-button aspect="raised" (click)="progress2.setProgress(30)">Progress = 30%</ml-button></p>
-<p><ml-button aspect="raised" (click)="progress2.setBuffer(20)">Buffer = 20%</ml-button></p>
-<p><ml-button aspect="raised" (click)="progress2.setBuffer(80)">Buffer = 80%</ml-button></p>
+<p><ml-button aspect="raised" (click)="progress2.setBuffer(50)">Buffer = 50%</ml-button></p>
+<p><ml-button aspect="raised" (click)="progress2.setBuffer(90)">Buffer = 90%</ml-button></p>
 
 <hr>
 

@@ -20,8 +20,7 @@ var PagCardModule = (function () {
     PagCardModule = __decorate([
         core_1.NgModule({
             imports: [mlButtonMod_1.MlButtonMod, mlMenuMod_1.MlMenuMod, mlCardMod_1.MlCardMod, router_1.RouterModule.forChild([{ path: '', component: pagCard_1.PagCard }])],
-            declarations: [pagCard_1.PagCard],
-        }), 
+            declarations: [pagCard_1.PagCard] }), 
         __metadata('design:paramtypes', [])
     ], PagCardModule);
     return PagCardModule;

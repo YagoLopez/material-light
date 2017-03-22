@@ -1,21 +1,25 @@
-//todo: usar ml-grid para obtener diseño responsivo
+//todo: media query para que se muestre el menu lateral en modo tablet en iframe
 //todo: mostrar ejemplos de codigo (mediante gists o iframes a paginas de github)
+//todo: selectfield dropdown mas ancho
+//todo: que se puedan usar diferentes cabeceras y menus laterales (<ml-header>) en cada pagina (usar named router-outlet?)
+//todo: hacer Ml boilerplate project
+//todo: hacer release en github
 //todo: habilitar webpack.config.js en angular-cli para poder usar local paths en router
 //todo: revisar default keyword y otras cosasa para compilacion aot
-//todo: usar un servicio en ml-loader-router
+//todo: usar un servicio en ml-loader
+//todo: transiciones de estado usando eventos de router (ref: https://toddmotto.com/dynamic-page-titles-angular-2-router-events)
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {RouterModule} from "@angular/router";
-import {MlLoaderRouterMod} from "./ml/components/loader_router/mlLoaderRouterMod";
-import {MlSpinnerMod} from "./ml/components/spinner/mlSpinnerMod";
+import {MlLoaderMod} from "./ml/components/loader/mlLoaderMod";
 import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
-import {MlTitleMod} from "./ml/components/title/mlTitleMod";
 import {App} from "./app.layout";
 
 // WEBPACK ROUTES: absolute paths are needed by webpack and lazy-load
 const APP_ROUTES = [
-{path: '',           loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/button/pagButtonModule'},
+{path: '',           redirectTo: 'button', pathMatch: 'full'},
+{path: 'card',      loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/card/pagCardModule'},
 {path: 'button',     loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/button/pagButtonModule'},
 {path: 'selectfield',loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/selectfield/pagSelectfieldModule'},
 {path: 'textfield',  loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/textfield/pagTextfieldModule'},
@@ -25,7 +29,6 @@ const APP_ROUTES = [
 {path: 'switch',     loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/switch/pagSwitchModule'},
 {path: 'toggle',     loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/toggle/pagToggleModule'},
 {path: 'badge',      loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/badge/pagBadgeModule'},
-{path: 'card',       loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/card/pagCardModule'},
 {path: 'grid',       loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/grid/pagGridModule'},
 {path: 'tabs',       loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/tabs/pagTabsModule'},
 {path: 'snackbar',   loadChildren: 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/snackbar/pagSnackbarModule'},
@@ -44,8 +47,9 @@ const APP_ROUTES = [
 // SYSTEMJS ROUTES: relative paths
 /*
 const APP_ROUTES = [
-  {path: '',           loadChildren: '.app/pages/button/pagButtonModule'},
+  {path: '',           redirectTo: 'button', pathMatch: 'full'},
   {path: 'button',     loadChildren: '.app/pages/button/pagButtonModule'},
+  {path: 'card',       loadChildren: '.app/pages/card/pagCardModule'},
   {path: 'selectfield',loadChildren: '.app/pages/selectfield/pagSelectfieldModule'},
   {path: 'textfield',  loadChildren: '.app/pages/textfield/pagTextfieldModule'},
   {path: 'textfield2', loadChildren: '.app/pages/textfield2/pagTextfieldModule2'},
@@ -54,7 +58,6 @@ const APP_ROUTES = [
   {path: 'switch',     loadChildren: '.app/pages/switch/pagSwitchModule'},
   {path: 'toggle',     loadChildren: '.app/pages/toggle/pagToggleModule'},
   {path: 'badge',      loadChildren: '.app/pages/badge/pagBadgeModule'},
-  {path: 'card',       loadChildren: '.app/pages/card/pagCardModule'},
   {path: 'grid',       loadChildren: '.app/pages/grid/pagGridModule'},
   {path: 'tabs',       loadChildren: '.app/pages/tabs/pagTabsModule'},
   {path: 'snackbar',   loadChildren: '.app/pages/snackbar/pagSnackbarModule'},
@@ -67,13 +70,13 @@ const APP_ROUTES = [
   {path: 'slider',     loadChildren: '.app/pages/slider/pagSliderModule'},
   {path: 'dialog',     loadChildren: '.app/pages/dialog/pagDialogModule'},
   {path: 'table',      loadChildren: '.app/pages/table/pagTableModule'},
-  {path: '**',         redirectTo: 'button'}
+  {path: '**',         redirectTo  : 'button'}
 ];
 */
 
 @NgModule({
   imports: [
-    BrowserModule, MlLoaderRouterMod, MlLayoutMod,
+    BrowserModule, MlLoaderMod, MlLayoutMod,
     RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
   declarations: [App],
   bootstrap: [App]

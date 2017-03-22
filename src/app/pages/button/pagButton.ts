@@ -7,7 +7,7 @@ template: `
 
 <p><ml-button ripple>Flat Button With Ripple</ml-button></p>
 
-<p><ml-button aspect="colored">Flat Colored</ml-button></p>
+<p><ml-button aspect="colored">Flat Button Colored</ml-button></p>
 
 <p><ml-button aspect="raised" ripple>Raised Button (Ripple)</ml-button></p>
 
