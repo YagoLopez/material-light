@@ -16,13 +16,14 @@ var mlToggleMod_1 = require("../../ml/components/controls/toggle/mlToggleMod");
 var mlRippleMod_1 = require("../../ml/components/ripple/mlRippleMod");
 var mlIconMod_1 = require("../../ml/components/icon/mlIconMod");
 var debugFormMod_1 = require("../../ml/lib/debug_form/debugFormMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagToggle_1 = require("./pagToggle");
 var PagToggleModule = (function () {
     function PagToggleModule() {
     }
     PagToggleModule = __decorate([
         core_1.NgModule({
-            imports: [mlRippleMod_1.MlRippleMod, forms_1.ReactiveFormsModule, mlIconMod_1.MlIconMod, mlToggleMod_1.MlToggleMod, debugFormMod_1.DebugFormMod,
+            imports: [mlRippleMod_1.MlRippleMod, forms_1.ReactiveFormsModule, mlIconMod_1.MlIconMod, mlToggleMod_1.MlToggleMod, debugFormMod_1.DebugFormMod, viewSourceMod_1.ViewSourceMod,
                 router_1.RouterModule.forChild([{ path: '', component: pagToggle_1.PagToggle }])],
             declarations: [pagToggle_1.PagToggle] }), 
         __metadata('design:paramtypes', [])

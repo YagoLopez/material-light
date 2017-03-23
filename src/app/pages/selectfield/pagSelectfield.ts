@@ -4,9 +4,7 @@ import {FormGroup, FormControl, Validators} from "@angular/forms";
 @Component({
 template: `
 
-<style>
-  .validationError{color: red;padding-bottom: 20px;}
-</style>
+<style>.validationError{color: red;padding-bottom: 20px;}</style>
 
 <h5>Select Field</h5>
 <p>Reactive Forms only</p>
@@ -22,29 +20,34 @@ template: `
     <ml-sf-item>six</ml-sf-item>
     <ml-sf-item disabled>disabled</ml-sf-item>
     <ml-sf-item>seven</ml-sf-item>
+    <ml-error [validateControl]="selectfield1" validator="required" class="validationError">
+      Required field
+    </ml-error>
+    <ml-error [validateControl]="selectfield1" validator="minLength" class="validationError">
+      Min length: {{ minLength }}
+    </ml-error>  
   </ml-selectfield>
-  <ml-error [validateControl]="selectfield1" validator="required" class="validationError">
-    Required field
-  </ml-error>
-  <ml-error [validateControl]="selectfield1" validator="minLength" class="validationError">
-    Min length: {{ minLength }}
-  </ml-error>  
-  <div>(With validators &uarr;)</div>
+
+  <div>(With validators ↑)</div>
   
   <ml-selectfield [formControl]="selectfield2" label="Choose another option..." ripple>
     <ml-sf-item ripple>alpha</ml-sf-item>
     <ml-sf-item ripple>beta</ml-sf-item>
     <ml-sf-item ripple>gamma</ml-sf-item>
   </ml-selectfield>
-  <p>(No validators + ripple &uarr;)</p>
+  
+  <p>(No validators + ripple ↑)</p>
   <br>
   
   <ml-button-submit [disabled]="selectForm.invalid" text="Submit to console" aspect="raised" ripple></ml-button-submit>
+  
 </form>
 
 <br>
 
 <div><debug-form [name]="selectForm"></debug-form></div>
+
+<view-source uri="selectfield/pagSelectfield.ts"></view-source>
 
 `//template
 })

@@ -1,4 +1,5 @@
 //todo: intentar que funcione sin usar un formulario (en template driven forms)
+//todo: revisar las classes de error en IE
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -53,10 +54,9 @@ var MlTextfieldExpand = (function () {
         }
         ml.setClass(this.host, 'mdl-textfield', this.ren);
         ml.setClass(this.host, 'mdl-textfield--expandable', this.ren);
-        if (this.floating === '')
-            ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren);
-        if (this.disabled === 'true')
+        if (this.disabled === 'true') {
             this.mlTextfield.disable();
+        }
         this.mlTextfield = new mlTextfieldLib_1.default(this.host.nativeElement);
     };
     MlTextfieldExpand.prototype.writeValue = function (value) {
@@ -79,10 +79,6 @@ var MlTextfieldExpand = (function () {
         core_1.Input(), 
         __metadata('design:type', String)
     ], MlTextfieldExpand.prototype, "name", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], MlTextfieldExpand.prototype, "floating", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)

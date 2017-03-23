@@ -21,7 +21,7 @@ var PagToggle = (function () {
     PagToggle = __decorate([
         core_1.Component({
             selector: 'page-toggle',
-            template: "\n\n<h5>Icon Toggle</h5>\n<h6>Only for reactive forms:</h6>\n\n<form [formGroup]=\"formToggle\">\n  <ml-toggle id=\"toggle4\" formControlName=\"option4\" ripple>\n    <ml-icon>verified_user</ml-icon>\n  </ml-toggle>Option 4 (Enabled by default + ripple)<br>\n  \n  <ml-toggle id=\"toggle5\" formControlName=\"option5\" ripple>\n    <ml-icon>extension</ml-icon>  \n  </ml-toggle>Option 5 (Undefined by default + ripple)<br>\n  \n  <ml-toggle id=\"toggle6\" formControlName=\"option6\" disabled=\"true\">\n    <ml-icon>print</ml-icon>\n  </ml-toggle>Option 6 (Disabled)\n</form>\n\n<debug-form [name]=\"formToggle\"></debug-form>\n\n" //template
+            template: "\n\n<h5>Icon Toggle</h5>\n<h6>Only for reactive forms:</h6>\n\n<form [formGroup]=\"formToggle\">\n  <ml-toggle id=\"toggle4\" formControlName=\"option4\" ripple>\n    <ml-icon>verified_user</ml-icon>\n  </ml-toggle>Option 4 (Enabled by default + ripple)<br>\n  \n  <ml-toggle id=\"toggle5\" formControlName=\"option5\" ripple>\n    <ml-icon>extension</ml-icon>  \n  </ml-toggle>Option 5 (Undefined by default + ripple)<br>\n  \n  <ml-toggle id=\"toggle6\" formControlName=\"option6\" disabled=\"true\">\n    <ml-icon>print</ml-icon>\n  </ml-toggle>Option 6 (Disabled)\n</form>\n\n<debug-form [name]=\"formToggle\"></debug-form>\n<view-source uri=\"toggle/pagToggle.ts\"></view-source>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagToggle);

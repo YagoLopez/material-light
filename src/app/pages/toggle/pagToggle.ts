@@ -24,6 +24,7 @@ template: `
 </form>
 
 <debug-form [name]="formToggle"></debug-form>
+<view-source uri="toggle/pagToggle.ts"></view-source>
 
 `//template
 })

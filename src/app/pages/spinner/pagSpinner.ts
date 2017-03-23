@@ -18,6 +18,8 @@ Single color:
 <p>SPINNER API:</p>
 <p><ml-button #btn1 aspect="raised" (click)="clickBtn1()">Stop spinner 1</ml-button></p>
 <p><ml-button aspect="raised" (click)="clickBtn2()">Start spinner 1</ml-button></p>
+
+<view-source uri="spinner/pagSpinner.ts"></view-source>        
         
 `//template
 })

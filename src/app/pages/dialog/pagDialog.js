@@ -14,7 +14,7 @@ var PagDialog = (function () {
     }
     PagDialog = __decorate([
         core_1.Component({
-            template: "\n\n<h5>Dialog</h5>\n\n<p>\n  <ml-button aspect=\"raised\" ripple (click)=\"dialog1.open()\">Open Dialog</ml-button>\n</p>\n\n<ml-dialog #dialog1>\n  <ml-dialog-title>Title</ml-dialog-title>\n  <ml-dialog-content>Content</ml-dialog-content>\n  <ml-dialog-actions>\n    <ml-button aspect=\"raised, colored, primary\" (click)=\"dialog1.close()\" ripple>Close</ml-button>\n  </ml-dialog-actions>\n</ml-dialog>\n        \n" //template
+            template: "\n\n<h5>Dialog</h5>\n\n<p>\n  <ml-button aspect=\"raised\" ripple (click)=\"dialog1.open()\">Open Dialog</ml-button>\n</p>\n\n<ml-dialog #dialog1>\n  <ml-dialog-title>Title</ml-dialog-title>\n  <ml-dialog-content>Content</ml-dialog-content>\n  <ml-dialog-actions>\n    <ml-button aspect=\"raised, colored, primary\" (click)=\"dialog1.close()\" ripple>Close</ml-button>\n  </ml-dialog-actions>\n</ml-dialog>\n\n<view-source uri=\"dialog/pagDialog.ts\"></view-source>\n        \n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagDialog);

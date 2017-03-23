@@ -16,9 +16,9 @@ template: `
   
   <!-- textfield1  ------------------------------------------------------------------------------------------------- -->
   
-  <ml-textfield [formControl]="textfield1" floating>
+  <ml-textfield [formControl]="textfield1" floating-label>
     <ml-textfield-label>
-      <ml-icon class="ico-aligned">email</ml-icon>Label: floating, icon, validated
+      <ml-icon class="ico-aligned">email</ml-icon>Label-1, icon, validated
     </ml-textfield-label>
     <ml-error [validateControl]="textfield1" validator="required">Required field</ml-error>
     <ml-error [validateControl]="textfield1" validator="minLength">Minimum length is 2</ml-error>
@@ -29,7 +29,7 @@ template: `
   <!-- textfield2  ------------------------------------------------------------------------------------------------- -->
   
   <ml-textfield id="textfield2" [formControl]="textfield2">
-    <ml-textfield-label>Label 2: no icon, no floating, validated</ml-textfield-label>
+    <ml-textfield-label>Label-2: no icon, no floating, validated</ml-textfield-label>
     <ml-error [validateControl]="textfield2" validator="required">Required field</ml-error>
   </ml-textfield>
   <br><br>
@@ -59,6 +59,7 @@ template: `
 </form>
 
 <p><debug-form [name]="textfieldForm"></debug-form></p>
+<view-source uri="textfield/pagTextfield.ts"></view-source>
 
 `//template
 })

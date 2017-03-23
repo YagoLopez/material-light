@@ -5,11 +5,7 @@ import {Component} from "@angular/core";
 @Component({
 template: `
 
-<style>
-.icon-menu{
-  vertical-align: middle;
-}
-</style>
+<style>.icon-menu {vertical-align: middle}</style>
 
 <h5>Menu</h5>
 
@@ -32,6 +28,8 @@ template: `
   <ml-menu-item divider>Item with divider</ml-menu-item>
   <ml-menu-item disabled>Item disabled</ml-menu-item>
 </ml-menu>
+
+<view-source uri="menu/pagMenu.ts"></view-source>
 
 `//template
 })

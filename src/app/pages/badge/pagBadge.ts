@@ -13,6 +13,8 @@ template: `
 
 <p>Icon Badge <ml-badge value="4" icon><ml-icon>account_box</ml-icon></ml-badge></p>
 
+<view-source uri="badge/pagBadge.ts"></view-source>
+
 `//template
 })
 export class PagBadge {}

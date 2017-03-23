@@ -11,12 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var mlGridMod_1 = require("../../ml/components/grid/mlGridMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagGrid_1 = require("./pagGrid");
 var PagGridModule = (function () {
     function PagGridModule() {
     }
     PagGridModule = __decorate([
-        core_1.NgModule({ imports: [mlGridMod_1.MlGridMod, router_1.RouterModule.forChild([{ path: '', component: pagGrid_1.PagGrid }])], declarations: [pagGrid_1.PagGrid] }), 
+        core_1.NgModule({ imports: [mlGridMod_1.MlGridMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagGrid_1.PagGrid }])],
+            declarations: [pagGrid_1.PagGrid] }), 
         __metadata('design:paramtypes', [])
     ], PagGridModule);
     return PagGridModule;

@@ -12,17 +12,14 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var mlButtonMod_1 = require("../../ml/components/controls/button/mlButtonMod");
 var mlSnackbarMod_1 = require("../../ml/components/snackbar/mlSnackbarMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagSnackbar_1 = require("./pagSnackbar");
 var PagSnackbarModule = (function () {
     function PagSnackbarModule() {
     }
     PagSnackbarModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                mlSnackbarMod_1.MlSnackbarMod, mlButtonMod_1.MlButtonMod,
-                router_1.RouterModule.forChild([{ path: '', component: pagSnackbar_1.PagSnackbar }])],
-            declarations: [pagSnackbar_1.PagSnackbar]
-        }), 
+        core_1.NgModule({ imports: [mlSnackbarMod_1.MlSnackbarMod, mlButtonMod_1.MlButtonMod, viewSourceMod_1.ViewSourceMod,
+                router_1.RouterModule.forChild([{ path: '', component: pagSnackbar_1.PagSnackbar }])], declarations: [pagSnackbar_1.PagSnackbar] }), 
         __metadata('design:paramtypes', [])
     ], PagSnackbarModule);
     return PagSnackbarModule;

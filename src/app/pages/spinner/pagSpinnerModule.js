@@ -12,15 +12,15 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var mlButtonMod_1 = require("../../ml/components/controls/button/mlButtonMod");
 var mlSpinnerMod_1 = require("../../ml/components/spinner/mlSpinnerMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagSpinner_1 = require("./pagSpinner");
 var PagSpinnerModule = (function () {
     function PagSpinnerModule() {
     }
     PagSpinnerModule = __decorate([
         core_1.NgModule({
-            imports: [mlButtonMod_1.MlButtonMod, mlSpinnerMod_1.MlSpinnerMod, router_1.RouterModule.forChild([{ path: '', component: pagSpinner_1.PagSpinner }])],
-            declarations: [pagSpinner_1.PagSpinner]
-        }), 
+            imports: [mlButtonMod_1.MlButtonMod, mlSpinnerMod_1.MlSpinnerMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagSpinner_1.PagSpinner }])],
+            declarations: [pagSpinner_1.PagSpinner] }), 
         __metadata('design:paramtypes', [])
     ], PagSpinnerModule);
     return PagSpinnerModule;

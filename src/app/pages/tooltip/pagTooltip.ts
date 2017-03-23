@@ -36,6 +36,7 @@ template: `
   </ml-tooltip>
 </div>
 
+<view-source uri="tooltip/pagTooltip.ts"></view-source>
 
 `//template
 })

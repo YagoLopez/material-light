@@ -19,6 +19,7 @@ template: `
 
 </div>
 
+<view-source uri="slider/pagSlider.ts"></view-source>
         
 `//template
 })

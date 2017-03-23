@@ -11,15 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var mlTooltipMod_1 = require("../../ml/components/tooltip/mlTooltipMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagTooltip_1 = require("./pagTooltip");
 var PagTooltipModule = (function () {
     function PagTooltipModule() {
     }
     PagTooltipModule = __decorate([
         core_1.NgModule({
-            imports: [mlTooltipMod_1.MlTooltipMod, router_1.RouterModule.forChild([{ path: '', component: pagTooltip_1.PagTooltip }])],
-            declarations: [pagTooltip_1.PagTooltip]
-        }), 
+            imports: [mlTooltipMod_1.MlTooltipMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagTooltip_1.PagTooltip }])],
+            declarations: [pagTooltip_1.PagTooltip] }), 
         __metadata('design:paramtypes', [])
     ], PagTooltipModule);
     return PagTooltipModule;

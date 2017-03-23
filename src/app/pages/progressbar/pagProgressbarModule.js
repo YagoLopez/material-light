@@ -12,13 +12,14 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var mlButtonMod_1 = require("../../ml/components/controls/button/mlButtonMod");
 var mlPgrogressbarMod_1 = require("../../ml/components/progressbar/mlPgrogressbarMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagProgressbar_1 = require("./pagProgressbar");
 var PagProgressbarModule = (function () {
     function PagProgressbarModule() {
     }
     PagProgressbarModule = __decorate([
         core_1.NgModule({
-            imports: [mlButtonMod_1.MlButtonMod, mlPgrogressbarMod_1.MlProgressbarMod, router_1.RouterModule.forChild([{ path: '', component: pagProgressbar_1.PagProgressar }])],
+            imports: [mlButtonMod_1.MlButtonMod, mlPgrogressbarMod_1.MlProgressbarMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagProgressbar_1.PagProgressar }])],
             declarations: [pagProgressbar_1.PagProgressar] }), 
         __metadata('design:paramtypes', [])
     ], PagProgressbarModule);

@@ -17,8 +17,8 @@ template: `
 </form>
 
 <br>
-
 <debug-form [name]="formCheckbox"></debug-form>
+<view-source uri="checkbox/pagCheckbox.ts"></view-source>
 
 `//template
 })

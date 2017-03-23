@@ -22,7 +22,7 @@ var PagCheckbox = (function () {
     }
     PagCheckbox = __decorate([
         core_1.Component({
-            template: "\n\n<h5>Checkbox</h5>\n<h6>(Only for reactive forms)</h6>\n\n<form [formGroup]=\"formCheckbox\">\n  <ml-checkbox id=\"checkbox3\" formControlName=\"option3\">Option 3</ml-checkbox>\n  <ml-checkbox id=\"checkbox4\" formControlName=\"option4\" ripple>Option 4 (With ripple)</ml-checkbox>\n  <ml-checkbox id=\"checkbox5\" formControlName=\"option5\">Option 5 (Undefined by default)</ml-checkbox>\n  <ml-checkbox id=\"checkbox6\" formControlName=\"option6\" disabled=\"true\">Option 6 (Disabled by default)</ml-checkbox>\n</form>\n\n<br>\n\n<debug-form [name]=\"formCheckbox\"></debug-form>\n\n" //template
+            template: "\n\n<h5>Checkbox</h5>\n<h6>(Only for reactive forms)</h6>\n\n<form [formGroup]=\"formCheckbox\">\n  <ml-checkbox id=\"checkbox3\" formControlName=\"option3\">Option 3</ml-checkbox>\n  <ml-checkbox id=\"checkbox4\" formControlName=\"option4\" ripple>Option 4 (With ripple)</ml-checkbox>\n  <ml-checkbox id=\"checkbox5\" formControlName=\"option5\">Option 5 (Undefined by default)</ml-checkbox>\n  <ml-checkbox id=\"checkbox6\" formControlName=\"option6\" disabled=\"true\">Option 6 (Disabled by default)</ml-checkbox>\n</form>\n\n<br>\n<debug-form [name]=\"formCheckbox\"></debug-form>\n<view-source uri=\"checkbox/pagCheckbox.ts\"></view-source>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagCheckbox);

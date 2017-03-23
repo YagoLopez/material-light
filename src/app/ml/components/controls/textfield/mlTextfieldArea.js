@@ -38,13 +38,16 @@ var MlTextfieldArea = (function () {
         this.checkValidity();
     };
     MlTextfieldArea.prototype.ngOnInit = function () {
-        if (!this.id)
+        if (!this.id) {
             this.id = ml.randomStr();
+        }
         ml.setClass(this.host, 'mdl-textfield', this.ren);
-        if (this.floating === '')
+        if (this.floatingLabel === '') {
             ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren);
-        if (this.disabled === 'true')
+        }
+        if (this.disabled === 'true') {
             this.mdlTextfiel.disable();
+        }
         this.mdlTextfiel = new mlTextfieldLib_1.default(this.host.nativeElement);
     };
     Object.defineProperty(MlTextfieldArea.prototype, "model", {
@@ -77,9 +80,9 @@ var MlTextfieldArea = (function () {
         __metadata('design:type', String)
     ], MlTextfieldArea.prototype, "name", void 0);
     __decorate([
-        core_1.Input(), 
+        core_1.Input('floating-label'), 
         __metadata('design:type', String)
-    ], MlTextfieldArea.prototype, "floating", void 0);
+    ], MlTextfieldArea.prototype, "floatingLabel", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)

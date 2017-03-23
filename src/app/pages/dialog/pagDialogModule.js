@@ -11,12 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var mlDialogMod_1 = require("../../ml/components/dialog/mlDialogMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagDialog_1 = require("./pagDialog");
 var PagDialogModule = (function () {
     function PagDialogModule() {
     }
     PagDialogModule = __decorate([
-        core_1.NgModule({ imports: [mlDialogMod_1.MlDialogMod, router_1.RouterModule.forChild([{ path: '', component: pagDialog_1.PagDialog }])],
+        core_1.NgModule({ imports: [mlDialogMod_1.MlDialogMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagDialog_1.PagDialog }])],
             declarations: [pagDialog_1.PagDialog] }), 
         __metadata('design:paramtypes', [])
     ], PagDialogModule);

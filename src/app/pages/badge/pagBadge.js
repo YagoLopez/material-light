@@ -14,7 +14,7 @@ var PagBadge = (function () {
     }
     PagBadge = __decorate([
         core_1.Component({
-            template: "\n\n<h5>Badge</h5>\n\n<p><ml-badge value=\"4\">Badge no overlap</ml-badge></p>\n\n<p><ml-badge value=\"4\" overlap=\"true\">Badge overlap</ml-badge></p>\n\n<p><ml-badge value=\"4\" background=\"false\">Badge no background</ml-badge></p>\n\n<p>Icon Badge <ml-badge value=\"4\" icon><ml-icon>account_box</ml-icon></ml-badge></p>\n\n" //template
+            template: "\n\n<h5>Badge</h5>\n\n<p><ml-badge value=\"4\">Badge no overlap</ml-badge></p>\n\n<p><ml-badge value=\"4\" overlap=\"true\">Badge overlap</ml-badge></p>\n\n<p><ml-badge value=\"4\" background=\"false\">Badge no background</ml-badge></p>\n\n<p>Icon Badge <ml-badge value=\"4\" icon><ml-icon>account_box</ml-icon></ml-badge></p>\n\n<view-source uri=\"badge/pagBadge.ts\"></view-source>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagBadge);

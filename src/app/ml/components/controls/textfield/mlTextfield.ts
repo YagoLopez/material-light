@@ -44,7 +44,7 @@ export class MlTextfield implements ControlValueAccessor{
   @Input() errors: any;
   @Input() disabled: string;
   @Input() name: string;
-  @Input() floating: string;
+  @Input('floating-label') floatingLabel: string;
   @Input() id: string;
   @Input() formControl: FormControl;
 
@@ -82,7 +82,7 @@ export class MlTextfield implements ControlValueAccessor{
     if (!this.id){
       this.id = ml.randomStr();
     }
-    if (ml.isDefined(this.floating)){
+    if (ml.isDefined(this.floatingLabel)){
       ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren);
     }
     if (this.disabled === 'true'){

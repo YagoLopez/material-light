@@ -6,9 +6,11 @@ template: `
 
 <h5>Snackbar</h5>
 
-<ml-button (click)="snackbar.show()" aspect="raised, accent" ripple>Open SnackBar</ml-button>
+<ml-button (click)="snackbar.show()" aspect="raised, accent" ripple>Open Bottom SnackBar</ml-button>
 
 <ml-snackbar [config]="config" #snackbar></ml-snackbar>
+
+<view-source uri="snackbar/pagSnackbar.ts"></view-source>
 
 `//template
 })

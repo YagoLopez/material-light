@@ -1,4 +1,5 @@
 //todo: intentar que funcione sin usar un formulario (en template driven forms)
+//todo: revisar las classes de error en IE
 
 import {Component, ViewEncapsulation, ElementRef, Renderer, Input, forwardRef,
   ChangeDetectionStrategy} from "@angular/core";
@@ -30,7 +31,6 @@ export class MlTextfieldExpand implements ControlValueAccessor{
   @Input() errors: any;
   @Input() disabled: string;
   @Input() name: string;
-  @Input() floating: string;
   @Input() id: string;
   @Input() formControl: FormControl;
   @Input() icon: string;
@@ -61,23 +61,14 @@ export class MlTextfieldExpand implements ControlValueAccessor{
     this.formControl.markAsTouched(true);
     this.checkValidity();
   }
-  
+
   get model() { return this._model }
 
   ngOnInit() {
-    if (!this.id){
-      this.id = ml.randomStr();
-    }
-
+    if (!this.id){ this.id = ml.randomStr() }
     ml.setClass(this.host, 'mdl-textfield', this.ren);
     ml.setClass(this.host, 'mdl-textfield--expandable', this.ren);
-
-    if (this.floating === '')
-      ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren);
-
-    if (this.disabled === 'true')
-      this.mlTextfield.disable();
-      
+    if (this.disabled === 'true'){ this.mlTextfield.disable() }
     this.mlTextfield = new MdlTextfield(this.host.nativeElement);
   }
   set model(value: any) {

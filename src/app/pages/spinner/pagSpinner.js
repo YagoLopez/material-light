@@ -30,7 +30,7 @@ var PagSpinner = (function () {
     ], PagSpinner.prototype, "spinner1", void 0);
     PagSpinner = __decorate([
         core_1.Component({
-            template: "\n\n<h5>Spinner</h5>\n\nMulti-color:\n<ml-spinner #spinner1></ml-spinner>\n\n<br><br>\n\nSingle color:\n<ml-spinner single-color></ml-spinner>\n\n<br><br>\n\n<p>SPINNER API:</p>\n<p><ml-button #btn1 aspect=\"raised\" (click)=\"clickBtn1()\">Stop spinner 1</ml-button></p>\n<p><ml-button aspect=\"raised\" (click)=\"clickBtn2()\">Start spinner 1</ml-button></p>\n        \n" //template
+            template: "\n\n<h5>Spinner</h5>\n\nMulti-color:\n<ml-spinner #spinner1></ml-spinner>\n\n<br><br>\n\nSingle color:\n<ml-spinner single-color></ml-spinner>\n\n<br><br>\n\n<p>SPINNER API:</p>\n<p><ml-button #btn1 aspect=\"raised\" (click)=\"clickBtn1()\">Stop spinner 1</ml-button></p>\n<p><ml-button aspect=\"raised\" (click)=\"clickBtn2()\">Start spinner 1</ml-button></p>\n\n<view-source uri=\"spinner/pagSpinner.ts\"></view-source>        \n        \n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagSpinner);

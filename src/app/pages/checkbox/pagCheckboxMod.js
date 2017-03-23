@@ -13,14 +13,15 @@ var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var mlCheckboxMod_1 = require("../../ml/components/controls/checkbox/mlCheckboxMod");
 var debugFormMod_1 = require("../../ml/lib/debug_form/debugFormMod");
-var pagCheckbox_1 = require("./pagCheckbox");
 var mlRippleMod_1 = require("../../ml/components/ripple/mlRippleMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
+var pagCheckbox_1 = require("./pagCheckbox");
 var PagCheckboxMod = (function () {
     function PagCheckboxMod() {
     }
     PagCheckboxMod = __decorate([
         core_1.NgModule({
-            imports: [mlRippleMod_1.MlRippleMod, forms_1.FormsModule, forms_1.ReactiveFormsModule, mlCheckboxMod_1.MlCheckboxMod, debugFormMod_1.DebugFormMod,
+            imports: [mlRippleMod_1.MlRippleMod, forms_1.FormsModule, forms_1.ReactiveFormsModule, mlCheckboxMod_1.MlCheckboxMod, debugFormMod_1.DebugFormMod, viewSourceMod_1.ViewSourceMod,
                 router_1.RouterModule.forChild([{ path: '', component: pagCheckbox_1.PagCheckbox }])],
             declarations: [pagCheckbox_1.PagCheckbox] }), 
         __metadata('design:paramtypes', [])

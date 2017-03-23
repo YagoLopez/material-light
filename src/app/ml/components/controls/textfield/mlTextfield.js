@@ -55,7 +55,7 @@ var MlTextfield = (function () {
         if (!this.id) {
             this.id = ml.randomStr();
         }
-        if (ml.isDefined(this.floating)) {
+        if (ml.isDefined(this.floatingLabel)) {
             ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren);
         }
         if (this.disabled === 'true') {
@@ -96,9 +96,9 @@ var MlTextfield = (function () {
         __metadata('design:type', String)
     ], MlTextfield.prototype, "name", void 0);
     __decorate([
-        core_1.Input(), 
+        core_1.Input('floating-label'), 
         __metadata('design:type', String)
-    ], MlTextfield.prototype, "floating", void 0);
+    ], MlTextfield.prototype, "floatingLabel", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)

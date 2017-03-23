@@ -54,6 +54,7 @@ template: `
 
 </ml-tabs>
 
+<view-source uri="tabs/pagTabs.ts"></view-source>
 
 `//template
 })

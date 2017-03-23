@@ -29,6 +29,7 @@ template: `
 
 <br>
         
+<view-source uri="progressbar/pagProgressbar.ts"></view-source>        
 `//template
 })
 export class PagProgressar {}

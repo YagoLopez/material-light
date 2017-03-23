@@ -5,9 +5,10 @@ import {MlSelectfieldMod} from "../../ml/components/controls/selectfield/mlSelec
 import {MlValidationErrorMod} from "../../ml/components/controls/error/mlValidationErrorMod";
 import {MlButtonMod} from "../../ml/components/controls/button/mlButtonMod";
 import {DebugFormMod} from "../../ml/lib/debug_form/debugFormMod";
+import {ViewSourceMod} from "../view-source/viewSourceMod";
 import {PagSelectfield} from "./pagSelectfield";
 @NgModule({
-imports: [DebugFormMod, MlButtonMod, MlValidationErrorMod, MlSelectfieldMod, ReactiveFormsModule,
+imports: [DebugFormMod, MlButtonMod, MlValidationErrorMod, MlSelectfieldMod, ReactiveFormsModule, ViewSourceMod, 
 RouterModule.forChild([{path: '', component: PagSelectfield}])],
 declarations: [PagSelectfield]})
 export default class PagSelectfieldModule{}

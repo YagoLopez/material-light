@@ -19,6 +19,8 @@ template: `
 
 <p><ml-chip-button (click)="onClickChip()">Chip button, click me!</ml-chip-button></p>
 
+<view-source uri="chip/pagChip.ts"></view-source>
+
 `//template
 })
 export class PageChip {

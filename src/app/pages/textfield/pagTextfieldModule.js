@@ -16,6 +16,7 @@ var mlButtonMod_1 = require("../../ml/components/controls/button/mlButtonMod");
 var mlValidationErrorMod_1 = require("../../ml/components/controls/error/mlValidationErrorMod");
 var debugFormMod_1 = require("../../ml/lib/debug_form/debugFormMod");
 var mlTextfieldMod_1 = require("../../ml/components/controls/textfield/mlTextfieldMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagTextfield_1 = require("./pagTextfield");
 var PagTextfieldModule = (function () {
     function PagTextfieldModule() {
@@ -23,7 +24,7 @@ var PagTextfieldModule = (function () {
     PagTextfieldModule = __decorate([
         core_1.NgModule({
             imports: [mlIconMod_1.MlIconMod, mlValidationErrorMod_1.MlValidationErrorMod, mlButtonMod_1.MlButtonMod, debugFormMod_1.DebugFormMod, forms_1.FormsModule, forms_1.ReactiveFormsModule, mlTextfieldMod_1.MlTextfieldMod,
-                router_1.RouterModule.forChild([{ path: '', component: pagTextfield_1.PagTextfield }])],
+                viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagTextfield_1.PagTextfield }])],
             declarations: [pagTextfield_1.PagTextfield] }), 
         __metadata('design:paramtypes', [])
     ], PagTextfieldModule);

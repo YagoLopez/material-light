@@ -25,7 +25,7 @@ export class MlTextfieldArea implements ControlValueAccessor{
   @Input() errors: any; //todo: igual se puede restringir a object
   @Input() disabled: string;
   @Input() name: string;
-  @Input() floating: string;
+  @Input('floating-label') floatingLabel: string;
   @Input() id: string;
   @Input() formControl: FormControl;
   @Input() rows: string;
@@ -59,17 +59,10 @@ export class MlTextfieldArea implements ControlValueAccessor{
   }
 
   ngOnInit() {
-    if (!this.id)
-      this.id = ml.randomStr();
-
+    if (!this.id){ this.id = ml.randomStr() }
     ml.setClass(this.host, 'mdl-textfield', this.ren);
-
-    if (this.floating === '')
-      ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren);
-
-    if (this.disabled === 'true')
-      this.mdlTextfiel.disable();
-      
+    if (this.floatingLabel === ''){ ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren) }
+    if (this.disabled === 'true'){ this.mdlTextfiel.disable() }
     this.mdlTextfiel = new MdlTextfield(this.host.nativeElement);
   }
   get model() { return this._model }

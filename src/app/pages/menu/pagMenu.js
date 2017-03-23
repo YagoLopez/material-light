@@ -15,7 +15,7 @@ var PageMenu = (function () {
     }
     PageMenu = __decorate([
         core_1.Component({
-            template: "\n\n<style>\n.icon-menu{\n  vertical-align: middle;\n}\n</style>\n\n<h5>Menu</h5>\n\n<h6>With ripple effect</h6>\n<ml-menu ripple>\n  <ml-menu-item ripple>\n    <ml-icon class=\"icon-menu\">email</ml-icon> Item with icon\n  </ml-menu-item>\n  <ml-menu-item ripple divider>Item with divider</ml-menu-item>\n  <ml-menu-item ripple disabled>Item disabled</ml-menu-item>\n</ml-menu>\n\n<br>\n\n<h6>No ripple effect</h6>\n<ml-menu>\n  <ml-menu-item>\n    <ml-icon class=\"icon-menu\">email</ml-icon> Item with icon\n  </ml-menu-item>\n  <ml-menu-item divider>Item with divider</ml-menu-item>\n  <ml-menu-item disabled>Item disabled</ml-menu-item>\n</ml-menu>\n\n" //template
+            template: "\n\n<style>.icon-menu {vertical-align: middle}</style>\n\n<h5>Menu</h5>\n\n<h6>With ripple effect</h6>\n<ml-menu ripple>\n  <ml-menu-item ripple>\n    <ml-icon class=\"icon-menu\">email</ml-icon> Item with icon\n  </ml-menu-item>\n  <ml-menu-item ripple divider>Item with divider</ml-menu-item>\n  <ml-menu-item ripple disabled>Item disabled</ml-menu-item>\n</ml-menu>\n\n<br>\n\n<h6>No ripple effect</h6>\n<ml-menu>\n  <ml-menu-item>\n    <ml-icon class=\"icon-menu\">email</ml-icon> Item with icon\n  </ml-menu-item>\n  <ml-menu-item divider>Item with divider</ml-menu-item>\n  <ml-menu-item disabled>Item disabled</ml-menu-item>\n</ml-menu>\n\n<view-source uri=\"menu/pagMenu.ts\"></view-source>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PageMenu);

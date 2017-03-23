@@ -13,13 +13,14 @@ var router_1 = require("@angular/router");
 var mlCardMod_1 = require("../../ml/components/card/mlCardMod");
 var mlButtonMod_1 = require("../../ml/components/controls/button/mlButtonMod");
 var mlMenuMod_1 = require("../../ml/components/menu/mlMenuMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagCard_1 = require("./pagCard");
 var PagCardModule = (function () {
     function PagCardModule() {
     }
     PagCardModule = __decorate([
         core_1.NgModule({
-            imports: [mlButtonMod_1.MlButtonMod, mlMenuMod_1.MlMenuMod, mlCardMod_1.MlCardMod, router_1.RouterModule.forChild([{ path: '', component: pagCard_1.PagCard }])],
+            imports: [mlButtonMod_1.MlButtonMod, mlMenuMod_1.MlMenuMod, mlCardMod_1.MlCardMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagCard_1.PagCard }])],
             declarations: [pagCard_1.PagCard] }), 
         __metadata('design:paramtypes', [])
     ], PagCardModule);

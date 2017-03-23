@@ -15,13 +15,14 @@ var mlSelectfieldMod_1 = require("../../ml/components/controls/selectfield/mlSel
 var mlValidationErrorMod_1 = require("../../ml/components/controls/error/mlValidationErrorMod");
 var mlButtonMod_1 = require("../../ml/components/controls/button/mlButtonMod");
 var debugFormMod_1 = require("../../ml/lib/debug_form/debugFormMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagSelectfield_1 = require("./pagSelectfield");
 var PagSelectfieldModule = (function () {
     function PagSelectfieldModule() {
     }
     PagSelectfieldModule = __decorate([
         core_1.NgModule({
-            imports: [debugFormMod_1.DebugFormMod, mlButtonMod_1.MlButtonMod, mlValidationErrorMod_1.MlValidationErrorMod, mlSelectfieldMod_1.MlSelectfieldMod, forms_1.ReactiveFormsModule,
+            imports: [debugFormMod_1.DebugFormMod, mlButtonMod_1.MlButtonMod, mlValidationErrorMod_1.MlValidationErrorMod, mlSelectfieldMod_1.MlSelectfieldMod, forms_1.ReactiveFormsModule, viewSourceMod_1.ViewSourceMod,
                 router_1.RouterModule.forChild([{ path: '', component: pagSelectfield_1.PagSelectfield }])],
             declarations: [pagSelectfield_1.PagSelectfield] }), 
         __metadata('design:paramtypes', [])

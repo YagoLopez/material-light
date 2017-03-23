@@ -5,8 +5,7 @@ template: `
 
 <h5>Table</h5>
 
-<table ml-table selectable>
-
+<table ml-table selectable style="width:100%">
   <!-- Table head ------------------------------------------------------------------------------------------------ -->
   
   <thead>
@@ -38,8 +37,9 @@ template: `
   </tbody>
   
   <!-- End table body -------------------------------------------------------------------------------------------- -->
-  
 </table>
+
+<view-source uri="table/pagTable.ts"></view-source>
 
 `//template
 })

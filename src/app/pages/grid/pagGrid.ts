@@ -19,6 +19,8 @@ template: `
   <ml-grid-cell width="12" class="bg-grey">Full width</ml-grid-cell>
   <ml-grid-cell width="12" class="bg-grey">Full width</ml-grid-cell>
 </ml-grid>
+
+<view-source uri="grid/pagGrid.ts"></view-source>
         
 `//template
 })

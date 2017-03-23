@@ -14,7 +14,7 @@ var PagGrid = (function () {
     }
     PagGrid = __decorate([
         core_1.Component({
-            template: "\n\n<style>\n.bg-blue{background: cornflowerblue}  \n.bg-grey{background: gainsboro}  \n.bg-yellow{background: yellow}  \n.bg-red{background: red}\n</style>\n\n<h6>Grid</h6>\n\n<ml-grid>\n  <ml-grid-cell width=\"1\" class=\"bg-grey\">1 col</ml-grid-cell>\n  <ml-grid-cell width=\"1\" class=\"bg-grey\">1 col</ml-grid-cell>\n  <br>\n  <ml-grid-cell width=\"12\" class=\"bg-grey\">Full width</ml-grid-cell>\n  <ml-grid-cell width=\"12\" class=\"bg-grey\">Full width</ml-grid-cell>\n</ml-grid>\n        \n" //template
+            template: "\n\n<style>\n.bg-blue{background: cornflowerblue}  \n.bg-grey{background: gainsboro}  \n.bg-yellow{background: yellow}  \n.bg-red{background: red}\n</style>\n\n<h6>Grid</h6>\n\n<ml-grid>\n  <ml-grid-cell width=\"1\" class=\"bg-grey\">1 col</ml-grid-cell>\n  <ml-grid-cell width=\"1\" class=\"bg-grey\">1 col</ml-grid-cell>\n  <br>\n  <ml-grid-cell width=\"12\" class=\"bg-grey\">Full width</ml-grid-cell>\n  <ml-grid-cell width=\"12\" class=\"bg-grey\">Full width</ml-grid-cell>\n</ml-grid>\n\n<view-source uri=\"grid/pagGrid.ts\"></view-source>\n        \n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagGrid);

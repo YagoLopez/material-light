@@ -11,13 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var mlTableMod_1 = require("../../ml/components/table/mlTableMod");
 var router_1 = require("@angular/router");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagTable_1 = require("./pagTable");
 var PagTableModule = (function () {
     function PagTableModule() {
     }
     PagTableModule = __decorate([
         core_1.NgModule({
-            imports: [mlTableMod_1.MlTableMod, router_1.RouterModule.forChild([{ path: '', component: pagTable_1.PagTable }])],
+            imports: [mlTableMod_1.MlTableMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagTable_1.PagTable }])],
             declarations: [pagTable_1.PagTable] }), 
         __metadata('design:paramtypes', [])
     ], PagTableModule);

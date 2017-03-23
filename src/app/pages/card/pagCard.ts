@@ -24,6 +24,8 @@ ml-menu {color: white}
   </ml-card-menu>
 </ml-card>
 
+<view-source uri="card/pagCard.ts"></view-source>
+
 `//template
 })
 export class PagCard {}

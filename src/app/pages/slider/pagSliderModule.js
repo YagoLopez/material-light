@@ -12,15 +12,15 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var mlButtonMod_1 = require("../../ml/components/controls/button/mlButtonMod");
 var mlSliderMod_1 = require("../../ml/components/controls/slider/mlSliderMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagSlider_1 = require("./pagSlider");
 var PagSliderModule = (function () {
     function PagSliderModule() {
     }
     PagSliderModule = __decorate([
         core_1.NgModule({
-            imports: [mlButtonMod_1.MlButtonMod, mlSliderMod_1.MlSliderMod, router_1.RouterModule.forChild([{ path: '', component: pagSlider_1.PagSlider }])],
-            declarations: [pagSlider_1.PagSlider]
-        }), 
+            imports: [mlButtonMod_1.MlButtonMod, mlSliderMod_1.MlSliderMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagSlider_1.PagSlider }])],
+            declarations: [pagSlider_1.PagSlider] }), 
         __metadata('design:paramtypes', [])
     ], PagSliderModule);
     return PagSliderModule;

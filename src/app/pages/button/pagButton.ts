@@ -25,6 +25,8 @@ template: `
 
 <p>Icon button: <ml-button variant="icon"><ml-icon>email</ml-icon></ml-button></p>
 
+<view-source uri="button/pagButton.ts"></view-source>
+
 `//template
 })
 export class PagButton {}

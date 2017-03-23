@@ -17,6 +17,8 @@ template: `
     <ml-button aspect="raised, colored, primary" (click)="dialog1.close()" ripple>Close</ml-button>
   </ml-dialog-actions>
 </ml-dialog>
+
+<view-source uri="dialog/pagDialog.ts"></view-source>
         
 `//template
 })

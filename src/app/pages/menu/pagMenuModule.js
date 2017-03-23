@@ -11,15 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var mlMenuMod_1 = require("../../ml/components/menu/mlMenuMod");
 var router_1 = require("@angular/router");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagMenu_1 = require("./pagMenu");
 var PagMenuModule = (function () {
     function PagMenuModule() {
     }
     PagMenuModule = __decorate([
         core_1.NgModule({
-            imports: [mlMenuMod_1.MlMenuMod, router_1.RouterModule.forChild([{ path: '', component: pagMenu_1.PageMenu }])],
-            declarations: [pagMenu_1.PageMenu]
-        }), 
+            imports: [mlMenuMod_1.MlMenuMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagMenu_1.PageMenu }])],
+            declarations: [pagMenu_1.PageMenu] }), 
         __metadata('design:paramtypes', [])
     ], PagMenuModule);
     return PagMenuModule;

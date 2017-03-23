@@ -1,5 +1,4 @@
 //todo: media query para que se muestre el menu lateral en modo tablet en iframe
-//todo: mostrar ejemplos de codigo (mediante gists o iframes a paginas de github)
 //todo: selectfield dropdown mas ancho
 //todo: que se puedan usar diferentes cabeceras y menus laterales (<ml-header>) en cada pagina (usar named router-outlet?)
 //todo: hacer Ml boilerplate project
@@ -86,8 +85,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
-                platform_browser_1.BrowserModule, mlLoaderMod_1.MlLoaderMod, mlLayoutMod_1.MlLayoutMod,
-                router_1.RouterModule.forRoot(APP_ROUTES, { enableTracing: false, useHash: true })],
+                platform_browser_1.BrowserModule, mlLoaderMod_1.MlLoaderMod, mlLayoutMod_1.MlLayoutMod, router_1.RouterModule.forRoot(APP_ROUTES, { enableTracing: false, useHash: true })],
             declarations: [app_layout_1.App],
             bootstrap: [app_layout_1.App]
         }), 

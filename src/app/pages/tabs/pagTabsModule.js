@@ -12,12 +12,13 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var mlRippleMod_1 = require("../../ml/components/ripple/mlRippleMod");
 var mlTabsMod_1 = require("../../ml/components/tabs/mlTabsMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagTabs_1 = require("./pagTabs");
 var PagTabsModule = (function () {
     function PagTabsModule() {
     }
     PagTabsModule = __decorate([
-        core_1.NgModule({ imports: [mlRippleMod_1.MlRippleMod, mlTabsMod_1.MlTabsMod,
+        core_1.NgModule({ imports: [mlRippleMod_1.MlRippleMod, mlTabsMod_1.MlTabsMod, viewSourceMod_1.ViewSourceMod,
                 router_1.RouterModule.forChild([{ path: '', component: pagTabs_1.PagTabs }])], declarations: [pagTabs_1.PagTabs] }), 
         __metadata('design:paramtypes', [])
     ], PagTabsModule);

@@ -15,13 +15,14 @@ var mlRippleMod_1 = require("../../ml/components/ripple/mlRippleMod");
 var mlRadioMod_1 = require("../../ml/components/controls/radio/mlRadioMod");
 var mlButtonMod_1 = require("../../ml/components/controls/button/mlButtonMod");
 var debugFormMod_1 = require("../../ml/lib/debug_form/debugFormMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagRadio_1 = require("./pagRadio");
 var PagRadioModule = (function () {
     function PagRadioModule() {
     }
     PagRadioModule = __decorate([
         core_1.NgModule({
-            imports: [mlRippleMod_1.MlRippleMod, forms_1.FormsModule, forms_1.ReactiveFormsModule, mlButtonMod_1.MlButtonMod, mlRadioMod_1.MlRadioMod, debugFormMod_1.DebugFormMod,
+            imports: [mlRippleMod_1.MlRippleMod, forms_1.FormsModule, forms_1.ReactiveFormsModule, mlButtonMod_1.MlButtonMod, mlRadioMod_1.MlRadioMod, debugFormMod_1.DebugFormMod, viewSourceMod_1.ViewSourceMod,
                 router_1.RouterModule.forChild([{ path: '', component: pagRadio_1.PagRadio }])],
             declarations: [pagRadio_1.PagRadio] }), 
         __metadata('design:paramtypes', [])

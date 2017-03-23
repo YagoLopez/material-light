@@ -8,11 +8,7 @@ template: `
 
 <h5>List</h5>
 
-<style>
-.demo-list {
-  background: ghostwhite;
-}
-</style>
+<style>.demo-list {background: ghostwhite}</style>
 
 <ml-list class="demo-list">
 
@@ -53,6 +49,8 @@ template: `
   </ml-item>
   
 </ml-list>
+
+<view-source uri="list/pagList.ts"></view-source>
         
 `//template
 })

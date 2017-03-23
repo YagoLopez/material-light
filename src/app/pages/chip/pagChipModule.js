@@ -11,12 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var mlChipMod_1 = require("../../ml/components/chip/mlChipMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagChip_1 = require("./pagChip");
 var PageChipModule = (function () {
     function PageChipModule() {
     }
     PageChipModule = __decorate([
-        core_1.NgModule({ imports: [mlChipMod_1.MlChipMod, router_1.RouterModule.forChild([{ path: '', component: pagChip_1.PageChip }])], declarations: [pagChip_1.PageChip] }), 
+        core_1.NgModule({ imports: [mlChipMod_1.MlChipMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagChip_1.PageChip }])],
+            declarations: [pagChip_1.PageChip] }), 
         __metadata('design:paramtypes', [])
     ], PageChipModule);
     return PageChipModule;

@@ -14,7 +14,7 @@ var PagCard = (function () {
     }
     PagCard = __decorate([
         core_1.Component({
-            template: "\n\n<style>\nml-card {width: 100%; height: 300px}\nml-menu {color: white}\n</style>\n\n<h5>Card</h5>\n\n<ml-card shadow=\"3\" img=\"assets/img/welcome_card.jpg\">\n  <ml-card-title>Title</ml-card-title>\n  <ml-card-text>Card text content</ml-card-text>\n  <ml-card-actions>\n    <ml-button aspect=\"colored\" ripple>Card Action 1</ml-button>\n  </ml-card-actions>\n  <ml-card-menu>\n    <ml-menu icon=\"share\" position=\"top-right\" ripple>\n      <ml-menu-item ripple>item 1</ml-menu-item>\n      <ml-menu-item ripple>item 2</ml-menu-item>\n    </ml-menu>\n  </ml-card-menu>\n</ml-card>\n\n" //template
+            template: "\n\n<style>\nml-card {width: 100%; height: 300px}\nml-menu {color: white}\n</style>\n\n<h5>Card</h5>\n\n<ml-card shadow=\"3\" img=\"assets/img/welcome_card.jpg\">\n  <ml-card-title>Title</ml-card-title>\n  <ml-card-text>Card text content</ml-card-text>\n  <ml-card-actions>\n    <ml-button aspect=\"colored\" ripple>Card Action 1</ml-button>\n  </ml-card-actions>\n  <ml-card-menu>\n    <ml-menu icon=\"share\" position=\"top-right\" ripple>\n      <ml-menu-item ripple>item 1</ml-menu-item>\n      <ml-menu-item ripple>item 2</ml-menu-item>\n    </ml-menu>\n  </ml-card-menu>\n</ml-card>\n\n<view-source uri=\"card/pagCard.ts\"></view-source>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagCard);

@@ -16,6 +16,7 @@ template: `
 <br>
 
 <debug-form [name]="formSwitchReactive"></debug-form>
+<view-source uri="switch/pagSwitch.ts"></view-source>
 
 `//template
 })

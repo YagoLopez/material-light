@@ -11,12 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var mlListMod_1 = require("../../ml/components/list/mlListMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagList_1 = require("./pagList");
 var PagListModule = (function () {
     function PagListModule() {
     }
     PagListModule = __decorate([
-        core_1.NgModule({ imports: [mlListMod_1.MlListMod, router_1.RouterModule.forChild([{ path: '', component: pagList_1.PagList }])],
+        core_1.NgModule({ imports: [mlListMod_1.MlListMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagList_1.PagList }])],
             declarations: [pagList_1.PagList] }), 
         __metadata('design:paramtypes', [])
     ], PagListModule);

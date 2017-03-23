@@ -1,4 +1,3 @@
-//todo: ripple effect applied incorrectly
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -15,14 +14,15 @@ var forms_1 = require("@angular/forms");
 var mlRippleMod_1 = require("../../ml/components/ripple/mlRippleMod");
 var mlSwitchMod_1 = require("../../ml/components/controls/switch/mlSwitchMod");
 var debugFormMod_1 = require("../../ml/lib/debug_form/debugFormMod");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagSwitch_1 = require("./pagSwitch");
 var PagSwitchModule = (function () {
     function PagSwitchModule() {
     }
     PagSwitchModule = __decorate([
         core_1.NgModule({
-            imports: [mlSwitchMod_1.MlSwitchMod, mlRippleMod_1.MlRippleMod, debugFormMod_1.DebugFormMod, forms_1.ReactiveFormsModule, router_1.RouterModule.forChild([{ path: '', component: pagSwitch_1.PagSwitch }])],
-            declarations: [pagSwitch_1.PagSwitch] }), 
+            imports: [mlSwitchMod_1.MlSwitchMod, mlRippleMod_1.MlRippleMod, debugFormMod_1.DebugFormMod, forms_1.ReactiveFormsModule, viewSourceMod_1.ViewSourceMod,
+                router_1.RouterModule.forChild([{ path: '', component: pagSwitch_1.PagSwitch }])], declarations: [pagSwitch_1.PagSwitch] }), 
         __metadata('design:paramtypes', [])
     ], PagSwitchModule);
     return PagSwitchModule;

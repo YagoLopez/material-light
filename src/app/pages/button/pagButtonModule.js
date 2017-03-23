@@ -11,13 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var mlButtonMod_1 = require("../../ml/components/controls/button/mlButtonMod");
 var router_1 = require("@angular/router");
+var viewSourceMod_1 = require("../view-source/viewSourceMod");
 var pagButton_1 = require("./pagButton");
 var PagButtonModule = (function () {
     function PagButtonModule() {
     }
     PagButtonModule = __decorate([
         core_1.NgModule({
-            imports: [mlButtonMod_1.MlButtonMod, router_1.RouterModule.forChild([{ path: '', component: pagButton_1.PagButton }])],
+            imports: [mlButtonMod_1.MlButtonMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagButton_1.PagButton }])],
             declarations: [pagButton_1.PagButton] }), 
         __metadata('design:paramtypes', [])
     ], PagButtonModule);
