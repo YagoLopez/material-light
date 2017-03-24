@@ -14,7 +14,7 @@ styleUrls: ['./mlTextfield.css', '../button/mlButton.css'],
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlTextfieldExpand), multi: true}],
-template: `
+template:`
 
 <label class="mdl-button mdl-button--icon" [attr.for]="id"><ml-icon>{{icon}}</ml-icon></label>
 <div class="mdl-textfield__expandable-holder">

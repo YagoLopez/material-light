@@ -1,3 +1,4 @@
+//todo: intentar probar a incluir directamente el ripple container en el template para ahorrar este codigo
 import {ElementRef} from "@angular/core";
 import MdlElement from "../../element/mdl_element";
 

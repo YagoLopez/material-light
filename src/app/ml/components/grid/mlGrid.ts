@@ -7,7 +7,7 @@ selector: 'ml-grid',
 styleUrls: ['./mlGrid.css'],
 host: {class: 'mdl-grid'},
 encapsulation: ViewEncapsulation.None,
-template: `
+template:`
 
 <ng-content></ng-content>
 

@@ -4,7 +4,7 @@ import {Component, Input} from "@angular/core";
 selector:  'ml-chip',
 // moduleId: module.id.toString(),
 styleUrls: ['./mlChip.css'],
-template: `
+template:`
 
 <span *ngIf="visible" class="mdl-chip" 
       [ngClass]="{'mdl-chip--contact': img || letter, 'mdl-chip--deletable': deletable}">
@@ -27,9 +27,9 @@ template: `
 export class MlChip {
 
   @Input() deletable: string;
+  @Input() img: string;
+  @Input() letter: string;
   @Input('delete-action') action: Function;
-  @Input('contact-image') img: string;
-  @Input('contact-letter') letter: string;
 
   private visible: boolean = true;
 

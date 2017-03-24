@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-template: `
+template:`
 
 <style>
 .bg-blue{background: cornflowerblue}  

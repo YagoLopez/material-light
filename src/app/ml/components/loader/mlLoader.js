@@ -1,5 +1,3 @@
-//todo: hacer componente MlLoaderProgressbar
-//todo: habilitar opcion para incluir texto en loader
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10,6 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+//todo: hacer componente MlLoaderProgressbar
+//todo: habilitar opcion para incluir texto en loader
+//todo: sustituir ml-loader por gif animado para mas rendimiento
 var core_1 = require('@angular/core');
 var router_1 = require("@angular/router");
 var MlLoader = (function () {
@@ -47,7 +48,7 @@ var MlLoader = (function () {
     MlLoader = __decorate([
         core_1.Component({
             selector: 'ml-loader',
-            template: "\n<style>\n.loader-text{\n  position: absolute;\n  margin: auto;\n  left: 0;\n  right: 0;\n  top: 37%;\n  bottom: 0;\n  text-align: center;\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n  font-size: 14px;}\n.loader {\n  position: absolute;\n  margin: auto;\n  left: 0;\n  right: 0;\n  top: 44%;\n  text-align: center;}\n</style>\n<div class=\"loader\">\n<ml-spinner *ngIf=\"loading\" class=\"loader\" single-color></ml-spinner>\n</div>\n" //template
+            template: "\n<style>\n.loader-text{position: absolute; margin: auto; left: 0; right: 0; top: 37%; bottom: 0; text-align: center;\n  font-family: \"Roboto\",serif; font-size: 14px}\n.loader {position: absolute; margin: auto; left: 0; right: 0; top: 44%; text-align: center}\n</style>\n<div class=\"loader\" *ngIf=\"loading\">\n<ml-spinner class=\"loader\" single-color></ml-spinner>\n</div>\n" //template
         }), 
         __metadata('design:paramtypes', [router_1.Router])
     ], MlLoader);

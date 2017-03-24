@@ -11,7 +11,7 @@ styleUrls: ['./mlTextfield.css'],
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlTextfieldArea), multi: true}],
-template: `
+template:`
 
 <textarea type="text" class="mdl-textfield__input" [attr.rows]="rows" [attr.maxrows]="maxrows" [attr.id]="id" 
 [name]="name" [(ngModel)]="model" (focus)="onFocus()" (keyup)="onKeyup()"></textarea>

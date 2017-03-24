@@ -1,4 +1,3 @@
-//todo: documentar funciones
 //todo: hacer una funcion factoria (mdlConstructor) que elimine repeticion de codigo en los constructores
 "use strict";
 function isDefined(value) { return typeof value !== 'undefined'; }

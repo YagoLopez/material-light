@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
-template: `
+template:`
 
 <style>
 .ico-aligned{vertical-align: middle; margin-top: -4px; padding-right: 5px}

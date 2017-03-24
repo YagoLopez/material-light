@@ -7,7 +7,7 @@ styleUrls: ['./mlCard.css'],
 // moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
 host: {class: 'mdl-card'},
-template: `
+template:`
 
 <div #cardTitle class="mdl-card__title mdl-card--expand">
   <h2 class="mdl-card__title-text">

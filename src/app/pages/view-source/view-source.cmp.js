@@ -13,10 +13,11 @@ var ViewSourceCmp = (function () {
     function ViewSourceCmp() {
         this.urlBaseRaw = 'https://raw.githubusercontent.com/YagoLopez/material-light/master/src/app/pages';
         this.urlBaseFormated = 'https://github.com/YagoLopez/material-light/blob/master/src/app/pages';
-        this.features = 'resizable,scrollbars=yes,status=0,toolbar=0,menubar=0';
     }
-    ViewSourceCmp.prototype.viewRawSource = function () { window.open(this.urlBaseRaw + "/" + this.uri, '_blank', this.features); };
-    ViewSourceCmp.prototype.viewFormatedSource = function () { window.open(this.urlBaseFormated + "/" + this.uri, '_blank', this.features); };
+    ViewSourceCmp.prototype.ngOnInit = function () {
+        this.urlRaw = this.urlBaseRaw + "/" + this.uri;
+        this.urlFormated = this.urlBaseFormated + "/" + this.uri;
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
@@ -24,7 +25,7 @@ var ViewSourceCmp = (function () {
     ViewSourceCmp = __decorate([
         core_1.Component({
             selector: 'view-source',
-            template: "\n<style>\n  .btn-view-src{font-size: small; display: block; color: grey; border: 1px solid grey; \n    text-decoration: none; padding: 5px; border-radius: 2px; box-shadow: 2px 2px 5px lightgrey; margin: 10px}\n  .btn-view-src:active{background-color: lightgrey}  \n  .btn-view-src-container{padding: 25px; text-align: center; margin: auto; width: 68%}\n</style>\n<div class=\"btn-view-src-container\">\n  <a href=\"javascript:void(0)\" (click)=\"viewRawSource()\" class=\"btn-view-src\">View raw source \u21D2 \u29C9</a>\n  <a href=\"javascript:void(0)\" (click)=\"viewFormatedSource()\" class=\"btn-view-src\">Formated source \u21D2 \u29C9</a>\n</div>\n" //template
+            template: "\n<style>\n  .btn-view-src{font-size: small; display: block; color: grey; border: 1px solid grey; \n    text-decoration: none; padding: 8px; border-radius: 2px; box-shadow: 1px 1px 5px lightgrey; margin: 10px}\n  .btn-view-src:active{background-color: lightgrey}  \n  .btn-view-src-container{padding: 25px; text-align: center; margin: auto; width: 68%}\n</style>\n<div class=\"btn-view-src-container\">\n  <a [href]=\"urlRaw\" class=\"btn-view-src\" target=\"_blank\">View raw source \u21D2 \u2750</a>\n  <a [href]=\"urlFormated\" class=\"btn-view-src\" target=\"_blank\">Formated source \u21D2 \u2750</a>\n</div>\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], ViewSourceCmp);

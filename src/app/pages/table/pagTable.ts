@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
 
 @Component({
-template: `
+template:`
 
 <h5>Table</h5>
 
-<table ml-table selectable style="width:100%">
+<table ml-table selectable>
   <!-- Table head ------------------------------------------------------------------------------------------------ -->
   
   <thead>

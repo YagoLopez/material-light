@@ -13,7 +13,7 @@ encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 // moduleId: module.id.toString(),
 host: {class: 'mdl-spinner is-active'},
-template: ``
+template:``
 })
 export class MlSpinner {
 

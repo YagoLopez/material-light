@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-template: `
+template:`
 
 <style>
 ml-card {width: 100%; height: 300px}

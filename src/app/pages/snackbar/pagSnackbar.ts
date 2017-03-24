@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {IConfigSnackbar} from "../../ml/components/snackbar/mlSnackbar";
 
 @Component({
-template: `
+template:`
 
 <h5>Snackbar</h5>
 

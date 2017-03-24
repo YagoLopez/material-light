@@ -1,18 +1,18 @@
 import {Component} from '@angular/core';
 
 @Component({
-template: `
+template:`
 
 <h5>Chip</h5>
 
 <p><ml-chip>Chip only text</ml-chip></p>
 
-<p><ml-chip contact-image="assets/img/user.jpg">Chip with contact image</ml-chip></p>
+<p><ml-chip img="assets/img/user.jpg">Chip with contact image</ml-chip></p>
 
-<p><ml-chip contact-letter="A">Chip with contact letter</ml-chip></p>
+<p><ml-chip letter="A">Chip with contact letter</ml-chip></p>
 
 <p>
-  <ml-chip contact-image="assets/img/user.jpg" deletable="true" [delete-action]="deleteFn">
+  <ml-chip img="assets/img/user.jpg" deletable="true" [delete-action]="deleteFn">
     Image, deletable button and callback Fn
   </ml-chip>
 </p>

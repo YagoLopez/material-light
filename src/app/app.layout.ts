@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
 
 @Component({
 selector: 'ml-demo-app',
-template: `
+template:`
 
 <style>
   a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}

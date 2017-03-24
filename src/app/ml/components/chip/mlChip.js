@@ -24,17 +24,17 @@ var MlChip = (function () {
         __metadata('design:type', String)
     ], MlChip.prototype, "deletable", void 0);
     __decorate([
-        core_1.Input('delete-action'), 
-        __metadata('design:type', Function)
-    ], MlChip.prototype, "action", void 0);
-    __decorate([
-        core_1.Input('contact-image'), 
+        core_1.Input(), 
         __metadata('design:type', String)
     ], MlChip.prototype, "img", void 0);
     __decorate([
-        core_1.Input('contact-letter'), 
+        core_1.Input(), 
         __metadata('design:type', String)
     ], MlChip.prototype, "letter", void 0);
+    __decorate([
+        core_1.Input('delete-action'), 
+        __metadata('design:type', Function)
+    ], MlChip.prototype, "action", void 0);
     MlChip = __decorate([
         core_1.Component({
             selector: 'ml-chip',

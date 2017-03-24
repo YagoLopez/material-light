@@ -19,7 +19,7 @@ var MlValidationError = (function () {
         }
     };
     MlValidationError.prototype.ngOnInit = function () {
-        // hack cause: validateControl.errors.minLength != validateControl.errors['minLength'] for example
+        // cause of hack: validateControl.errors.minLength != validateControl.errors['minLength'] for example
         this.validator = this.validator.toLowerCase();
     };
     __decorate([

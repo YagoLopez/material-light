@@ -1,1 +1,1 @@
-{"version":3,"file":"pagTabs.js","sourceRoot":"","sources":["pagTabs.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAAwB,eAAe,CAAC,CAAA;AA4DxC;IAAA;IAAsB,CAAC;IA1DvB;QAAC,gBAAS,CAAC;YACX,QAAQ,EAAE,q8CAuDT,CAAA,UAAU;SACV,CAAC;;eAAA;IACoB,cAAC;AAAD,CAAC,AAAvB,IAAuB;AAAV,eAAO,UAAG,CAAA"}
+{"version":3,"file":"pagTabs.js","sourceRoot":"","sources":["pagTabs.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAAwB,eAAe,CAAC,CAAA;AA4DxC;IAAA;IAAsB,CAAC;IA1DvB;QAAC,gBAAS,CAAC;YACX,QAAQ,EAAC,q8CAuDR,CAAA,UAAU;SACV,CAAC;;eAAA;IACoB,cAAC;AAAD,CAAC,AAAvB,IAAuB;AAAV,eAAO,UAAG,CAAA"}

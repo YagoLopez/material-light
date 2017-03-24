@@ -4,7 +4,7 @@ import {FormGroup, FormControl} from "@angular/forms";
 @Component({
 
 selector: 'page-toggle',
-template: `
+template:`
 
 <h5>Icon Toggle</h5>
 <h6>Only for reactive forms:</h6>

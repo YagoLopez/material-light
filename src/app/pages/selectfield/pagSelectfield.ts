@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {FormGroup, FormControl, Validators} from "@angular/forms";
 
 @Component({
-template: `
+template:`
 
 <style>.validationError{color: red;padding-bottom: 20px;}</style>
 
@@ -20,14 +20,14 @@ template: `
     <ml-sf-item>six</ml-sf-item>
     <ml-sf-item disabled>disabled</ml-sf-item>
     <ml-sf-item>seven</ml-sf-item>
-    <ml-error [validateControl]="selectfield1" validator="required" class="validationError">
-      Required field
-    </ml-error>
-    <ml-error [validateControl]="selectfield1" validator="minLength" class="validationError">
-      Min length: {{ minLength }}
-    </ml-error>  
   </ml-selectfield>
-
+  <ml-error [validateControl]="selectfield1" validator="minLength" class="validationError">
+    Min length: {{ minLength }}
+  </ml-error>  
+  <ml-error [validateControl]="selectfield1" validator="required" class="validationError">
+    Required field
+  </ml-error>
+  
   <div>(With validators ↑)</div>
   
   <ml-selectfield [formControl]="selectfield2" label="Choose another option..." ripple>
@@ -44,9 +44,7 @@ template: `
 </form>
 
 <br>
-
-<div><debug-form [name]="selectForm"></debug-form></div>
-
+<debug-form [name]="selectForm"></debug-form>
 <view-source uri="selectfield/pagSelectfield.ts"></view-source>
 
 `//template

@@ -9,7 +9,7 @@ template: '<div *ngIf="showError()" style="display: block"><ng-content></ng-cont
 export class MlValidationError {
 
   @Input() validateControl: any;
-  @Input() validator: string;   // validator name
+  @Input() validator: string; // validator name. Ejem: minLength, required, etc.
 
   showError(): boolean | undefined{
     if (this.validateControl){
@@ -18,7 +18,7 @@ export class MlValidationError {
   }
 
   ngOnInit() {
-    // hack cause: validateControl.errors.minLength != validateControl.errors['minLength'] for example
+    // cause of hack: validateControl.errors.minLength != validateControl.errors['minLength'] for example
     this.validator = this.validator.toLowerCase();
   }
 }

@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
 selector: 'page-tooltip',
-template: `
+template:`
 
 <style>
 .paragraph{display:inline-block}

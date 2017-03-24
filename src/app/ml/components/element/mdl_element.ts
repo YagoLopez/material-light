@@ -1,9 +1,9 @@
+// All Material Light components are based on MdlLib elements that inherit from MdlElement 
 import {ElementRef} from "@angular/core";
 
-// All Material Light elements (Ml elements) inherit form and are based in a base MdlElement 
 export default class MdlElement{
-  element_: ElementRef | any;
   init: Function;
+  element_: ElementRef | any;
   Constant_: Object | any;
   CssClasses_: Object | any;
   updateClasses_: Function;

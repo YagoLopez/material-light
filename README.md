@@ -1,5 +1,4 @@
 <!-- todo: poner los incoveninets de otras alternativas como que son mas lentas, complicadas, etc. -->
-<!-- <div style="margin: auto; width: 81px;"><img src="src/assets/img/logo.png" style="margin: auto; width: 81px;"></div> -->
 <p align="center"><img src="src/assets/img/logo.png" style="margin: auto; width: 81px;"></p>
 
 # Material Light
@@ -8,6 +7,8 @@
 
 This library of components has been carefully designed to create light, easy of use and fast Angular 2 + user interfaces
 (Either for web as for mobile apps).
+
+If you are find this project useful and going to use it in any way, please give an star.
 
 ## Author
 
@@ -50,4 +51,4 @@ AOT-ready code must be statically analizable which impose several restrictions o
 - Material Design is a Google's registered trade mark probably.
 - License: <a href="LICENSE.txt">MIT</a>.
 - This is an open source project without commercial or profit intentions.
-- Tested on 2.4.7 Angular version
+- Tested on Angular version 2.4.7.

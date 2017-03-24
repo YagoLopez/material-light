@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-template: `
+template:`
 
 <h5>ProgressBar</h5>
 <p><ml-progressbar progress="50" #progress1 style="width:200px"></ml-progressbar></p>

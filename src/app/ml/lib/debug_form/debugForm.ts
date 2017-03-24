@@ -3,7 +3,7 @@ import {FormGroup} from "@angular/forms";
 
 @Component({
 selector: 'debug-form',
-template: `
+template:`
 <style>
 .code-block{
   background: aliceblue;

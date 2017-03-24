@@ -1,4 +1,3 @@
-//todo: documentar funciones
 //todo: hacer una funcion factoria (mdlConstructor) que elimine repeticion de codigo en los constructores
 
 import {Renderer, ElementRef} from "@angular/core";

@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
 selector: 'ml-chip-button',
 styleUrls: ['./mlChip.css'],
 // moduleId: module.id.toString(),
-template: `
+template:`
 
 <button type="button" class="mdl-chip">
 <span class="mdl-chip__text"><ng-content></ng-content></span>

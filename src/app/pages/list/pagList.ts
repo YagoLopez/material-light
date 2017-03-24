@@ -4,7 +4,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
 encapsulation: ViewEncapsulation.None,
-template: `
+template:`
 
 <h5>List</h5>
 

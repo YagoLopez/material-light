@@ -12,7 +12,7 @@ styleUrls: ['./mlSwitch.css'],
 // moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlSwitch), multi: true}],
-template: `
+template:`
 
 <label #label [attr.for]="id+'mdl'" class="mdl-switch" [ngClass]="{'is-checked': isChecked()}">
   <input type="checkbox" class="mdl-switch__input" 

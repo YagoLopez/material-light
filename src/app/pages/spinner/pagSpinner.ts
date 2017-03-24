@@ -1,7 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 
 @Component({
-template: `
+template:`
 
 <h5>Spinner</h5>
 

@@ -29,7 +29,7 @@ styleUrls: ['./mlTextfield.css'],
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlTextfield), multi: true}],
-template: `
+template:`
 
 <input [attr.type]="type" class="mdl-textfield__input" [attr.id]="id" [name]="name" [(ngModel)]="model" 
 (focus)="onFocus()" (keyup)="onKeyup()">

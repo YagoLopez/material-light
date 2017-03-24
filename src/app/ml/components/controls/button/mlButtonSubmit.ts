@@ -10,7 +10,7 @@ const ML_BUTTON_ASPECTS = ['raised', 'colored', 'accent'];
 selector: 'ml-button-submit',
 // moduleId: module.id.toString(),
 styleUrls: ['./mlButton.css'],
-template: `
+template:`
 
 <div class="mdl-button" style="padding: 3px">
 <input #input [attr.type]="type" [attr.value]="text" [disabled]="disabled" class="mdl-button" style="pointer-events: auto" />

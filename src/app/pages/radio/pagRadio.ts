@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {FormGroup, FormControl} from "@angular/forms";
 
 @Component({
-template: `
+template:`
 
 <h5>Radio Button</h5>
 <h6>(Only for reactive forms)</h6>
