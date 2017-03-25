@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var forms_1 = require("@angular/forms");
 var PagSwitch = (function () {
     function PagSwitch() {
-        this.formSwitchReactive = new forms_1.FormGroup({
+        this.formSwitch = new forms_1.FormGroup({
             option4: new forms_1.FormControl(true),
             option5: new forms_1.FormControl(),
             option6: new forms_1.FormControl({ value: true, disabled: true }) // Disabled on init
@@ -20,7 +20,7 @@ var PagSwitch = (function () {
     }
     PagSwitch = __decorate([
         core_1.Component({
-            template: "\n\n<h5>Switch Button</h5>\n<h6>Only works with reactive forms:</h6>\n\n<form [formGroup]=\"formSwitchReactive\">\n  <ml-switch id=\"switch4\" formControlName=\"option4\">Option 4</ml-switch>\n  <ml-switch id=\"switch5\" formControlName=\"option5\" ripple>Option 5 (With ripple)</ml-switch>\n  <ml-switch id=\"switch6\" formControlName=\"option6\" disabled=\"true\">Option 6 (Disabled)</ml-switch>\n</form>\n\n<br>\n\n<debug-form [name]=\"formSwitchReactive\"></debug-form>\n<view-source uri=\"switch/pagSwitch.ts\"></view-source>\n\n" //template
+            template: "\n\n<h5>Switch Button</h5>\n<h6>Only works with reactive forms:</h6>\n\n<form [formGroup]=\"formSwitch\">\n  <ml-switch id=\"switch4\" formControlName=\"option4\">Option 4</ml-switch>\n  <ml-switch id=\"switch5\" formControlName=\"option5\" ripple>Option 5 (With ripple)</ml-switch>\n  <ml-switch id=\"switch6\" formControlName=\"option6\" disabled=\"true\">Option 6 (Disabled)</ml-switch>\n</form>\n\n<br>\n\n<debug-form [name]=\"formSwitch\"></debug-form>\n<view-source uri=\"switch/pagSwitch.ts\"></view-source>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], PagSwitch);

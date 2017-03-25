@@ -13,6 +13,7 @@
     "serve_prod": "ng serve --prod",
     "serve_prod_aot": "ng serve --prod --aot",
     "lint": "tslint \"src/**/*.ts\""
+
   },
   "private": true,
   "dependencies": {

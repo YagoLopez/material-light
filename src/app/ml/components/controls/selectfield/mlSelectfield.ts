@@ -1,5 +1,5 @@
 //todo: testar textfield con tipo: file, color, etc.
-//todo: (general) nombrar todos los componentes empezando por "C" (Ej: CMlTextfield)
+//todo: (general) usar esta nomenclatura para componentes (Ej: MlTextfieldCmp)
 
 // NOTE: this component ("MlSelectfield") is based on "MlButton", "MdlMenu" and "MdlTextfield"
 // For this reason it uses files from these components
@@ -14,19 +14,14 @@ import * as ml from "../../../lib/ml_lib";
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-selectfield',
-styleUrls: ['../../menu/mlMenu.css', '../textfield/mlTextfield.css'],
+styleUrls: ['./mlSelectfield.css', '../../menu/mlMenu.css', '../textfield/mlTextfield.css'],
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 // moduleId: module.id.toString(),
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlSelectfield), multi: true}],
 template:`
 
-<style>
-.input-field{padding-left: 33px !important; cursor: pointer}
-.input-label{padding-left: 33px !important; cursor: pointer}
-.menu-btn{height: 27px !important}
-</style>
-<div class="mdl-textfield getmdl-select">
+<div class="mdl-textfield dropdown-width getmdl-select">
   <input #input type="text" class="mdl-textfield__input input-field" (click)="clickInput()" readonly>
   <label #label class="mdl-textfield__label input-label">{{ labelText }}</label>
   <ml-button #mdlButton variant="icon" [attr.id]="idBtn" class="menu-btn">

@@ -1,11 +1,10 @@
 //todo: media query para que se muestre el menu lateral en modo tablet en iframe
-//todo: selectfield dropdown mas ancho
 //todo: hacer documentacion de api para cada componente
 //todo: que se puedan usar diferentes cabeceras y menus laterales (<ml-header>) en cada pagina (usar named router-outlet?)
 //todo: hacer Ml boilerplate project
 //todo: hacer release en github
 //todo: habilitar webpack.config.js en angular-cli para poder usar local paths en router
-//todo: revisar default keyword y otras cosasa para compilacion aot
+//todo: revisar default keyword y otras cosas para compilacion aot
 //todo: transiciones de estado usando eventos de router
 // (ref: https://toddmotto.com/dynamic-page-titles-angular-2-router-events)
 // Se podría pensar en hacer una directiva o un componente

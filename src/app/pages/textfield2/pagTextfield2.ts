@@ -15,7 +15,7 @@ template:`
   <!-- Password ---------------------------------------------------------------------------------------------------- -->
 
   <div>➃ <strong>Password field: </strong></div>
-  <ml-textfield type="password" id="password" [formControl]="password" floating>
+  <ml-textfield type="password" id="password" [formControl]="password" floating-label>
     <ml-textfield-label>Enter password</ml-textfield-label>
     <ml-error [validateControl]="password" validator="required">Required field</ml-error>
     <ml-error [validateControl]="password" validator="minLength">Minimum length: {{ passLength }}</ml-error>

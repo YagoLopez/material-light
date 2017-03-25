@@ -1,3 +1,8 @@
+ml-selectfield > div > div > div.mdl-menu__outline {width: 250px !important}
+ml-selectfield > div > div > ul > ml-sf-item > li.mdl-menu__item {width: 218px}
+.input-field{padding-left: 33px !important; cursor: pointer}
+.input-label{padding-left: 33px !important; cursor: pointer}
+.menu-btn{height: 27px !important}
 /*
 .getmdl-select .mdl-icon-toggle__label {
 	float: right;
