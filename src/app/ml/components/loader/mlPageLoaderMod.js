@@ -11,15 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var mlSpinnerMod_1 = require("../spinner/mlSpinnerMod");
-var mlLoader_1 = require("./mlLoader");
-var MlLoaderMod = (function () {
-    function MlLoaderMod() {
+var mlPageLoader_1 = require("./mlPageLoader");
+var MlPageLoaderMod = (function () {
+    function MlPageLoaderMod() {
     }
-    MlLoaderMod = __decorate([
-        core_1.NgModule({ imports: [common_1.CommonModule, mlSpinnerMod_1.MlSpinnerMod], declarations: [mlLoader_1.MlLoader], exports: [mlLoader_1.MlLoader] }), 
+    MlPageLoaderMod = __decorate([
+        core_1.NgModule({ imports: [common_1.CommonModule, mlSpinnerMod_1.MlSpinnerMod], declarations: [mlPageLoader_1.MlPageLoader], exports: [mlPageLoader_1.MlPageLoader] }), 
         __metadata('design:paramtypes', [])
-    ], MlLoaderMod);
-    return MlLoaderMod;
+    ], MlPageLoaderMod);
+    return MlPageLoaderMod;
 }());
-exports.MlLoaderMod = MlLoaderMod;
-//# sourceMappingURL=mlLoaderMod.js.map
+exports.MlPageLoaderMod = MlPageLoaderMod;
+//# sourceMappingURL=mlPageLoaderMod.js.map

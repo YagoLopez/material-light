@@ -36,7 +36,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
-var mlLoaderMod_1 = require("./ml/components/loader/mlLoaderMod");
+var mlPageLoaderMod_1 = require("./ml/components/loader/mlPageLoaderMod");
 var mlLayoutMod_1 = require("./ml/components/layout/mlLayoutMod");
 var app_layout_1 = require("./app.layout");
 // export const basePath = '.app/pages/';
@@ -104,7 +104,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
-                platform_browser_1.BrowserModule, mlLoaderMod_1.MlLoaderMod, mlLayoutMod_1.MlLayoutMod, router_1.RouterModule.forRoot(APP_ROUTES, { enableTracing: false, useHash: true })],
+                platform_browser_1.BrowserModule, mlPageLoaderMod_1.MlPageLoaderMod, mlLayoutMod_1.MlLayoutMod, router_1.RouterModule.forRoot(APP_ROUTES, { enableTracing: false, useHash: true })],
             declarations: [app_layout_1.App],
             bootstrap: [app_layout_1.App]
         }), 

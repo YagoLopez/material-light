@@ -1,11 +1,11 @@
 //todo: hacer componente MlLoaderProgressbar
 //todo: habilitar opcion para incluir texto en loader
-//todo: sustituir ml-loader por gif animado para mas rendimiento
+//todo: sustituir ml-page-loader por gif animado para mas rendimiento
 import {Component, Output, EventEmitter} from '@angular/core';
 import {Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError} from "@angular/router";
 
 @Component({
-selector: 'ml-loader',
+selector: 'ml-page-loader',
 template:`
 <style>
 .loader-text{position: absolute; margin: auto; left: 0; right: 0; top: 37%; bottom: 0; text-align: center;
@@ -17,7 +17,7 @@ template:`
 </div>
 `//template
 })
-export class MlLoader {
+export class MlPageLoader {
   @Output() isLoading: EventEmitter<boolean> = new EventEmitter();
   loading = true;
   constructor (private router: Router) {}
@@ -39,7 +39,7 @@ export class MlLoader {
       if (event instanceof NavigationError){
         this.loading = false;
         this.isLoading.emit(this.loading);
-        console.error('MlLoader: navigation error');
+        console.error('MlPageLoader: navigation error');
      }
     });
   }

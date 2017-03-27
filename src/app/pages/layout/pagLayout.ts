@@ -1,4 +1,6 @@
-import {Component} from "@angular/core";
+import {Component, ElementRef, ViewChild} from "@angular/core";
+// require ('https://gist.github.com/YagoLopez/fd5c11eb71b4b3b03a36ba31fac0aaa5.js');
+
 @Component({
 template:`
 
@@ -23,7 +25,7 @@ This feature is experimental and still has not been tested</p>
 
 <p>Here is a schematic code of a basic layout:</p>
 
-<iframe src="app/pages/layout/mlLayoutGist.html"></iframe>
+<iframe src="app/pages/layout/layoutGist.html"></iframe>
 
 <p>And here is the source code of this layout demo:</p>
 <view-source uri="../app.layout.ts"></view-source>

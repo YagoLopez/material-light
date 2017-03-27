@@ -1,5 +1,3 @@
-// todo: contenido de pagina responsivo. (usar ml-grid)
-
 import {Component} from '@angular/core';
 
 @Component({
@@ -99,7 +97,7 @@ template:`
   <!-- Content ----------------------------------------------------------------------------------------------------- -->
   
   <ml-content>
-    <ml-loader (isLoading)="onLoading($event)"></ml-loader>
+    <ml-page-loader (isLoading)="onLoading($event)"></ml-page-loader>
     <ml-content-tabheader id="tab1" active [hidden]="isLoading">
       <router-outlet></router-outlet>
     </ml-content-tabheader>

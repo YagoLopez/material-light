@@ -52,7 +52,6 @@ strong{color: #3f51b5}
 </ml-grid>
 
 <hr>
-
 <view-source uri="grid/pagGrid.ts"></view-source>
         
 `//template

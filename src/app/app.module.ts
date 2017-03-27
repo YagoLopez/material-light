@@ -27,7 +27,7 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {RouterModule} from "@angular/router";
-import {MlLoaderMod} from "./ml/components/loader/mlLoaderMod";
+import {MlPageLoaderMod} from "./ml/components/loader/mlPageLoaderMod";
 import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {App} from "./app.layout";
 
@@ -95,7 +95,7 @@ const APP_ROUTES = [
 
 @NgModule({
   imports: [
-    BrowserModule, MlLoaderMod, MlLayoutMod, RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
+    BrowserModule, MlPageLoaderMod, MlLayoutMod, RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
   declarations: [App],
   bootstrap: [App]
 })

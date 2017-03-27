@@ -10,16 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 //todo: hacer componente MlLoaderProgressbar
 //todo: habilitar opcion para incluir texto en loader
-//todo: sustituir ml-loader por gif animado para mas rendimiento
+//todo: sustituir ml-page-loader por gif animado para mas rendimiento
 var core_1 = require('@angular/core');
 var router_1 = require("@angular/router");
-var MlLoader = (function () {
-    function MlLoader(router) {
+var MlPageLoader = (function () {
+    function MlPageLoader(router) {
         this.router = router;
         this.isLoading = new core_1.EventEmitter();
         this.loading = true;
     }
-    MlLoader.prototype.ngOnInit = function () {
+    MlPageLoader.prototype.ngOnInit = function () {
         var _this = this;
         this.router.events.subscribe(function (event) {
             if (event instanceof router_1.NavigationStart) {
@@ -37,22 +37,22 @@ var MlLoader = (function () {
             if (event instanceof router_1.NavigationError) {
                 _this.loading = false;
                 _this.isLoading.emit(_this.loading);
-                console.error('MlLoader: navigation error');
+                console.error('MlPageLoader: navigation error');
             }
         });
     };
     __decorate([
         core_1.Output(), 
         __metadata('design:type', core_1.EventEmitter)
-    ], MlLoader.prototype, "isLoading", void 0);
-    MlLoader = __decorate([
+    ], MlPageLoader.prototype, "isLoading", void 0);
+    MlPageLoader = __decorate([
         core_1.Component({
-            selector: 'ml-loader',
+            selector: 'ml-page-loader',
             template: "\n<style>\n.loader-text{position: absolute; margin: auto; left: 0; right: 0; top: 37%; bottom: 0; text-align: center;\n  font-family: \"Roboto\",serif; font-size: 14px}\n.loader {position: absolute; margin: auto; left: 0; right: 0; top: 44%; text-align: center}\n</style>\n<div class=\"loader\" *ngIf=\"loading\">\n<ml-spinner class=\"loader\" single-color></ml-spinner>\n</div>\n" //template
         }), 
         __metadata('design:paramtypes', [router_1.Router])
-    ], MlLoader);
-    return MlLoader;
+    ], MlPageLoader);
+    return MlPageLoader;
 }());
-exports.MlLoader = MlLoader;
-//# sourceMappingURL=mlLoader.js.map
+exports.MlPageLoader = MlPageLoader;
+//# sourceMappingURL=mlPageLoader.js.map
