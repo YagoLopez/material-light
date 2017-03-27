@@ -12,7 +12,7 @@ are placed</p>
 <p>The Material Light layout contains three main sections</p>
 <ul>
   <li><strong>ml-header</strong>: the upper bar with the title and the menu icon</li>
-  <li><strong>ml-drawer</strong>: the deployable menu to the left</li>
+  <li><strong>ml-drawer</strong>: the menu to the left</li>
   <li><strong>ml-content</strong>: the main content area (suitable to place the router-outlet)</li>
 </ul>
 
@@ -21,11 +21,11 @@ are placed</p>
 <p>It is also posible to have different submenus and headers for each page using auxiliar router-outlets. 
 This feature is experimental and still has not been tested</p>
 
-<!--<p>Here is a schematic code of a basic layout:</p>
+<p>Here is a schematic code of a basic layout:</p>
 
 <iframe src="app/pages/layout/mlLayoutGist.html"></iframe>
 
-<p>An here is the source code of this layout demo:</p>-->
+<p>And here is the source code of this layout demo:</p>
 <view-source uri="../app.layout.ts"></view-source>
 
 `//template

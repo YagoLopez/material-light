@@ -6,14 +6,14 @@ template:`
 <style>
 .bg-blue{background: lightblue}  
 .bg-grey{background: gainsboro}  
-.bg-yellow{background: yellow}  
+.bg-orange{background: orange}  
 .bg-darkgrey{background: darkgrey}
 strong{color: #3f51b5}
 </style>
 
 <h5>Grid</h5>
 <hr>
-<h6>Grid system adapts blocks position to screen size automatically</h6>
+<h6>Grid system adapts automatically position of block to screen size</h6>
 
 <strong>• Grid 1</strong>
 <ml-grid>
@@ -47,8 +47,8 @@ strong{color: #3f51b5}
   <ml-grid-cell width="1" class="bg-grey">1 col</ml-grid-cell>
   <ml-grid-cell width="2" class="bg-blue">2 col</ml-grid-cell>
   <ml-grid-cell width="2" class="bg-blue">2 col</ml-grid-cell>
-  <ml-grid-cell width="3" class="bg-yellow">3 col</ml-grid-cell>
-  <ml-grid-cell width="3" class="bg-yellow">3 col</ml-grid-cell>
+  <ml-grid-cell width="3" class="bg-orange">3 col</ml-grid-cell>
+  <ml-grid-cell width="3" class="bg-orange">3 col</ml-grid-cell>
 </ml-grid>
 
 <hr>
