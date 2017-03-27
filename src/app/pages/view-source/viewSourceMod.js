@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var view_source_cmp_1 = require("./view-source.cmp");
+var viewSourceCmp_1 = require("./viewSourceCmp");
 var ViewSourceMod = (function () {
     function ViewSourceMod() {
     }
     ViewSourceMod = __decorate([
-        core_1.NgModule({ declarations: [view_source_cmp_1.ViewSourceCmp], exports: [view_source_cmp_1.ViewSourceCmp] }), 
+        core_1.NgModule({ declarations: [viewSourceCmp_1.ViewSourceCmp], exports: [viewSourceCmp_1.ViewSourceCmp] }), 
         __metadata('design:paramtypes', [])
     ], ViewSourceMod);
     return ViewSourceMod;

@@ -12,7 +12,7 @@ template:`
 
 <form [formGroup]="textfieldForm" (ngSubmit)="onSubmit()" autocomplete="off">
 
-  <div>➀ <strong>Textfields normal:</strong> (Validated)</div>
+  <div>➀ <strong>Textfield:</strong> (Validated)</div>
   
   <!-- textfield1  ------------------------------------------------------------------------------------------------- -->
   
@@ -58,7 +58,7 @@ template:`
 
 </form>
 
-<p><debug-form [name]="textfieldForm"></debug-form></p>
+<debug-form [name]="textfieldForm"></debug-form>
 <view-source uri="textfield/pagTextfield.ts"></view-source>
 
 `//template

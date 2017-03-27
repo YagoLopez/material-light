@@ -1,4 +1,3 @@
-// https://material.io/icons/
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// https://material.io/icons/
 // ICON NAMES: http://google.github.io/web-starter-kit/latest/styleguide/icons/demo.html
 // NOTE: change middle dash (-) for lower dash (_) in icon name for using ICON NAMES from the above url
 var core_1 = require("@angular/core");
@@ -16,10 +16,7 @@ var MlIcon = (function () {
     function MlIcon() {
     }
     MlIcon = __decorate([
-        core_1.Component({
-            selector: 'ml-icon',
-            template: '<ng-content></ng-content>',
-            host: { class: 'material-icons' } }), 
+        core_1.Component({ selector: 'ml-icon', template: '<ng-content></ng-content>', host: { class: 'material-icons' } }), 
         __metadata('design:paramtypes', [])
     ], MlIcon);
     return MlIcon;

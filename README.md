@@ -8,7 +8,7 @@
 This library of components has been carefully designed to create light, easy of use and fast Angular 2 + user interfaces
 (Both for web and mobile apps).
 
-If you are find this project useful and are going to use it, please give an star.
+If you find this project useful and are going to use it, please give a star and credits to the author in your work as is mentioned in the license.
 
 ## Author
 
@@ -30,9 +30,9 @@ Yago López:
 - Copy the `ml` folder (where the components are) into your project
 - Copy and paste the `assets` folder contents into the **exact same path** in your angular-cli project
 - Use the components following the examples in the `pages` directory. The components use `ml` as namespace. For example: `<ml-icon>email</ml-icon>` places an email icon component in a template.
-- There are two ways of using the components:
-  1. **As components**. For example, import `MlButton` and `MlIcon` in your component and put `<ml-button>` and `<ml-icon>` in your template.
-  2. **As modules**: Following the previous example, you will need to import the modules `MlButtonMod` and `MlIconMod`. Modules allows to implement lazy-loading.
+- There are two ways of using the library:
+  1 - **As components**. For example, import `MlButton` and `MlIcon` in your component and put `<ml-button>` and `<ml-icon>` in your template.
+  2 - **As modules**: Following the previous example, you will need to import the modules `MlButtonMod` and `MlIconMod` in your own module. The use of modules allows to implement lazy-loading.
 - Note: At this moment AOT compilation is not supported.
 AOT-ready code must be statically analizable which impose several restrictions on the typescript code.
 

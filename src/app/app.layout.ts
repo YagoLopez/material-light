@@ -92,6 +92,7 @@ template:`
       <a nav-item routerLink="slider" routerLinkActive="active-nav">Slider</a>
       <a nav-item routerLink="dialog" routerLinkActive="active-nav">Dialog</a>
       <a nav-item routerLink="table" routerLinkActive="active-nav">Table</a>
+      <a nav-item routerLink="layout" routerLinkActive="active-nav">Layout</a>
     </ml-nav>
   </ml-drawer>
   
