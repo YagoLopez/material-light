@@ -8,8 +8,8 @@ template:`
   a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}
   .bg-grey{background: lightgrey}
   .active-nav{background: darkgrey; color: white !important}
-  .drawer-txt{color: white; text-align: center}
-  .drawer-top-container{
+  .drawer-title{color: white; text-align: center}
+  .drawer-top-img{
     margin: auto; display: block; width: 100%;height: 150px; background: url('assets/img/bg1.jpg') 0 0 / cover;}
   .drawer-img{width: 25%; text-align: center; margin: 30px auto auto; display: block;}
   .page-loader{width: 100%; height: 500px; position: absolute; text-align: center; margin-top: 76%;}
@@ -44,9 +44,9 @@ template:`
   
   <ml-drawer>
 
-    <div class="drawer-top-container">
+    <div class="drawer-top-img">
       <img src="assets/img/logo.png" class="drawer-img">
-      <div class="drawer-txt">Material Light</div>
+      <div class="drawer-title">Material Light</div>
     </div>
     
     <ml-nav>
