@@ -31,17 +31,7 @@ import {MlLoaderMod} from "./ml/components/loader/mlLoaderMod";
 import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {App} from "./app.layout";
 
-/*
-type ModuleLoader = 'webpack' | 'systemjs';
-const LOADER: ModuleLoader = 'webpack';
-export let basePath: string;
-if(LOADER === 'webpack'){
-  basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
-} else {
-  basePath = '.app/pages/';
-}
-*/
-
+// export const basePath = '.app/pages/';
 export const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
 
 // WEBPACK ROUTES: absolute paths are needed by webpack and lazy-load
@@ -102,35 +92,6 @@ const APP_ROUTES = [
   {path: '**',         redirectTo  : 'button'}
 ];
 */
-
-/*
- const APP_ROUTES = [
- {path: '',           redirectTo: 'button', pathMatch: 'full'},
- {path: 'button',     loadChildren: '.app/pages/button/pagButtonModule'},
- {path: 'card',       loadChildren: '.app/pages/card/pagCardModule'},
- {path: 'selectfield',loadChildren: '.app/pages/selectfield/pagSelectfieldModule'},
- {path: 'textfield',  loadChildren: '.app/pages/textfield/pagTextfieldModule'},
- {path: 'textfield2', loadChildren: '.app/pages/textfield2/pagTextfieldModule2'},
- {path: 'checkbox',   loadChildren: '.app/pages/checkbox/pagCheckboxMod'},
- {path: 'radio',      loadChildren: '.app/pages/radio/pagRadioModule'},
- {path: 'switch',     loadChildren: '.app/pages/switch/pagSwitchModule'},
- {path: 'toggle',     loadChildren: '.app/pages/toggle/pagToggleModule'},
- {path: 'badge',      loadChildren: '.app/pages/badge/pagBadgeModule'},
- {path: 'grid',       loadChildren: '.app/pages/grid/pagGridModule'},
- {path: 'tabs',       loadChildren: '.app/pages/tabs/pagTabsModule'},
- {path: 'snackbar',   loadChildren: '.app/pages/snackbar/pagSnackbarModule'},
- {path: 'chip',       loadChildren: '.app/pages/chip/pagChipModule'},
- {path: 'list',       loadChildren: '.app/pages/list/pagListModule'},
- {path: 'menu',       loadChildren: '.app/pages/menu/pagMenuModule'},
- {path: 'progressbar',loadChildren: '.app/pages/progressbar/pagProgressbarModule'},
- {path: 'spinner',    loadChildren: '.app/pages/spinner/pagSpinnerModule'},
- {path: 'tooltip',    loadChildren: '.app/pages/tooltip/pagTooltipModule'},
- {path: 'slider',     loadChildren: '.app/pages/slider/pagSliderModule'},
- {path: 'dialog',     loadChildren: '.app/pages/dialog/pagDialogModule'},
- {path: 'table',      loadChildren: '.app/pages/table/pagTableModule'},
- {path: '**',         redirectTo  : 'button'}
- ];
- */
 
 @NgModule({
   imports: [
