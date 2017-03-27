@@ -8,7 +8,8 @@
 This library of components has been carefully designed to create light, easy of use and fast Angular 2 + user interfaces
 (Both for web and mobile apps).
 
-If you find this project useful and are going to use it, please give a star and credits to the author in your work as is mentioned in the license.
+If you find this project useful and are going to use it, please give a star and credits to the author in your work.
+Terms of use under <a href="LICENSE.txt">MIT</a> license.
 
 ## Author
 
@@ -54,6 +55,5 @@ AOT-ready code must be statically analizable which impose several restrictions o
 
 - This project is based on <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>
 - Material Design is a Google's registered trade mark probably.
-- License: <a href="LICENSE.txt">MIT</a>.
 - This is an open source project without commercial or profit intentions.
 - Tested on Angular version 2.4.7.
