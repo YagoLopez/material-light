@@ -6,24 +6,6 @@ template:`
 
 <style>
   a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}
-  @media (min-width: 700px){
-    ml-content{
-      padding-top: 50px;
-      padding-bottom: 50px;
-      background-color: ghostwhite;
-    }
-    ml-content-tabheader{
-      background-color: white;
-      margin: auto;
-      width: 60%;
-      padding: 25px 50px 50px;
-      border: 1px solid lightgrey;
-      box-shadow: 1px 1px 5px lightgrey;
-    }
-  }
-  @media(max-width: 700px){
-    ml-content{padding: 10px;}
-  }
   .bg-grey{background: lightgrey}
   .active-nav{background: darkgrey; color: white !important}
   .drawer-txt{color: white; text-align: center}
