@@ -161,4 +161,3 @@ MdlSwitch.prototype.init = function () {
         this.element_.classList.add('is-upgraded');
     }
 };
-//# sourceMappingURL=mlSwitchLib.js.map

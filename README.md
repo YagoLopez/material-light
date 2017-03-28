@@ -35,8 +35,7 @@ Yago López:
 - There are two ways of using the library:
   1. **As components**. For example, import `MlButton` and `MlIcon` in your component and put `<ml-button>` and `<ml-icon>` in your template.
   2. **As modules**: Following the previous example, you will need to import the modules `MlButtonMod` and `MlIconMod` in your own module. The use of modules allows to implement lazy-loading.
-- Note: At this moment AOT compilation is not supported.
-AOT-ready code must be statically analizable which impose several restrictions on the typescript code.
+- Note: This library works with AOT
 
 ## Testing
 

@@ -69,4 +69,3 @@ var MlTableTextCell = (function () {
     return MlTableTextCell;
 }());
 exports.MlTableTextCell = MlTableTextCell;
-//# sourceMappingURL=mlTable.js.map

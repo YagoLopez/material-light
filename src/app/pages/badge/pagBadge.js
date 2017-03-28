@@ -21,4 +21,3 @@ var PagBadge = (function () {
     return PagBadge;
 }());
 exports.PagBadge = PagBadge;
-//# sourceMappingURL=pagBadge.js.map

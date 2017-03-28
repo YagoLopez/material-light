@@ -21,4 +21,3 @@ var PagSlider = (function () {
     return PagSlider;
 }());
 exports.PagSlider = PagSlider;
-//# sourceMappingURL=pagSlider.js.map

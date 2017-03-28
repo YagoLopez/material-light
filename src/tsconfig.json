@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "sourceMap": true,
+    "sourceMap": false,
     "typeRoots": ["../node_modules/@types"]
   },
   "exclude": ["/assets, /temp"],

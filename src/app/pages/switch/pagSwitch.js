@@ -27,4 +27,3 @@ var PagSwitch = (function () {
     return PagSwitch;
 }());
 exports.PagSwitch = PagSwitch;
-//# sourceMappingURL=pagSwitch.js.map

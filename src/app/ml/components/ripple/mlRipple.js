@@ -33,4 +33,3 @@ var MlRipple = (function () {
     return MlRipple;
 }());
 exports.MlRipple = MlRipple;
-//# sourceMappingURL=mlRipple.js.map

@@ -21,4 +21,3 @@ var PagCard = (function () {
     return PagCard;
 }());
 exports.PagCard = PagCard;
-//# sourceMappingURL=pagCard.js.map

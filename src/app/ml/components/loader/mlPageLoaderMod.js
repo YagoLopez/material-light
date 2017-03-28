@@ -22,4 +22,3 @@ var MlPageLoaderMod = (function () {
     return MlPageLoaderMod;
 }());
 exports.MlPageLoaderMod = MlPageLoaderMod;
-//# sourceMappingURL=mlPageLoaderMod.js.map

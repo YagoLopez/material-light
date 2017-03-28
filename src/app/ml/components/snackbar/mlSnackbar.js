@@ -35,4 +35,3 @@ var MlSnackbar = (function () {
     return MlSnackbar;
 }());
 exports.MlSnackbar = MlSnackbar;
-//# sourceMappingURL=mlSnackbar.js.map

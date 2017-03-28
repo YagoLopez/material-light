@@ -21,4 +21,3 @@ var MlBadgeMod = (function () {
     return MlBadgeMod;
 }());
 exports.MlBadgeMod = MlBadgeMod;
-//# sourceMappingURL=mlBadgeMod.js.map

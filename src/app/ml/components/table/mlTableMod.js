@@ -20,4 +20,3 @@ var MlTableMod = (function () {
     return MlTableMod;
 }());
 exports.MlTableMod = MlTableMod;
-//# sourceMappingURL=mlTableMod.js.map

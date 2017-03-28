@@ -63,4 +63,3 @@ var MlBadge = (function () {
     return MlBadge;
 }());
 exports.MlBadge = MlBadge;
-//# sourceMappingURL=mlBadge.js.map

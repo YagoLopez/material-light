@@ -21,4 +21,3 @@ var PagTable = (function () {
     return PagTable;
 }());
 exports.PagTable = PagTable;
-//# sourceMappingURL=pagTable.js.map

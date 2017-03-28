@@ -10,4 +10,4 @@ import {PagCheckbox} from "./pagCheckbox";
 imports: [MlRippleMod, FormsModule, ReactiveFormsModule, MlCheckboxMod, DebugFormMod, ViewSourceMod,
 RouterModule.forChild( [{path: '', component: PagCheckbox}] )],
 declarations: [PagCheckbox]})
-export default class PagCheckboxMod{}
+export class PagCheckboxMod{}

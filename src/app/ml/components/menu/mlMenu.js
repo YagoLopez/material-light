@@ -138,4 +138,3 @@ var MlMenuItem = (function () {
     return MlMenuItem;
 }());
 exports.MlMenuItem = MlMenuItem;
-//# sourceMappingURL=mlMenu.js.map

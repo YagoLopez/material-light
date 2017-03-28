@@ -9,22 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var PageChip = (function () {
-    function PageChip() {
+var PagChip = (function () {
+    function PagChip() {
     }
-    PageChip.prototype.deleteFn = function () {
+    PagChip.prototype.deleteFn = function () {
         window.alert('Chip delete action executed');
     };
-    PageChip.prototype.onClickChip = function () {
+    PagChip.prototype.onClickChip = function () {
         window.alert('Button Chip Clicked');
     };
-    PageChip = __decorate([
+    PagChip = __decorate([
         core_1.Component({
             template: "\n\n<h5>Chip</h5>\n\n<p><ml-chip>Chip only text</ml-chip></p>\n\n<p><ml-chip img=\"assets/img/user.jpg\">Chip with contact image</ml-chip></p>\n\n<p><ml-chip letter=\"A\">Chip with contact letter</ml-chip></p>\n\n<p>\n  <ml-chip img=\"assets/img/user.jpg\" deletable=\"true\" [delete-action]=\"deleteFn\">\n    Image, deletable button and callback Fn\n  </ml-chip>\n</p>\n\n<p><ml-chip-button (click)=\"onClickChip()\">Chip button, click me!</ml-chip-button></p>\n\n<view-source uri=\"chip/pagChip.ts\"></view-source>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
-    ], PageChip);
-    return PageChip;
+    ], PagChip);
+    return PagChip;
 }());
-exports.PageChip = PageChip;
-//# sourceMappingURL=pagChip.js.map
+exports.PagChip = PagChip;

@@ -31,4 +31,3 @@ var ViewSourceCmp = (function () {
     return ViewSourceCmp;
 }());
 exports.ViewSourceCmp = ViewSourceCmp;
-//# sourceMappingURL=viewSourceCmp.js.map

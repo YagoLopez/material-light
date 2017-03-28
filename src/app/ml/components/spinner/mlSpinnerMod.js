@@ -20,4 +20,3 @@ var MlSpinnerMod = (function () {
     return MlSpinnerMod;
 }());
 exports.MlSpinnerMod = MlSpinnerMod;
-//# sourceMappingURL=mlSpinnerMod.js.map

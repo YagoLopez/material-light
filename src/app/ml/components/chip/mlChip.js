@@ -47,4 +47,3 @@ var MlChip = (function () {
     return MlChip;
 }());
 exports.MlChip = MlChip;
-//# sourceMappingURL=mlChip.js.map

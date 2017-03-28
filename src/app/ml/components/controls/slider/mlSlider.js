@@ -38,4 +38,3 @@ var MlSlider = (function () {
     return MlSlider;
 }());
 exports.MlSlider = MlSlider;
-//# sourceMappingURL=mlSlider.js.map

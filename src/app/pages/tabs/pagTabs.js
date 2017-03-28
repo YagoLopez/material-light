@@ -21,4 +21,3 @@ var PagTabs = (function () {
     return PagTabs;
 }());
 exports.PagTabs = PagTabs;
-//# sourceMappingURL=pagTabs.js.map

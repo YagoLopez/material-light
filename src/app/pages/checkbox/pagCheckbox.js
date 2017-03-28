@@ -29,4 +29,3 @@ var PagCheckbox = (function () {
     return PagCheckbox;
 }());
 exports.PagCheckbox = PagCheckbox;
-//# sourceMappingURL=pagCheckbox.js.map

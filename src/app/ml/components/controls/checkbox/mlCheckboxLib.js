@@ -159,4 +159,3 @@ MdlCheckbox.prototype.init = function () {
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
     }
 };
-//# sourceMappingURL=mlCheckboxLib.js.map

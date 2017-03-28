@@ -42,7 +42,7 @@ template:`
 
 `//template
 })
-export class PagTextfield {
+export class PagTextfield2 {
 
   passLength = 4;
   password = new FormControl('', [Validators.required, Validators.minLength(this.passLength)]);

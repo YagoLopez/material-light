@@ -35,12 +35,15 @@ var MlPageLoader = (function () {
                 _this.isLoading.emit(_this.loading);
             }
             if (event instanceof router_1.NavigationError) {
-                _this.loading = false;
-                _this.isLoading.emit(_this.loading);
+                _this.divLoader.nativeElement.remove();
                 console.error('MlPageLoader: navigation error');
             }
         });
     };
+    __decorate([
+        core_1.ViewChild('divLoader'), 
+        __metadata('design:type', core_1.ElementRef)
+    ], MlPageLoader.prototype, "divLoader", void 0);
     __decorate([
         core_1.Output(), 
         __metadata('design:type', core_1.EventEmitter)
@@ -48,11 +51,10 @@ var MlPageLoader = (function () {
     MlPageLoader = __decorate([
         core_1.Component({
             selector: 'ml-page-loader',
-            template: "\n<style>\n.loader-text{position: absolute; margin: auto; left: 0; right: 0; top: 37%; bottom: 0; text-align: center;\n  font-family: \"Roboto\",serif; font-size: 14px}\n.loader {position: absolute; margin: auto; left: 0; right: 0; top: 44%; text-align: center}\n</style>\n<div class=\"loader\" *ngIf=\"loading\">\n<ml-spinner class=\"loader\" single-color></ml-spinner>\n</div>\n" //template
+            template: "\n<style>\n.loader-text{position: absolute; margin: auto; left: 0; right: 0; top: 37%; bottom: 0; text-align: center;\n  font-family: \"Roboto\",serif; font-size: 14px}\n.loader {position: absolute; margin: auto; left: 0; right: 0; top: 44%; text-align: center}\n</style>\n<div #divLoader class=\"loader\" *ngIf=\"loading\">\n<ml-spinner class=\"loader\" single-color></ml-spinner>\n</div>\n" //template
         }), 
         __metadata('design:paramtypes', [router_1.Router])
     ], MlPageLoader);
     return MlPageLoader;
 }());
 exports.MlPageLoader = MlPageLoader;
-//# sourceMappingURL=mlPageLoader.js.map

@@ -21,4 +21,3 @@ var PagProgressar = (function () {
     return PagProgressar;
 }());
 exports.PagProgressar = PagProgressar;
-//# sourceMappingURL=pagProgressbar.js.map

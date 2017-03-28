@@ -76,7 +76,7 @@ export class MlItemIcon {
   constructor(
     private ren: Renderer
   ){}
-  
+
   ngOnInit(){
     if(this.type === 'avatar'){
       ml.setClass(this.icon, 'mdl-list__item-avatar', this.ren)

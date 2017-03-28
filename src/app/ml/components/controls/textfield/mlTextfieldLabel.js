@@ -22,4 +22,3 @@ var MlTextfieldLabel = (function () {
     return MlTextfieldLabel;
 }());
 exports.MlTextfieldLabel = MlTextfieldLabel;
-//# sourceMappingURL=mlTextfieldLabel.js.map

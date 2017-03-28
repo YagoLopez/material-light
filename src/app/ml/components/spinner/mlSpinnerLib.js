@@ -77,4 +77,3 @@ MdlSpinner.prototype.init = function () {
         this.element_.classList.add('is-upgraded');
     }
 };
-//# sourceMappingURL=mlSpinnerLib.js.map

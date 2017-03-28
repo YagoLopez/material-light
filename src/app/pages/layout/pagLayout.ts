@@ -27,4 +27,4 @@ This feature is experimental and still has not been tested</p>
 <view-source uri="../app.layout.ts"></view-source>
 
 `//template
-}) export class pagLayout{}
+}) export class PagLayout{}

@@ -25,4 +25,3 @@ var MlSwitchMod = (function () {
     return MlSwitchMod;
 }());
 exports.MlSwitchMod = MlSwitchMod;
-//# sourceMappingURL=mlSwitchMod.js.map

@@ -20,4 +20,3 @@ var ViewSourceMod = (function () {
     return ViewSourceMod;
 }());
 exports.ViewSourceMod = ViewSourceMod;
-//# sourceMappingURL=viewSourceMod.js.map

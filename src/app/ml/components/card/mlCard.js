@@ -110,4 +110,3 @@ var MlCardMenu = (function () {
     return MlCardMenu;
 }());
 exports.MlCardMenu = MlCardMenu;
-//# sourceMappingURL=mlCard.js.map

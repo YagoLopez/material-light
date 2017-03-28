@@ -56,4 +56,3 @@ var MlSpinner = (function () {
     return MlSpinner;
 }());
 exports.MlSpinner = MlSpinner;
-//# sourceMappingURL=mlSpinner.js.map

@@ -13,7 +13,7 @@ strong{color: #3f51b5}
 
 <h5>Grid</h5>
 <hr>
-<h6>Grid system adapts automatically position of blocks to screen size</h6>
+<h6>The grid system adapts automatically the position of the blocks to the screen size</h6>
 
 <strong>• Grid 1</strong>
 <ml-grid>

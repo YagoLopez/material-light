@@ -8,4 +8,3 @@ var MdlElement = (function () {
 }());
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = MdlElement;
-//# sourceMappingURL=mdl_element.js.map

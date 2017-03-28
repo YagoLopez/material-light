@@ -23,4 +23,3 @@ var PagList = (function () {
     return PagList;
 }());
 exports.PagList = PagList;
-//# sourceMappingURL=pagList.js.map

@@ -66,4 +66,3 @@ var MlProgressbar = (function () {
     return MlProgressbar;
 }());
 exports.MlProgressbar = MlProgressbar;
-//# sourceMappingURL=mlProgressbar.js.map

@@ -20,4 +20,3 @@ var MlProgressbarMod = (function () {
     return MlProgressbarMod;
 }());
 exports.MlProgressbarMod = MlProgressbarMod;
-//# sourceMappingURL=mlPgrogressbarMod.js.map

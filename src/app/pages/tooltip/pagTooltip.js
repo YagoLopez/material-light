@@ -22,4 +22,3 @@ var PagTooltip = (function () {
     return PagTooltip;
 }());
 exports.PagTooltip = PagTooltip;
-//# sourceMappingURL=pagTooltip.js.map

@@ -19,4 +19,3 @@ function isAttributeValid(attribute, validValues) {
     return validValues.indexOf(attribute) >= 0;
 }
 exports.isAttributeValid = isAttributeValid;
-//# sourceMappingURL=ml_lib.js.map

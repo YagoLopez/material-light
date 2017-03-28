@@ -154,4 +154,3 @@ MdlToggle.prototype.init = function () {
         this.element_.classList.add('is-upgraded');
     }
 };
-//# sourceMappingURL=mlToggleLib.js.map

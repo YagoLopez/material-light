@@ -22,4 +22,3 @@ var PageMenu = (function () {
     return PageMenu;
 }());
 exports.PageMenu = PageMenu;
-//# sourceMappingURL=pagMenu.js.map

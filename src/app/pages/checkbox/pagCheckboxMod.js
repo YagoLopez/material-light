@@ -28,6 +28,4 @@ var PagCheckboxMod = (function () {
     ], PagCheckboxMod);
     return PagCheckboxMod;
 }());
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = PagCheckboxMod;
-//# sourceMappingURL=pagCheckboxMod.js.map
+exports.PagCheckboxMod = PagCheckboxMod;

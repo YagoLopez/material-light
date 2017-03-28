@@ -41,4 +41,3 @@ MdlButton.prototype.init = function () {
         this.element_.addEventListener('mouseleave', this.boundButtonBlurHandler);
     }
 };
-//# sourceMappingURL=mdButtonLib.js.map

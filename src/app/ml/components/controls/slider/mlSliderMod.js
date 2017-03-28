@@ -20,4 +20,3 @@ var MlSliderMod = (function () {
     return MlSliderMod;
 }());
 exports.MlSliderMod = MlSliderMod;
-//# sourceMappingURL=mlSliderMod.js.map

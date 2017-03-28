@@ -22,4 +22,3 @@ var MlIcon = (function () {
     return MlIcon;
 }());
 exports.MlIcon = MlIcon;
-//# sourceMappingURL=mlIcon.js.map

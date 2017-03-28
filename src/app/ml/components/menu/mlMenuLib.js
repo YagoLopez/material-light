@@ -369,4 +369,3 @@ MdlMenu.prototype.toggle = function (evt) {
         this.show(evt);
     }
 };
-//# sourceMappingURL=mlMenuLib.js.map

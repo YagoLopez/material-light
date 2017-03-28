@@ -21,4 +21,3 @@ var PagButton = (function () {
     return PagButton;
 }());
 exports.PagButton = PagButton;
-//# sourceMappingURL=pagButton.js.map

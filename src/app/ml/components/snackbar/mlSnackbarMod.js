@@ -23,4 +23,3 @@ var MlSnackbarMod = (function () {
     return MlSnackbarMod;
 }());
 exports.MlSnackbarMod = MlSnackbarMod;
-//# sourceMappingURL=mlSnackbarMod.js.map

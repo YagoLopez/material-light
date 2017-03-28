@@ -51,6 +51,7 @@ template:`
     
     <ml-nav>
       <a nav-item routerLink="button" routerLinkActive="active-nav">Button</a>
+      <a nav-item routerLink="card" routerLinkActive="active-nav">Card</a>
       <a nav-item routerLink="selectfield" routerLinkActive="active-nav">SelectField</a>
       <a nav-item routerLink="textfield" routerLinkActive="active-nav">TextField</a>
       <a nav-item routerLink="textfield2" routerLinkActive="active-nav">TextField2</a>
@@ -59,7 +60,6 @@ template:`
       <a nav-item routerLink="switch" routerLinkActive="active-nav">SwitchButton</a>
       <a nav-item routerLink="toggle" routerLinkActive="active-nav">IconToggle</a>
       <a nav-item routerLink="badge" routerLinkActive="active-nav">Badge</a>
-      <a nav-item routerLink="card" routerLinkActive="active-nav">Card</a>
       <a nav-item routerLink="grid" routerLinkActive="active-nav">Grid</a>
       <a nav-item routerLink="tabs" routerLinkActive="active-nav">Tabs</a>
       <a nav-item routerLink="chip" routerLinkActive="active-nav">Chip</a>

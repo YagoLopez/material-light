@@ -24,4 +24,3 @@ var MlChipButton = (function () {
     return MlChipButton;
 }());
 exports.MlChipButton = MlChipButton;
-//# sourceMappingURL=mlChipButton.js.map

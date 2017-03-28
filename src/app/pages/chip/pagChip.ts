@@ -23,7 +23,7 @@ template:`
 
 `//template
 })
-export class PageChip {
+export class PagChip {
 
   deleteFn(){
     window.alert('Chip delete action executed');

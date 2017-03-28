@@ -3,6 +3,10 @@
 # dependencies
 /node_modules
 
+# transpiled_files
+/src/*.js
+/src/*.map
+
 # misc
 npm-debug.log
 

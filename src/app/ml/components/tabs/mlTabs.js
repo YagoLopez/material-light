@@ -88,4 +88,3 @@ var MlTabPanel = (function () {
     return MlTabPanel;
 }());
 exports.MlTabPanel = MlTabPanel;
-//# sourceMappingURL=mlTabs.js.map

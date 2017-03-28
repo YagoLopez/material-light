@@ -37,4 +37,3 @@ var PagSpinner = (function () {
     return PagSpinner;
 }());
 exports.PagSpinner = PagSpinner;
-//# sourceMappingURL=pagSpinner.js.map

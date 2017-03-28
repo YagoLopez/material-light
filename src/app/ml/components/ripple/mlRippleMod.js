@@ -20,4 +20,3 @@ var MlRippleMod = (function () {
     return MlRippleMod;
 }());
 exports.MlRippleMod = MlRippleMod;
-//# sourceMappingURL=mlRippleMod.js.map

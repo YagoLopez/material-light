@@ -28,4 +28,3 @@ var PagToggle = (function () {
     return PagToggle;
 }());
 exports.PagToggle = PagToggle;
-//# sourceMappingURL=pagToggle.js.map

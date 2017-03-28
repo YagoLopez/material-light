@@ -30,4 +30,3 @@ var PagSnackbar = (function () {
     return PagSnackbar;
 }());
 exports.PagSnackbar = PagSnackbar;
-//# sourceMappingURL=pagSnackbar.js.map

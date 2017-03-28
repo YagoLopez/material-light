@@ -26,4 +26,3 @@ var MlButtonMod = (function () {
     return MlButtonMod;
 }());
 exports.MlButtonMod = MlButtonMod;
-//# sourceMappingURL=mlButtonMod.js.map

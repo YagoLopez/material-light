@@ -118,4 +118,3 @@ MdlSnackbar.prototype.setActionHidden_ = function (value) {
         this.actionElement_.removeAttribute('aria-hidden');
     }
 };
-//# sourceMappingURL=mlSnackbarLib.js.map

@@ -21,4 +21,3 @@ var MlTabsMod = (function () {
     return MlTabsMod;
 }());
 exports.MlTabsMod = MlTabsMod;
-//# sourceMappingURL=mlTabsMod.js.map

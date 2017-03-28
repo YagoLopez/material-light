@@ -20,4 +20,3 @@ var MlGridMod = (function () {
     return MlGridMod;
 }());
 exports.MlGridMod = MlGridMod;
-//# sourceMappingURL=mlGridMod.js.map

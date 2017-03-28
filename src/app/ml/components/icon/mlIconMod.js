@@ -23,4 +23,3 @@ var MlIconMod = (function () {
     return MlIconMod;
 }());
 exports.MlIconMod = MlIconMod;
-//# sourceMappingURL=mlIconMod.js.map
