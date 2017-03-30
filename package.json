@@ -4,14 +4,16 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "serve": "ng serve --open",
+    "ng_serve": "ng serve --open",
     "webpack_help": "webpack -h",
     "webpack_config_file": "webpack-dev-server --config ./src/webpack.config.js --content-base=src --open",
-    "build": "ng build",
-    "build_prod": "ng build --prod",
-    "build_prod_aot": "ng build --prod --aot",
-    "serve_prod": "ng serve --prod",
-    "serve_prod_aot": "ng serve --prod --aot",
+    "ng_build": "ng build",
+    "ng_build_prod": "ng build --prod",
+    "ng_build_prod_no_hashes": "ng build --prod --output-hashing none",
+    "ng_build_prod_aot": "ng build --prod --aot",
+    "ng_build_prod_aot_no_hashes": "ng build --prod --aot --output-hashing none",
+    "ng_serve_prod": "ng serve --prod",
+    "ng_serve_prod_aot": "ng serve --prod --aot",
     "lint": "tslint \"src/**/*.ts\""
 
   },

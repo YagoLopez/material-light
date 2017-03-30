@@ -16,10 +16,7 @@ export class MlBadge{
   @Input() overlap: string = 'false';
   @Input() icon: string;
 
-  constructor(
-      private host: ElementRef,
-      private ren: Renderer){
-  }
+  constructor(private host: ElementRef, private ren: Renderer){}
 
   ngOnInit() {
     ml.setAttribute(this.host, 'data-badge', this.value, this.ren);

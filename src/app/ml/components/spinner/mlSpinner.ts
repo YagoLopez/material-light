@@ -30,7 +30,7 @@ export class MlSpinner {
   ngOnInit() {
     if (this.singleColor === '')
       ml.setClass(this.host, 'mdl-spinner--single-color', this.ren);
-      
+
     this.mdlSpinner = new MdlSpinner(this.host.nativeElement);
 
     if (this.inactive === ''){

@@ -5,7 +5,7 @@
 
 **Material Designt UI components for Angular 2 +**
 
-This library of components has been carefully designed to create light, easy of use and fast Angular 2 + user interfaces
+This library of components has been carefully designed to create light, easy to use and fast Angular 2 + user interfaces
 (Both for web and mobile apps).
 
 If you find this project useful and are going to use it, please give a star and credits to the author in your work.
