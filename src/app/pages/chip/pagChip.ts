@@ -9,7 +9,7 @@ template:`
 
 <p><ml-chip img="assets/img/user.jpg">Chip with contact image</ml-chip></p>
 
-<p><ml-chip letter="A">Chip with contact letter</ml-chip></p>
+<p><ml-chip letter="A" color="white" background="teal">Chip with contact letter</ml-chip></p>
 
 <p>
   <ml-chip img="assets/img/user.jpg" deletable="true" [delete-action]="deleteFn">

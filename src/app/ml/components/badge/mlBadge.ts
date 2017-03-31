@@ -12,22 +12,18 @@ template: '<ng-content></ng-content>'
 export class MlBadge{
 
   @Input() value: string = '0';
-  @Input() background: string = 'true';
-  @Input() overlap: string = 'false';
+  @Input() background: string;
+  @Input() overlap: string;
   @Input() icon: string;
 
   constructor(private host: ElementRef, private ren: Renderer){}
 
   ngOnInit() {
     ml.setAttribute(this.host, 'data-badge', this.value, this.ren);
+    ml.isDefined(this.background) && ml.setClass(this.host, 'mdl-badge--no-background', this.ren);
+    ml.isDefined(this.overlap) && ml.setClass(this.host, 'mdl-badge--overlap', this.ren);
 
-    if (this.background.toLowerCase() === 'false'){
-      ml.setClass(this.host, 'mdl-badge--no-background', this.ren);
-    }
-    if (this.overlap.toLowerCase() === 'true'){
-      ml.setClass(this.host, 'mdl-badge--overlap', this.ren);
-    }
-    if (this.icon === ''){
+    if(ml.isDefined(this.icon)){
       ml.setClass(this.host, 'material-icons', this.ren);
       ml.setClass(this.host, 'mdl-badge--overlap', this.ren);
       this.host.nativeElement.querySelector('ml-icon').className = 'mdl-badge-icon';

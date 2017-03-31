@@ -1,13 +1,10 @@
-//todo: revisar badge: overlap=true
 //todo: que se oculten drowdowns al hacer click en el fondo
-//todo: que pasa con label en textfield-area
 //todo: renombrar mlLayoutLib.ts a mdlLayoutLib, por ejemplo, y los demas ficheros
 //todo: media query para que se muestre el menu lateral en modo tablet en iframe
 //todo: hacer documentacion de api para cada componente
 //todo: que se puedan usar diferentes cabeceras y menus laterales (<ml-header>) en cada pagina (usar named router-outlet?)
-//todo: hacer Ml boilerplate project
+//todo: hacer Ml starter project
 //todo: habilitar webpack.config.js en angular-cli para poder usar local paths en router
-//todo: revisar default keyword y otras cosas para compilacion aot
 //todo: transiciones de estado usando eventos de router
 // (ref: https://toddmotto.com/dynamic-page-titles-angular-2-router-events)
 // Se podría pensar en hacer una directiva o un componente
@@ -16,10 +13,9 @@
 //todo: travis
 //todo: hacer test con browserstack
 //todo: footer component
-//todo: renombrar modulos de paginas a mod
 //todo: crear un componente para visualizar gist en angular 2
 //todo: crear mas librerias de componentes
-//todo: separar page loader component en un repositorio diferente, hacer una pagina de page-loader
+//todo: separar page loader component en un repositorio diferente, hacer una pagina de page-loader y progressbar loader
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";

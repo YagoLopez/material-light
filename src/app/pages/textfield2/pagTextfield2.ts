@@ -14,7 +14,7 @@ template:`
 
   <!-- Password ---------------------------------------------------------------------------------------------------- -->
 
-  <div>➃ <strong>Password field: </strong></div>
+  <div><strong>➃ Password field: </strong></div>
   <ml-textfield type="password" id="password" [formControl]="password" floating-label>
     <ml-textfield-label>Enter password</ml-textfield-label>
     <ml-error [validateControl]="password" validator="required">Required field</ml-error>
@@ -25,7 +25,7 @@ template:`
   <!-- Date -------------------------------------------------------------------------------------------------------- -->
   
   <!-- todo: at this moment error classes are not correctly applied at date field-->
-  <div class="date-field">➄ <strong>Date field: </strong></div>
+  <div class="date-field"><strong>➄ Date field: </strong></div>
   <ml-textfield type="date" [formControl]="date" class="pad-top"></ml-textfield>
   
   <!-- Submit button ----------------------------------------------------------------------------------------------- -->

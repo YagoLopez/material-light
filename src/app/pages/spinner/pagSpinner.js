@@ -1,0 +1,39 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = require('@angular/core');
+var PagSpinner = (function () {
+    function PagSpinner() {
+    }
+    PagSpinner.prototype.clickBtn1 = function () {
+        this.spinner1.stop();
+        this.btn1.disable();
+    };
+    PagSpinner.prototype.clickBtn2 = function () {
+        this.spinner1.start();
+        this.btn1.enable();
+    };
+    __decorate([
+        core_1.ViewChild('btn1'), 
+        __metadata('design:type', Object)
+    ], PagSpinner.prototype, "btn1", void 0);
+    __decorate([
+        core_1.ViewChild('spinner1'), 
+        __metadata('design:type', Object)
+    ], PagSpinner.prototype, "spinner1", void 0);
+    PagSpinner = __decorate([
+        core_1.Component({
+            template: "\n\n<h5>Spinner</h5>\n\nMulti-color:\n<ml-spinner #spinner1></ml-spinner>\n\n<br><br>\n\nSingle color:\n<ml-spinner single-color></ml-spinner>\n\n<br><br>\n\n<p>SPINNER API:</p>\n<p><ml-button #btn1 aspect=\"raised\" (click)=\"clickBtn1()\">Stop spinner 1</ml-button></p>\n<p><ml-button aspect=\"raised\" (click)=\"clickBtn2()\">Start spinner 1</ml-button></p>\n\n<view-source uri=\"spinner/pagSpinner.ts\"></view-source>        \n        \n" //template
+        }), 
+        __metadata('design:paramtypes', [])
+    ], PagSpinner);
+    return PagSpinner;
+}());
+exports.PagSpinner = PagSpinner;

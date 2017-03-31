@@ -7,7 +7,7 @@ template:`
 
 <p><ml-badge value="4">Badge no overlap</ml-badge></p>
 
-<p><ml-badge value="4" overlap="true">Badge overlap</ml-badge></p>
+<p><ml-badge value="4" overlap>Badge overlap</ml-badge></p>
 
 <p><ml-badge value="4" background="false">Badge no background</ml-badge></p>
 

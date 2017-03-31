@@ -15,7 +15,10 @@ template:`
 
 <textarea type="text" class="mdl-textfield__input" [attr.rows]="rows" [attr.maxrows]="maxrows" [attr.id]="id" 
 [name]="name" [(ngModel)]="model" (focus)="onFocus()" (keyup)="onKeyup()"></textarea>
-<label class="mdl-textfield__label" [attr.for]="id"><ng-content select="mdl-textfield-label"></ng-content></label>
+
+<!--<label class="mdl-textfield__label" [attr.for]="id"><ng-content select="mdl-textfield-label"></ng-content></label>-->
+<label class="mdl-textfield__label" [attr.for]="id"><ng-content select="ml-textfield-label"></ng-content></label>
+
 <div *ngIf="showError" class="mdl-textfield__error"><ng-content select="ml-error"></ng-content></div>
 
 `//template
