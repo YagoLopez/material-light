@@ -7,11 +7,12 @@
 /src/*.js
 /src/*.map
 
+#System Files
+/src/*.db
+
 # misc
 npm-debug.log
 
 # e2e
 /e2e
 
-#System Files
-Thumbs.db
