@@ -38,9 +38,9 @@ var MlChip = (function () {
     MlChip = __decorate([
         core_1.Component({
             selector: 'ml-chip',
-            // moduleId: module.id.toString(),
+            moduleId: module.id,
             styleUrls: ['./mlChip.css'],
-            template: "\n\n<span *ngIf=\"visible\" class=\"mdl-chip\" \n      [ngClass]=\"{'mdl-chip--contact': img || letter, 'mdl-chip--deletable': deletable}\">\n  \n  <span *ngIf=\"letter\" class=\"mdl-chip__contact mdl-color--teal mdl-color-text--white\">{{letter}}</span>\n  \n  <img *ngIf=\"img\" class=\"mdl-chip__contact\" [src]=\"img\"/>\n  \n  <span class=\"mdl-chip__text\">\n    <ng-content></ng-content>\n  </span>\n    \n  <a *ngIf=\"deletable\" href=\"#\" class=\"mdl-chip__action\" (click)=\"deleteChip($event)\">\n    <i class=\"material-icons\">cancel</i>\n  </a>\n</span>\n\n" //template
+            template: "\n\n<span *ngIf=\"visible\" class=\"mdl-chip\" \n      [ngClass]=\"{'mdl-chip--contact': img || letter, 'mdl-chip--deletable': deletable}\">\n  \n  <span *ngIf=\"letter\" class=\"mdl-chip__contact mdl-color--teal mdl-color-text--white\">{{letter}}</span>\n  <img *ngIf=\"img\" class=\"mdl-chip__contact\" [src]=\"img\"/>\n  \n  <span class=\"mdl-chip__text\">\n    <ng-content></ng-content>\n  </span>\n    \n  <a *ngIf=\"deletable\" href=\"#\" class=\"mdl-chip__action\" (click)=\"deleteChip($event)\">\n    <i class=\"material-icons\">cancel</i>\n  </a>\n</span>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], MlChip);

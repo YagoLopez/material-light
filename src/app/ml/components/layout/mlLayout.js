@@ -45,12 +45,12 @@ var MlLayout = (function () {
     MlLayout = __decorate([
         core_1.Component({
             selector: 'ml-layout',
-            // moduleId: module.id.toString(),
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             styleUrls: ['./mlLayout.css', '../ripple/mlRipple.css', '../icon/mlIicon.css'],
             host: { class: 'mdl-layout' },
             encapsulation: core_1.ViewEncapsulation.None,
-            template: '<ng-content></ng-content>'
+            template: '<ng-content></ng-content>',
+            moduleId: module.id,
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlLayout);

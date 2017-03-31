@@ -15,11 +15,7 @@ var MlValidationErrorMod = (function () {
     function MlValidationErrorMod() {
     }
     MlValidationErrorMod = __decorate([
-        core_1.NgModule({
-            imports: [common_1.CommonModule],
-            declarations: [mlValidationError_1.MlValidationError],
-            exports: [mlValidationError_1.MlValidationError]
-        }), 
+        core_1.NgModule({ imports: [common_1.CommonModule], declarations: [mlValidationError_1.MlValidationError], exports: [mlValidationError_1.MlValidationError] }), 
         __metadata('design:paramtypes', [])
     ], MlValidationErrorMod);
     return MlValidationErrorMod;

@@ -6,8 +6,8 @@ import * as ml from "../../../lib/ml_lib";
 
 @Component({
 selector: 'ml-textfield-area',
+moduleId: module.id,
 styleUrls: ['./mlTextfield.css'],
-// moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlTextfieldArea), multi: true}],

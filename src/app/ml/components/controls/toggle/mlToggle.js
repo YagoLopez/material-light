@@ -51,8 +51,8 @@ var MlToggle = (function () {
     MlToggle = __decorate([
         core_1.Component({
             selector: 'ml-toggle',
+            moduleId: module.id,
             styleUrls: ['./mlToggle.css'],
-            // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlToggle; }), multi: true }],
             template: "\n\n<label #label [attr.for]=\"id+'mdl'\" class=\"mdl-icon-toggle\" [ngClass]=\"{'is-checked': isChecked()}\">\n  <input type=\"checkbox\"  class=\"mdl-icon-toggle__input\" \n         [attr.id]=\"id+'mdl'\"\n         [(ngModel)]=\"model\" \n         [disabled]=\"disabled\">\n  <span class=\"mdl-icon-toggle__label\"><ng-content></ng-content></span>\n  <span class=\"mdl-icon-toggle__ripple-container\">\n    <span class=\"mdl-ripple\"></span>\n  </span>\n</label>\n\n" //template

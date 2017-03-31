@@ -51,7 +51,7 @@ var MlBadge = (function () {
     MlBadge = __decorate([
         core_1.Component({
             selector: 'ml-badge',
-            // moduleId: module.id.toString(),
+            moduleId: module.id,
             styleUrls: ['./mlBadge.css'],
             host: { class: 'mdl-badge' },
             encapsulation: core_1.ViewEncapsulation.None,

@@ -7,8 +7,8 @@ import MdlToggle from './mlToggleLib';
 
 @Component({
 selector: 'ml-toggle',
+moduleId: module.id,
 styleUrls: ['./mlToggle.css'],
-// moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlToggle), multi: true}],
 template:`

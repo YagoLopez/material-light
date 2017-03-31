@@ -55,7 +55,7 @@ var MlButton = (function () {
     MlButton = __decorate([
         core_1.Component({
             selector: 'ml-button',
-            // moduleId: module.id.toString(),
+            moduleId: module.id,
             encapsulation: core_1.ViewEncapsulation.None,
             styleUrls: ['./mlButton.css'],
             host: { class: 'mdl-button' },

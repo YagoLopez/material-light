@@ -14,10 +14,10 @@ import * as ml from "../../../lib/ml_lib";
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-selectfield',
+moduleId: module.id,
 styleUrls: ['./mlSelectfield.css', '../../menu/mlMenu.css', '../textfield/mlTextfield.css'],
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
-// moduleId: module.id.toString(),
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlSelectfield), multi: true}],
 template:`
 
@@ -93,11 +93,7 @@ export class MlSelectfieldItem {
   constructor(private ren: Renderer){}
 
   ngOnInit() {
-    if (this.divider === ''){
-      ml.setClass(this.selectfieldItem, 'mdl-menu__item--full-bleed-divider', this.ren);
-    }
-    if (this.disabled === ''){
-      ml.setAttribute(this.selectfieldItem, 'disabled', '', this.ren);
-    }
+    ml.isDefined(this.divider) && ml.setClass(this.selectfieldItem, 'mdl-menu__item--full-bleed-divider', this.ren);
+    ml.isDefined(this.disabled) && ml.setAttribute(this.selectfieldItem, 'disabled', '', this.ren);
   }
 }

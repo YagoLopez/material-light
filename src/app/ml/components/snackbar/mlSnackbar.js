@@ -24,8 +24,8 @@ var MlSnackbar = (function () {
     MlSnackbar = __decorate([
         core_1.Component({
             selector: 'ml-snackbar',
+            moduleId: module.id,
             styleUrls: ['./mlSnackbar.css'],
-            // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             host: { class: 'mdl-snackbar' },
             template: "\n\n<div class=\"mdl-snackbar__text\"></div>\n<button class=\"mdl-snackbar__action\" (click)=\"close()\"></button>\n\n" //template

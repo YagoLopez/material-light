@@ -1,6 +1,3 @@
-// todo: menu items
-// todo: revisar encapsulacion.none. los componentes debrian estar encapsulados
-
 import { Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation } from "@angular/core";
 import {MlButton} from "../controls/button/mlButton";
 import MdlMenu from "./mlMenuLib";
@@ -8,9 +5,9 @@ import * as ml from "../../lib/ml_lib";
 
 @Component({
 selector: 'ml-menu',
+moduleId: module.id,
 styleUrls: ['./mlMenu.css'],
 encapsulation: ViewEncapsulation.None,
-// moduleId: module.id.toString(),
 template:`
 
 <ml-button [attr.id]="id" variant="icon" #mdlButton><ml-icon>{{icon}}</ml-icon></ml-button>
@@ -36,9 +33,7 @@ export class MlMenu{
     TOP_RIGHT: 'mdl-menu--top-right',
   };
 
-  constructor(
-    private ren: Renderer){
-  }
+  constructor(private ren: Renderer){}
 
   ngOnInit(){
     if (!this.id){
@@ -60,7 +55,7 @@ export class MlMenu{
 
   /**
    * Get menu position from input attribute POSITION.
-   * 
+   *
    * @param position {string} Input Menu position relative to screen corners.
    * @returns {string} Class name defining position
    *
@@ -68,7 +63,7 @@ export class MlMenu{
    */
   private getMenuPosition(position: string): string{
     // todo: class names are wrong?
-    let mdlClassName: string = "";
+    let mdlClassName = '';
     if(position === 'top-left'){
       mdlClassName = this.className.BOTTOM_LEFT;
     }
@@ -98,11 +93,7 @@ export class MlMenuItem {
   constructor(private ren: Renderer){}
 
   ngOnInit() {
-    if (this.divider === ''){
-      ml.setClass(this.menuItem, 'mdl-menu__item--full-bleed-divider', this.ren);
-    }
-    if (this.disabled === ''){
-      ml.setAttribute(this.menuItem, 'disabled', '', this.ren);
-    }
+    ml.isDefined(this.divider) && ml.setClass(this.menuItem, 'mdl-menu__item--full-bleed-divider', this.ren);
+    ml.isDefined(this.disabled) && ml.setAttribute(this.menuItem, 'disabled', '', this.ren);
   }
 }

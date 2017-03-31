@@ -8,9 +8,9 @@ import * as ml from '../../lib/ml_lib'
 selector: 'table.[ml-table]',
 styleUrls: ['./mlTable.css'],
 encapsulation: ViewEncapsulation.None,
-// moduleId: module.id.toString(),
 host: {class: 'mdl-data-table'},
-template: '<ng-content></ng-content>'
+template: '<ng-content></ng-content>',
+moduleId: module.id
 })
 export class MlTable {
 

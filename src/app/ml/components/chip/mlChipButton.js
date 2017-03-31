@@ -15,8 +15,8 @@ var MlChipButton = (function () {
     MlChipButton = __decorate([
         core_1.Component({
             selector: 'ml-chip-button',
+            moduleId: module.id,
             styleUrls: ['./mlChip.css'],
-            // moduleId: module.id.toString(),
             template: "\n\n<button type=\"button\" class=\"mdl-chip\">\n<span class=\"mdl-chip__text\"><ng-content></ng-content></span>\n</button>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])

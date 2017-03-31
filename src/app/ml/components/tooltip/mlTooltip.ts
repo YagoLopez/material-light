@@ -7,9 +7,9 @@ import * as ml from "../../lib/ml_lib";
 
 @Component({
 selector: 'ml-tooltip',
-// moduleId: module.id.toString(),
 styleUrls: ['./mlTooltip.css'],
-template: '<span [attr.for]="for" class="mdl-tooltip" #spanTooltip><ng-content></ng-content></span>'
+template: '<span [attr.for]="for" class="mdl-tooltip" #spanTooltip><ng-content></ng-content></span>',
+moduleId: module.id
 })
 export class MlTooltip {
 
@@ -18,9 +18,7 @@ export class MlTooltip {
   @Input() position: string;  // Position values: [right, left, top, bottom]
   @Input() large: string;
 
-  constructor(
-    private ren: Renderer){
-  }
+  constructor(private ren: Renderer){}
 
   ngAfterViewInit(){
     if (this.large === '')

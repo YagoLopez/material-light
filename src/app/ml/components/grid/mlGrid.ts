@@ -3,7 +3,7 @@ import * as ml from "../../lib/ml_lib";
 
 @Component({
 selector: 'ml-grid',
-// moduleId: module.id.toString(),
+moduleId: module.id,
 styleUrls: ['./mlGrid.css'],
 host: {class: 'mdl-grid'},
 encapsulation: ViewEncapsulation.None,

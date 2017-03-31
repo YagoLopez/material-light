@@ -15,7 +15,7 @@ const ML_BUTTON_VARIANTS = ['fab', 'minifab', 'icon'];
 
 @Component({
 selector: 'ml-button',
-// moduleId: module.id.toString(),
+moduleId: module.id,
 encapsulation: ViewEncapsulation.None,
 styleUrls: ['./mlButton.css'],
 host: {class: 'mdl-button'},

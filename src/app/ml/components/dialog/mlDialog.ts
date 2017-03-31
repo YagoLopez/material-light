@@ -4,8 +4,8 @@ declare var HTMLDialogElement: any;
 
 @Component({
 selector: 'ml-dialog',
+moduleId: module.id,
 styleUrls: ['./mlDialog.css'],
-// moduleId: module.id.toString(),
 template:`
   
 <dialog class="mdl-dialog" #mdlDialog>
@@ -20,7 +20,7 @@ template:`
   </div>
 </dialog>    
   
- `//template
+`//template
 })
 export class MlDialog{
 

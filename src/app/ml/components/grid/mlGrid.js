@@ -27,7 +27,7 @@ var MlGrid = (function () {
     MlGrid = __decorate([
         core_1.Component({
             selector: 'ml-grid',
-            // moduleId: module.id.toString(),
+            moduleId: module.id,
             styleUrls: ['./mlGrid.css'],
             host: { class: 'mdl-grid' },
             encapsulation: core_1.ViewEncapsulation.None,

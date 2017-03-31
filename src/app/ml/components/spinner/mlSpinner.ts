@@ -11,9 +11,9 @@ selector: 'ml-spinner',
 styleUrls: ['./mlSpinner.css'],
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
-// moduleId: module.id.toString(),
 host: {class: 'mdl-spinner is-active'},
-template:``
+template:``,
+moduleId: module.id
 })
 export class MlSpinner {
 

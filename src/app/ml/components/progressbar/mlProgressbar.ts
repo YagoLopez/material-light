@@ -10,10 +10,10 @@ import * as ml from "../../lib/ml_lib";
 @Component({
 selector: 'ml-progressbar',
 styleUrls: ['./mlProgressbar.css'],
-// moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
 host: {class: 'mdl-progress'},
-template: ''
+template: '',
+moduleId: module.id
 })
 export class MlProgressbar {
 

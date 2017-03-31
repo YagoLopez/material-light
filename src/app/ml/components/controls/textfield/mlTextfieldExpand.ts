@@ -9,8 +9,8 @@ import * as ml from "../../../lib/ml_lib";
 
 @Component({
 selector: 'ml-textfield-expand',
+moduleId: module.id,
 styleUrls: ['./mlTextfield.css', '../button/mlButton.css'],
-// moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlTextfieldExpand), multi: true}],

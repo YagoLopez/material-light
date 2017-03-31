@@ -17,9 +17,7 @@ var MlCheckboxMod = (function () {
     }
     MlCheckboxMod = __decorate([
         core_1.NgModule({
-            imports: [common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
-            declarations: [mlCheckbox_1.MlCheckbox],
-            exports: [mlCheckbox_1.MlCheckbox] }), 
+            imports: [common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule], declarations: [mlCheckbox_1.MlCheckbox], exports: [mlCheckbox_1.MlCheckbox] }), 
         __metadata('design:paramtypes', [])
     ], MlCheckboxMod);
     return MlCheckboxMod;

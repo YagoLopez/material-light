@@ -7,8 +7,8 @@ export interface IConfigSnackbar {
 
 @Component({
 selector: 'ml-snackbar',
+moduleId: module.id,
 styleUrls: ['./mlSnackbar.css'],
-// moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
 host: {class: 'mdl-snackbar'},
 template:`

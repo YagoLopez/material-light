@@ -3,8 +3,8 @@ import * as ml from "../../lib/ml_lib";
 
 @Component({
 selector: 'ml-card',
+moduleId: module.id,
 styleUrls: ['./mlCard.css'],
-// moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
 host: {class: 'mdl-card'},
 template:`
@@ -17,7 +17,7 @@ template:`
 <div class="mdl-card__supporting-text">
   <ng-content select="ml-card-text"></ng-content>
 </div>
-<div class="mdl-card__actions mdl-card&#45;&#45;border">
+<div class="mdl-card__actions mdl-card--border">
   <ng-content select="ml-card-actions"></ng-content>
 </div>
 <div class="mdl-card__menu">

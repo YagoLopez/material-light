@@ -13,9 +13,9 @@ import MdlCheckbox from './mlCheckboxLib';
 
 @Component({
 selector: 'ml-checkbox',
+moduleId: module.id,
 styleUrls: ['./mlCheckbox.css'],
 encapsulation: ViewEncapsulation.None,
-// moduleId: module.id.toString(),
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlCheckbox), multi: true}],
 template:`
 
@@ -29,14 +29,13 @@ template:`
 
 `//template
 })
-
 export class MlCheckbox implements ControlValueAccessor {
 
   @ViewChild('label') label: ElementRef;
   @Input() id: string;
   @Input() disabled: string;
 
-  _model: any; 
+  _model: any;
   mdlCheckbox: MdlCheckbox;
   isRippleDefined: boolean;
   onTouch = () => {};
@@ -56,7 +55,7 @@ export class MlCheckbox implements ControlValueAccessor {
     this._model = value;
     this.onChange(value);
   }
-  
+
   writeValue(value: any): void { this.model = value }
   registerOnChange(fn: any): void { this.onChange = fn }
   registerOnTouched(fn: any): void { this.onTouch = fn }

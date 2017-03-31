@@ -23,8 +23,8 @@ const MlTextfieldTypes = ['text', 'password', 'date', 'datetime-local', 'month',
 
 @Component({
 selector: 'ml-textfield',
+moduleId: module.id,
 host: {class: 'mdl-textfield'},
-// moduleId: module.id.toString(),
 styleUrls: ['./mlTextfield.css'],
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,

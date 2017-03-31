@@ -50,9 +50,9 @@ var MlTooltip = (function () {
     MlTooltip = __decorate([
         core_1.Component({
             selector: 'ml-tooltip',
-            // moduleId: module.id.toString(),
             styleUrls: ['./mlTooltip.css'],
-            template: '<span [attr.for]="for" class="mdl-tooltip" #spanTooltip><ng-content></ng-content></span>'
+            template: '<span [attr.for]="for" class="mdl-tooltip" #spanTooltip><ng-content></ng-content></span>',
+            moduleId: module.id
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])
     ], MlTooltip);

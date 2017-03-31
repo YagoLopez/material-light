@@ -55,7 +55,7 @@ var MlButtonSubmit = (function () {
     MlButtonSubmit = __decorate([
         core_1.Component({
             selector: 'ml-button-submit',
-            // moduleId: module.id.toString(),
+            moduleId: module.id,
             styleUrls: ['./mlButton.css'],
             template: "\n\n<div class=\"mdl-button\" style=\"padding: 3px\">\n<input #input [attr.type]=\"type\" [attr.value]=\"text\" [disabled]=\"disabled\" class=\"mdl-button\" style=\"pointer-events: auto\" />\n<!--<span class=\"mdl-button__ripple-container\" style=\"z-index: -10;\">-->\n<span class=\"mdl-button__ripple-container\" style=\"pointer-events: none\"><span class=\"mdl-ripple\"></span></span>\n</div>\n\n" //template
         }), 

@@ -66,7 +66,7 @@ var MlRadio = (function () {
     MlRadio = __decorate([
         core_1.Component({
             selector: 'ml-radio',
-            // moduleId: module.id.toString(),
+            moduleId: module.id,
             styleUrls: ['./mlRadio.css'],
             encapsulation: core_1.ViewEncapsulation.None,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlRadio; }), multi: true }],

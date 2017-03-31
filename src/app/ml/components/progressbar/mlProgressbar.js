@@ -56,10 +56,10 @@ var MlProgressbar = (function () {
         core_1.Component({
             selector: 'ml-progressbar',
             styleUrls: ['./mlProgressbar.css'],
-            // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             host: { class: 'mdl-progress' },
-            template: ''
+            template: '',
+            moduleId: module.id
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlProgressbar);

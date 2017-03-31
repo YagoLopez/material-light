@@ -44,9 +44,9 @@ var MlSpinner = (function () {
             styleUrls: ['./mlSpinner.css'],
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            // moduleId: module.id.toString(),
             host: { class: 'mdl-spinner is-active' },
-            template: ""
+            template: "",
+            moduleId: module.id
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlSpinner);

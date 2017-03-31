@@ -5,9 +5,9 @@ import * as ml from "../../lib/ml_lib";
 @Component({
 selector: 'ml-list',
 encapsulation: ViewEncapsulation.None,
-// moduleId: module.id.toString(),
 styleUrls: ['./mlList.css'],
-template: '<ul class="mdl-list" #ulElement><ng-content></ng-content></ul>'
+template: '<ul class="mdl-list" #ulElement><ng-content></ng-content></ul>',
+moduleId: module.id
 })
 export class MlList {
 
@@ -26,8 +26,7 @@ export class MlList {
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-item',
-// moduleId: module.id.toString(),
-template: '<li class="mdl-list__item" #liElement><ng-content></ng-content></li>'
+template: '<li class="mdl-list__item" #liElement><ng-content></ng-content></li>',
 })
 export class MlItem {
 

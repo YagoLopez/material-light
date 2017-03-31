@@ -2,7 +2,7 @@ import {Component, Input} from "@angular/core";
 
 @Component({
 selector:  'ml-chip',
-// moduleId: module.id.toString(),
+moduleId: module.id,
 styleUrls: ['./mlChip.css'],
 template:`
 
@@ -10,7 +10,6 @@ template:`
       [ngClass]="{'mdl-chip--contact': img || letter, 'mdl-chip--deletable': deletable}">
   
   <span *ngIf="letter" class="mdl-chip__contact mdl-color--teal mdl-color-text--white">{{letter}}</span>
-  
   <img *ngIf="img" class="mdl-chip__contact" [src]="img"/>
   
   <span class="mdl-chip__text">

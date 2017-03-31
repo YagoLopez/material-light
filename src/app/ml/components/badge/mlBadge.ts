@@ -3,7 +3,7 @@ import * as ml from "../../lib/ml_lib";
 
 @Component({
 selector: 'ml-badge',
-// moduleId: module.id.toString(),
+moduleId: module.id,
 styleUrls: ['./mlBadge.css'],
 host: {class: 'mdl-badge'},
 encapsulation: ViewEncapsulation.None,

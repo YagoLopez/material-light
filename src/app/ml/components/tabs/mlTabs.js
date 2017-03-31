@@ -24,9 +24,9 @@ var MlTabs = (function () {
             styleUrls: ['./mlTabs.css'],
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            // moduleId: module.id.toString(),
             host: { class: 'mdl-tabs' },
-            template: '<ng-content></ng-content>'
+            template: '<ng-content></ng-content>',
+            moduleId: module.id
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
     ], MlTabs);

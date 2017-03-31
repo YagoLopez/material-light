@@ -94,8 +94,8 @@ var MlTextfieldExpand = (function () {
     MlTextfieldExpand = __decorate([
         core_1.Component({
             selector: 'ml-textfield-expand',
+            moduleId: module.id,
             styleUrls: ['./mlTextfield.css', '../button/mlButton.css'],
-            // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlTextfieldExpand; }), multi: true }],

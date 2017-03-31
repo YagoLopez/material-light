@@ -1,5 +1,3 @@
-// todo: menu items
-// todo: revisar encapsulacion.none. los componentes debrian estar encapsulados
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -51,7 +49,7 @@ var MlMenu = (function () {
      */
     MlMenu.prototype.getMenuPosition = function (position) {
         // todo: class names are wrong?
-        var mdlClassName = "";
+        var mdlClassName = '';
         if (position === 'top-left') {
             mdlClassName = this.className.BOTTOM_LEFT;
         }
@@ -93,9 +91,9 @@ var MlMenu = (function () {
     MlMenu = __decorate([
         core_1.Component({
             selector: 'ml-menu',
+            moduleId: module.id,
             styleUrls: ['./mlMenu.css'],
             encapsulation: core_1.ViewEncapsulation.None,
-            // moduleId: module.id.toString(),
             template: "\n\n<ml-button [attr.id]=\"id\" variant=\"icon\" #mdlButton><ml-icon>{{icon}}</ml-icon></ml-button>\n<ul class=\"mdl-menu\" [attr.for]=\"id\" #menuList>\n<ng-content select=\"ml-menu-item\"></ng-content>\n</ul>         \n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])
@@ -109,12 +107,8 @@ var MlMenuItem = (function () {
         this.ren = ren;
     }
     MlMenuItem.prototype.ngOnInit = function () {
-        if (this.divider === '') {
-            ml.setClass(this.menuItem, 'mdl-menu__item--full-bleed-divider', this.ren);
-        }
-        if (this.disabled === '') {
-            ml.setAttribute(this.menuItem, 'disabled', '', this.ren);
-        }
+        ml.isDefined(this.divider) && ml.setClass(this.menuItem, 'mdl-menu__item--full-bleed-divider', this.ren);
+        ml.isDefined(this.disabled) && ml.setAttribute(this.menuItem, 'disabled', '', this.ren);
     };
     __decorate([
         core_1.ViewChild('menuItem'), 

@@ -7,9 +7,9 @@ selector: 'ml-tabs',
 styleUrls: ['./mlTabs.css'],
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
-// moduleId: module.id.toString(),
 host: {class: 'mdl-tabs'},
-template: '<ng-content></ng-content>'
+template: '<ng-content></ng-content>',
+moduleId: module.id
 })
 export class MlTabs {
 

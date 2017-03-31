@@ -6,17 +6,17 @@ import * as ml from "../../../lib/ml_lib";
 selector: 'input.[ml-slider]',
 styleUrls: ['./mlSlider.css'],
 host: {class: 'mdl-slider'},
-// moduleId: module.id.toString(),
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
-template:'' // no template
+template:'', // no template
+moduleId: module.id
 })
 export class MlSlider{
 
   private mdlSlider: MdlSlider;
 
   constructor(private hostElement: ElementRef, private ren: Renderer){}
-  
+
   change(value: number): void {
     this.mdlSlider.change(value)
   }

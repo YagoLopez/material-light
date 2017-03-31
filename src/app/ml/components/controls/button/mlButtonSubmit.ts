@@ -8,7 +8,7 @@ const ML_BUTTON_ASPECTS = ['raised', 'colored', 'accent'];
 
 @Component({
 selector: 'ml-button-submit',
-// moduleId: module.id.toString(),
+moduleId: module.id,
 styleUrls: ['./mlButton.css'],
 template:`
 

@@ -102,8 +102,8 @@ var MlTextfieldArea = (function () {
     MlTextfieldArea = __decorate([
         core_1.Component({
             selector: 'ml-textfield-area',
+            moduleId: module.id,
             styleUrls: ['./mlTextfield.css'],
-            // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlTextfieldArea; }), multi: true }],

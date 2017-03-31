@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
 selector: 'ml-chip-button',
+moduleId: module.id,
 styleUrls: ['./mlChip.css'],
-// moduleId: module.id.toString(),
 template:`
 
 <button type="button" class="mdl-chip">

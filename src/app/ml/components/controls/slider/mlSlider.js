@@ -28,10 +28,10 @@ var MlSlider = (function () {
             selector: 'input.[ml-slider]',
             styleUrls: ['./mlSlider.css'],
             host: { class: 'mdl-slider' },
-            // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            template: '' // no template
+            template: '',
+            moduleId: module.id
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlSlider);

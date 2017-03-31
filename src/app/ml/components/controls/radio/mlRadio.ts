@@ -5,7 +5,7 @@ import * as ml from "../../../lib/ml_lib";
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-radio',
-// moduleId: module.id.toString(),
+moduleId: module.id,
 styleUrls: ['./mlRadio.css'],
 encapsulation: ViewEncapsulation.None,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlRadio), multi: true}],

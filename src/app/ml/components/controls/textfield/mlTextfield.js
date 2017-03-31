@@ -110,8 +110,8 @@ var MlTextfield = (function () {
     MlTextfield = __decorate([
         core_1.Component({
             selector: 'ml-textfield',
+            moduleId: module.id,
             host: { class: 'mdl-textfield' },
-            // moduleId: module.id.toString(),
             styleUrls: ['./mlTextfield.css'],
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,

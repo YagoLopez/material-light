@@ -72,11 +72,11 @@ var MlSwitch = (function () {
     MlSwitch = __decorate([
         core_1.Component({
             selector: 'ml-switch',
+            moduleId: module.id,
             styleUrls: ['./mlSwitch.css'],
-            // moduleId: module.id.toString(),
             encapsulation: core_1.ViewEncapsulation.None,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlSwitch; }), multi: true }],
-            template: "\n\n<label #label [attr.for]=\"id+'mdl'\" class=\"mdl-switch\" [ngClass]=\"{'is-checked': isChecked()}\">\n  <input type=\"checkbox\" class=\"mdl-switch__input\" \n         [attr.id]=\"id+'mdl'\"\n         [(ngModel)]=\"model\" \n         [disabled]=\"disabled\">\n  <span class=\"mdl-switch__label\"><ng-content></ng-content></span>\n  <span class=\"mdl-switch__ripple-container mdl-ripple--center\"><span class=\"mdl-ripple\"></span></span>\n</label>\n\n" //template
+            template: "\n\n<label #label [attr.for]=\"id+'mdl'\" class=\"mdl-switch\" [ngClass]=\"{'is-checked': isChecked()}\">\n  <input type=\"checkbox\" class=\"mdl-switch__input\" \n    [attr.id]=\"id+'mdl'\"\n    [(ngModel)]=\"model\" \n    [disabled]=\"disabled\">\n  <span class=\"mdl-switch__label\"><ng-content></ng-content></span>\n  <span class=\"mdl-switch__ripple-container mdl-ripple--center\"><span class=\"mdl-ripple\"></span></span>\n</label>\n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlSwitch);
