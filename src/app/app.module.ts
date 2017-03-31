@@ -29,10 +29,10 @@ import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {App} from "./app.layout";
 
 // Relative paths for SystemJS
-// export const basePath = '.app/pages/';
+export const basePath = '.app/pages/';
 
 // Absolute paths for Webpack
-export const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
+// export const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
 
 // WEBPACK ROUTES: absolute paths are needed by webpack and lazy-load
 const APP_ROUTES = [

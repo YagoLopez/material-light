@@ -37,9 +37,9 @@ var mlPageLoaderMod_1 = require("./ml/components/loader/mlPageLoaderMod");
 var mlLayoutMod_1 = require("./ml/components/layout/mlLayoutMod");
 var app_layout_1 = require("./app.layout");
 // Relative paths for SystemJS
-// export const basePath = '.app/pages/';
+exports.basePath = '.app/pages/';
 // Absolute paths for Webpack
-exports.basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
+// export const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
 // WEBPACK ROUTES: absolute paths are needed by webpack and lazy-load
 var APP_ROUTES = [
     { path: '', redirectTo: 'button', pathMatch: 'full' },

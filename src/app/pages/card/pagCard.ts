@@ -14,7 +14,7 @@ ml-menu {color: white}
   <ml-card-title>Title</ml-card-title>
   <ml-card-text>Card text content</ml-card-text>
   <ml-card-actions>
-    <ml-button aspect="colored" ripple>Card Action 1</ml-button>
+    <ml-button aspect="colored" ripple>Card Action</ml-button>
   </ml-card-actions>
   <ml-card-menu>
     <ml-menu icon="share" position="top-right" ripple>
