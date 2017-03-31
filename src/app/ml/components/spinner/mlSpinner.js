@@ -1,5 +1,5 @@
 //todo: hay que revisar como se pueden añadir estilos al componnente. por ejemplo definir el añcho de la barra globalmente
-//todo: repensar lo de las atributos sin valor especifico de cara al comportamiento de angular en data-binding:
+//todo: repensar lo de los atributos sin valor especifico de cara al comportamiento de angular en data-binding:
 //todo: [attributo]="valor". Si no hay valor puede que haya problemas
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -22,12 +22,9 @@ var MlSpinner = (function () {
     MlSpinner.prototype.start = function () { this.mdlSpinner.start(); };
     MlSpinner.prototype.stop = function () { this.mdlSpinner.stop(); };
     MlSpinner.prototype.ngOnInit = function () {
-        if (this.singleColor === '')
-            ml.setClass(this.host, 'mdl-spinner--single-color', this.ren);
         this.mdlSpinner = new mlSpinnerLib_1.default(this.host.nativeElement);
-        if (this.inactive === '') {
-            this.mdlSpinner.stop();
-        }
+        ml.isDefined(this.singleColor) && ml.setClass(this.host, 'mdl-spinner--single-color', this.ren);
+        ml.isDefined(this.inactive) && this.mdlSpinner.stop();
     };
     __decorate([
         core_1.Input('single-color'), 

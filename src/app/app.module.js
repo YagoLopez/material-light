@@ -1,4 +1,4 @@
-//todo: cambiar los nombres de los formularios
+//todo: renombrar mlLayoutLib.ts a mdlLayoutLib, por ejemplo, y los demas ficheros
 //todo: media query para que se muestre el menu lateral en modo tablet en iframe
 //todo: hacer documentacion de api para cada componente
 //todo: que se puedan usar diferentes cabeceras y menus laterales (<ml-header>) en cada pagina (usar named router-outlet?)

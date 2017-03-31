@@ -1,5 +1,5 @@
 //todo: hay que revisar como se pueden añadir estilos al componnente. por ejemplo definir el añcho de la barra globalmente
-//todo: repensar lo de las atributos sin valor especifico de cara al comportamiento de angular en data-binding:
+//todo: repensar lo de los atributos sin valor especifico de cara al comportamiento de angular en data-binding:
 //todo: [attributo]="valor". Si no hay valor puede que haya problemas
 
 import {Component, ElementRef, Input, Renderer, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
@@ -23,18 +23,12 @@ export class MlSpinner {
   mdlSpinner: MdlSpinner;
 
   constructor(private host: ElementRef, private ren: Renderer){}
-
   start(){ this.mdlSpinner.start() }
   stop(){ this.mdlSpinner.stop() }
 
   ngOnInit() {
-    if (this.singleColor === '')
-      ml.setClass(this.host, 'mdl-spinner--single-color', this.ren);
-
     this.mdlSpinner = new MdlSpinner(this.host.nativeElement);
-
-    if (this.inactive === ''){
-      this.mdlSpinner.stop();
-    }
+    ml.isDefined(this.singleColor) && ml.setClass(this.host, 'mdl-spinner--single-color', this.ren);
+    ml.isDefined(this.inactive) && this.mdlSpinner.stop();
   }
 }

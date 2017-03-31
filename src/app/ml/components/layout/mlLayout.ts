@@ -29,7 +29,7 @@ export class MlLayout {
     this.mdlLayout.drawer_.classList.remove('is-visible');
     this.mdlLayout.obfuscator_.classList.remove('is-visible');
   }
-  
+
   ngAfterViewInit() {
     if (this.drawer === 'fixed')
       ml.setClass(this.host, 'mdl-layout--fixed-drawer', this.ren);
@@ -54,17 +54,12 @@ export class MlHeader {
   @Input() seamed: string;
 
   constructor(private host: ElementRef, private ren: Renderer){}
-  
+
   ngOnInit() {
-    if (this.seamed === '')
-      ml.setClass(this.host, 'mdl-layout__header--seamed', this.ren);
-  
-    if (this.transparent === '')
-      ml.setClass(this.host, 'mdl-layout__header--transparent', this.ren);
-  
-    if (this.waterfall === '')
-      ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
-  
+    ml.isDefined(this.seamed) && ml.setClass(this.host, 'mdl-layout__header--seamed', this.ren);
+    ml.isDefined(this.transparent) && ml.setClass(this.host, 'mdl-layout__header--transparent', this.ren);
+    ml.isDefined(this.waterfall) && ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
+
     if (this.waterfall === 'hide-top'){
       ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
       ml.setClass(this.host, 'mdl-layout__header--waterfall-hide-top', this.ren);
@@ -116,15 +111,13 @@ template: '<ng-content></ng-content>'
 export class MlDrawer {
 
   constructor(private host: ElementRef, private ren: Renderer){}
-  
+
   ngOnInit() {
    // Hides drawer and obfuscator when clicking item menu on drawer
    this.ren.listen(this.host.nativeElement, 'click', () => {
-      this.host.nativeElement.classList.remove('is-visible');
-      const obfuscator = document.querySelector('div.mdl-layout__obfuscator.is-visible');
-      if(obfuscator){
-        obfuscator.classList.remove('is-visible');
-      }
+     this.host.nativeElement.classList.remove('is-visible');
+     const obfuscator = document.querySelector('div.mdl-layout__obfuscator.is-visible');
+     obfuscator && obfuscator.classList.remove('is-visible');
    });
    ml.setClass(this.host,'mdl-layout__drawer', this.ren);
   }

@@ -1,25 +1,6 @@
-ml-selectfield > div > div > div.mdl-menu__outline {width: 250px !important}
+ml-selectfield > div > div > div.mdl-menu__outline{width: 250px !important;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.14)}
 ml-selectfield > div > div > ul > ml-sf-item > li.mdl-menu__item {width: 218px}
 .input-field{padding-left: 33px !important; cursor: pointer}
 .input-label{padding-left: 33px !important; cursor: pointer}
 .menu-btn{height: 27px !important}
-/*
-.getmdl-select .mdl-icon-toggle__label {
-	float: right;
-	margin-top: -30px;
-	color: rgba(0, 0, 0, 0.4);
-}
-.getmdl-select.is-focused .mdl-icon-toggle__label {color: #3f51b5}
-.getmdl-select .mdl-menu__container {
-  width: 100% !important;
-  overflow: hidden;
-
-  border: 1px solid #e3e2f1 !important;
-  left: 0 !important;
-  top: 47px !important;
-  box-shadow: 2px 5px 5px #888888 !important;
-}
-.getmdl-select .mdl-menu__container .mdl-menu .mdl-menu__item {font-size: 16px}
-.getmdl-select__fullwidth, .mdl-menu {width: 100%}
-.getmdl-select__fix-height .mdl-menu__container {overflow-y: auto;max-height: 300px !important}
-*/

@@ -50,18 +50,10 @@ var MlGridCell = (function () {
         var tabletWidthClass = 'mdl-cell--' + this.tabletWidth + '-col-tablet';
         var desktopWidthClass = 'mdl-cell--' + this.desktopWidth + '-col-desktop';
         var host = this.host;
-        if (this.width) {
-            ml.setClass(host, widthClass, this.ren);
-        }
-        if (this.phoneWith) {
-            ml.setClass(host, phoneWidthClass, this.ren);
-        }
-        if (this.tabletWidth) {
-            ml.setClass(host, tabletWidthClass, this.ren);
-        }
-        if (this.desktopWidth) {
-            ml.setClass(host, desktopWidthClass, this.ren);
-        }
+        this.width && ml.setClass(host, widthClass, this.ren);
+        this.phoneWith && ml.setClass(host, phoneWidthClass, this.ren);
+        this.tabletWidth && ml.setClass(host, tabletWidthClass, this.ren);
+        this.desktopWidth && ml.setClass(host, desktopWidthClass, this.ren);
     };
     __decorate([
         core_1.Input(), 

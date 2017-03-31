@@ -64,12 +64,9 @@ var MlHeader = (function () {
         this.ren = ren;
     }
     MlHeader.prototype.ngOnInit = function () {
-        if (this.seamed === '')
-            ml.setClass(this.host, 'mdl-layout__header--seamed', this.ren);
-        if (this.transparent === '')
-            ml.setClass(this.host, 'mdl-layout__header--transparent', this.ren);
-        if (this.waterfall === '')
-            ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
+        ml.isDefined(this.seamed) && ml.setClass(this.host, 'mdl-layout__header--seamed', this.ren);
+        ml.isDefined(this.transparent) && ml.setClass(this.host, 'mdl-layout__header--transparent', this.ren);
+        ml.isDefined(this.waterfall) && ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
         if (this.waterfall === 'hide-top') {
             ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
             ml.setClass(this.host, 'mdl-layout__header--waterfall-hide-top', this.ren);
@@ -195,9 +192,7 @@ var MlDrawer = (function () {
         this.ren.listen(this.host.nativeElement, 'click', function () {
             _this.host.nativeElement.classList.remove('is-visible');
             var obfuscator = document.querySelector('div.mdl-layout__obfuscator.is-visible');
-            if (obfuscator) {
-                obfuscator.classList.remove('is-visible');
-            }
+            obfuscator && obfuscator.classList.remove('is-visible');
         });
         ml.setClass(this.host, 'mdl-layout__drawer', this.ren);
     };

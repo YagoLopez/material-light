@@ -28,7 +28,6 @@ export class MlBadge{
       ml.setClass(this.host, 'mdl-badge--overlap', this.ren);
     }
     if (this.icon === ''){
-      //todo: evitar queryselector, usar renderer
       ml.setClass(this.host, 'material-icons', this.ren);
       ml.setClass(this.host, 'mdl-badge--overlap', this.ren);
       this.host.nativeElement.querySelector('ml-icon').className = 'mdl-badge-icon';

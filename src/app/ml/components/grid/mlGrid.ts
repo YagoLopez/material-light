@@ -21,7 +21,7 @@ export class MlGrid {
   ngOnInit(){
     if (this.noSpace === '') {
       ml.setClass(this.host, 'mdl-grid--no-spacing', this.ren);
-    }  
+    }
   }
 }
 // ---------------------------------------------------------------------------------------------------------------------
@@ -42,27 +42,19 @@ export class MlGridCell{
   @Input('phone-width') phoneWith: string;
   @Input('tablet-width') tabletWidth: string;
   @Input('desktop-width') desktopWidth: string;
-  
-  constructor (private host: ElementRef, private ren: Renderer){}
-  
-  ngOnInit(){
-    let widthClass = 'mdl-cell--'+this.width+'-col';
-    let phoneWidthClass = 'mdl-cell--'+this.phoneWith+'-col-phone';
-    let tabletWidthClass = 'mdl-cell--'+this.tabletWidth+'-col-tablet';
-    let desktopWidthClass = 'mdl-cell--'+this.desktopWidth+'-col-desktop';
-    let host = this.host;
 
-    if(this.width) {
-      ml.setClass(host, widthClass, this.ren);
-    }  
-    if(this.phoneWith) {
-      ml.setClass(host, phoneWidthClass, this.ren);
-    }
-    if(this.tabletWidth) {
-      ml.setClass(host, tabletWidthClass, this.ren);
-    }
-    if(this.desktopWidth) {
-      ml.setClass(host, desktopWidthClass, this.ren);
-    }
+  constructor (private host: ElementRef, private ren: Renderer){}
+
+  ngOnInit(){
+    const widthClass = 'mdl-cell--'+this.width+'-col';
+    const phoneWidthClass = 'mdl-cell--'+this.phoneWith+'-col-phone';
+    const tabletWidthClass = 'mdl-cell--'+this.tabletWidth+'-col-tablet';
+    const desktopWidthClass = 'mdl-cell--'+this.desktopWidth+'-col-desktop';
+    const host = this.host;
+
+    this.width && ml.setClass(host, widthClass, this.ren);
+    this.phoneWith && ml.setClass(host, phoneWidthClass, this.ren);
+    this.tabletWidth && ml.setClass(host, tabletWidthClass, this.ren);
+    this.desktopWidth && ml.setClass(host, desktopWidthClass, this.ren);
   }
 }

@@ -16,7 +16,7 @@ var MlIcon = (function () {
     function MlIcon() {
     }
     MlIcon = __decorate([
-        core_1.Component({ selector: 'ml-icon', template: '<ng-content></ng-content>', host: { class: 'material-icons' } }), 
+        core_1.Component({ selector: 'ml-icon', host: { class: 'material-icons' }, template: '<ng-content></ng-content>' }), 
         __metadata('design:paramtypes', [])
     ], MlIcon);
     return MlIcon;

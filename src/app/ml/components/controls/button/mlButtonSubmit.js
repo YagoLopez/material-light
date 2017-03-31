@@ -26,15 +26,9 @@ var MlButtonSubmit = (function () {
         if (!ml.isAttributeValid(this.aspect.toLowerCase(), ML_BUTTON_ASPECTS)) {
             console.warn("<ml-button-submit> Wrong attribute: aspect=\"" + this.aspect + "\"");
         }
-        if (ml.isSubstring('raised', this.aspect)) {
-            ml.setClass(this.input, 'mdl-button--raised', this.ren);
-        }
-        if (ml.isSubstring('colored', this.aspect)) {
-            ml.setClass(this.input, 'mdl-button--colored', this.ren);
-        }
-        if (ml.isSubstring('accent', this.aspect)) {
-            ml.setClass(this.input, 'mdl-button--accent', this.ren);
-        }
+        ml.isSubstring('raised', this.aspect) && ml.setClass(this.input, 'mdl-button--raised', this.ren);
+        ml.isSubstring('colored', this.aspect) && ml.setClass(this.input, 'mdl-button--colored', this.ren);
+        ml.isSubstring('accent', this.aspect) && ml.setClass(this.input, 'mdl-button--accent', this.ren);
         new mdButtonLib_1.default(this.input.nativeElement);
     };
     __decorate([

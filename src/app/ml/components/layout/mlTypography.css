@@ -1,0 +1,263 @@
+/* NOT LOADED at this moment */
+
+/**
+ * Class Name Styles
+ */
+.mdl-typography--display-4 {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 112px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.04em; }
+
+.mdl-typography--display-4-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 112px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  opacity: 0.54; }
+
+.mdl-typography--display-3 {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.02em; }
+
+.mdl-typography--display-3-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  opacity: 0.54; }
+
+.mdl-typography--display-2 {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 48px; }
+
+.mdl-typography--display-2-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 48px;
+  opacity: 0.54; }
+
+.mdl-typography--display-1 {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px; }
+
+.mdl-typography--display-1-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px;
+  opacity: 0.54; }
+
+.mdl-typography--headline {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.mdl-typography--headline-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 0.87; }
+
+.mdl-typography--title {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em; }
+
+.mdl-typography--title-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  opacity: 0.87; }
+
+.mdl-typography--subhead {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em; }
+
+.mdl-typography--subhead-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  opacity: 0.87; }
+
+.mdl-typography--body-2 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0; }
+
+.mdl-typography--body-2-color-contrast {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.mdl-typography--body-1 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0; }
+
+.mdl-typography--body-1-color-contrast {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.mdl-typography--body-2-force-preferred-font {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0; }
+
+.mdl-typography--body-2-force-preferred-font-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.mdl-typography--body-1-force-preferred-font {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0; }
+
+.mdl-typography--body-1-force-preferred-font-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.mdl-typography--caption {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0; }
+
+.mdl-typography--caption-force-preferred-font {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0; }
+
+.mdl-typography--caption-color-contrast {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  opacity: 0.54; }
+
+.mdl-typography--caption-force-preferred-font-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  opacity: 0.54; }
+
+.mdl-typography--menu {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0; }
+
+.mdl-typography--menu-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.mdl-typography--button {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0; }
+
+.mdl-typography--button-color-contrast {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.mdl-typography--text-left {
+  text-align: left; }
+
+.mdl-typography--text-right {
+  text-align: right; }
+
+.mdl-typography--text-center {
+  text-align: center; }
+
+.mdl-typography--text-justify {
+  text-align: justify; }
+
+.mdl-typography--text-nowrap {
+  white-space: nowrap; }
+
+.mdl-typography--text-lowercase {
+  text-transform: lowercase; }
+
+.mdl-typography--text-uppercase {
+  text-transform: uppercase; }
+
+.mdl-typography--text-capitalize {
+  text-transform: capitalize; }
+
+.mdl-typography--font-thin {
+  font-weight: 200 !important; }
+
+.mdl-typography--font-light {
+  font-weight: 300 !important; }
+
+.mdl-typography--font-regular {
+  font-weight: 400 !important; }
+
+.mdl-typography--font-medium {
+  font-weight: 500 !important; }
+
+.mdl-typography--font-bold {
+  font-weight: 700 !important; }
+
+.mdl-typography--font-black {
+  font-weight: 900 !important; }
