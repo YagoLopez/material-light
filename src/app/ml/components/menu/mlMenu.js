@@ -24,11 +24,7 @@ var MlMenu = (function () {
         };
     }
     MlMenu.prototype.ngOnInit = function () {
-        // if (!this.id){
-        //   this.id = ml.randomStr();
-        // }
-        !this.id && this.id;
-        ml.randomStr();
+        !this.id && (this.id = ml.randomStr());
         if (this.ripple === '') {
             ml.setClass(this.mdlButton.host, 'mdl-js-ripple-effect', this.ren);
             ml.setClass(this.menuList, 'mdl-js-ripple-effect', this.ren);

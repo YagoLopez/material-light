@@ -52,8 +52,7 @@ var MlTextfield = (function () {
         if (!ml.isAttributeValid(this.type.toLowerCase(), MlTextfieldTypes)) {
             console.warn("<ml-textfield> Wrong attribute: type=\"" + this.type + "\"");
         }
-        !this.id && this.id;
-        ml.randomStr();
+        !this.id && (this.id = ml.randomStr());
         ml.isDefined(this.floatingLabel) && ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren);
         if (this.disabled === 'true') {
             this.mdlTextfield.disable();
