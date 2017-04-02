@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 // https://material.io/icons/
-// ICON NAMES: http://google.github.io/web-starter-kit/latest/styleguide/icons/demo.html
+// NOTE: icon names: http://google.github.io/web-starter-kit/latest/styleguide/icons/demo.html
 // NOTE: change middle dash (-) for lower dash (_) in icon name for using ICON NAMES from the above url
 var core_1 = require("@angular/core");
 var MlIcon = (function () {

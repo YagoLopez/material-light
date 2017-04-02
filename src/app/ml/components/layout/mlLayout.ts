@@ -31,8 +31,9 @@ export class MlLayout {
   }
 
   ngAfterViewInit() {
-    if (this.drawer === 'fixed')
+    if (this.drawer === 'fixed'){
       ml.setClass(this.host, 'mdl-layout--fixed-drawer', this.ren);
+    }
 
     if (this.tabs === 'fixed'){
       ml.setClass(this.host, 'mdl-layout--fixed-header', this.ren);

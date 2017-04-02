@@ -1,4 +1,4 @@
-//todo: nota. probablemente no haya que usar host en el componente padre para poder encapsular los estilos y no 
+//todo: nota. probablemente no haya que usar host en el componente padre para poder encapsular los estilos y no
 // tener que usar viewencapsulation.none; sin embargo si puede ser util usar host en componentes hijos
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -18,8 +18,7 @@ var MlTooltip = (function () {
         this.ren = ren;
     }
     MlTooltip.prototype.ngAfterViewInit = function () {
-        if (this.large === '')
-            ml.setClass(this.spanTooltip, 'mdl-tooltip--large', this.ren);
+        ml.isDefined(this.large) && ml.setClass(this.spanTooltip, 'mdl-tooltip--large', this.ren);
         if (this.position === 'right')
             ml.setClass(this.spanTooltip, 'mdl-tooltip--right', this.ren);
         if (this.position === 'left')
@@ -43,7 +42,7 @@ var MlTooltip = (function () {
         __metadata('design:type', String)
     ], MlTooltip.prototype, "position", void 0);
     __decorate([
-        // Position values: [right, left, top, bottom]
+        // todo: revisar position values: [right, left, top, bottom]
         core_1.Input(), 
         __metadata('design:type', String)
     ], MlTooltip.prototype, "large", void 0);

@@ -4,11 +4,11 @@
 /node_modules
 
 # transpiled_files
-/src/*.js
-/src/*.map
+/src/**/*.js
+/src/**/*.map
 
 #System Files
-/src/*.db
+*.db
 
 # misc
 npm-debug.log

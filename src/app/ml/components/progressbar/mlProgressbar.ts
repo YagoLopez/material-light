@@ -23,9 +23,7 @@ export class MlProgressbar {
 
   mdlProgress: any;
 
-  constructor(
-    private host: ElementRef,
-    private ren: Renderer){
+  constructor(private host: ElementRef, private ren: Renderer){
     this.mdlProgress = new MdlProgress(this.host.nativeElement);
   }
 
@@ -41,14 +39,9 @@ export class MlProgressbar {
   }
 
   ngOnInit() {
-    if (this.progressValue)
-      this.setProgress(this.progressValue);
-
-    if (this.bufferValue)
-      this.setBuffer(this.bufferValue);
-
-    if (this.indeterminate === '')
-      ml.setClass(this.host, 'mdl-progress__indeterminate', this.ren);
+    this.progressValue && this.setProgress(this.progressValue);
+    this.bufferValue && this.setBuffer(this.bufferValue);
+    ml.isDefined(this.indeterminate) && ml.setClass(this.host, 'mdl-progress__indeterminate', this.ren);
   }
 
 }

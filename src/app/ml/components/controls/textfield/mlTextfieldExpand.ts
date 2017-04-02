@@ -77,9 +77,7 @@ export class MlTextfieldExpand implements ControlValueAccessor{
   }
   writeValue(value: any): void {
     this._model = value;
-    if (value){
-      this.mlTextfield.change(value);
-    }
+    value && this.mlTextfield.change(value);
   }
   registerOnChange(fn: any): void { this.onChange = fn }
   registerOnTouched(fn: any): void { this.onTouch = fn }

@@ -36,9 +36,10 @@ export class MlMenu{
   constructor(private ren: Renderer){}
 
   ngOnInit(){
-    if (!this.id){
-      this.id = ml.randomStr();
-    }
+    // if (!this.id){
+    //   this.id = ml.randomStr();
+    // }
+    !this.id && this.id = ml.randomStr();
     if (this.ripple === ''){
       ml.setClass(this.mdlButton.host, 'mdl-js-ripple-effect', this.ren);
       ml.setClass(this.menuList, 'mdl-js-ripple-effect', this.ren);
@@ -82,8 +83,7 @@ export class MlMenu{
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-menu-item',
-template: '<li class="mdl-menu__item" #menuItem><ng-content></ng-content></li>'
-})
+template: '<li class="mdl-menu__item" #menuItem><ng-content></ng-content></li>'})
 export class MlMenuItem {
 
   @ViewChild('menuItem') menuItem: ElementRef;

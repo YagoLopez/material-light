@@ -19,7 +19,7 @@ var MlRadio = (function () {
         this.onChanged = function (_) { };
     }
     MlRadio.prototype.ngOnInit = function () {
-        if (this.disabled === '') {
+        if (ml.isDefined(this.disabled)) {
             this.input.nativeElement.disabled = 'true';
             this.label.nativeElement.classList.add('is-disabled');
         }

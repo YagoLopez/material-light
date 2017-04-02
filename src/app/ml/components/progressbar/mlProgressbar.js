@@ -32,12 +32,9 @@ var MlProgressbar = (function () {
         this.mdlProgress.setBuffer(value);
     };
     MlProgressbar.prototype.ngOnInit = function () {
-        if (this.progressValue)
-            this.setProgress(this.progressValue);
-        if (this.bufferValue)
-            this.setBuffer(this.bufferValue);
-        if (this.indeterminate === '')
-            ml.setClass(this.host, 'mdl-progress__indeterminate', this.ren);
+        this.progressValue && this.setProgress(this.progressValue);
+        this.bufferValue && this.setBuffer(this.bufferValue);
+        ml.isDefined(this.indeterminate) && ml.setClass(this.host, 'mdl-progress__indeterminate', this.ren);
     };
     __decorate([
         core_1.Input('progress'), 

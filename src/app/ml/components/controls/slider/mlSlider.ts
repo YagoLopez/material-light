@@ -15,14 +15,14 @@ export class MlSlider{
 
   private mdlSlider: MdlSlider;
 
-  constructor(private hostElement: ElementRef, private ren: Renderer){}
+  constructor(private host: ElementRef, private ren: Renderer){}
 
   change(value: number): void {
     this.mdlSlider.change(value)
   }
 
   ngOnInit(){
-    ml.setAttribute(this.hostElement, 'type', 'range', this.ren);
-    this.mdlSlider = new MdlSlider(this.hostElement.nativeElement);
+    ml.setAttribute(this.host, 'type', 'range', this.ren);
+    this.mdlSlider = new MdlSlider(this.host.nativeElement);
   }
 }

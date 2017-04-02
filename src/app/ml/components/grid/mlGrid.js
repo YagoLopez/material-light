@@ -16,9 +16,7 @@ var MlGrid = (function () {
         this.ren = ren;
     }
     MlGrid.prototype.ngOnInit = function () {
-        if (this.noSpace === '') {
-            ml.setClass(this.host, 'mdl-grid--no-spacing', this.ren);
-        }
+        ml.isDefined(this.noSpace) && ml.setClass(this.host, 'mdl-grid--no-spacing', this.ren);
     };
     __decorate([
         core_1.Input('no-space'), 

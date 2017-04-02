@@ -41,7 +41,7 @@ export class MlRadio implements ControlValueAccessor {
   checked: boolean;
 
   ngOnInit(){
-    if (this.disabled === ''){
+    if (ml.isDefined(this.disabled)){
       this.input.nativeElement.disabled= 'true';
       this.label.nativeElement.classList.add('is-disabled');
     }

@@ -1,4 +1,3 @@
-//todo: quizas se pueda evitar la repeticion de codigo usando herencia (sobre todo con los constructores repetidos)
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -22,12 +21,13 @@ var MlTable = (function () {
     };
     MlTable.prototype.ngOnInit = function () {
         ml.setClass(this.host, this.shadowClassName(this.shadow), this.ren);
-        if (this.selectable === "")
-            ml.setClass(this.host, 'mdl-data-table--selectable', this.ren);
-        if (this.order === "asc")
+        ml.isDefined(this.selectable) && ml.setClass(this.host, 'mdl-data-table--selectable', this.ren);
+        if (this.order === "asc") {
             ml.setClass(this.host, 'mdl-data-table__header--sorted-ascending', this.ren);
-        if (this.order === "desc")
+        }
+        if (this.order === "desc") {
             ml.setClass(this.host, 'mdl-data-table__header--sorted-descending', this.ren);
+        }
     };
     __decorate([
         core_1.Input(), 
@@ -60,10 +60,7 @@ var MlTableTextCell = (function () {
     function MlTableTextCell() {
     }
     MlTableTextCell = __decorate([
-        core_1.Directive({
-            selector: '[text-cell]',
-            host: { class: 'mdl-data-table__cell--non-numeric' }
-        }), 
+        core_1.Directive({ selector: '[text-cell]', host: { class: 'mdl-data-table__cell--non-numeric' } }), 
         __metadata('design:paramtypes', [])
     ], MlTableTextCell);
     return MlTableTextCell;

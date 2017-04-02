@@ -57,21 +57,13 @@ export class MlSwitch implements ControlValueAccessor {
     this.model = value;
   }
 
-  isChecked(){
-    return this.model == true;
-  }
-
   private onTouch = () => {};
   private onChange = (_: any) => {};
 
   registerOnChange(fn: any): void { this.onChange = fn }
   registerOnTouched(fn: any): void { this.onTouch = fn }
-
-  on(){
-    this.mdlSwitch.on();
-  }
-
-  off(){
-    this.mdlSwitch.off();
-  }
+  
+  isChecked(){ return this.model == true }
+  on(){ this.mdlSwitch.on() }
+  off(){ this.mdlSwitch.off() }
 }

@@ -19,9 +19,7 @@ export class MlGrid {
   constructor (private host: ElementRef, private ren: Renderer){}
 
   ngOnInit(){
-    if (this.noSpace === '') {
-      ml.setClass(this.host, 'mdl-grid--no-spacing', this.ren);
-    }
+    ml.isDefined(this.noSpace) && ml.setClass(this.host, 'mdl-grid--no-spacing', this.ren);
   }
 }
 // ---------------------------------------------------------------------------------------------------------------------

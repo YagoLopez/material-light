@@ -1,5 +1,3 @@
-//todo: quizas se pueda evitar la repeticion de codigo usando herencia (sobre todo con los constructores repetidos)
-
 import {Component, Renderer, ElementRef, ViewEncapsulation, Directive, Input} from '@angular/core';
 import * as ml from '../../lib/ml_lib'
 
@@ -18,10 +16,7 @@ export class MlTable {
   @Input() selectable: string;
   @Input() order: string;
 
-  constructor(
-    private host: ElementRef,
-    private ren: Renderer
-  ) {}
+  constructor(private host: ElementRef, private ren: Renderer) {}
 
   private shadowClassName(shadowValue: string): string {
     return `mdl-shadow--${shadowValue}dp`;
@@ -29,20 +24,15 @@ export class MlTable {
 
   ngOnInit() {
     ml.setClass(this.host, this.shadowClassName(this.shadow), this.ren);
-
-    if (this.selectable === "")
-      ml.setClass(this.host, 'mdl-data-table--selectable', this.ren);
-
-    if (this.order === "asc")
+    ml.isDefined(this.selectable) && ml.setClass(this.host, 'mdl-data-table--selectable', this.ren);
+    if (this.order === "asc"){
       ml.setClass(this.host, 'mdl-data-table__header--sorted-ascending', this.ren);
-
-    if (this.order === "desc")
+    }
+    if (this.order === "desc"){
       ml.setClass(this.host, 'mdl-data-table__header--sorted-descending', this.ren);
+    }
   }
 }
 // ---------------------------------------------------------------------------------------------------------------------
-@Directive({
-selector: '[text-cell]',
-host: {class: 'mdl-data-table__cell--non-numeric'}
-})
+@Directive({selector: '[text-cell]', host: {class: 'mdl-data-table__cell--non-numeric'}})
 export class MlTableTextCell {}

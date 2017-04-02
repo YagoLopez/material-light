@@ -24,9 +24,11 @@ var MlMenu = (function () {
         };
     }
     MlMenu.prototype.ngOnInit = function () {
-        if (!this.id) {
-            this.id = ml.randomStr();
-        }
+        // if (!this.id){
+        //   this.id = ml.randomStr();
+        // }
+        !this.id && this.id;
+        ml.randomStr();
         if (this.ripple === '') {
             ml.setClass(this.mdlButton.host, 'mdl-js-ripple-effect', this.ren);
             ml.setClass(this.menuList, 'mdl-js-ripple-effect', this.ren);
@@ -125,8 +127,7 @@ var MlMenuItem = (function () {
     MlMenuItem = __decorate([
         core_1.Component({
             selector: 'ml-menu-item',
-            template: '<li class="mdl-menu__item" #menuItem><ng-content></ng-content></li>'
-        }), 
+            template: '<li class="mdl-menu__item" #menuItem><ng-content></ng-content></li>' }), 
         __metadata('design:paramtypes', [core_1.Renderer])
     ], MlMenuItem);
     return MlMenuItem;

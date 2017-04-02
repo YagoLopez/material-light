@@ -4,10 +4,8 @@
 import {Directive, ElementRef, Renderer} from "@angular/core";
 import MdlRipple from "./mlRippleLib";
 
-@Directive({
-selector: '[ripple]',
-})
-// Note: in complex elements where is not enough with using the "ripple" attribute, a "<label>" container must be used
+// Note: in complex elements where is not enough to use the "ripple" attribute, a "<label>" container must be used
+@Directive({selector: '[ripple]'})
 export class MlRipple{
 
   constructor(private host: ElementRef, private ren: Renderer) {}
@@ -19,5 +17,4 @@ export class MlRipple{
       new MdlRipple(elementWithRipple);
     }, 0)
   }
-
 }

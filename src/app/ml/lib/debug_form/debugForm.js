@@ -20,7 +20,7 @@ var DebugForm = (function () {
     DebugForm = __decorate([
         core_1.Component({
             selector: 'debug-form',
-            template: "\n<style>\n.code-block{\n  background: aliceblue;\n  font-size: 13px;\n  margin: auto;\n  border: 1px solid lightgray;\n  border-radius: 4px;  \n}\n.inner-div{margin-left: 10px;}\n.value{color: cornflowerblue;}\n</style>\n\n<pre class=\"code-block\">\n  <div class=\"inner-div\">\n    <b>FORM DEBUGGER:</b>\n    \u27A0 Form values: <span class=\"value\">{{ formName.value | json }}</span>\n    \u27A0 Form valid : <span class=\"value\">{{ formName.valid }}</span>\n  </div>\n</pre>\n" //template
+            template: "\n<style>\n.code-block{background: aliceblue; font-size: 13px; margin: auto; border: 1px solid lightgray; border-radius: 4px}\n.inner-div{margin-left: 10px;}\n.value{color: cornflowerblue;}\n</style>\n\n<pre class=\"code-block\">\n  <div class=\"inner-div\">\n    <b>FORM DEBUGGER:</b>\n    \u27A0 Form values: <span class=\"value\">{{ formName.value | json }}</span>\n    \u27A0 Form valid : <span class=\"value\">{{ formName.valid }}</span>\n  </div>\n</pre>\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], DebugForm);

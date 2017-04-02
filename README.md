@@ -1,14 +1,33 @@
-<!-- todo: poner los incoveninets de otras alternativas como que son mas lentas, complicadas, etc. -->
 <p align="center"><img src="src/assets/img/logo.png" style="margin: auto; width: 81px;"></p>
 
 <h1><p align="center">Material Light</p></h1>
 
 **Material Designt UI components for Angular 2 +**
 
+<!--
 This library of components has been carefully designed to create light, easy to use and fast Angular 2 + user interfaces
 (Both for web and mobile apps).
+-->
 
-If you find this project useful and are going to use it, please give a star and credits to the author in your work.
+There are other adaptations of Material Design Lite and other UI frameworks like the official Material Design 2, 
+but this library has the following advantages:
+
+- Lighter
+- Faster
+- Easier and fun to use
+- True library of componentes encapsulating typescipt code, CSS and HTML as atomic units
+- Easy and quick form validation
+- Great performance on mobile UI interfaces.
+- Responsive content adaptable to desktop and mobile
+- Components available also as Angular Modules allowing Lazy-loading. This implies loading only the components needed at runtime
+- Ready for Ahead of Time Compilation (AOT)
+- Tested in main desktop/mobile browsers: Chrome (Android, IOS, desktop), FF, Edge, IE, Opera, etc.
+- No dependencies of other libraries like JQuery.
+
+Note: The main goal was to achieve great performance not to encompas all posible kind of UI components (this is the philosophy of
+Material Design Light too). You can always add other components needed from other sources.
+
+If you find this project useful and are going to use it, please give a star in the repo and credits to the author in your work.
 
 Terms of use under <a href="LICENSE.txt">MIT</a> license.
 
@@ -27,7 +46,7 @@ Yago López:
 
 ## Use
 
-- This project is meant to be used with **angular-cli**
+- This project is meant to be used with the **angular-cli** although not mandatory.
 - Clone or download the repository.
 - Copy the `ml` folder (where the components are) into your project
 - Copy and paste the `assets` folder contents into the **exact same path** in your angular-cli project
@@ -39,16 +58,16 @@ Yago López:
 
 ## Testing
 
-<div>E2E tests with the colaboration of:</div>
+<div>Tests with the colaboration of:</div>
 <a href="https://www.browserstack.com/" target="_blank"><img src="browserstack-logo.png" height="90px"></a>
 
-## Requirements:
+## Used for running this demo:
 
 - Angular 2 +
 - Angular Command Line (angular-cli)
 - Typescript
-- Webpack
-- SystemJS (recommended)
+- Webpack for production builds
+- SystemJS as module loader for development time
 - Node/Npm
 
 ## Disclaimers:

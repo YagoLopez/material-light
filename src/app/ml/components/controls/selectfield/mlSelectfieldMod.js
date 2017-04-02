@@ -16,9 +16,7 @@ var MlSelectfieldMod = (function () {
     function MlSelectfieldMod() {
     }
     MlSelectfieldMod = __decorate([
-        core_1.NgModule({
-            imports: [mlIconMod_1.MlIconMod, mlButtonMod_1.MlButtonMod],
-            declarations: [mlSelectfield_1.MlSelectfield, mlSelectfield_1.MlSelectfieldItem],
+        core_1.NgModule({ imports: [mlIconMod_1.MlIconMod, mlButtonMod_1.MlButtonMod], declarations: [mlSelectfield_1.MlSelectfield, mlSelectfield_1.MlSelectfieldItem],
             exports: [mlSelectfield_1.MlSelectfield, mlSelectfield_1.MlSelectfieldItem] }), 
         __metadata('design:paramtypes', [])
     ], MlSelectfieldMod);

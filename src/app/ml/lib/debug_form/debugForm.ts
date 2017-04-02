@@ -5,13 +5,7 @@ import {FormGroup} from "@angular/forms";
 selector: 'debug-form',
 template:`
 <style>
-.code-block{
-  background: aliceblue;
-  font-size: 13px;
-  margin: auto;
-  border: 1px solid lightgray;
-  border-radius: 4px;  
-}
+.code-block{background: aliceblue; font-size: 13px; margin: auto; border: 1px solid lightgray; border-radius: 4px}
 .inner-div{margin-left: 10px;}
 .value{color: cornflowerblue;}
 </style>

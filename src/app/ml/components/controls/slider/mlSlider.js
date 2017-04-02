@@ -12,16 +12,16 @@ var core_1 = require("@angular/core");
 var mlSliderLib_1 = require("./mlSliderLib");
 var ml = require("../../../lib/ml_lib");
 var MlSlider = (function () {
-    function MlSlider(hostElement, ren) {
-        this.hostElement = hostElement;
+    function MlSlider(host, ren) {
+        this.host = host;
         this.ren = ren;
     }
     MlSlider.prototype.change = function (value) {
         this.mdlSlider.change(value);
     };
     MlSlider.prototype.ngOnInit = function () {
-        ml.setAttribute(this.hostElement, 'type', 'range', this.ren);
-        this.mdlSlider = new mlSliderLib_1.default(this.hostElement.nativeElement);
+        ml.setAttribute(this.host, 'type', 'range', this.ren);
+        this.mdlSlider = new mlSliderLib_1.default(this.host.nativeElement);
     };
     MlSlider = __decorate([
         core_1.Component({

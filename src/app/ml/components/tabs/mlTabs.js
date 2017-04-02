@@ -15,9 +15,7 @@ var MlTabs = (function () {
     function MlTabs(host) {
         this.host = host;
     }
-    MlTabs.prototype.ngAfterViewInit = function () {
-        new mlTabsLib_1.default(this.host.nativeElement);
-    };
+    MlTabs.prototype.ngAfterViewInit = function () { new mlTabsLib_1.default(this.host.nativeElement); };
     MlTabs = __decorate([
         core_1.Component({
             selector: 'ml-tabs',
@@ -38,10 +36,7 @@ var MlTabsBar = (function () {
     function MlTabsBar() {
     }
     MlTabsBar = __decorate([
-        core_1.Component({
-            selector: 'ml-tabs-bar',
-            host: { class: 'mdl-tabs__tab-bar' },
-            template: '<ng-content></ng-content>' }), 
+        core_1.Component({ selector: 'ml-tabs-bar', host: { class: 'mdl-tabs__tab-bar' }, template: '<ng-content></ng-content>' }), 
         __metadata('design:paramtypes', [])
     ], MlTabsBar);
     return MlTabsBar;
@@ -52,23 +47,18 @@ var MlTab = (function () {
     function MlTab() {
     }
     MlTab = __decorate([
-        core_1.Directive({
-            selector: '[ml-tab]',
-            host: { class: 'mdl-tabs__tab' } }), 
+        core_1.Directive({ selector: '[ml-tab]', host: { class: 'mdl-tabs__tab' } }), 
         __metadata('design:paramtypes', [])
     ], MlTab);
     return MlTab;
 }());
-exports.MlTab = MlTab; // Do not confuse with MdlTabHeader
+exports.MlTab = MlTab;
 // ---------------------------------------------------------------------------------------------------------------------
 var MlActive = (function () {
     function MlActive() {
     }
     MlActive = __decorate([
-        // Do not confuse with MdlTabHeader
-        core_1.Directive({
-            selector: '[ml-active]',
-            host: { class: 'is-active' } }), 
+        core_1.Directive({ selector: '[ml-active]', host: { class: 'is-active' } }), 
         __metadata('design:paramtypes', [])
     ], MlActive);
     return MlActive;
@@ -79,10 +69,7 @@ var MlTabPanel = (function () {
     function MlTabPanel() {
     }
     MlTabPanel = __decorate([
-        core_1.Component({
-            selector: 'ml-tab-panel',
-            host: { class: 'mdl-tabs__panel' },
-            template: '<ng-content></ng-content>' }), 
+        core_1.Component({ selector: 'ml-tab-panel', host: { class: 'mdl-tabs__panel' }, template: '<ng-content></ng-content>' }), 
         __metadata('design:paramtypes', [])
     ], MlTabPanel);
     return MlTabPanel;

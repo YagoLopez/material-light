@@ -30,8 +30,7 @@ var MlList = (function () {
             encapsulation: core_1.ViewEncapsulation.None,
             styleUrls: ['./mlList.css'],
             template: '<ul class="mdl-list" #ulElement><ng-content></ng-content></ul>',
-            moduleId: module.id
-        }), 
+            moduleId: module.id }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
     ], MlList);
     return MlList;
@@ -44,10 +43,12 @@ var MlItem = (function () {
         this.lines = '';
     }
     MlItem.prototype.ngOnInit = function () {
-        if (this.lines === '2')
+        if (this.lines === '2') {
             ml.setClass(this.liElement, 'mdl-list__item--two-line', this.ren);
-        if (this.lines === '3')
+        }
+        if (this.lines === '3') {
             ml.setClass(this.liElement, 'mdl-list__item--three-line', this.ren);
+        }
     };
     __decorate([
         core_1.ViewChild('liElement'), 
@@ -60,8 +61,7 @@ var MlItem = (function () {
     MlItem = __decorate([
         core_1.Component({
             selector: 'ml-item',
-            template: '<li class="mdl-list__item" #liElement><ng-content></ng-content></li>',
-        }), 
+            template: '<li class="mdl-list__item" #liElement><ng-content></ng-content></li>', }), 
         __metadata('design:paramtypes', [core_1.Renderer])
     ], MlItem);
     return MlItem;
@@ -75,8 +75,7 @@ var MlItemContent = (function () {
         core_1.Component({
             selector: 'ml-item-content',
             host: { class: 'mdl-list__item-primary-content' },
-            template: "\n<span class=\"mdl-list__item-primary-content\">\n  <ng-content></ng-content>\n</span>\n" //template
-        }), 
+            template: '<span class="mdl-list__item-primary-content"><ng-content></ng-content></span>' }), 
         __metadata('design:paramtypes', [])
     ], MlItemContent);
     return MlItemContent;
@@ -90,8 +89,7 @@ var MlItemAction = (function () {
         core_1.Component({
             selector: 'ml-item-action',
             host: { class: 'mdl-list__item-secondary-action' },
-            template: '<ng-content></ng-content>'
-        }), 
+            template: '<ng-content></ng-content>' }), 
         __metadata('design:paramtypes', [])
     ], MlItemAction);
     return MlItemAction;
@@ -121,8 +119,7 @@ var MlItemIcon = (function () {
     MlItemIcon = __decorate([
         core_1.Component({
             selector: 'ml-item-icon',
-            template: '<i class="material-icons" #icon><ng-content></ng-content></i>'
-        }), 
+            template: '<i class="material-icons" #icon><ng-content></ng-content></i>' }), 
         __metadata('design:paramtypes', [core_1.Renderer])
     ], MlItemIcon);
     return MlItemIcon;
@@ -133,10 +130,7 @@ var MlItemTitle = (function () {
     function MlItemTitle() {
     }
     MlItemTitle = __decorate([
-        core_1.Component({
-            selector: 'ml-item-title',
-            template: '<span><ng-content></ng-content></span>'
-        }), 
+        core_1.Component({ selector: 'ml-item-title', template: '<span><ng-content></ng-content></span>' }), 
         __metadata('design:paramtypes', [])
     ], MlItemTitle);
     return MlItemTitle;
@@ -147,10 +141,8 @@ var MlItemSubtitle = (function () {
     function MlItemSubtitle() {
     }
     MlItemSubtitle = __decorate([
-        core_1.Component({
-            selector: 'ml-item-subtitle',
-            template: '<span class="mdl-list__item-sub-title"><ng-content></ng-content></span>'
-        }), 
+        core_1.Component({ selector: 'ml-item-subtitle',
+            template: '<span class="mdl-list__item-sub-title"><ng-content></ng-content></span>' }), 
         __metadata('design:paramtypes', [])
     ], MlItemSubtitle);
     return MlItemSubtitle;
@@ -161,10 +153,8 @@ var MlItemDesc = (function () {
     function MlItemDesc() {
     }
     MlItemDesc = __decorate([
-        core_1.Component({
-            selector: 'ml-item-desc',
-            template: '<span class="mdl-list__item-text-body"><ng-content></ng-content></span>'
-        }), 
+        core_1.Component({ selector: 'ml-item-desc',
+            template: '<span class="mdl-list__item-text-body"><ng-content></ng-content></span>' }), 
         __metadata('design:paramtypes', [])
     ], MlItemDesc);
     return MlItemDesc;

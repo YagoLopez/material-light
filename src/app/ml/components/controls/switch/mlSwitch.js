@@ -42,17 +42,11 @@ var MlSwitch = (function () {
     MlSwitch.prototype.writeValue = function (value) {
         this.model = value;
     };
-    MlSwitch.prototype.isChecked = function () {
-        return this.model == true;
-    };
     MlSwitch.prototype.registerOnChange = function (fn) { this.onChange = fn; };
     MlSwitch.prototype.registerOnTouched = function (fn) { this.onTouch = fn; };
-    MlSwitch.prototype.on = function () {
-        this.mdlSwitch.on();
-    };
-    MlSwitch.prototype.off = function () {
-        this.mdlSwitch.off();
-    };
+    MlSwitch.prototype.isChecked = function () { return this.model == true; };
+    MlSwitch.prototype.on = function () { this.mdlSwitch.on(); };
+    MlSwitch.prototype.off = function () { this.mdlSwitch.off(); };
     __decorate([
         core_1.ViewChild('label'), 
         __metadata('design:type', core_1.ElementRef)

@@ -12,6 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var mlRippleLib_1 = require("./mlRippleLib");
+// Note: in complex elements where is not enough to use the "ripple" attribute, a "<label>" container must be used
 var MlRipple = (function () {
     function MlRipple(host, ren) {
         this.host = host;
@@ -25,9 +26,7 @@ var MlRipple = (function () {
         }, 0);
     };
     MlRipple = __decorate([
-        core_1.Directive({
-            selector: '[ripple]',
-        }), 
+        core_1.Directive({ selector: '[ripple]' }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlRipple);
     return MlRipple;

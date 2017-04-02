@@ -52,12 +52,9 @@ var MlTextfield = (function () {
         if (!ml.isAttributeValid(this.type.toLowerCase(), MlTextfieldTypes)) {
             console.warn("<ml-textfield> Wrong attribute: type=\"" + this.type + "\"");
         }
-        if (!this.id) {
-            this.id = ml.randomStr();
-        }
-        if (ml.isDefined(this.floatingLabel)) {
-            ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren);
-        }
+        !this.id && this.id;
+        ml.randomStr();
+        ml.isDefined(this.floatingLabel) && ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren);
         if (this.disabled === 'true') {
             this.mdlTextfield.disable();
         }

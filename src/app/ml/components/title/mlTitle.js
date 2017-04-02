@@ -13,10 +13,7 @@ var MlTitle = (function () {
     function MlTitle() {
     }
     MlTitle = __decorate([
-        core_1.Component({
-            selector: 'ml-title',
-            host: { class: 'mdl-layout-title' },
-            template: "<ng-content></ng-content>" }), 
+        core_1.Component({ selector: 'ml-title', host: { class: 'mdl-layout-title' }, template: "<ng-content></ng-content>" }), 
         __metadata('design:paramtypes', [])
     ], MlTitle);
     return MlTitle;

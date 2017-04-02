@@ -61,9 +61,7 @@ var MlTextfieldExpand = (function () {
     };
     MlTextfieldExpand.prototype.writeValue = function (value) {
         this._model = value;
-        if (value) {
-            this.mlTextfield.change(value);
-        }
+        value && this.mlTextfield.change(value);
     };
     MlTextfieldExpand.prototype.registerOnChange = function (fn) { this.onChange = fn; };
     MlTextfieldExpand.prototype.registerOnTouched = function (fn) { this.onTouch = fn; };
