@@ -48,7 +48,7 @@ var MlLayout = (function () {
             selector: 'ml-layout',
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             styleUrls: ['./mlLayout.css', '../ripple/mlRipple.css', '../icon/mlIicon.css'],
-            host: { class: 'mdl-layout' },
+            host: { class: 'mdl-layout mdl-layout__container' },
             encapsulation: core_1.ViewEncapsulation.None,
             template: '<ng-content></ng-content>',
             moduleId: module.id,

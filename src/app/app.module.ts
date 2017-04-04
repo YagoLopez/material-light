@@ -1,6 +1,9 @@
-//todo: que se oculten drowdowns al hacer click en el fondo
+//todo: revisar header scrollable
+//todo: crear instalador npm
+//todo: probar con angular 4
+//todo: validaciones de input.date component (probar con valueChanges())
+//todo: que se oculten dropwdowns al hacer click en el fondo
 //todo: renombrar mlLayoutLib.ts a mdlLayoutLib, por ejemplo, y los demas ficheros
-//todo: media query para que se muestre el menu lateral en modo tablet en iframe
 //todo: hacer documentacion de api para cada componente
 //todo: que se puedan usar diferentes cabeceras y menus laterales (<ml-header>) en cada pagina (usar named router-outlet?)
 //todo: hacer Ml starter project
@@ -11,11 +14,11 @@
 //todo: abrir issue en repo angular sobre los warnings en controles
 //todo: drawer dragabble
 //todo: travis
-//todo: hacer test con browserstack
+//todo: completar tests con browserstack
 //todo: footer component
 //todo: crear un componente para visualizar gist en angular 2
 //todo: crear mas librerias de componentes
-//todo: separar page loader component en un repositorio diferente, hacer una pagina de page-loader y progressbar loader
+//todo: separar page-loader component en un repositorio diferente, hacer 2: page-loader y progressbar-loader
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
@@ -25,10 +28,10 @@ import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {App} from "./app.layout";
 
 // Relative paths for SystemJS
-export const basePath = '.app/pages/';
+// export const basePath = '.app/pages/';
 
 // Absolute paths for Webpack
-// export const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
+export const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
 
 // WEBPACK ROUTES: absolute paths are needed by webpack and lazy-load
 const APP_ROUTES = [
@@ -58,36 +61,6 @@ const APP_ROUTES = [
 {path: 'layout',     loadChildren: basePath + 'layout/pagLayoutMod#PagLayoutMod'},
 {path: '**',         redirectTo: 'button'}
 ];
-
-// SYSTEMJS ROUTES: relative paths
-/*
-const APP_ROUTES = [
-  {path: '',           redirectTo: 'button', pathMatch: 'full'},
-  {path: 'button',     loadChildren: '.app/pages/button/pagButtonMod'},
-  {path: 'card',       loadChildren: '.app/pages/card/pagCardMod'},
-  {path: 'selectfield',loadChildren: '.app/pages/selectfield/pagSelectfieldMod'},
-  {path: 'textfield',  loadChildren: '.app/pages/textfield/pagTextfieldMod'},
-  {path: 'textfield2', loadChildren: '.app/pages/textfield2/pagTextfiel2dMod'},
-  {path: 'checkbox',   loadChildren: '.app/pages/checkbox/pagCheckboxMod'},
-  {path: 'radio',      loadChildren: '.app/pages/radio/pagRadioMod'},
-  {path: 'switch',     loadChildren: '.app/pages/switch/pagSwitchMod'},
-  {path: 'toggle',     loadChildren: '.app/pages/toggle/pagToggleMod'},
-  {path: 'badge',      loadChildren: '.app/pages/badge/pagBadgeMod'},
-  {path: 'grid',       loadChildren: '.app/pages/grid/pagGridMod'},
-  {path: 'tabs',       loadChildren: '.app/pages/tabs/pagTabsMod'},
-  {path: 'snackbar',   loadChildren: '.app/pages/snackbar/pagSnackbarMod'},
-  {path: 'chip',       loadChildren: '.app/pages/chip/pagChipMod'},
-  {path: 'list',       loadChildren: '.app/pages/list/pagListMod'},
-  {path: 'menu',       loadChildren: '.app/pages/menu/pagMenuMod'},
-  {path: 'progressbar',loadChildren: '.app/pages/progressbar/pagProgressbarMod'},
-  {path: 'spinner',    loadChildren: '.app/pages/spinner/pagSpinnerMod'},
-  {path: 'tooltip',    loadChildren: '.app/pages/tooltip/pagTooltipMod'},
-  {path: 'slider',     loadChildren: '.app/pages/slider/pagSliderMod'},
-  {path: 'dialog',     loadChildren: '.app/pages/dialog/pagDialogMod'},
-  {path: 'table',      loadChildren: '.app/pages/table/pagTableMod'},
-  {path: '**',         redirectTo  : 'button'}
-];
-*/
 
 @NgModule({
   imports: [

@@ -27,7 +27,8 @@ but this library has the following advantages:
 Note: The main goal was to achieve great performance not to encompas all posible kind of UI components (this is the philosophy of
 Material Design Light too). You can always add other components needed from other sources.
 
-If you find this project useful and are going to use it, please give a star in the repo and credits to the author in your work.
+If you find this project useful and are going to use it, please give a star in the repo and credits in your work to the author 
+and to <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>
 
 Terms of use under <a href="LICENSE.txt">MIT</a> license.
 

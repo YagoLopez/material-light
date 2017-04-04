@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation } from "@angular/core";
+import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation} from "@angular/core";
 import {MlButton} from "../controls/button/mlButton";
 import MdlMenu from "./mlMenuLib";
 import * as ml from "../../lib/ml_lib";
@@ -37,7 +37,7 @@ export class MlMenu{
 
   ngOnInit(){
     !this.id && (this.id = ml.randomStr());
-    if (this.ripple === ''){
+    if (ml.isDefined(this.ripple)){
       ml.setClass(this.mdlButton.host, 'mdl-js-ripple-effect', this.ren);
       ml.setClass(this.menuList, 'mdl-js-ripple-effect', this.ren);
     }
@@ -52,13 +52,14 @@ export class MlMenu{
   }
 
   /**
-   * Get menu position from input attribute POSITION.
+   * Get menu position from @Input.position
    *
    * @param position {string} Input Menu position relative to screen corners.
    * @returns {string} Class name defining position
    *
    * Allowed values: [top-left, top-right, bottom-left, bottom, right] (in lower case)
    */
+  //todo: definir tipos de valores permitidos como en otros casos
   private getMenuPosition(position: string): string{
     // todo: class names are wrong?
     let mdlClassName = '';

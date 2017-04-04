@@ -321,8 +321,6 @@ ul, ol {
   line-height: 24px;
   letter-spacing: 0; }
 
-
-
 /* ANIMATIONS --------------------------------------------------------------------- */
 .mdl-animation--default { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
 
@@ -555,7 +553,7 @@ ul, ol {
   @media screen and (max-width: 1024px) {
     /* todo: revisar esto */
     /*.mdl-layout__header { display: none; }*/
-    .mdl-layout--fixed-header > .mdl-layout__header { display: -webkit-flex; display: -ms-flexbox; display: flex; }
+    /*.mdl-layout--fixed-header > .mdl-layout__header { display: -webkit-flex; display: -ms-flexbox; display: flex; }*/
   }
 
 .mdl-layout__header--transparent.mdl-layout__header--transparent { background-color: transparent;  box-shadow: none; }

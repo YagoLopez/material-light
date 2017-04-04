@@ -11,7 +11,7 @@ import * as ml from "../../lib/ml_lib";
 selector: 'ml-layout',
 changeDetection: ChangeDetectionStrategy.OnPush,
 styleUrls: ['./mlLayout.css', '../ripple/mlRipple.css', '../icon/mlIicon.css'],
-host: {class: 'mdl-layout'},
+host: {class: 'mdl-layout mdl-layout__container'},
 encapsulation: ViewEncapsulation.None,
 template: '<ng-content></ng-content>',
 moduleId: module.id,

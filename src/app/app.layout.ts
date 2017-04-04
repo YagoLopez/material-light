@@ -5,21 +5,19 @@ selector: 'ml-demo-app',
 template:`
 
 <style>
-  a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}
-  .bg-grey{background: lightgrey}
-  .active-nav{background: darkgrey; color: white !important}
-  .drawer-title{color: white; text-align: center}
-  .drawer-top-img{
-    margin: auto; display: block; width: 100%;height: 150px; background: url('assets/img/bg1.jpg') 0 0 / cover;}
-  .drawer-img{width: 25%; text-align: center; margin: 30px auto auto; display: block;}
-  .page-loader{width: 100%; height: 500px; position: absolute; text-align: center; margin-top: 76%;}
+a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}
+.bg-grey{background: lightgrey}
+.active-nav{background: darkgrey; color: white !important}
+.drawer-title{color: white; text-align: center}
+.drawer-top-img{margin: auto; display: block; width: 100%;height: 150px; background: url('assets/img/bg1.jpg') 0 0 / cover;}
+.drawer-img{width: 25%; text-align: center; margin: 30px auto auto; display: block;}
 </style>
 
 <ml-layout drawer="fixed">
 
   <!-- Header ------------------------------------------------------------------------------------------------------ -->
 
-  <ml-header>
+  <ml-header waterfall>
     <ml-header-row>
       <ml-title>Material Light Demo</ml-title>
       <ml-spacer></ml-spacer>
@@ -43,12 +41,10 @@ template:`
   <!-- Drawer ------------------------------------------------------------------------------------------------------ -->
   
   <ml-drawer>
-
     <div class="drawer-top-img">
       <img src="assets/img/logo.png" class="drawer-img">
       <div class="drawer-title">Material Light</div>
     </div>
-    
     <ml-nav>
       <a nav-item routerLink="button" routerLinkActive="active-nav">Button</a>
       <a nav-item routerLink="card" routerLinkActive="active-nav">Card</a>
@@ -79,7 +75,7 @@ template:`
   <!-- Content ----------------------------------------------------------------------------------------------------- -->
   
   <ml-content>
-    <ml-page-loader (isLoading)="onLoading($event)"></ml-page-loader>
+    <ml-page-loader spinner (onLoading)="onLoading($event)"></ml-page-loader>
     <ml-content-tabheader id="tab1" active [hidden]="isLoading">
       <router-outlet></router-outlet>
     </ml-content-tabheader>

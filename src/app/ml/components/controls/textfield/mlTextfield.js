@@ -1,4 +1,11 @@
 //todo: intentar implementar ml-textfield como el componente mdl-slider
+//todo: he visto que en algun ejemplo usan ngControl en template-driven forms. investigarlo
+//todo: revisar algunos inputs, pueden sobrar al no usar model-driven forms (ej: name)
+//todo: que solo haya que usar una vez el input de form-control [control] -> pasarselo al componente hijo que muestra
+//los errores.
+//todo: para posteriores versiones tratar de evitar el js de los ficheros Lib.js
+//es posible que se puedan sustituir por logica de templates de component
+//todo: intentar simplificar tomando como referencia MlSelectfield, aunque igual no funcionan template forms
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,13 +16,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-//todo: he visto que en algun ejemplo usan ngControl en template-driven forms. investigarlo
-//todo: revisar algunos inputs, pueden sobrar al no usar model-driven forms (ej: name)
-//todo: que solo haya que usar una vez el input de form-control [control] -> pasarselo al componente hijo que muestra
-//los errores.
-//todo: para posteriores versiones tratar de evitar el js de los ficheros Lib.js
-//es posible que se puedan sustituir por logica de templates de component
-//todo: intentar simplificar tomando como referencia MlSelectfield, aunque igual no funcionan template forms
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var mlTextfieldLib_1 = require("./mlTextfieldLib");

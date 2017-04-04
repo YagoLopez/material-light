@@ -16,23 +16,23 @@ var router_1 = require("@angular/router");
 var MlPageLoader = (function () {
     function MlPageLoader(router) {
         this.router = router;
-        this.isLoading = new core_1.EventEmitter();
-        this.loading = true;
+        this.onLoading = new core_1.EventEmitter();
+        this.isLoading = true;
     }
     MlPageLoader.prototype.ngOnInit = function () {
         var _this = this;
         this.router.events.subscribe(function (event) {
             if (event instanceof router_1.NavigationStart) {
-                _this.loading = true;
-                _this.isLoading.emit(_this.loading);
+                _this.isLoading = true;
+                _this.onLoading.emit(_this.isLoading);
             }
             if (event instanceof router_1.NavigationEnd) {
-                _this.loading = false;
-                _this.isLoading.emit(_this.loading);
+                _this.isLoading = false;
+                _this.onLoading.emit(_this.isLoading);
             }
             if (event instanceof router_1.NavigationCancel) {
-                _this.loading = false;
-                _this.isLoading.emit(_this.loading);
+                _this.isLoading = false;
+                _this.onLoading.emit(_this.isLoading);
             }
             if (event instanceof router_1.NavigationError) {
                 _this.divLoader.nativeElement.remove();
@@ -47,11 +47,15 @@ var MlPageLoader = (function () {
     __decorate([
         core_1.Output(), 
         __metadata('design:type', core_1.EventEmitter)
-    ], MlPageLoader.prototype, "isLoading", void 0);
+    ], MlPageLoader.prototype, "onLoading", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], MlPageLoader.prototype, "spinner", void 0);
     MlPageLoader = __decorate([
         core_1.Component({
             selector: 'ml-page-loader',
-            template: "\n<style>\n.loader-text{position: absolute; margin: auto; left: 0; right: 0; top: 37%; bottom: 0; text-align: center;\n  font-family: \"Roboto\",serif; font-size: 14px}\n.loader {position: absolute; margin: auto; left: 0; right: 0; top: 44%; text-align: center}\n</style>\n<div #divLoader class=\"loader\" *ngIf=\"loading\">\n<ml-spinner class=\"loader\" single-color></ml-spinner>\n</div>\n" //template
+            template: "\n<div #divLoader *ngIf=\"isLoading\" style=\"position:absolute;width:95%;top:40%;text-align:center\">\n<ml-spinner *ngIf=\"spinner === ''\" single-color></ml-spinner>\n<div><ng-content></ng-content></div>\n</div>\n" //template
         }), 
         __metadata('design:paramtypes', [router_1.Router])
     ], MlPageLoader);
