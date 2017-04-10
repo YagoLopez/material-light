@@ -25,21 +25,31 @@ strong{color: #3f51b5}
   <ml-grid-cell width="1" class="bg-grey">1 col</ml-grid-cell>
 </ml-grid>
 
-<strong>• Grid 2</strong>
+<strong>• Grid 2</strong> (no space between cells)
+<ml-grid no-space style="padding: 14px">
+  <ml-grid-cell width="1" class="bg-grey">1 col</ml-grid-cell>
+  <ml-grid-cell width="1" class="bg-blue">1 col</ml-grid-cell>
+  <ml-grid-cell width="1" class="bg-grey">1 col</ml-grid-cell>
+  <ml-grid-cell width="1" class="bg-blue">1 col</ml-grid-cell>
+  <ml-grid-cell width="1" class="bg-grey">1 col</ml-grid-cell>
+  <ml-grid-cell width="1" class="bg-blue">1 col</ml-grid-cell>
+</ml-grid>
+
+<strong>• Grid 3</strong>
 <ml-grid>
   <ml-grid-cell width="2" class="bg-blue">2 col</ml-grid-cell>
   <ml-grid-cell width="2" class="bg-blue">2 col</ml-grid-cell>
 </ml-grid>
 
-<strong>• Grid 3</strong>
+<strong>• Grid 4</strong>
 <ml-grid>
   <ml-grid-cell width="12" class="bg-darkgrey">Full width</ml-grid-cell>
   <ml-grid-cell width="12" class="bg-darkgrey">Full width</ml-grid-cell>
 </ml-grid>
 
 <hr>
-<h6>One grid with mixed widths</h6>
 
+<h6>One grid with mixed cells</h6>
 <ml-grid>
   <ml-grid-cell width="1" class="bg-grey">1 col</ml-grid-cell>
   <ml-grid-cell width="1" class="bg-grey">1 col</ml-grid-cell>

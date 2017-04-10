@@ -239,6 +239,7 @@ MdlLayout.prototype.init = function () {
         this.header_.addEventListener('click', this.headerClickHandler_.bind(this));
       } else if (this.header_.classList.contains(this.CssClasses_.HEADER_SCROLL)) {
         mode = this.Mode_.SCROLL;
+        //todo: esto puede tener que ver con que no funcione scrolling header
         // container.classList.add(this.CssClasses_.HAS_SCROLLING_HEADER);
       }
       if (mode === this.Mode_.STANDARD) {

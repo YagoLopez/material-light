@@ -4,28 +4,26 @@
 
 **Material Designt UI components for Angular 2 +**
 
-<!--
-This library of components has been carefully designed to create light, easy to use and fast Angular 2 + user interfaces
-(Both for web and mobile apps).
--->
-
 There are other adaptations of Material Design Lite and other UI frameworks like the official Material Design 2, 
 but this library has the following advantages:
 
-- Lighter
-- Faster
-- Easier and fun to use
+- 100% Free forever.
+- Light
+- Fast
+- Easy and fun to use
 - True library of componentes encapsulating typescipt code, CSS and HTML as atomic units
 - Easy and quick form validation
 - Great performance on mobile UI interfaces.
 - Responsive content adaptable to desktop and mobile
-- Components available also as Angular Modules allowing Lazy-loading. This implies loading only the components needed at runtime
+- Components available also as Angular Modules allowing Code-Splitting or Lazy-loading. This implies loading only the components needed at runtime
 - Ready for Ahead of Time Compilation (AOT)
 - Tested in main desktop/mobile browsers: Chrome (Android, IOS, desktop), FF, Edge, IE, Opera, etc.
-- No dependencies of other libraries like JQuery.
+- No dependencies of other libraries like JQuery or Bootstrap.
 
-Note: The main goal was to achieve great performance not to encompas all posible kind of UI components (this is the philosophy of
-Material Design Light too). You can always add other components needed from other sources.
+## Objective
+
+The main goal was to achieve minimalism and great performance, not to encompass all posible kind of options or UI components (this is the philosophy of
+Material Design Light too). You can always add other components from other sources.
 
 If you find this project useful and are going to use it, please give a star in the repo and credits in your work to the author 
 and to <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>
@@ -48,14 +46,14 @@ Yago López:
 ## Use
 
 - This project is meant to be used with the **angular-cli** although not mandatory.
-- Clone or download the repository.
+- Until it will be available as an NPM package, clone or download the repository.
 - Copy the `ml` folder (where the components are) into your project
-- Copy and paste the `assets` folder contents into the **exact same path** in your angular-cli project
+- Copy and paste the contents of the `assets` folder into the **exact same path** in your angular-cli project
 - Use the components following the examples in the `pages` directory. The components use `ml` as namespace. For example: `<ml-icon>email</ml-icon>` places an email icon component in a template.
 - There are two ways of using the library:
   1. **As components**. For example, import `MlButton` and `MlIcon` in your component and put `<ml-button>` and `<ml-icon>` in your template.
-  2. **As modules**: Following the previous example, you will need to import the modules `MlButtonMod` and `MlIconMod` in your own module. The use of modules allows to implement lazy-loading.
-- Note: This library works with AOT
+  2. **As modules**: You would need to import the modules `MlButtonMod` and `MlIconMod` into your own module. The use of modules is indicated for lazy-loading.
+- This library works with AOT
 
 ## Testing
 
@@ -64,16 +62,16 @@ Yago López:
 
 ## Used for running this demo:
 
-- Angular 2 +
+- Angular 2+
 - Angular Command Line (angular-cli)
 - Typescript
 - Webpack for production builds
-- SystemJS as module loader for development time
-- Node/Npm
+- SystemJS as module loader during development time
+- Node/Npm latest versions
 
 ## Disclaimers:
 
-- This project is based on <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>
+- This project is based on <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>. It is an adaptation of Javascript MDL components to Angular Typscript components with the permission of the MDL team.
 - Material Design is a Google's registered trade mark probably.
-- This is an open source project without commercial or profit intentions.
+- This is an open-source project without commercial or profit intentions.
 - Tested on Angular version 2.4.7.

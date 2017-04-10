@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {MlSpinnerMod} from "../spinner/mlSpinnerMod";
-import {MlPageLoader} from "./mlPageLoader";
-@NgModule({imports: [CommonModule, MlSpinnerMod], declarations: [MlPageLoader], exports: [MlPageLoader]})
+import {MlContentLoader} from "./mlContentLoader";
+@NgModule({imports: [CommonModule, MlSpinnerMod], declarations: [MlContentLoader], exports: [MlContentLoader]})
 export class MlPageLoaderMod{}

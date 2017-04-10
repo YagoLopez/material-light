@@ -17,12 +17,10 @@
   box-sizing: border-box; }
 
 .mdl-card__media {
-  background-color: rgb(255,64,129);
-  background-repeat: repeat;
-  background-position: 50% 50%;
   background-size: cover;
   background-origin: padding-box;
-  background-attachment: scroll;
+  /*background: rgb(255, 64, 129) repeat scroll 50% 50%;*/
+  background: lightgrey repeat scroll 50% 50%;
   box-sizing: border-box; }
 
 .mdl-card__title {
@@ -44,8 +42,8 @@
   -webkit-transform-origin: 165px 56px;
   transform-origin: 165px 56px;
   box-sizing: border-box; }
-.mdl-card__title.mdl-card--border {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.mdl-card__title.mdl-card--border { border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 .mdl-card__title-text {
   -webkit-align-self: flex-end;
@@ -64,10 +62,7 @@
   transform-origin: 149px 48px;
   margin: 0; }
 
-.mdl-card__subtitle-text {
-  font-size: 14px;
-  color: rgba(0,0,0, 0.54);
-  margin: 0; }
+.mdl-card__subtitle-text { font-size: 14px; color: rgba(0,0,0, 0.54); margin: 0; }
 
 .mdl-card__supporting-text {
   color: rgba(0,0,0, 0.54);
@@ -84,18 +79,10 @@
   background-color: transparent;
   padding: 8px;
   box-sizing: border-box; }
-.mdl-card__actions.mdl-card--border {
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
-.mdl-card--expand {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1; }
-
-.mdl-card__menu {
-  position: absolute;
-  right: 16px;
-  top: 16px; }
+.mdl-card__actions.mdl-card--border { border-top: 1px solid rgba(0, 0, 0, 0.1); }
+.mdl-card--expand { -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; }
+.mdl-card__menu { position: absolute; right: 16px; top: 16px; }
 
  .mdl-shadow--2dp {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }

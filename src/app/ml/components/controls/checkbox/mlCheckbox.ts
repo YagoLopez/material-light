@@ -1,9 +1,9 @@
-// [attr.id]= "id+'mdl'" => adds sufix 'mdl' to avoid colision width <mdl-checkbox id> attribute
+// [attr.id]= "id+'mdl'" => adds sufix 'mdl' to avoid collision width <ml-checkbox id> attribute
 
 // Options groups checkboxes not supported?
 
 //todo: una forma de arreglar lo de no cargar varias veces 'ml_ripple.css' es poniendo los estilos mdl-ripple en
-//      el fichero general 'material.css' pero puede haber problemas con la encapsulacion
+//el fichero general 'material.css' pero puede haber problemas con la encapsulacion
 
 //todo: otra forma: si el attributo de entrada RIPPLE esta definido, cargar la hoja de estilos 'ml_ripple.css'
 
@@ -37,7 +37,6 @@ export class MlCheckbox implements ControlValueAccessor {
 
   _model: any;
   mdlCheckbox: MdlCheckbox;
-  isRippleDefined: boolean;
   onTouch = () => {};
   onChange = (_: any) => {};
 

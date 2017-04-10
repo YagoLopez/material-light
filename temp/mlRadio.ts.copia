@@ -1,12 +1,13 @@
 import {Component, ElementRef, ViewChild, Input, forwardRef} from "@angular/core";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import * as ml from "../../../lib/ml_lib";
+
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-radio',
 moduleId: module.id,
 styleUrls: ['./mlRadio.css'],
-providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef( ()=>MlRadio ), multi: true}],
+providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlRadio), multi: true}],
 template:`
 
 <label #label [attr.for]="id+'mdl'" class="mdl-radio is-upgraded" [ngClass]="{'is-checked': isChecked()}" [attr.ripple]>
@@ -26,7 +27,8 @@ template:`
 </label>
 
 `//template
-}) export class MlRadio implements ControlValueAccessor {
+})
+export class MlRadio implements ControlValueAccessor {
 
   @ViewChild('label') label: ElementRef;
   @ViewChild('input') input: ElementRef;
@@ -35,7 +37,7 @@ template:`
   @Input() value: string;
   @Input() disabled: string;
   @Input() formControlName: string;
-  @Input() checked: boolean;
+  checked: boolean;
 
   ngOnInit(){
     if (ml.isDefined(this.disabled)){
@@ -44,20 +46,10 @@ template:`
     }
   }
 
-  onClick($event) { this.onChanged($event.target.value) }
+  onClick($event) {this.onChanged($event.target.value)}
 
-  isChecked(): boolean { return this.input.nativeElement.checked }
+  isChecked(): boolean {return this.input.nativeElement.checked}
 
-  setChecked(status: 'true' | ''): void { this.input.nativeElement.checked = status }
-
-  setDisabled(){
-    this.input.nativeElement.disabled= 'true';
-    this.label.nativeElement.classList.add('is-disabled');
-  }
-  setEnabled(){
-    this.input.nativeElement.disabled= '';
-    this.label.nativeElement.classList.remove('is-disabled');
-  }
   writeValue(value: any): void {
     if (value === this.value){
       this.value = value;
@@ -69,4 +61,5 @@ template:`
   private onChanged = (_: any) => {};
   registerOnChange(fn: any): void {this.onChanged = fn}
   registerOnTouched(fn: any): void {this.onTouched = fn}
+
 }

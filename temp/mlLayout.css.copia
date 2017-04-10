@@ -210,7 +210,7 @@ main {display: block;}
 *[hidden] { display: none !important; }
 
 html, body {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px; }
@@ -402,7 +402,6 @@ ul, ol {
   position: absolute;
   top: 0;
   left: 0;
-  /* todo: tratar de simplificar esto */
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   border-right: 1px solid rgb(224,224,224);
@@ -474,7 +473,7 @@ ul, ol {
   cursor: pointer;
   font-size: 26px;
   line-height: 56px;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   margin: 8px 12px;
   top: 0;
   left: 0;
@@ -522,18 +521,13 @@ ul, ol {
   border: none;
   min-height: 64px;
   max-height: 1000px;
-  /* modifications */
-  /*z-index: 3;*/
-  /* /modifications */
+  z-index: 3;
   background-color: rgb(63,81,181);
   color: rgb(255,255,255);
-  box-shadow: 0 1px 8px 2px rgba(0, 0, 0, 0.2) !important;
-  transition-duration: 0.1s;
-  /*transition-duration: 0.2s;*/
-  /*transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
-  /*transition-property: max-height, box-shadow;*/
-  transition-property: max-height;
-  }
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: max-height, box-shadow; }
   @media screen and (max-width: 1024px) { .mdl-layout__header { min-height: 56px; } }
   .mdl-layout--fixed-drawer.is-upgraded:not(.is-small-screen) > .mdl-layout__header {
     margin-left: 240px;
@@ -557,7 +551,7 @@ ul, ol {
   .mdl-layout__header.is-compact.has-tabs { height: 112px; }
     @media screen and (max-width: 1024px) { .mdl-layout__header.is-compact.has-tabs { min-height: 104px; } }
   @media screen and (max-width: 1024px) {
-    /* todo: revisar esto, puede que tenga que ver con fixed-header */
+    /* todo: revisar esto */
     /*.mdl-layout__header { display: none; }*/
     /*.mdl-layout--fixed-header > .mdl-layout__header { display: -webkit-flex; display: -ms-flexbox; display: flex; }*/
   }
@@ -568,15 +562,22 @@ ul, ol {
 
 .mdl-layout__header--scroll { box-shadow: none; }
 
+
+
+
+
 .mdl-layout__header--waterfall { box-shadow: none; overflow: hidden; }
   .mdl-layout__header--waterfall.is-casting-shadow {
-    box-shadow: 0 1px 8px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
   .mdl-layout__header--waterfall.mdl-layout__header--waterfall-hide-top {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+
+
+
 
 .mdl-layout__header-row {
   display: -webkit-flex;

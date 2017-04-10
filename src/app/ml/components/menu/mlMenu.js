@@ -93,7 +93,7 @@ var MlMenu = (function () {
             moduleId: module.id,
             styleUrls: ['./mlMenu.css'],
             encapsulation: core_1.ViewEncapsulation.None,
-            template: "\n\n<ml-button [attr.id]=\"id\" variant=\"icon\" #mdlButton><ml-icon>{{icon}}</ml-icon></ml-button>\n<ul class=\"mdl-menu\" [attr.for]=\"id\" #menuList>\n<ng-content select=\"ml-menu-item\"></ng-content>\n</ul>         \n\n" //template
+            template: "\n\n<ml-button #mdlButton [attr.id]=\"id\" variant=\"icon\"><ml-icon>{{icon}}</ml-icon></ml-button>\n<ul class=\"mdl-menu\" [attr.for]=\"id\" #menuList>\n<ng-content select=\"ml-menu-item\"></ng-content>\n</ul>         \n\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])
     ], MlMenu);

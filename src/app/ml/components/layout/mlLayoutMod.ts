@@ -8,9 +8,7 @@ MlContent, MlHeaderTabs, MlHeaderTab, MlHeaderTabContent, MlHeaderTabActive} fro
 @NgModule({
 imports: [CommonModule, MlRippleMod, MlTitleMod],
 declarations: [MlLayout, MlHeader, MlHeaderRow, MlDrawer, MlSpacer, MlNav, MlNavItem, MlLargeScreenOnly,
-MlSmallScreenOnly, MlContent, MlHeaderTabs, MlHeaderTab, MlHeaderTabContent, MlHeaderTabActive
-],
+  MlSmallScreenOnly, MlContent, MlHeaderTabs, MlHeaderTab, MlHeaderTabContent, MlHeaderTabActive],
 exports: [MlRippleMod, MlTitleMod, MlLayout, MlHeader, MlHeaderRow, MlDrawer, MlSpacer, MlNav, MlNavItem, MlLargeScreenOnly,
-MlSmallScreenOnly, MlContent, MlHeaderTabs, MlHeaderTab, MlHeaderTabContent, MlHeaderTabActive]
-})
+MlSmallScreenOnly, MlContent, MlHeaderTabs, MlHeaderTab, MlHeaderTabContent, MlHeaderTabActive]})
 export class MlLayoutMod{}

@@ -36,7 +36,7 @@ template:`
   
   <!-- textfield expandable  --------------------------------------------------------------------------------------- -->
   
-  <div><strong>➁ Textfield expandable:</strong> (No validation)</div>
+  <div><strong>➁ Textfield expandable:</strong> (No validated)</div>
   <ml-textfield-expand [formControl]="textExpandable" icon="search"></ml-textfield-expand>
   
   <!-- textfield area  --------------------------------------------------------------------------------------------- -->

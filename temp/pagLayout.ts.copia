@@ -1,14 +1,16 @@
-import {Component, ViewChild} from "@angular/core";
+import {Component, ViewEncapsulation, ViewChild, ElementRef} from "@angular/core";
 import {MlRadio} from "../../ml/components/controls/radio/mlRadio";
 
 @Component({
+//todo: revisar lo de encapsulamiento aqui
+encapsulation: ViewEncapsulation.None,
 template:`
 
 <style>
-:host /deep/ ml-radio {margin-left: 20px}
-:host /deep/ span.mdl-radio__label {color: orange; font-family: "Roboto", "Arial", sans-serif; font-size: smaller}
-:host /deep/ span.mdl-radio__inner-circle {background: orange !important} 
-:host /deep/ span.mdl-radio__outer-circle {border: 2px solid orange !important}
+div#radios {margin-left: 20px}
+div#radios span.mdl-radio__label{color: orange; font-family: "Roboto", "Arial", sans-serif; font-size: smaller}
+div#radios span.mdl-radio__inner-circle{background: orange !important} 
+div#radios span.mdl-radio__outer-circle{border: 2px solid orange !important} 
 </style>
 
 <h5>Material Light Layout</h5>
@@ -25,13 +27,13 @@ template:`
 <p>Each section can have variations. For example <strong>ml-header</strong> can have tabs, links, or other icons</p>
 <p>Here are some examples of <strong>ml-layout</strong> variations: </p>
 
-
+<div id="radios">
 <div><ml-radio #radio_scroll_head checked="true" (click)="scrollableHeaderTabs()">
   Scrollable Header-Tabs</ml-radio></div>
 <div><ml-radio #radio_fixed_head (click)="fixedHeaderTabs()">Fixed Header-Tabs</ml-radio></div>
 <div><ml-radio (click)="backgroundTransparent()">Background transparent with image</ml-radio></div>
 <p><ml-radio (click)="solidBackground()">Solid background color</ml-radio></p>
-
+</div>
 
 <p>There is also the posibility of having different nested drawers and headers in each page using auxiliary 
 router-outlets. This feature is experimental and still has not been tested</p>
@@ -50,7 +52,7 @@ Meanwhile take a look at the examples and the code.</p>
   @ViewChild('radio_scroll_head') radioScrollHead: MlRadio;
   @ViewChild('radio_fixed_head') radioFixedHead: MlRadio;
 
-  imgBackgrnd = 'assets/img/city2.jpg';
+  imgBackground = 'assets/img/transparent.jpg';
   mlLayout: HTMLElement = document.querySelector('ml-layout') as HTMLElement;
   mlHeader: HTMLElement = this.mlLayout.querySelector('ml-header') as HTMLElement;
   mlTitle: HTMLElement = this.mlLayout.querySelector('ml-title') as HTMLElement;
@@ -62,21 +64,20 @@ Meanwhile take a look at the examples and the code.</p>
     const btns: NodeListOf<HTMLElement> = this.mlLayout.querySelectorAll('view-source > div > a') as NodeListOf<HTMLElement>;
     Array.from(btns).forEach( (btn: HTMLElement) => {btn.style.background = color} )
   }
+
   disableRadioBtn(radioBtn: MlRadio): void {
     radioBtn.setDisabled();
     radioBtn.label.nativeElement.querySelector('span').style.color = '#757575';
-    radioBtn.label.nativeElement.querySelector('span.mdl-radio__outer-circle').
-      style.cssText = 'border: 2px solid #757575 !important';
   }
+
   enableRadioBtn(radioBtn: MlRadio): void {
     radioBtn.setEnabled();
     radioBtn.label.nativeElement.querySelector('span').style.color = 'orange';
-    radioBtn.label.nativeElement.querySelector('span.mdl-radio__outer-circle').
-      style.cssText = 'border: 2px solid orange !important';
   }
+
   backgroundTransparent() {
     this.mlLayout.style.color = this.mlTitle.style.color = 'white';
-    this.mlLayout.style.background = `url('${this.imgBackgrnd}') 0 0 / cover`;
+    this.mlLayout.style.background = `url('${this.imgBackground}') 0 0 / cover`;
     this.mlHeader.style.cssText = 'background-color: transparent; box-shadow: none !important';
     this.mlHeaderTabs.style.display = 'none';
     this.mlContent.style.backgroundColor = 'transparent';
@@ -93,16 +94,20 @@ Meanwhile take a look at the examples and the code.</p>
     this.mlContentTabheader.style.cssText = `@media (min-width: 700px) {background-color: white; margin: auto;
       width: 60%; padding: 25px 50px 50px; border: 1px solid lightgrey; box-shadow: 1px 1px 5px lightgrey; }`;
     this.backgroundBtn('');
+    this.enableRadioBtn(this.radioFixedHead);
     this.enableRadioBtn(this.radioScrollHead);
-
   }
   fixedHeaderTabs(){
     this.mlHeader.classList.remove('mdl-layout__header--waterfall');
   }
   scrollableHeaderTabs(){
     this.mlHeader.classList.add('mdl-layout__header--waterfall');
-    this.enableRadioBtn(this.radioFixedHead);
   }
+  ngAfterViewInit(){
+    // debugger;
+
+  }
+
   ngOnDestroy(){
     this.solidBackground();
     this.scrollableHeaderTabs();

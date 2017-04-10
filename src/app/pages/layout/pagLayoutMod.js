@@ -11,13 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var viewSourceMod_1 = require("../view-source/viewSourceMod");
+var mlRadioMod_1 = require("../../ml/components/controls/radio/mlRadioMod");
 var pagLayout_1 = require("./pagLayout");
 var PagLayoutMod = (function () {
     function PagLayoutMod() {
     }
     PagLayoutMod = __decorate([
-        core_1.NgModule({
-            imports: [viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagLayout_1.PagLayout }])], declarations: [pagLayout_1.PagLayout] }), 
+        core_1.NgModule({ imports: [mlRadioMod_1.MlRadioMod, viewSourceMod_1.ViewSourceMod, router_1.RouterModule.forChild([{ path: '', component: pagLayout_1.PagLayout }])],
+            declarations: [pagLayout_1.PagLayout] }), 
         __metadata('design:paramtypes', [])
     ], PagLayoutMod);
     return PagLayoutMod;

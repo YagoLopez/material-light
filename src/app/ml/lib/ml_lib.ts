@@ -13,7 +13,7 @@ export function setAttribute(elementRef: ElementRef, attrName: string, attrValue
 
 export function randomStr(): string{ return Math.random().toString(36).substr(2, 5) }
 
-export function isSubstring(subStr:string, bigStr:string): boolean {
+export function isSubstring(subStr: string, bigStr: string): boolean {
   if (bigStr)
     return bigStr.indexOf(subStr) > -1;
   else

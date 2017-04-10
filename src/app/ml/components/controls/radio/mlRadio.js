@@ -26,6 +26,15 @@ var MlRadio = (function () {
     };
     MlRadio.prototype.onClick = function ($event) { this.onChanged($event.target.value); };
     MlRadio.prototype.isChecked = function () { return this.input.nativeElement.checked; };
+    MlRadio.prototype.setChecked = function (status) { this.input.nativeElement.checked = status; };
+    MlRadio.prototype.setDisabled = function () {
+        this.input.nativeElement.disabled = 'true';
+        this.label.nativeElement.classList.add('is-disabled');
+    };
+    MlRadio.prototype.setEnabled = function () {
+        this.input.nativeElement.disabled = '';
+        this.label.nativeElement.classList.remove('is-disabled');
+    };
     MlRadio.prototype.writeValue = function (value) {
         if (value === this.value) {
             this.value = value;
@@ -63,14 +72,17 @@ var MlRadio = (function () {
         core_1.Input(), 
         __metadata('design:type', String)
     ], MlRadio.prototype, "formControlName", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], MlRadio.prototype, "checked", void 0);
     MlRadio = __decorate([
         core_1.Component({
             selector: 'ml-radio',
             moduleId: module.id,
             styleUrls: ['./mlRadio.css'],
-            encapsulation: core_1.ViewEncapsulation.None,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlRadio; }), multi: true }],
-            template: "\n\n<label #label [attr.for]=\"id+'mdl'\" class=\"mdl-radio is-upgraded\" [ngClass]=\"{'is-checked': isChecked()}\" [attr.ripple]>\n  <input #input type=\"radio\" class=\"mdl-radio__button\"\n          [attr.id]=\"id+'mdl'\" \n          [attr.disabled] \n          [name]=\"formControlName\"\n          [value]=\"value\"\n          [checked]=\"checked\"\n          (click)=\"onClick($event)\">\n  <span class=\"mdl-radio__label\"><ng-content></ng-content></span>\n  <span class=\"mdl-radio__outer-circle\"></span> \n  <span class=\"mdl-radio__inner-circle\"></span>\n  <span class=\"mdl-radio__ripple-container mdl-ripple--center\">\n    <span class=\"mdl-ripple\"></span>\n  </span>  \n</label>\n\n" //template
+            template: "\n\n<label #label [attr.for]=\"id+'mdl'\" class=\"mdl-radio is-upgraded\" [ngClass]=\"{'is-checked': isChecked()}\" [attr.ripple]>\n  <input #input type=\"radio\" class=\"mdl-radio__button\"\n    [attr.id]=\"id+'mdl'\" \n    [attr.disabled] \n    [name]=\"formControlName\"\n    [value]=\"value\"\n    [checked]=\"checked\"\n    (click)=\"onClick($event)\">\n  <span class=\"mdl-radio__label\"><ng-content></ng-content></span>\n  <span class=\"mdl-radio__outer-circle\"></span> \n  <span class=\"mdl-radio__inner-circle\"></span>\n  <span class=\"mdl-radio__ripple-container mdl-ripple--center\">\n    <span class=\"mdl-ripple\"></span>\n  </span>  \n</label>\n\n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], MlRadio);

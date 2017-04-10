@@ -5,19 +5,23 @@ selector: 'ml-demo-app',
 template:`
 
 <style>
-a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}
-.bg-grey{background: lightgrey}
-.active-nav{background: darkgrey; color: white !important}
-.drawer-title{color: white; text-align: center}
-.drawer-top-img{margin: auto; display: block; width: 100%;height: 150px; background: url('assets/img/bg1.jpg') 0 0 / cover;}
-.drawer-img{width: 25%; text-align: center; margin: 30px auto auto; display: block;}
+a[nav-item] {padding-top: 10px !important; padding-bottom: 10px !important}
+:host /deep/ ml-menu-item.share-item-header > li
+  {cursor: default; background-color: transparent !important; color: cornflowerblue; font-weight: 500}
+.drawer-top-img
+  {margin: auto; display: block; width: 100%;height: 150px; background: url('assets/img/bg1.jpg') 0 0 / cover;}
+.share-item {color: rgba(0,0,0, 0.87); text-decoration: none; font-weight: normal; display: block}
+.bg-grey {background: lightgrey}
+.active-route {background: darkgrey; color: white !important}
+.drawer-title {color: white; text-align: center}
+.drawer-img {width: 25%; text-align: center; margin: 30px auto auto; display: block;}
 </style>
 
-<ml-layout drawer="fixed">
+<ml-layout drawer="fixed"><!-- todo: atributo "fixed" en <ml-drawer>. mas intuitivo -->
 
   <!-- Header ------------------------------------------------------------------------------------------------------ -->
 
-  <ml-header waterfall>
+  <ml-header scrollable>
     <ml-header-row>
       <ml-title>Material Light Demo</ml-title>
       <ml-spacer></ml-spacer>
@@ -27,6 +31,14 @@ a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}
         <a nav-item href="">Link</a>
         <a nav-item href="">Link</a>
       </ml-nav>
+      <ml-menu icon="share" position="top-right">
+        <ml-menu-item divider class="share-item-header">Share...</ml-menu-item>
+        <ml-menu-item><a [href]="shareTwitter" target="_blank" class="share-item">Twitter</a></ml-menu-item>
+        <ml-menu-item><a [href]="shareFB" target="_blank" class="share-item">Facebook</a></ml-menu-item>
+        <ml-menu-item><a [href]="shareGPlus" target="_blank" class="share-item">Google+</a></ml-menu-item>
+        <ml-menu-item><a [href]="shareLinkedIn" target="_blank" class="share-item">LinkedIn</a></ml-menu-item>
+        <ml-menu-item><a [href]="shareEmail" target="_blank" class="share-item">Email</a></ml-menu-item>
+      </ml-menu>
     </ml-header-row>
     <ml-header-tabs>
       <a header-tab href="#tab1" ripple active>Tab 1</a>
@@ -46,36 +58,36 @@ a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}
       <div class="drawer-title">Material Light</div>
     </div>
     <ml-nav>
-      <a nav-item routerLink="button" routerLinkActive="active-nav">Button</a>
-      <a nav-item routerLink="card" routerLinkActive="active-nav">Card</a>
-      <a nav-item routerLink="selectfield" routerLinkActive="active-nav">SelectField</a>
-      <a nav-item routerLink="textfield" routerLinkActive="active-nav">TextField</a>
-      <a nav-item routerLink="textfield2" routerLinkActive="active-nav">TextField2</a>
-      <a nav-item routerLink="checkbox" routerLinkActive="active-nav">Checkbox</a>
-      <a nav-item routerLink="radio" routerLinkActive="active-nav">RadioButton</a>
-      <a nav-item routerLink="switch" routerLinkActive="active-nav">SwitchButton</a>
-      <a nav-item routerLink="toggle" routerLinkActive="active-nav">IconToggle</a>
-      <a nav-item routerLink="badge" routerLinkActive="active-nav">Badge</a>
-      <a nav-item routerLink="grid" routerLinkActive="active-nav">Grid</a>
-      <a nav-item routerLink="tabs" routerLinkActive="active-nav">Tabs</a>
-      <a nav-item routerLink="chip" routerLinkActive="active-nav">Chip</a>
-      <a nav-item routerLink="list" routerLinkActive="active-nav">List</a>
-      <a nav-item routerLink="menu" routerLinkActive="active-nav">Menu</a>
-      <a nav-item routerLink="progressbar" routerLinkActive="active-nav">ProgressBar</a>
-      <a nav-item routerLink="spinner" routerLinkActive="active-nav">Spinner</a>
-      <a nav-item routerLink="snackbar" routerLinkActive="active-nav">SnackBar</a>
-      <a nav-item routerLink="tooltip" routerLinkActive="active-nav">Tooltip</a>
-      <a nav-item routerLink="slider" routerLinkActive="active-nav">Slider</a>
-      <a nav-item routerLink="dialog" routerLinkActive="active-nav">Dialog</a>
-      <a nav-item routerLink="table" routerLinkActive="active-nav">Table</a>
-      <a nav-item routerLink="layout" routerLinkActive="active-nav">Layout</a>
+      <a nav-item routerLink="button" routerLinkActive="active-route">Button</a>
+      <a nav-item routerLink="layout" routerLinkActive="active-route">Layout</a>
+      <a nav-item routerLink="card" routerLinkActive="active-route">Card</a>
+      <a nav-item routerLink="selectfield" routerLinkActive="active-route">SelectField</a>
+      <a nav-item routerLink="textfield" routerLinkActive="active-route">TextField</a>
+      <a nav-item routerLink="textfield2" routerLinkActive="active-route">TextField2</a>
+      <a nav-item routerLink="checkbox" routerLinkActive="active-route">Checkbox</a>
+      <a nav-item routerLink="radio" routerLinkActive="active-route">RadioButton</a>
+      <a nav-item routerLink="switch" routerLinkActive="active-route">SwitchButton</a>
+      <a nav-item routerLink="toggle" routerLinkActive="active-route">IconToggle</a>
+      <a nav-item routerLink="badge" routerLinkActive="active-route">Badge</a>
+      <a nav-item routerLink="grid" routerLinkActive="active-route">Grid</a>
+      <a nav-item routerLink="tabs" routerLinkActive="active-route">Tabs</a>
+      <a nav-item routerLink="chip" routerLinkActive="active-route">Chip</a>
+      <a nav-item routerLink="list" routerLinkActive="active-route">List</a>
+      <a nav-item routerLink="menu" routerLinkActive="active-route">Menu</a>
+      <a nav-item routerLink="progressbar" routerLinkActive="active-route">ProgressBar</a>
+      <a nav-item routerLink="spinner" routerLinkActive="active-route">Spinner</a>
+      <a nav-item routerLink="snackbar" routerLinkActive="active-route">SnackBar</a>
+      <a nav-item routerLink="tooltip" routerLinkActive="active-route">Tooltip</a>
+      <a nav-item routerLink="slider" routerLinkActive="active-route">Slider</a>
+      <a nav-item routerLink="dialog" routerLinkActive="active-route">Dialog</a>
+      <a nav-item routerLink="table" routerLinkActive="active-route">Table</a>
     </ml-nav>
   </ml-drawer>
   
   <!-- Content ----------------------------------------------------------------------------------------------------- -->
   
   <ml-content>
-    <ml-page-loader spinner (onLoading)="onLoading($event)"></ml-page-loader>
+    <ml-content-loader spinner (onLoading)="onLoading($event)"></ml-content-loader>
     <ml-content-tabheader id="tab1" active [hidden]="isLoading">
       <router-outlet></router-outlet>
     </ml-content-tabheader>
@@ -92,11 +104,21 @@ a[nav-item]{padding-top: 10px !important; padding-bottom: 10px !important}
 
 `//template
 })
-
 export class App {
+
   isLoading = false;
 
   onLoading($event){
     this.isLoading = $event;
   }
+
+  appName = `MATERIAL LIGHT: Free, fast and easy to use Angular 2.x UI components`;
+  msgShare = `Link of interest shared from ${this.appName}: `;
+  urlApp = 'https://github.com/YagoLopez/material-light';
+  shareTwitter = `http://twitter.com/share?url=${this.urlApp}&text=${this.msgShare}`;
+  shareFB = `http://www.facebook.com/sharer/sharer.php?u=${this.urlApp}`;
+  shareGPlus= `https://plus.google.com/share?url=${this.urlApp}`;
+  shareLinkedIn= `http://www.linkedin.com/shareArticle?
+    mini=true&url=${this.urlApp}&title=${this.msgShare}&source=${this.appName}`;
+  shareEmail = `mailto:?subject=Shared link&body=${this.msgShare} ${this.urlApp}`;
 }

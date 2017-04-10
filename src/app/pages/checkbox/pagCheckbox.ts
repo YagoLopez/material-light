@@ -1,4 +1,4 @@
-// todo: hacer todos los disabled=true
+// todo: hacer todos los disabled=true o al menos unificar criterios
 
 import {Component} from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';

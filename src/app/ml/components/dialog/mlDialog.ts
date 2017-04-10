@@ -8,7 +8,7 @@ moduleId: module.id,
 styleUrls: ['./mlDialog.css'],
 template:`
   
-<dialog class="mdl-dialog" #mdlDialog>
+<dialog #mdlDialog class="mdl-dialog">
   <h6 class="mdl-dialog__title">
     <ng-content select="ml-dialog-title"></ng-content>
   </h6>

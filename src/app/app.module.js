@@ -1,6 +1,14 @@
-//todo: revisar header scrollable
-//todo: crear instalador npm
+//todo: estudiar como pasar estilos css a componentes
+//todo: notificar errores de router (con alert?)
+//todo: revisar sitios donde es posible eliminar encapsulation.none usando :host /deep/
 //todo: probar con angular 4
+//todo: crear instalador npm
+//todo: ponerse en contacto con f7 para hacer otros componentes. ej: acordeon
+//todo: atributo "fixed" en <ml-drawer>. mas intuitivo
+//todo: poner menu contextual superior izquierdo para compartir redes sociales
+//todo: investigar lo de quitar el encapsulation: ViewEncapsulation.None en cada componente (funciono en ml-radio)
+//todo: queda pendiente lo de changedetection.onpush, a ver si funiona asi ml-selectfield type=date
+//todo: revisar header scrollable
 //todo: validaciones de input.date component (probar con valueChanges())
 //todo: que se oculten dropwdowns al hacer click en el fondo
 //todo: renombrar mlLayoutLib.ts a mdlLayoutLib, por ejemplo, y los demas ficheros
@@ -17,8 +25,8 @@
 //todo: completar tests con browserstack
 //todo: footer component
 //todo: crear un componente para visualizar gist en angular 2
-//todo: crear mas librerias de componentes
 //todo: separar page-loader component en un repositorio diferente, hacer 2: page-loader y progressbar-loader
+//todo: muestra de grid sin bordes
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -32,18 +40,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
-var mlPageLoaderMod_1 = require("./ml/components/loader/mlPageLoaderMod");
+var mlContentLoaderMod_1 = require("./ml/components/loader/mlContentLoaderMod");
 var mlLayoutMod_1 = require("./ml/components/layout/mlLayoutMod");
+var mlMenuMod_1 = require("./ml/components/menu/mlMenuMod");
 var app_layout_1 = require("./app.layout");
 // Relative paths for SystemJS
 // export const basePath = '.app/pages/';
 // Absolute paths for Webpack
 exports.basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
-// WEBPACK ROUTES: absolute paths are needed by webpack and lazy-load
 var APP_ROUTES = [
     { path: '', redirectTo: 'button', pathMatch: 'full' },
-    { path: 'card', loadChildren: exports.basePath + 'card/pagCardMod#PagCardMod' },
     { path: 'button', loadChildren: exports.basePath + 'button/pagButtonMod#PagButtonMod' },
+    { path: 'layout', loadChildren: exports.basePath + 'layout/pagLayoutMod#PagLayoutMod' },
+    { path: 'card', loadChildren: exports.basePath + 'card/pagCardMod#PagCardMod' },
     { path: 'selectfield', loadChildren: exports.basePath + 'selectfield/pagSelectfieldMod#PagSelectfieldMod' },
     { path: 'textfield', loadChildren: exports.basePath + 'textfield/pagTextfieldMod#PagTextfieldMod' },
     { path: 'textfield2', loadChildren: exports.basePath + 'textfield2/pagTextfield2Mod#PagTextfiel2dMod' },
@@ -64,18 +73,16 @@ var APP_ROUTES = [
     { path: 'slider', loadChildren: exports.basePath + 'slider/pagSliderMod#PagSliderMod' },
     { path: 'dialog', loadChildren: exports.basePath + 'dialog/pagDialogMod#PagDialogMod' },
     { path: 'table', loadChildren: exports.basePath + 'table/pagTableMod#PagTableMod' },
-    { path: 'layout', loadChildren: exports.basePath + 'layout/pagLayoutMod#PagLayoutMod' },
-    { path: '**', redirectTo: 'button' }
+    { path: '**', redirectTo: 'layout' }
 ];
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule, mlPageLoaderMod_1.MlPageLoaderMod, mlLayoutMod_1.MlLayoutMod, router_1.RouterModule.forRoot(APP_ROUTES, { enableTracing: false, useHash: true })],
-            declarations: [app_layout_1.App],
-            bootstrap: [app_layout_1.App]
+            imports: [platform_browser_1.BrowserModule, mlContentLoaderMod_1.MlPageLoaderMod, mlLayoutMod_1.MlLayoutMod, mlMenuMod_1.MlMenuMod,
+                router_1.RouterModule.forRoot(APP_ROUTES, { enableTracing: false, useHash: true })],
+            declarations: [app_layout_1.App], bootstrap: [app_layout_1.App]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

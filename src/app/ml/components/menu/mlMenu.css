@@ -96,12 +96,13 @@
   overflow: hidden;
   font-size: 14px;
   font-weight: 400;
+  /* todo: revisar */
   line-height: 24px;
+  line-height: 48px;
   letter-spacing: 0;
   text-decoration: none;
   cursor: pointer;
   height: 48px;
-  line-height: 48px;
   white-space: nowrap;
   opacity: 0;
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -136,9 +137,9 @@
 .mdl-menu__item--ripple-container {
   display: block;
   height: 100%;
-  left: 0px;
+  left: 0;
   position: absolute;
-  top: 0px;
+  top: 0;
   width: 100%;
   z-index: 0;
   overflow: hidden; }

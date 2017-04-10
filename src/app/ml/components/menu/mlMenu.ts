@@ -10,7 +10,7 @@ styleUrls: ['./mlMenu.css'],
 encapsulation: ViewEncapsulation.None,
 template:`
 
-<ml-button [attr.id]="id" variant="icon" #mdlButton><ml-icon>{{icon}}</ml-icon></ml-button>
+<ml-button #mdlButton [attr.id]="id" variant="icon"><ml-icon>{{icon}}</ml-icon></ml-button>
 <ul class="mdl-menu" [attr.for]="id" #menuList>
 <ng-content select="ml-menu-item"></ng-content>
 </ul>         

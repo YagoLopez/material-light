@@ -28,7 +28,7 @@ var MlDialog = (function () {
             selector: 'ml-dialog',
             moduleId: module.id,
             styleUrls: ['./mlDialog.css'],
-            template: "\n  \n<dialog class=\"mdl-dialog\" #mdlDialog>\n  <h6 class=\"mdl-dialog__title\">\n    <ng-content select=\"ml-dialog-title\"></ng-content>\n  </h6>\n  <div class=\"mdl-dialog__content\">\n    <ng-content select=\"ml-dialog-content\"></ng-content>\n  </div>\n  <div class=\"mdl-dialog__actions\">\n    <ng-content select=\"ml-dialog-actions\"></ng-content>\n  </div>\n</dialog>    \n  \n" //template
+            template: "\n  \n<dialog #mdlDialog class=\"mdl-dialog\">\n  <h6 class=\"mdl-dialog__title\">\n    <ng-content select=\"ml-dialog-title\"></ng-content>\n  </h6>\n  <div class=\"mdl-dialog__content\">\n    <ng-content select=\"ml-dialog-content\"></ng-content>\n  </div>\n  <div class=\"mdl-dialog__actions\">\n    <ng-content select=\"ml-dialog-actions\"></ng-content>\n  </div>\n</dialog>    \n  \n" //template
         }), 
         __metadata('design:paramtypes', [])
     ], MlDialog);

@@ -29,9 +29,14 @@ var MlLayout = (function () {
         if (this.drawer === 'fixed') {
             ml.setClass(this.host, 'mdl-layout--fixed-drawer', this.ren);
         }
-        if (this.tabs === 'fixed') {
-            ml.setClass(this.host, 'mdl-layout--fixed-header', this.ren);
-            ml.setClass(this.host, 'mdl-layout--fixed-tabs', this.ren);
+        // if (this.tabs === 'fixed'){
+        //   ml.setClass(this.host, 'mdl-layout--fixed-header', this.ren);
+        //   ml.setClass(this.host, 'mdl-layout--fixed-tabs', this.ren);
+        // }
+        if (ml.isDefined(this.background)) {
+            this.host.nativeElement.style.background = "url('" + this.background + "') 0 0 / cover";
+            var mlContent = document.querySelector('ml-content');
+            mlContent && (mlContent.style.backgroundColor = 'transparent');
         }
         this.mdlLayout = new mlLayoutLib_1.default(this.host.nativeElement);
     };
@@ -43,6 +48,10 @@ var MlLayout = (function () {
         core_1.Input(), 
         __metadata('design:type', String)
     ], MlLayout.prototype, "tabs", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], MlLayout.prototype, "background", void 0);
     MlLayout = __decorate([
         core_1.Component({
             selector: 'ml-layout',
@@ -66,20 +75,26 @@ var MlHeader = (function () {
     }
     MlHeader.prototype.ngOnInit = function () {
         ml.isDefined(this.seamed) && ml.setClass(this.host, 'mdl-layout__header--seamed', this.ren);
-        ml.isDefined(this.transparent) && ml.setClass(this.host, 'mdl-layout__header--transparent', this.ren);
-        ml.isDefined(this.waterfall) && ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
-        if (this.waterfall === 'hide-top') {
+        ml.isDefined(this.scrollable) && ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
+        if (this.scrollable === 'hide-top-header') {
             ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
             ml.setClass(this.host, 'mdl-layout__header--waterfall-hide-top', this.ren);
         }
-        // todo: Header scroll no funciona
-        // todo: mdl-layout__content hace que la cabecera se quede fija o no
+        // todo: Header scrollable no funciona
+        // todo: mdl-layout__content hace que la cabecera sea scrollable (en concreto position: absolute/relative)
         // ml.setClass(this.host,'mdl-layout__header--scroll', this.ren);
+    };
+    MlHeader.prototype.ngAfterViewInit = function () {
+        if (ml.isDefined(this.transparent)) {
+            ml.setClass(this.host, 'mdl-layout__header--transparent', this.ren);
+            var mlContent = document.querySelector('ml-content');
+            mlContent && (mlContent.style.backgroundColor = 'transparent');
+        }
     };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], MlHeader.prototype, "waterfall", void 0);
+    ], MlHeader.prototype, "scrollable", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)

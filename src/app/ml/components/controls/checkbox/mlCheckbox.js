@@ -1,4 +1,4 @@
-// [attr.id]= "id+'mdl'" => adds sufix 'mdl' to avoid colision width <mdl-checkbox id> attribute
+// [attr.id]= "id+'mdl'" => adds sufix 'mdl' to avoid collision width <ml-checkbox id> attribute
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 // Options groups checkboxes not supported?
 //todo: una forma de arreglar lo de no cargar varias veces 'ml_ripple.css' es poniendo los estilos mdl-ripple en
-//      el fichero general 'material.css' pero puede haber problemas con la encapsulacion
+//el fichero general 'material.css' pero puede haber problemas con la encapsulacion
 //todo: otra forma: si el attributo de entrada RIPPLE esta definido, cargar la hoja de estilos 'ml_ripple.css'
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");

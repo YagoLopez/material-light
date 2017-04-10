@@ -29,7 +29,7 @@ var MlGrid = (function () {
             styleUrls: ['./mlGrid.css'],
             host: { class: 'mdl-grid' },
             encapsulation: core_1.ViewEncapsulation.None,
-            template: "\n\n<ng-content></ng-content>\n\n" //template
+            template: '<ng-content></ng-content>'
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], MlGrid);
@@ -44,12 +44,12 @@ var MlGridCell = (function () {
     }
     MlGridCell.prototype.ngOnInit = function () {
         var widthClass = 'mdl-cell--' + this.width + '-col';
-        var phoneWidthClass = 'mdl-cell--' + this.phoneWith + '-col-phone';
+        var phoneWidthClass = 'mdl-cell--' + this.phoneWidth + '-col-phone';
         var tabletWidthClass = 'mdl-cell--' + this.tabletWidth + '-col-tablet';
         var desktopWidthClass = 'mdl-cell--' + this.desktopWidth + '-col-desktop';
         var host = this.host;
         this.width && ml.setClass(host, widthClass, this.ren);
-        this.phoneWith && ml.setClass(host, phoneWidthClass, this.ren);
+        this.phoneWidth && ml.setClass(host, phoneWidthClass, this.ren);
         this.tabletWidth && ml.setClass(host, tabletWidthClass, this.ren);
         this.desktopWidth && ml.setClass(host, desktopWidthClass, this.ren);
     };
@@ -60,7 +60,7 @@ var MlGridCell = (function () {
     __decorate([
         core_1.Input('phone-width'), 
         __metadata('design:type', String)
-    ], MlGridCell.prototype, "phoneWith", void 0);
+    ], MlGridCell.prototype, "phoneWidth", void 0);
     __decorate([
         core_1.Input('tablet-width'), 
         __metadata('design:type', String)
