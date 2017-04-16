@@ -18,7 +18,7 @@ template:`
   
   <ml-textfield [formControl]="textfield1" floating-label>
     <ml-textfield-label>
-      <ml-icon class="ico-aligned">email</ml-icon>Label 1, icon, validated
+      <ml-icon class="ico-aligned">email</ml-icon>Label 1: icon, floating, validated
     </ml-textfield-label>
     <ml-error [validateControl]="textfield1" validator="required">Required field</ml-error>
     <ml-error [validateControl]="textfield1" validator="minLength">Minimum length is 2</ml-error>
@@ -62,8 +62,7 @@ template:`
 <view-source uri="textfield/pagTextfield.ts"></view-source>
 
 `//template
-})
-export class PagTextfield {
+}) export class PagTextfield {
 
   textfield1 = new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(4)]);
   textfield2 = new FormControl('', Validators.required);

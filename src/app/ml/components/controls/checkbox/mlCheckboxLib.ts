@@ -1,4 +1,3 @@
-import {ElementRef} from "@angular/core";
 import MdlElement from "../../element/mdl_element";
 
 export default class MdlCheckbox extends MdlElement{
@@ -14,7 +13,7 @@ export default class MdlCheckbox extends MdlElement{
   uncheck: Function;
   updateClasses_: Function;
   blur_: Function;
-  constructor(el: ElementRef){
+  constructor(el: HTMLElement){
     super(el);
   }
 }

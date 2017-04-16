@@ -7,8 +7,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var mdl_element_1 = require("../../element/mdl_element");
 var MdlTextfield = (function (_super) {
     __extends(MdlTextfield, _super);
-    function MdlTextfield(element) {
-        _super.call(this, element);
+    function MdlTextfield(el) {
+        _super.call(this, el);
         this.maxRows = -1;
     }
     return MdlTextfield;

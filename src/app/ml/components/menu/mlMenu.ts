@@ -16,8 +16,7 @@ template:`
 </ul>         
 
 `//template
-})
-export class MlMenu{
+}) export class MlMenu{
 
   @ViewChild('menuList') menuList: ElementRef;
   @ViewChild('mdlButton') mdlButton: MlButton;
@@ -53,7 +52,6 @@ export class MlMenu{
 
   /**
    * Get menu position from @Input.position
-   *
    * @param position {string} Input Menu position relative to screen corners.
    * @returns {string} Class name defining position
    *
@@ -85,7 +83,7 @@ template: '<li class="mdl-menu__item" #menuItem><ng-content></ng-content></li>'}
 export class MlMenuItem {
 
   @ViewChild('menuItem') menuItem: ElementRef;
-  @Input() divider: string;
+  @Input('with-divider') divider: string;
   @Input() disabled: string;
 
   constructor(private ren: Renderer){}

@@ -1,12 +1,11 @@
-import {ElementRef} from "@angular/core";
 import MdlElement from "../element/mdl_element";
 
 export default class MdlSpinner extends MdlElement{
   createLayer: Function;
   stop: Function;
   start: Function;
-  constructor(element: ElementRef){
-    super(element);
+  constructor(el: HTMLElement){
+    super(el);
   }
 }
 MdlSpinner.prototype.Constant_ = { MDL_SPINNER_LAYER_COUNT: 4 };

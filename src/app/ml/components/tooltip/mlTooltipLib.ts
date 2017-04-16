@@ -1,11 +1,10 @@
-import {ElementRef} from "@angular/core";
 import MdlElement from "../element/mdl_element";
 
 export default class MdlTooltip extends MdlElement{
   handleMouseEnter_: Function;
   hideTooltip_: Function;
-  constructor(element: ElementRef){
-    super(element);
+  constructor(el: HTMLElement){
+    super(el);
   }
 }
 MdlTooltip.prototype.CssClasses_ = {

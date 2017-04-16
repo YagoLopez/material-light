@@ -1,6 +1,6 @@
 //todo: comprobar validez atributos aspect
 //todo: control de excepciones en angular 2
-//todo: revisar con linting e inspections al maximo, hay cosas que se pueden quitar y mejorar
+//todo: usar enums
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

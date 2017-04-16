@@ -1,4 +1,3 @@
-import {ElementRef} from "@angular/core";
 import MdlElement from "../element/mdl_element";
 
 export default class MdlMenu extends MdlElement{
@@ -13,8 +12,8 @@ export default class MdlMenu extends MdlElement{
   show: Function;
   hide: Function;
   toggle: Function;
-  constructor(element: ElementRef){
-    super(element);
+  constructor(el: HTMLElement){
+    super(el);
   }
 }
 MdlMenu.prototype.Constant_ = {

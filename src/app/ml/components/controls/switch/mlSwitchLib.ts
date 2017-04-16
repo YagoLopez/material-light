@@ -1,6 +1,3 @@
-//todo: poner copyright de google
-
-import {ElementRef} from "@angular/core";
 import MdlElement from "../../element/mdl_element";
 
 export default class MdlSwitch extends MdlElement{
@@ -16,8 +13,8 @@ export default class MdlSwitch extends MdlElement{
   on: Function;
   off: Function;
   blur_: Function;
-  constructor(element: ElementRef){
-    super(element);
+  constructor(el: HTMLElement){
+    super(el);
   }
 }
 MdlSwitch.prototype.Constant_ = { TINY_TIMEOUT: 0.001 };

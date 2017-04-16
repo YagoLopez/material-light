@@ -11,8 +11,7 @@ template:`
 <div><ng-content></ng-content></div>
 </div>
 `//template
-})
-export class MlContentLoader {
+}) export class MlContentLoader {
   @ViewChild('divLoader') divLoader: ElementRef;
   @Output() onLoading: EventEmitter<boolean> = new EventEmitter();
   @Input() spinner: string;
@@ -35,7 +34,8 @@ export class MlContentLoader {
       }
       if (event instanceof NavigationError){
         this.divLoader.nativeElement.remove();
-        console.error('MlContentLoader: navigation error');
+        window.alert(`Navigation error: couldn't load route ${event.url}`);
+        console.error('MlContentLoader > navigation error:', event.error);
      }
     });
   }

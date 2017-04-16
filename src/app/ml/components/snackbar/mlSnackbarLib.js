@@ -1,16 +1,16 @@
-//todo: habria que cancelar siempre el timer o eliminar el snackbar preventivamente antes de mostrar un nuvo
-//snackbar para prevenir que se puedan crear varios snackbars al hacer varios clicks rapidos
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+//todo: habria que cancelar siempre el timer o eliminar el snackbar preventivamente antes de mostrar un nuevo
+//snackbar para prevenir que se puedan crear varios snackbars al hacer varios clicks rapidos => possible memory leaking
 var mdl_element_1 = require("../element/mdl_element");
 var MdlSnackbar = (function (_super) {
     __extends(MdlSnackbar, _super);
-    function MdlSnackbar(element) {
-        _super.call(this, element);
+    function MdlSnackbar(el) {
+        _super.call(this, el);
         this.textElement_ = this.element_.querySelector('.' + this.CssClasses_.MESSAGE);
         this.actionElement_ = this.element_.querySelector('.' + this.CssClasses_.ACTION);
         if (!this.textElement_)

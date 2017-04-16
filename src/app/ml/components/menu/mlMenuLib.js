@@ -7,8 +7,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var mdl_element_1 = require("../element/mdl_element");
 var MdlMenu = (function (_super) {
     __extends(MdlMenu, _super);
-    function MdlMenu(element) {
-        _super.call(this, element);
+    function MdlMenu(el) {
+        _super.call(this, el);
     }
     return MdlMenu;
 }(mdl_element_1.default));

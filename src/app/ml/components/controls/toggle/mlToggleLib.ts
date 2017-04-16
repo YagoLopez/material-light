@@ -1,4 +1,3 @@
-import {ElementRef} from "@angular/core";
 import MdlElement from "../../element/mdl_element";
 
 export default class MdlToggle extends MdlElement{
@@ -13,8 +12,8 @@ export default class MdlToggle extends MdlElement{
   enable: Function;
   check: Function;
   uncheck: Function;
-  constructor(element: ElementRef){
-    super(element);
+  constructor(el: HTMLElement){
+    super(el);
   }
 }
 MdlToggle.prototype.Constant_ = { TINY_TIMEOUT: 0.001 };

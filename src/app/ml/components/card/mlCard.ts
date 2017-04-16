@@ -25,8 +25,7 @@ template:`
 </div>
 
 `//template
-})
-export class MlCard{
+}) export class MlCard{
 
   @Input() shadow: string;
   @Input() img: string;
@@ -46,7 +45,7 @@ export class MlCard{
   }
 }
 @Directive({selector: 'ml-card-title'}) export class MlCardTitle{}
-@Directive({selector: 'ml-card-subtitle'})export class MlCardSubtitle{}
+@Directive({selector: 'ml-card-subtitle'}) export class MlCardSubtitle{}
 @Directive({selector: 'ml-card-media'}) export class MlCardMedia {}
 @Directive({selector: 'ml-card-text'}) export class MlCardText {}
 @Directive({selector: 'ml-card-actions'}) export class MlCardActions {}

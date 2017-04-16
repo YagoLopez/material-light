@@ -1,12 +1,11 @@
-import {ElementRef} from "@angular/core";
 import MdlElement from "../element/mdl_element";
 
 export default class MdlRipple extends MdlElement{
   downHandler_: Function;
   upHandler_: Function;
-  rippleElement_: ElementRef;
-  constructor(element: ElementRef){
-    super(element);
+  rippleElement_: HTMLElement;
+  constructor(el: HTMLElement){
+    super(el);
   }
 }
 MdlRipple.prototype.Constant_ = {
@@ -26,10 +25,10 @@ MdlRipple.prototype.CssClasses_ = {
 /**
    * Handle mouse / finger down on element.
    *
-   * @param {Event} event The event that fired.
+   * @param {Event | any} event The event that fired.
    * @private
    */
-MdlRipple.prototype.downHandler_ = function (event: any) {
+MdlRipple.prototype.downHandler_ = function (event: Event | any) {
 
     // modificaciones
     if (!this.rippleElement_){
@@ -79,10 +78,10 @@ MdlRipple.prototype.downHandler_ = function (event: any) {
 /**
    * Handle mouse / finger up on element.
    *
-   * @param {Event} event The event that fired.
+   * @param {Event | any} event The event that fired.
    * @private
    */
-MdlRipple.prototype.upHandler_ = function (event: any) {
+MdlRipple.prototype.upHandler_ = function (event: Event | any) {
 
     // modificaciones
     if (!this.rippleElement_){
@@ -105,7 +104,6 @@ MdlRipple.prototype.upHandler_ = function (event: any) {
    * Initialize element.
    */
 MdlRipple.prototype.init = function () {
-    // debugger;
     if (this.element_) {
         var recentering = this.element_.classList.contains(this.CssClasses_.RIPPLE_CENTER);
         if (!this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT_IGNORE_EVENTS)) {

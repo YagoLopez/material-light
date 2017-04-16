@@ -7,8 +7,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var mdl_element_1 = require("../element/mdl_element");
 var MdlSpinner = (function (_super) {
     __extends(MdlSpinner, _super);
-    function MdlSpinner(element) {
-        _super.call(this, element);
+    function MdlSpinner(el) {
+        _super.call(this, el);
     }
     return MdlSpinner;
 }(mdl_element_1.default));

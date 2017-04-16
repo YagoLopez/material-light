@@ -4,6 +4,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+//todo: intentar probar a incluir directamente el ripple container en el template para ahorrar este codigo
 var mdl_element_1 = require("../../element/mdl_element");
 var MdlButton = (function (_super) {
     __extends(MdlButton, _super);

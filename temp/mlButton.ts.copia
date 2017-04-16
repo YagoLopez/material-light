@@ -1,11 +1,12 @@
 //todo: comprobar validez atributos aspect
 //todo: control de excepciones en angular 2
-//todo: usar enums
+//todo: revisar con linting e inspections al maximo, hay cosas que se pueden quitar y mejorar
 
 import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angular/core";
 import MdlButton from "./mdButtonLib";
 import * as ml from "../../../lib/ml_lib";
 
+//todo: usar enums
 // Input attribute values are case-sensitive
 // aspect="colored" => background blue, font-color white
 // aspect="accent" => background magenta, font-color white

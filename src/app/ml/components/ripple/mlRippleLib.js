@@ -7,8 +7,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var mdl_element_1 = require("../element/mdl_element");
 var MdlRipple = (function (_super) {
     __extends(MdlRipple, _super);
-    function MdlRipple(element) {
-        _super.call(this, element);
+    function MdlRipple(el) {
+        _super.call(this, el);
     }
     return MdlRipple;
 }(mdl_element_1.default));
@@ -31,7 +31,7 @@ MdlRipple.prototype.CssClasses_ = {
 /**
    * Handle mouse / finger down on element.
    *
-   * @param {Event} event The event that fired.
+   * @param {Event | any} event The event that fired.
    * @private
    */
 MdlRipple.prototype.downHandler_ = function (event) {
@@ -84,7 +84,7 @@ MdlRipple.prototype.downHandler_ = function (event) {
 /**
    * Handle mouse / finger up on element.
    *
-   * @param {Event} event The event that fired.
+   * @param {Event | any} event The event that fired.
    * @private
    */
 MdlRipple.prototype.upHandler_ = function (event) {
@@ -108,7 +108,6 @@ MdlRipple.prototype.upHandler_ = function (event) {
    * Initialize element.
    */
 MdlRipple.prototype.init = function () {
-    // debugger;
     if (this.element_) {
         var recentering = this.element_.classList.contains(this.CssClasses_.RIPPLE_CENTER);
         if (!this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT_IGNORE_EVENTS)) {

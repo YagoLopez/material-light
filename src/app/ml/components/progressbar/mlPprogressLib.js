@@ -7,8 +7,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var mdl_element_1 = require("../element/mdl_element");
 var MdlProgress = (function (_super) {
     __extends(MdlProgress, _super);
-    function MdlProgress(element) {
-        _super.call(this, element);
+    function MdlProgress(el) {
+        _super.call(this, el);
     }
     return MdlProgress;
 }(mdl_element_1.default));

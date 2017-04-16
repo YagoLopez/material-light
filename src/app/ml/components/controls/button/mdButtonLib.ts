@@ -1,10 +1,9 @@
 //todo: intentar probar a incluir directamente el ripple container en el template para ahorrar este codigo
-import {ElementRef} from "@angular/core";
 import MdlElement from "../../element/mdl_element";
 
 export default class MdlButton extends MdlElement{
   blurHandler_: Function;
-  constructor(el: ElementRef){
+  constructor(el: HTMLElement){
     super(el);
   }
 }

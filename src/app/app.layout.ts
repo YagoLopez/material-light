@@ -5,19 +5,21 @@ selector: 'ml-demo-app',
 template:`
 
 <style>
-a[nav-item] {padding-top: 10px !important; padding-bottom: 10px !important}
-:host /deep/ ml-menu-item.share-item-header > li
-  {cursor: default; background-color: transparent !important; color: cornflowerblue; font-weight: 500}
-.drawer-top-img
-  {margin: auto; display: block; width: 100%;height: 150px; background: url('assets/img/bg1.jpg') 0 0 / cover;}
-.share-item {color: rgba(0,0,0, 0.87); text-decoration: none; font-weight: normal; display: block}
-.bg-grey {background: lightgrey}
-.active-route {background: darkgrey; color: white !important}
-.drawer-title {color: white; text-align: center}
-.drawer-img {width: 25%; text-align: center; margin: 30px auto auto; display: block;}
+  a[nav-item] {padding: 10px !important}
+  :host /deep/ ml-menu-item > li > a 
+    {color: rgba(0,0,0, 0.87); text-decoration: none; font-weight: normal; display: block}
+  :host /deep/ ml-menu-item.share-item-header > li
+    {cursor: default; background-color: transparent !important; color: cornflowerblue; font-weight: 500}
+  .drawer-top-img
+    {margin: auto; display: block; width: 100%; height: 150px; background: url('assets/img/bg1.jpg') 0 0 / cover;}
+  .bg-grey {background: lightgrey}
+  .active-route {background: darkgrey; color: white !important}
+  .drawer-title {color: white; text-align: center}
+  .drawer-img {width: 25%; text-align: center; margin: 30px auto auto; display: block;}
 </style>
 
-<ml-layout drawer="fixed"><!-- todo: atributo "fixed" en <ml-drawer>. mas intuitivo -->
+<!-- todo: atributo "fixed" en <ml-drawer>. mas intuitivo -->
+<ml-layout drawer="fixed"> 
 
   <!-- Header ------------------------------------------------------------------------------------------------------ -->
 
@@ -26,18 +28,18 @@ a[nav-item] {padding-top: 10px !important; padding-bottom: 10px !important}
       <ml-title>Material Light Demo</ml-title>
       <ml-spacer></ml-spacer>
       <ml-nav large-screen-only>
-        <a nav-item href="">Link</a>
-        <a nav-item href="">Link</a>
-        <a nav-item href="">Link</a>
-        <a nav-item href="">Link</a>
+        <a nav-item href="">Link 1</a>
+        <a nav-item href="">Link 2</a>
+        <a nav-item href="">Link 3</a>
+        <a nav-item href="">Link 4</a>
       </ml-nav>
       <ml-menu icon="share" position="top-right">
-        <ml-menu-item divider class="share-item-header">Share...</ml-menu-item>
-        <ml-menu-item><a [href]="shareTwitter" target="_blank" class="share-item">Twitter</a></ml-menu-item>
-        <ml-menu-item><a [href]="shareFB" target="_blank" class="share-item">Facebook</a></ml-menu-item>
-        <ml-menu-item><a [href]="shareGPlus" target="_blank" class="share-item">Google+</a></ml-menu-item>
-        <ml-menu-item><a [href]="shareLinkedIn" target="_blank" class="share-item">LinkedIn</a></ml-menu-item>
-        <ml-menu-item><a [href]="shareEmail" target="_blank" class="share-item">Email</a></ml-menu-item>
+        <ml-menu-item with-divider class="share-item-header">Share...</ml-menu-item>
+        <ml-menu-item><a [href]="shareTwitter" target="_blank">Twitter</a></ml-menu-item>
+        <ml-menu-item><a [href]="shareFB" target="_blank">Facebook</a></ml-menu-item>
+        <ml-menu-item><a [href]="shareGPlus" target="_blank">Google+</a></ml-menu-item>
+        <ml-menu-item><a [href]="shareLinkedIn" target="_blank">LinkedIn</a></ml-menu-item>
+        <ml-menu-item><a [href]="shareEmail" target="_blank">Email</a></ml-menu-item>
       </ml-menu>
     </ml-header-row>
     <ml-header-tabs>
@@ -103,8 +105,7 @@ a[nav-item] {padding-top: 10px !important; padding-bottom: 10px !important}
 </ml-layout>
 
 `//template
-})
-export class App {
+}) export class App {
 
   isLoading = false;
 

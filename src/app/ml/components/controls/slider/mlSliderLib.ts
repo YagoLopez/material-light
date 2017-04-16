@@ -1,4 +1,3 @@
-import {ElementRef} from "@angular/core";
 import MdlElement from "../../element/mdl_element";
 
 export default class MdlSlider extends MdlElement{
@@ -10,8 +9,8 @@ export default class MdlSlider extends MdlElement{
   disable: Function;
   enable: Function;
   change: Function;
-  constructor(element: ElementRef){
-    super(element);
+  constructor(el: HTMLElement){
+    super(el);
     this.isIE_ = window.navigator.msPointerEnabled;
   }
 }

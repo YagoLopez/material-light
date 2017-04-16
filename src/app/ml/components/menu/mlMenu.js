@@ -39,7 +39,6 @@ var MlMenu = (function () {
     };
     /**
      * Get menu position from @Input.position
-     *
      * @param position {string} Input Menu position relative to screen corners.
      * @returns {string} Class name defining position
      *
@@ -114,7 +113,7 @@ var MlMenuItem = (function () {
         __metadata('design:type', core_1.ElementRef)
     ], MlMenuItem.prototype, "menuItem", void 0);
     __decorate([
-        core_1.Input(), 
+        core_1.Input('with-divider'), 
         __metadata('design:type', String)
     ], MlMenuItem.prototype, "divider", void 0);
     __decorate([

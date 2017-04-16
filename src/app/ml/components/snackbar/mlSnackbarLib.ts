@@ -1,27 +1,24 @@
-//todo: habria que cancelar siempre el timer o eliminar el snackbar preventivamente antes de mostrar un nuvo
-//snackbar para prevenir que se puedan crear varios snackbars al hacer varios clicks rapidos
-
-import {ElementRef} from "@angular/core";
+//todo: habria que cancelar siempre el timer o eliminar el snackbar preventivamente antes de mostrar un nuevo
+//snackbar para prevenir que se puedan crear varios snackbars al hacer varios clicks rapidos => possible memory leaking
 import MdlElement from "../element/mdl_element";
 
 export default class MdlSnackbar extends MdlElement{
-  textElement_: ElementRef;
-  actionElement_: ElementRef;
+  textElement_: HTMLElement;
+  actionElement_: HTMLElement;
   active: boolean;
   actionHandler_: Function;
   message_: string;
   actionText_: string;
   queuedNotifications_: Array<any>;
-  setActionHidden: Function;
   showSnackbar: Function;
   checkQueue_: Function;
   cleanup_: Function;
   setActionHidden_: Function;
   displaySnackbar_: Function;
-  constructor(element: ElementRef){
-    super(element);
-    this.textElement_ = this.element_.querySelector('.' + this.CssClasses_.MESSAGE);
-    this.actionElement_ = this.element_.querySelector('.' + this.CssClasses_.ACTION);
+  constructor(el: HTMLElement){
+    super(el);
+    this.textElement_ = this.element_.querySelector('.' + this.CssClasses_.MESSAGE) as HTMLElement;
+    this.actionElement_ = this.element_.querySelector('.' + this.CssClasses_.ACTION) as HTMLElement;
     if (!this.textElement_)
         throw new Error('There must be a message element for a snackbar.');
     if (!this.actionElement_)
@@ -31,7 +28,7 @@ export default class MdlSnackbar extends MdlElement{
     this.setActionHidden_(true);
   }
 }
-MdlSnackbar.prototype.init = function(){}
+MdlSnackbar.prototype.init = function(){};
 MdlSnackbar.prototype.Constant_ = {
     // The duration of the snackbar show/hide animation, in ms.
     ANIMATION_LENGTH: 250

@@ -7,8 +7,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var mdl_element_1 = require("../element/mdl_element");
 var MdlTooltip = (function (_super) {
     __extends(MdlTooltip, _super);
-    function MdlTooltip(element) {
-        _super.call(this, element);
+    function MdlTooltip(el) {
+        _super.call(this, el);
     }
     return MdlTooltip;
 }(mdl_element_1.default));

@@ -1,4 +1,3 @@
-import {ElementRef} from "@angular/core";
 import MdlElement from "../../element/mdl_element";
 
 export default class MdlTextfield extends MdlElement{
@@ -13,8 +12,8 @@ export default class MdlTextfield extends MdlElement{
   enable: Function;
   disable: Function;
   change: Function;
-  constructor(element: ElementRef){
-    super(element);
+  constructor(el: HTMLElement){
+    super(el);
   }
 }
 MdlTextfield.prototype.Constant_ = {

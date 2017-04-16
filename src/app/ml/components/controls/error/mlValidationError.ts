@@ -11,7 +11,7 @@ export class MlValidationError {
   @Input() validateControl: any;
   @Input() validator: string; // validator name. Ejem: minLength, required, etc.
 
-  showError(): boolean | undefined{
+  showError(): boolean | undefined {
     if (this.validateControl){
       return ( this.validateControl.hasError(this.validator) && this.validateControl.touched );
     }

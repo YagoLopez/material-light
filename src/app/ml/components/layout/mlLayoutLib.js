@@ -7,8 +7,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var mdl_element_1 = require("../element/mdl_element");
 var MdlLayout = (function (_super) {
     __extends(MdlLayout, _super);
-    function MdlLayout(element) {
-        _super.call(this, element);
+    function MdlLayout(el) {
+        _super.call(this, el);
     }
     return MdlLayout;
 }(mdl_element_1.default));
@@ -79,7 +79,8 @@ MdlLayout.prototype.contentScrollHandler_ = function () {
     if (this.header_.classList.contains(this.CssClasses_.IS_ANIMATING)) {
         return;
     }
-    var headerVisible = !this.element_.classList.contains(this.CssClasses_.IS_SMALL_SCREEN) || this.element_.classList.contains(this.CssClasses_.FIXED_HEADER);
+    var headerVisible = !this.element_.classList.contains(this.CssClasses_.IS_SMALL_SCREEN) ||
+        this.element_.classList.contains(this.CssClasses_.FIXED_HEADER);
     if (this.content_.scrollTop > 0 && !this.header_.classList.contains(this.CssClasses_.IS_COMPACT)) {
         this.header_.classList.add(this.CssClasses_.CASTING_SHADOW);
         this.header_.classList.add(this.CssClasses_.IS_COMPACT);
@@ -97,9 +98,10 @@ MdlLayout.prototype.contentScrollHandler_ = function () {
 };
 /**
  * Handles a keyboard event on the drawer.
- * @param {Event} evt The event that fired.
+ * @param {KeyboardEvent} evt The event that fired.
  */
 MdlLayout.prototype.keyboardEventHandler_ = function (evt) {
+    debugger;
     // Only react when the drawer is open.
     if (evt.keyCode === this.Keycodes_.ESCAPE && this.drawer_.classList.contains(this.CssClasses_.IS_DRAWER_OPEN)) {
         this.toggleDrawer();
@@ -123,7 +125,7 @@ MdlLayout.prototype.screenSizeHandler_ = function () {
 };
 /**
  * Handles events of drawer button.
- * @param {Event} evt The event that fired.
+ * @param {KeyboardEvent} evt The event that fired.
  */
 MdlLayout.prototype.drawerToggleHandler_ = function (evt) {
     if (evt && evt.type === 'keydown') {
@@ -195,24 +197,25 @@ MdlLayout.prototype.init = function () {
         if (focusedElement) {
             focusedElement.focus();
         }
-        /* modifications */
-        // var directChildren = this.element_.childNodes;
-        // var numChildren = directChildren.length;
-        // for (var c = 0; c < numChildren; c++) {
-        //     var child = directChildren[c];
-        //     if (child.classList && child.classList.contains(this.CssClasses_.HEADER)) {
-        //         this.header_ = child;
-        //     }
-        //     if (child.classList && child.classList.contains(this.CssClasses_.DRAWER)) {
-        //         this.drawer_ = child;
-        //     }
-        //     if (child.classList && child.classList.contains(this.CssClasses_.CONTENT)) {
-        //         this.content_ = child;
-        //     }
-        // }
-        this.header_ = document.getElementsByTagName('ml-header')[0];
-        this.drawer_ = document.getElementsByTagName('ml-drawer')[0];
-        this.content_ = document.getElementsByTagName('ml-content')[0];
+        /* modifications
+        var directChildren = this.element_.childNodes;
+        var numChildren = directChildren.length;
+        for (var c = 0; c < numChildren; c++) {
+            var child = directChildren[c];
+            if (child.classList && child.classList.contains(this.CssClasses_.HEADER)) {
+                this.header_ = child;
+            }
+            if (child.classList && child.classList.contains(this.CssClasses_.DRAWER)) {
+                this.drawer_ = child;
+            }
+            if (child.classList && child.classList.contains(this.CssClasses_.CONTENT)) {
+                this.content_ = child;
+            }
+        }
+        /modifications */
+        this.header_ = this.element_.getElementsByTagName('ml-header')[0];
+        this.drawer_ = this.element_.getElementsByTagName('ml-drawer')[0];
+        this.content_ = this.element_.getElementsByTagName('ml-content')[0];
         /* end of modifications */
         window.addEventListener('pageshow', function (e) {
             if (e.persisted) {

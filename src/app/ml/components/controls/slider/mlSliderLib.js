@@ -7,8 +7,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var mdl_element_1 = require("../../element/mdl_element");
 var MdlSlider = (function (_super) {
     __extends(MdlSlider, _super);
-    function MdlSlider(element) {
-        _super.call(this, element);
+    function MdlSlider(el) {
+        _super.call(this, el);
         this.isIE_ = window.navigator.msPointerEnabled;
     }
     return MdlSlider;

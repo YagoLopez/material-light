@@ -1,12 +1,11 @@
-import {ElementRef} from "@angular/core";
 import MdlElement from "../element/mdl_element";
 
 export default class MdlTabs extends MdlElement{
   initTabs_: Function;
   resetTabState_: Function;
   resetPanelState_: Function;
-  constructor(element: ElementRef){
-    super(element);
+  constructor(el: HTMLElement){
+    super(el);
   }
 }
 MdlTabs.prototype.CssClasses_ = {

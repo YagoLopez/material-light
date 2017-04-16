@@ -21,10 +21,9 @@ moduleId: module.id,
 export class MlLayout {
 
   // Input vales must be in lowercase
-  //todo: estaria bien poder definir el drawer como fixed en la propia etiqueta <ml-drawer> en lugar de aqui
+  // todo: estaria bien poder definir el drawer como fixed en la propia etiqueta <ml-drawer> en lugar de aqui
   @Input() drawer: string;
   @Input() tabs: string;
-  //todo: cuando se define una imagen de fondo en el layout, se de beria hacer la cabecera transparente automaticamente
   @Input() background: string;
   mdlLayout: MdlLayout;
 
