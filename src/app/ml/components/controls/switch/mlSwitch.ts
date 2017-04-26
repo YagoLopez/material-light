@@ -24,8 +24,7 @@ template:`
 </label>
 
 `//template
-})
-export class MlSwitch implements ControlValueAccessor {
+}) export class MlSwitch implements ControlValueAccessor {
 
   @ViewChild('label') label: ElementRef;
   @Input() id: string;

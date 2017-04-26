@@ -9,6 +9,5 @@ import {MlTextfieldLabel} from "./mlTextfieldLabel";
 @NgModule({
 imports: [CommonModule, FormsModule, ReactiveFormsModule, MlIconMod],
 declarations: [MlTextfield, MlTextfieldExpand, MlTextfieldArea, MlTextfieldLabel],
-exports: [MlTextfield, MlTextfieldExpand, MlTextfieldArea, MlTextfieldLabel]
-})
+exports: [MlTextfield, MlTextfieldExpand, MlTextfieldArea, MlTextfieldLabel]})
 export class MlTextfieldMod{}

@@ -1,16 +1,14 @@
 /**
- * @ClassDesc Most of the Material Light MlComponents use Ml*Lib.ts elements that inherit from the base MdlElement
+ * @ClassDesc Most of the Material Light MlComponents are based in Mdl Classes (defined in Ml*Lib.ts files).
+ * At the same time, all Mdl Classes inherit from this base MdlElement
  * @Class {MdlElement}
- * @params {HTMLElement} el HTML Element used as base to create the ML component
+ * @params {HTMLElement} HTML Element used as base to create ML components
  */
 export default class MdlElement{
   init: Function;
   element_: HTMLElement;
-  Constant_: Object | any;
+  Constant_: Object;
   CssClasses_: Object | any;
   updateClasses_: Function;
-  constructor(el: HTMLElement){
-    this.element_ = el;
-    this.init();
-  }
+  constructor(el: HTMLElement) {this.element_ = el; this.init()}
 }

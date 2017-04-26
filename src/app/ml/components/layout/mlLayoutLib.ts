@@ -106,7 +106,6 @@ MdlLayout.prototype.contentScrollHandler_ = function () {
  * @param {KeyboardEvent} evt The event that fired.
  */
 MdlLayout.prototype.keyboardEventHandler_ = function (evt: KeyboardEvent) {
-  debugger;
   // Only react when the drawer is open.
   if (evt.keyCode === this.Keycodes_.ESCAPE && this.drawer_.classList.contains(this.CssClasses_.IS_DRAWER_OPEN)) {
     this.toggleDrawer();
