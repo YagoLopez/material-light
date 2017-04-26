@@ -32,5 +32,4 @@ template:`
 <view-source uri="menu/pagMenu.ts"></view-source>
 
 `//template
-})
-export class PageMenu {}
+}) export class PageMenu {}

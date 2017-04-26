@@ -25,14 +25,26 @@ var MlSelectfield = (function () {
         this.host = host;
         this.labelText = 'Choose one option...';
     }
-    MlSelectfield.prototype.itemSelected = function ($event) {
+    MlSelectfield.prototype.onItemSelected = function ($event) {
         this.label.nativeElement.textContent = '';
         this.input.nativeElement.value = $event.target.textContent;
         this.formControl.setValue($event.target.textContent);
         this.formControl.markAsTouched(true);
     };
-    MlSelectfield.prototype.clickInput = function () {
+    /**
+     * Close open selectfields. Used to have only one selectfield open at time
+     */
+    MlSelectfield.prototype.closeSelectfields = function () {
+        var openSelects = document.querySelectorAll('div.mdl-menu__container.is-visible');
+        Array.from(openSelects).forEach(function (openSelect) { openSelect.classList.remove('is-visible'); });
+    };
+    /**
+     * Toggle state of clicked selectfield
+     * @param $event
+     */
+    MlSelectfield.prototype.onClickInput = function () {
         this.mdlMenu.toggle();
+        this.closeSelectfields();
     };
     MlSelectfield.prototype.ngOnInit = function () {
         this.idBtn = ml.randomStr();
@@ -40,10 +52,13 @@ var MlSelectfield = (function () {
             ml.setClass(this.mdlButton.host, 'mdl-js-ripple-effect', this.ren);
             ml.setClass(this.menuList, 'mdl-js-ripple-effect', this.ren);
         }
-    };
-    MlSelectfield.prototype.ngAfterViewInit = function () {
         this.mdlMenu = new mlMenuLib_1.default(this.menuList.nativeElement);
         this.mdlTextfield = new mlTextfieldLib_1.default(this.input.nativeElement);
+        // if user defines a selectfield height from @Input => enable selectfield content overflow and scrollbars
+        if (this.height) {
+            this.mdlMenu.userDefinedHeight = this.height;
+            this.mdlMenu.container_.style.overflow = 'auto';
+        }
     };
     MlSelectfield.prototype.writeValue = function (value) {
         if (value) {
@@ -81,6 +96,10 @@ var MlSelectfield = (function () {
         core_1.Input('label'), 
         __metadata('design:type', Object)
     ], MlSelectfield.prototype, "labelText", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], MlSelectfield.prototype, "height", void 0);
     MlSelectfield = __decorate([
         core_1.Component({
             selector: 'ml-selectfield',
@@ -89,7 +108,7 @@ var MlSelectfield = (function () {
             encapsulation: core_1.ViewEncapsulation.None,
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             providers: [{ provide: forms_1.NG_VALUE_ACCESSOR, useExisting: core_1.forwardRef(function () { return MlSelectfield; }), multi: true }],
-            template: "\n\n<div class=\"mdl-textfield dropdown-width getmdl-select\">\n  <input #input type=\"text\" class=\"mdl-textfield__input input-field\" (click)=\"clickInput()\" readonly>\n  <label #label class=\"mdl-textfield__label input-label\">{{ labelText }}</label>\n  <ml-button #mdlButton variant=\"icon\" [attr.id]=\"idBtn\" class=\"menu-btn\">\n    <ml-icon>keyboard_arrow_down</ml-icon>\n  </ml-button>\n  <ul #menuList [attr.for]=\"idBtn\" class=\"getmdl-select__fullwidth mdl-menu\" (click)=\"itemSelected($event)\">\n    <ng-content select=\"ml-sf-item\"></ng-content>\n  </ul>         \n</div>\n\n" //template
+            template: "\n<div class=\"mdl-textfield\">\n  <input #input type=\"text\" class=\"mdl-textfield__input input-field\" (click)=\"onClickInput()\" readonly>\n  <label #label class=\"mdl-textfield__label input-label\">{{ labelText }}</label>\n  <ml-button #mdlButton variant=\"icon\" [attr.id]=\"idBtn\" class=\"menu-btn\" (click)=\"onClickInput()\">\n    <ml-icon>keyboard_arrow_down</ml-icon>\n  </ml-button>\n  <ul #menuList [attr.for]=\"idBtn\" class=\"mdl-menu\" (click)=\"onItemSelected($event)\">\n    <ng-content select=\"ml-sf-item\"></ng-content>\n  </ul>         \n</div>\n" //template
         }), 
         __metadata('design:paramtypes', [core_1.Renderer, core_1.ElementRef])
     ], MlSelectfield);
@@ -110,7 +129,7 @@ var MlSelectfieldItem = (function () {
         __metadata('design:type', core_1.ElementRef)
     ], MlSelectfieldItem.prototype, "selectfieldItem", void 0);
     __decorate([
-        core_1.Input(), 
+        core_1.Input('with-divider'), 
         __metadata('design:type', String)
     ], MlSelectfieldItem.prototype, "divider", void 0);
     __decorate([

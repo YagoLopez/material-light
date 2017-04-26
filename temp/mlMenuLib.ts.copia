@@ -1,7 +1,6 @@
 import MdlElement from "../element/mdl_element";
 
 export default class MdlMenu extends MdlElement{
-  userDefinedHeight: string;
   outline_: HTMLElement;
   container_: HTMLElement;
   Keycodes_: Object;
@@ -15,7 +14,9 @@ export default class MdlMenu extends MdlElement{
   show: Function;
   hide: Function;
   toggle: Function;
-  constructor(el: HTMLElement){ super(el) }
+  constructor(el: HTMLElement){
+    super(el);
+  }
 }
 MdlMenu.prototype.Constant_ = {
   // Total duration of the menu animation.
@@ -214,7 +215,7 @@ MdlMenu.prototype.handleItemKeyboardEvent_ = function (evt: any) {
 };
 /**
  * Handles a click event on an item.
- * @param {any} evt The event that fired.
+ * @param {Event} evt The event that fired.
  */
 MdlMenu.prototype.handleItemClick_ = function (evt: any) {
   if (evt.target.hasAttribute('disabled')) {
@@ -276,16 +277,11 @@ MdlMenu.prototype.show = function (evt: any) {
   if (this.element_ && this.container_ && this.outline_) {
     // Measure the inner element.
     var height = this.element_.getBoundingClientRect().height;
+    // var height = 100;
     var width = this.element_.getBoundingClientRect().width;
     // Apply the inner element's size to the container and outline.
     this.container_.style.width = width + 'px';
-    /* modifications */
-    if (this.userDefinedHeight){
-      this.container_.style.height = this.userDefinedHeight + 'px';
-    } else {
-      this.container_.style.height = height + 'px';
-    }
-    /* /modifications */
+    this.container_.style.height = height + 'px';
     this.outline_.style.width = width + 'px';
     this.outline_.style.height = height + 'px';
     var transitionDuration = this.Constant_.TRANSITION_DURATION_SECONDS * this.Constant_.TRANSITION_DURATION_FRACTION;

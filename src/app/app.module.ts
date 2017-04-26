@@ -1,6 +1,8 @@
+//todo: revisar aplicacion de fondo azul en splashscreen
 //todo: retocar page-loader para que quite cualquier posible imagen de fondo
 //todo: usar enums para posibles valores de inputs
 //todo: eventos drawer y obfuscator
+//todo: probar a eliminar atributos id en elementos 'label'. revisar docs angular
 //todo: probar a quitar "mdl-layout__container" de ml-layout => (cabcera+contenido) scrollable. hacer tests
 //todo: themes: (1) estudiar como pasar estilos css a componentes
 //todo: themes: (2) revisar sitios donde es posible eliminar encapsulation.none usando :host /deep/
@@ -40,12 +42,12 @@ import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {App} from "./app.layout";
 
 // Relative paths for SystemJS
-// export const basePath = '.app/pages/';
+export const basePath = '.app/pages/';
 
 // Absolute paths for Webpack
-export const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
+// export const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
 
-const APP_ROUTES: Routes = [
+export const APP_ROUTES: Routes = [
 {path: '',           redirectTo: 'button', pathMatch: 'full'},
 {path: 'button',     loadChildren: basePath + 'button/pagButtonMod#PagButtonMod'},
 {path: 'layout',     loadChildren: basePath + 'layout/pagLayoutMod#PagLayoutMod'},

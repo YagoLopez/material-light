@@ -39,12 +39,12 @@ var MlMenu = (function () {
     };
     /**
      * Get menu position from @Input.position
-     * @param position {string} Input Menu position relative to screen corners.
+     * @param position {string} Menu position from @Input, relative to screen corners.
      * @returns {string} Class name defining position
      *
      * Allowed values: [top-left, top-right, bottom-left, bottom, right] (in lower case)
      */
-    //todo: definir tipos de valores permitidos como en otros casos
+    //todo: comprobar valores permitidos como en otros casos
     MlMenu.prototype.getMenuPosition = function (position) {
         // todo: class names are wrong?
         var mdlClassName = '';

@@ -221,7 +221,7 @@ MdlMenu.prototype.handleItemKeyboardEvent_ = function (evt) {
 };
 /**
  * Handles a click event on an item.
- * @param {Event} evt The event that fired.
+ * @param {any} evt The event that fired.
  */
 MdlMenu.prototype.handleItemClick_ = function (evt) {
     if (evt.target.hasAttribute('disabled')) {
@@ -269,7 +269,7 @@ MdlMenu.prototype.applyClip_ = function (height, width) {
 /**
  * Cleanup function to remove animation listeners.
  *
- * @param {Event} evt
+ * @param {any} evt
  */
 MdlMenu.prototype.removeAnimationEndListener_ = function (evt) {
     evt.target.classList.remove(MdlMenu.prototype.CssClasses_.IS_ANIMATING);
@@ -291,7 +291,14 @@ MdlMenu.prototype.show = function (evt) {
         var width = this.element_.getBoundingClientRect().width;
         // Apply the inner element's size to the container and outline.
         this.container_.style.width = width + 'px';
-        this.container_.style.height = height + 'px';
+        /* modifications */
+        if (this.userDefinedHeight) {
+            this.container_.style.height = this.userDefinedHeight + 'px';
+        }
+        else {
+            this.container_.style.height = height + 'px';
+        }
+        /* /modifications */
         this.outline_.style.width = width + 'px';
         this.outline_.style.height = height + 'px';
         var transitionDuration = this.Constant_.TRANSITION_DURATION_SECONDS * this.Constant_.TRANSITION_DURATION_FRACTION;

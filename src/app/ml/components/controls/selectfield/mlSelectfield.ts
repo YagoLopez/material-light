@@ -20,21 +20,18 @@ encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlSelectfield), multi: true}],
 template:`
-
-<div class="mdl-textfield dropdown-width getmdl-select">
-  <input #input type="text" class="mdl-textfield__input input-field" (click)="clickInput()" readonly>
+<div class="mdl-textfield">
+  <input #input type="text" class="mdl-textfield__input input-field" (click)="onClickInput()" readonly>
   <label #label class="mdl-textfield__label input-label">{{ labelText }}</label>
-  <ml-button #mdlButton variant="icon" [attr.id]="idBtn" class="menu-btn">
+  <ml-button #mdlButton variant="icon" [attr.id]="idBtn" class="menu-btn" (click)="onClickInput()">
     <ml-icon>keyboard_arrow_down</ml-icon>
   </ml-button>
-  <ul #menuList [attr.for]="idBtn" class="getmdl-select__fullwidth mdl-menu" (click)="itemSelected($event)">
+  <ul #menuList [attr.for]="idBtn" class="mdl-menu" (click)="onItemSelected($event)">
     <ng-content select="ml-sf-item"></ng-content>
   </ul>         
 </div>
-
 `//template
-})
-export class MlSelectfield implements ControlValueAccessor{
+}) export class MlSelectfield implements ControlValueAccessor{
 
   @ViewChild('menuList') menuList: ElementRef;
   @ViewChild('mdlButton') mdlButton: MlButton;
@@ -43,32 +40,55 @@ export class MlSelectfield implements ControlValueAccessor{
   @Input() formControl: FormControl;
   @Input() ripple: string;
   @Input('label') labelText = 'Choose one option...';
+  @Input() height: string;
   idBtn: string;
   mdlTextfield: MdlTextfield;
   mdlMenu: MdlMenu;
 
-  constructor( private ren: Renderer, private host: ElementRef ){}
+  constructor(private ren: Renderer, private host: ElementRef){}
 
-  itemSelected($event){
+  onItemSelected($event){
     this.label.nativeElement.textContent = '';
     this.input.nativeElement.value = $event.target.textContent;
     this.formControl.setValue($event.target.textContent);
     this.formControl.markAsTouched(true);
   }
-  clickInput(){
-    this.mdlMenu.toggle();
+
+  /**
+   * Close open selectfields. Used to have only one selectfield open at time
+   */
+  closeSelectfields(){
+    const openSelects: NodeListOf<HTMLElement> =
+      document.querySelectorAll('div.mdl-menu__container.is-visible') as NodeListOf<HTMLElement>;
+    Array.from(openSelects).forEach( openSelect => {openSelect.classList.remove('is-visible')} )
   }
+
+  /**
+   * Toggle state of clicked selectfield
+   * @param $event
+   */
+  onClickInput(){
+    this.mdlMenu.toggle();
+    this.closeSelectfields();
+  }
+
   ngOnInit(){
     this.idBtn = ml.randomStr();
     if (this.ripple === ''){
       ml.setClass(this.mdlButton.host, 'mdl-js-ripple-effect', this.ren);
       ml.setClass(this.menuList, 'mdl-js-ripple-effect', this.ren);
     }
-  }
-  ngAfterViewInit(){
+
     this.mdlMenu = new MdlMenu(this.menuList.nativeElement);
     this.mdlTextfield = new MdlTextfield(this.input.nativeElement);
+
+    // if user defines a selectfield height from @Input => enable selectfield content overflow and scrollbars
+    if(this.height){
+      this.mdlMenu.userDefinedHeight = this.height;
+      this.mdlMenu.container_.style.overflow = 'auto';
+    }
   }
+
   writeValue(value: any): void {
     if(value){
       this.label.nativeElement.textContent = '';
@@ -87,7 +107,7 @@ template: '<li class="mdl-menu__item" #selectfieldItem><ng-content></ng-content>
 export class MlSelectfieldItem {
 
   @ViewChild('selectfieldItem') selectfieldItem: ElementRef;
-  @Input() divider: string;
+  @Input('with-divider') divider: string;
   @Input() disabled: string;
 
   constructor(private ren: Renderer){}

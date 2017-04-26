@@ -1,6 +1,8 @@
+//todo: revisar aplicacion de fondo azul en splashscreen
 //todo: retocar page-loader para que quite cualquier posible imagen de fondo
 //todo: usar enums para posibles valores de inputs
 //todo: eventos drawer y obfuscator
+//todo: probar a eliminar atributos id en elementos 'label'. revisar docs angular
 //todo: probar a quitar "mdl-layout__container" de ml-layout => (cabcera+contenido) scrollable. hacer tests
 //todo: themes: (1) estudiar como pasar estilos css a componentes
 //todo: themes: (2) revisar sitios donde es posible eliminar encapsulation.none usando :host /deep/
@@ -48,10 +50,10 @@ var mlLayoutMod_1 = require("./ml/components/layout/mlLayoutMod");
 var mlMenuMod_1 = require("./ml/components/menu/mlMenuMod");
 var app_layout_1 = require("./app.layout");
 // Relative paths for SystemJS
-// export const basePath = '.app/pages/';
+exports.basePath = '.app/pages/';
 // Absolute paths for Webpack
-exports.basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
-var APP_ROUTES = [
+// export const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
+exports.APP_ROUTES = [
     { path: '', redirectTo: 'button', pathMatch: 'full' },
     { path: 'button', loadChildren: exports.basePath + 'button/pagButtonMod#PagButtonMod' },
     { path: 'layout', loadChildren: exports.basePath + 'layout/pagLayoutMod#PagLayoutMod' },
@@ -84,7 +86,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, mlContentLoaderMod_1.MlPageLoaderMod, mlLayoutMod_1.MlLayoutMod, mlMenuMod_1.MlMenuMod,
-                router_1.RouterModule.forRoot(APP_ROUTES, { enableTracing: false, useHash: true })],
+                router_1.RouterModule.forRoot(exports.APP_ROUTES, { enableTracing: false, useHash: true })],
             declarations: [app_layout_1.App], bootstrap: [app_layout_1.App]
         }), 
         __metadata('design:paramtypes', [])
