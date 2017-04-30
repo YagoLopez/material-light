@@ -1,5 +1,5 @@
 import {Component, ElementRef, Directive, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
-import MdlTabs from "./mlTabsLib";
+import MdlTabs from "./mdlTabsClass";
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-tabs',

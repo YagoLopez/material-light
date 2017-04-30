@@ -2,7 +2,7 @@
 // tener que usar viewencapsulation.none; sin embargo si puede ser util usar host en componentes hijos
 
 import {Component, ElementRef, Input, Renderer, ViewChild} from '@angular/core';
-import MdlTooltip from "./mlTooltipLib";
+import MdlTooltip from "./mdlTooltipClass";
 import * as ml from "../../lib/ml_lib";
 
 @Component({

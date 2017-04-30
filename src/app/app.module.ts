@@ -1,3 +1,5 @@
+//todo: atributo "fixed" en <ml-drawer>. mas intuitivo
+//todo: migracion a angular 4
 //todo: eliminar ficheros *.js en repo
 //todo: usar enums para posibles valores de inputs
 //todo: eventos drawer y obfuscator
@@ -5,21 +7,13 @@
 //todo: probar a quitar "mdl-layout__container" de ml-layout => (cabcera+contenido) scrollable. hacer tests
 //todo: themes: (1) estudiar como pasar estilos css a componentes
 //todo: themes: (2) revisar sitios donde es posible eliminar encapsulation.none usando :host /deep/
-//todo: themes: (3) investigar lo de quitar el encapsulation: ViewEncapsulation.None en cada componente (funciono en ml-radio)
-//todo: revisar todos lo modulos, puede haber clases que sobren como paso con MlLayoutMod (sobre todo en los imports)
+//todo: themes: (3) investigar lo de quitar el 'encapsulation: ViewEncapsulation.None' en cada componente (funciono en ml-radio)
 //todo: comprobar consola usando chrome remote debugging por usb en el movil
-//todo: migracion a angular 4
 //todo: crear paquete npm
 //todo: ponerse en contacto con f7 para hacer otros componentes. ej: acordeon
-//todo: atributo "fixed" en <ml-drawer>. mas intuitivo
-//todo: Pruebas con Changedetection.onpush on/off para ml-selectfield type=date
-//todo: revisar header scrollable
-//todo: validaciones de input.date component (probar con valueChanges())
-//todo: que se oculten dropwdowns al hacer click en el fondo
-//todo: renombrar mlLayoutLib.ts a mdlLayoutLib, por ejemplo, y los demas ficheros
 //todo: hacer documentacion de api para cada componente
 //todo: que se puedan usar diferentes cabeceras y menus laterales (<ml-header>) en cada pagina (usar named router-outlet?)
-//todo: hacer Ml starter project
+//todo: hacer ML starter project
 //todo: habilitar webpack.config.js en angular-cli para poder usar local paths en router
 //todo: animaciones en transiciones de estado usando eventos de router
 // (ref: https://toddmotto.com/dynamic-page-titles-angular-2-router-events)
@@ -44,7 +38,7 @@ import {App} from "./app.layout";
 // const basePath = '.app/pages/';
 
 // Absolute paths for Webpack
-export const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
+const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
 
 const APP_ROUTES: Routes = [
 {path: '',           redirectTo: 'button', pathMatch: 'full'},

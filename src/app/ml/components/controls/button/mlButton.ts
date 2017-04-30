@@ -3,7 +3,7 @@
 //todo: usar enums
 
 import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angular/core";
-import MdlButton from "./mdButtonLib";
+import MdlButton from "./mdlButtonClass";
 import * as ml from "../../../lib/ml_lib";
 
 // Input attribute values are case-sensitive
@@ -29,14 +29,14 @@ export class MlButton{
 
   ngOnInit(){
     // Input "aspect" --------------------------------------------------------------------------------------------------
-    if( this.variant && !ml.isAttributeValid(this.variant, ML_BUTTON_VARIANTS) ){
-      console.warn(`<ml-button> Wrong attribute: variant="${this.variant}"`);
-    }
     ml.isSubstring('raised', this.aspect) && ml.setClass(this.host, 'mdl-button--raised', this.ren);
     ml.isSubstring('colored', this.aspect) && ml.setClass(this.host, 'mdl-button--colored', this.ren);
     ml.isSubstring('accent', this.aspect) && ml.setClass(this.host, 'mdl-button--accent', this.ren);
 
    // Input "variant" --------------------------------------------------------------------------------------------------
+    if( this.variant && !ml.isAttributeValid(this.variant, ML_BUTTON_VARIANTS) ){
+      console.warn(`<ml-button> Wrong attribute: variant="${this.variant}"`);
+    }
     if (ml.isSubstring('minifab', this.variant)){
       ml.setClass(this.host, 'mdl-button--fab', this.ren);
       ml.setClass(this.host, 'mdl-button--mini-fab', this.ren);

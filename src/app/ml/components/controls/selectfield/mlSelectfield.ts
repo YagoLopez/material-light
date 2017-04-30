@@ -8,8 +8,8 @@ import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation, fo
  ChangeDetectionStrategy} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import {MlButton} from "../button/mlButton";
-import MdlMenu from "../../menu/mlMenuLib";
-import MdlTextfield from "../textfield/mlTextfieldLib";
+import MdlMenu from "../../menu/mdlMenuClass";
+import MdlTextfield from "../textfield/mdlTextfieldClass";
 import * as ml from "../../../lib/ml_lib";
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({

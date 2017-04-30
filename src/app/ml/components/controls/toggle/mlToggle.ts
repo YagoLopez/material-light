@@ -3,7 +3,7 @@
 
 import {Component, ViewChild, ElementRef, Input, ViewEncapsulation, forwardRef} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
-import MdlToggle from './mlToggleLib';
+import MdlToggle from './mdlToggleClass';
 
 @Component({
 selector: 'ml-toggle',

@@ -4,7 +4,7 @@
 
 import {Component, ViewChild, ElementRef, Input, ViewEncapsulation, forwardRef, Renderer} from "@angular/core";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
-import MdlSwitch from "./mlSwitchLib";
+import MdlSwitch from "./mdlSwitchClass";
 
 @Component({
 selector: 'ml-switch',

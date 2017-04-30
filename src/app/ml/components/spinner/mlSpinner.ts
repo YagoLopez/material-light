@@ -3,7 +3,7 @@
 //todo: [attributo]="valor". Si no hay valor puede que haya problemas
 
 import {Component, ElementRef, Input, Renderer, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
-import MdlSpinner from "./mlSpinnerLib";
+import MdlSpinner from "./mdlSpinnerClass";
 import * as ml from "../../lib/ml_lib";
 
 @Component({

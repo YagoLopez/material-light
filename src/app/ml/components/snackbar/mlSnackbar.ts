@@ -1,5 +1,5 @@
 import {Component, ElementRef, Input, ViewEncapsulation} from "@angular/core";
-import MdlSnackbar from "./mlSnackbarLib";
+import MdlSnackbar from "./mdlSnackbarClass";
 
 export interface IConfigSnackbar {
   message: string, actionHandler?: Function, actionText?: string, timeout?: number

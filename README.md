@@ -5,7 +5,7 @@
 **Material Designt UI components for Angular 2 +**
 
 There are other adaptations of Material Design Lite and other UI frameworks like the official Material Design 2, 
-but this library has the following advantages:
+but this library has the following features:
 
 - 100% Free forever.
 - Light
@@ -15,9 +15,9 @@ but this library has the following advantages:
 - Easy and quick form validation
 - Great performance on mobile UI interfaces.
 - Responsive content adaptable to desktop and mobile
-- Components available also as Angular Modules allowing Code-Splitting or Lazy-loading. This implies loading only the components needed at runtime
+- Components available also as Angular Modules allowing Code-Splitting/Lazy-loading. This implies loading only the components needed at runtime
 - Ready for Ahead of Time Compilation (AOT)
-- Tested in main desktop/mobile browsers: Chrome (Android, IOS, desktop), FF, Edge, IE, Opera, etc.
+- Tested in main desktop/mobile browsers: Chrome (Android, IOS, desktop), FF, Edge, IE, Opera.
 - No dependencies of other libraries like JQuery or Bootstrap.
 
 ## Objective
@@ -49,11 +49,12 @@ Yago López:
 - Until it will be available as an NPM package, clone or download the repository.
 - Copy the `ml` folder (where the components are) into your project
 - Copy and paste the contents of the `assets` folder into the **exact same path** in your angular-cli project
+- If you are cloning this project and goint to run it, adjust the path in `app.module.ts`
 - Use the components following the examples in the `pages` directory. The components use `ml` as namespace. For example: `<ml-icon>email</ml-icon>` places an email icon component in a template.
-- There are two ways of using the library:
+- There are two ways of using this library:
   1. **As components**. For example, import `MlButton` and `MlIcon` in your component and put `<ml-button>` and `<ml-icon>` in your template.
-  2. **As modules**: You would need to import the modules `MlButtonMod` and `MlIconMod` into your own module. The use of modules is indicated for lazy-loading.
-- This library works with AOT
+  2. **As modules**: You will need to import the modules `MlButtonMod` and `MlIconMod` into your own module. The use of modules is indicated for lazy-loading.
+
 
 ## Testing
 
@@ -73,5 +74,5 @@ Yago López:
 
 - This project is based on <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>. It is an adaptation of Javascript MDL components to Angular Typscript components with the permission of the MDL team.
 - Material Design is a Google's registered trade mark probably.
-- This is an open-source project without commercial or profit intentions.
+- This is an open-source project without commercial or profit intention.
 - Tested on Angular version 2.4.7.

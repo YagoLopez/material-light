@@ -7,7 +7,7 @@
 /src/**/*.js
 /src/**/*.map
 
-#System Files
+# system files
 *.db
 
 # misc

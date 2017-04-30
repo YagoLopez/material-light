@@ -65,5 +65,4 @@ strong{color: #3f51b5}
 <view-source uri="grid/pagGrid.ts"></view-source>
         
 `//template
-})
-export class PagGrid {}
+}) export class PagGrid {}

@@ -5,7 +5,7 @@
 
 import {
   Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy} from "@angular/core";
-import MdlLayout from "./mlLayoutLib";
+import MdlLayout from "./mdlLayoutClass";
 import * as ml from "../../lib/ml_lib";
 
 // ---------------------------------------------------------------------------------------------------------------------

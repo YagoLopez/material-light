@@ -4,13 +4,18 @@ import {FormGroup, FormControl, Validators} from "@angular/forms";
 @Component({
 template:`
 
-<style>.validationError{color: red; padding-bottom: 20px}</style>
+<style>
+  .validationError{color: red; padding-bottom: 20px}
+  strong {display: block}
+</style>
 
 <h5>Select Field</h5>
 <p>Reactive Forms only</p>
 <form [formGroup]="selectForm" (ngSubmit)="onSubmit()" autocomplete="off">
+
+  <!-- Selectfield1 ------------------------------------------------------------------------------------------------ -->
   
-  <div><strong>Selectfield1</strong></div>
+  <strong>Selectfield1</strong>
   
   <ml-selectfield [formControl]="selectfield1">
     <ml-sf-item>one</ml-sf-item>
@@ -32,7 +37,9 @@ template:`
   
   <p>(With validators ↑)</p><br>
   
-  <div><strong>Selectfield2</strong></div>
+  <!-- Selectfield2 ------------------------------------------------------------------------------------------------ -->
+  
+  <strong>Selectfield2</strong>
   
   <ml-selectfield [formControl]="selectfield2" label="Choose another option..." ripple>
     <ml-sf-item ripple>alpha</ml-sf-item>
@@ -41,8 +48,11 @@ template:`
   </ml-selectfield>
   
   <p>(No validators + ripple ↑)</p><br>
+
+  <!-- /Selectfield2 ----------------------------------------------------------------------------------------------- -->
   
-  <ml-button-submit [disabled]="selectForm.invalid" text="Submit to console" aspect="raised" ripple></ml-button-submit>
+  <ml-button-input type="submit" aspect="raised" [disabled]="selectForm.invalid" ripple>
+    Submit to console</ml-button-input>
   
 </form>
 

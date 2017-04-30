@@ -11,15 +11,15 @@ template:`
   <p><ml-radio id="radio3" formControlName="option" value="option3">Option 3</ml-radio></p>
   <p><ml-radio id="radio4" formControlName="option" value="option4" ripple>Option 4 (With ripple)</ml-radio></p>
   <p><ml-radio id="radio5" formControlName="option" value="option5" disabled>Option 5 (Disabled)</ml-radio></p>
-  <p><ml-button-submit aspect="raised" text="Submit to console" ripple></ml-button-submit></p>
+  <p><ml-button-input type="submit" [disabled]="formRadio.invalid" aspect="raised" ripple>
+    Submit to console</ml-button-input></p>
 </form>
 
 <debug-form [name]="formRadio"></debug-form>
 <view-source uri="radio/pagRadio.ts"></view-source>
 
 `//template
-})
-export class PagRadio {
+}) export class PagRadio {
 
   formRadio: FormGroup;
   option = new FormControl('option3');
@@ -27,7 +27,6 @@ export class PagRadio {
   ngOnInit(){
     this.formRadio = new FormGroup({option: this.option})
   }
-
   onSubmit(){
     console.log(this.formRadio.value);
   }

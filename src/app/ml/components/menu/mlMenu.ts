@@ -1,6 +1,6 @@
 import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation} from "@angular/core";
 import {MlButton} from "../controls/button/mlButton";
-import MdlMenu from "./mlMenuLib";
+import MdlMenu from "./mdlMenuClass";
 import * as ml from "../../lib/ml_lib";
 
 @Component({

@@ -5,9 +5,10 @@ import {FormGroup} from "@angular/forms";
 selector: 'debug-form',
 template:`
 <style>
-.code-block{background: aliceblue; font-size: 13px; margin: auto; border: 1px solid lightgray; border-radius: 4px}
-.inner-div{margin-left: 10px;}
-.value{color: cornflowerblue;}
+.inner-div {margin-left: 10px}
+.value {color: cornflowerblue}
+.code-block {background: aliceblue; font-size: 13px; margin: auto;
+  border: 1px solid lightgray; border-radius: 4px; overflow-x: auto}
 </style>
 
 <pre class="code-block">
@@ -18,7 +19,6 @@ template:`
   </div>
 </pre>
 `//template
-})
-export class DebugForm {
+}) export class DebugForm {
   @Input('name') formName: FormGroup;
 }

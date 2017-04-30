@@ -1,5 +1,5 @@
 import {Component, ElementRef, Renderer, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
-import MdlSlider from "./mlSliderLib";
+import MdlSlider from "./mdlSliderClass";
 import * as ml from "../../../lib/ml_lib";
 
 @Component({

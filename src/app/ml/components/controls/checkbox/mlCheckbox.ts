@@ -9,7 +9,7 @@
 
 import {Component, ElementRef, ViewChild, Input, forwardRef, ViewEncapsulation} from "@angular/core";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
-import MdlCheckbox from './mlCheckboxLib';
+import MdlCheckbox from './mdlCheckboxClass';
 
 @Component({
 selector: 'ml-checkbox',

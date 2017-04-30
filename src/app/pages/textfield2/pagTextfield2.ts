@@ -4,36 +4,54 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 @Component({
 template:`
 <style>
-.pad-top {padding-top: 0}
-.date-field {padding-top: 10px; padding-bottom: 10px}
+  .pad-top {padding-top: 0}
+  .pad-top-10 {padding-top: 10px}
+  .date-field {padding-top: 10px; padding-bottom: 10px}
+  .color-picker {float: right; margin-left: 5px; width: 20px; height: 20px}
+  .color-picker-container {position: absolute; padding-top: 10px; padding-left: 52px}
+  :host /deep/ ml-button-input > label {width: 200px}
+  ml-button-input {display: block; padding-bottom: 25px}
 </style>
 
-<h5>More text Controls</h5>
+<h5>More Input Controls</h5>
 
 <form [formGroup]="textfieldForm2" (ngSubmit)="onSubmit()" autocomplete="off">
 
   <!-- Password ---------------------------------------------------------------------------------------------------- -->
 
-  <div><strong>➃ Password field: </strong>(Validated)</div>
+  <div><strong>Password textfield: </strong>(Validated)</div>
   <ml-textfield type="password" id="password" [formControl]="password" floating-label>
     <ml-textfield-label>Enter password</ml-textfield-label>
     <ml-error [validateControl]="password" validator="required">Required field</ml-error>
     <ml-error [validateControl]="password" validator="minLength">Minimum length: {{ passLength }}</ml-error>
   </ml-textfield>
   
-  <br>
   <!-- Date -------------------------------------------------------------------------------------------------------- -->
   
-  <!-- todo: at this moment error classes are not correctly applied at date field-->
-  <div class="date-field"><strong>➄ Date field: </strong>(No validated)</div>
-  <ml-textfield type="date" [formControl]="date" class="pad-top"></ml-textfield>
+  <div class="date-field"><strong>Date textfield: </strong>(Validated)</div>
+  <ml-textfield type="date" [formControl]="date" class="pad-top">
+    <ml-error [validateControl]="date" validator="required">Required field</ml-error>
+  </ml-textfield>
   
-  <!-- Submit button ----------------------------------------------------------------------------------------------- -->
-  <p> 
-    <ml-button-submit [disabled]="textfieldForm2.invalid" 
-      text="Submit to console" aspect="raised" ripple></ml-button-submit>
-  </p>                      
-  <!-- /Submit button ---------------------------------------------------------------------------------------------- -->
+  <!-- Input color button ------------------------------------------------------------------------------------------ -->
+  
+  <p class="pad-top-10"><strong>Input Color Button: </strong>(Validated)</p>
+  <div class="color-picker-container">
+    color: <div [style.background]="this.color.value" class="color-picker"></div>
+  </div>
+  <ml-button-input [formControl]="color" type="color" aspect="colored" variant="minifab" ripple>
+    <ml-icon>palette</ml-icon>
+    <ml-error [validateControl]="color" validator="required">Required data</ml-error>
+  </ml-button-input>
+  
+  <!-- Submit and reset input buttons ------------------------------------------------------------------------------ -->
+  
+  <ml-button-input type="submit" [disabled]="textfieldForm2.invalid" aspect="raised" ripple>
+    Submit to console</ml-button-input>
+  <ml-button-input type="reset" aspect="raised" ripple>
+    Reset form</ml-button-input>
+                            
+  <!-- /Submit and reset input buttons ----------------------------------------------------------------------------- -->
                       
 </form>
 
@@ -41,16 +59,17 @@ template:`
 <view-source uri="textfield2/pagTextfield2.ts"></view-source>
 
 `//template
-})
-export class PagTextfield2 {
+}) export class PagTextfield2 {
 
   passLength = 4;
   password = new FormControl('', [Validators.required, Validators.minLength(this.passLength)]);
-  date = new FormControl();
+  date = new FormControl('', [Validators.required]);
+  color = new FormControl('', [Validators.required]);
 
   textfieldForm2 = new FormGroup({
     password: this.password,
-    date: this.date
+    date: this.date,
+    color: this.color
   });
 
   onSubmit(){

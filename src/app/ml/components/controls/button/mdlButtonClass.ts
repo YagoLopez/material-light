@@ -3,9 +3,7 @@ import MdlElement from "../../element/mdl_element";
 
 export default class MdlButton extends MdlElement{
   blurHandler_: Function;
-  constructor(el: HTMLElement){
-    super(el);
-  }
+  constructor(el: HTMLElement){super(el)}
 }
 MdlButton.prototype.CssClasses_ = {
     RIPPLE_EFFECT: 'mdl-js-ripple-effect',

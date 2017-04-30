@@ -2,7 +2,7 @@
 //todo: convertir ml de namespace a mudule. de esta forma se pueden cargar las funciones auxiliares una a una
 
 import {Directive, ElementRef, Renderer} from "@angular/core";
-import MdlRipple from "./mlRippleLib";
+import MdlRipple from "./mdlRippleClass";
 
 // Note: in complex elements where is not enough to use the "ripple" attribute, a "<label>" container must be used
 @Directive({selector: '[ripple]'})

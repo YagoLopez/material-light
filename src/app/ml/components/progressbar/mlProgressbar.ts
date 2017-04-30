@@ -4,7 +4,7 @@
 //todo: cambiar todas las declaraciones declare var material*: any -> declare var material*: Object
 
 import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angular/core";
-import MdlProgress from "./mlPprogressLib"
+import MdlProgress from "./mdlPprogressClass"
 import * as ml from "../../lib/ml_lib";
 
 @Component({
