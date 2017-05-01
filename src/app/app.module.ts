@@ -1,6 +1,5 @@
 //todo: atributo "fixed" en <ml-drawer>. mas intuitivo
 //todo: migracion a angular 4
-//todo: eliminar ficheros *.js en repo
 //todo: usar enums para posibles valores de inputs
 //todo: eventos drawer y obfuscator
 //todo: probar a eliminar atributos id en elementos 'label'. revisar docs angular

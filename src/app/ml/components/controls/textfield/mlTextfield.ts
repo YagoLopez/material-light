@@ -14,7 +14,7 @@ import MdlTextfield from "./mdlTextfieldClass";
 import * as ml from "../../../lib/ml_lib";
 
 // <ml-textfield type> attribute must be restricted to the following values:
-const MlTextfieldTypes = ['text', 'password', 'date', 'datetime-local', 'month', 'time', 'week', 'url', 'tel'];
+const MlTextfieldTypes = ['text', 'password', 'date', 'datetime-local', 'month', 'time', 'week', 'url', 'tel', 'color'];
 
 @Component({
 selector: 'ml-textfield',

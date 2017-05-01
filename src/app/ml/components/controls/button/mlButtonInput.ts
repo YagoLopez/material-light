@@ -17,10 +17,18 @@ changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlButtonInput), multi: true}],
 template:`
 
+<!--
 <label #label class="mdl-button"><ng-content></ng-content>
 <input [type]="type" [(ngModel)]="model" style="pointer-events: auto; display: none" 
 (change)="onChangeEvent()" (click)="onClick()">
 <span class="mdl-button__ripple-container" style="pointer-events: none"><span class="mdl-ripple"></span></span>
+</label>
+<div *ngIf="showError" class="mdl-textfield__error"><ng-content select="ml-error"></ng-content></div>
+-->
+<label #label class="mdl-button"><ng-content></ng-content>
+<input [type]="type" [(ngModel)]="model" style="display: none" 
+(change)="onChangeEvent()" (click)="onClick()">
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
 </label>
 <div *ngIf="showError" class="mdl-textfield__error"><ng-content select="ml-error"></ng-content></div>
 

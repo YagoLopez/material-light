@@ -33,6 +33,14 @@ template:`
     <ml-error [validateControl]="date" validator="required">Required field</ml-error>
   </ml-textfield>
   
+  <!-- Color -------------------------------------------------------------------------------------------------------- -->
+  
+  <div class="date-field"><strong>Color2 textfield: </strong>(Validated)</div>
+  <ml-textfield type="color" [formControl]="color2" class="pad-top">
+    <ml-textfield-label>color</ml-textfield-label>
+    <ml-error [validateControl]="color2" validator="required">Required field</ml-error>
+  </ml-textfield>
+  
   <!-- Input color button ------------------------------------------------------------------------------------------ -->
   
   <p class="pad-top-10"><strong>Input Color Button: </strong>(Validated)</p>
@@ -65,11 +73,13 @@ template:`
   password = new FormControl('', [Validators.required, Validators.minLength(this.passLength)]);
   date = new FormControl('', [Validators.required]);
   color = new FormControl('', [Validators.required]);
+  color2 = new FormControl('', [Validators.required]);
 
   textfieldForm2 = new FormGroup({
     password: this.password,
     date: this.date,
-    color: this.color
+    color: this.color,
+    color2: this.color2
   });
 
   onSubmit(){
