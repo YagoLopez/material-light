@@ -1,10 +1,11 @@
+//todo: probar a usar @Input('model') = _model. De esta forma podrían funcionar template forms
 //todo: intentar implementar ml-textfield como el componente mdl-slider
 //todo: he visto que en algun ejemplo usan ngControl en template-driven forms. investigarlo
-//todo: revisar algunos inputs, pueden sobrar al no usar model-driven forms (ej: name)
+//todo: revisar algunos @Inputs, pueden sobrar al no usar model-driven forms (ej: name)
 //todo: que solo haya que usar una vez el input de form-control [control] -> pasarselo al componente hijo que muestra
 //los errores.
-//todo: para posteriores versiones tratar de evitar el js de los ficheros Lib.js
-//es posible que se puedan sustituir por logica de templates de component
+//todo: para posteriores versiones tratar de evitar el js de los ficheros Class.js
+//es posible que se puedan sustituir por logica de templates en component
 //todo: intentar simplificar tomando como referencia MlSelectfield, aunque igual no funcionan template forms
 
 import {Component, ViewEncapsulation, ElementRef, Renderer, Input, forwardRef,
@@ -14,7 +15,8 @@ import MdlTextfield from "./mdlTextfieldClass";
 import * as ml from "../../../lib/ml_lib";
 
 // <ml-textfield type> attribute must be restricted to the following values:
-const MlTextfieldTypes = ['text', 'password', 'date', 'datetime-local', 'month', 'time', 'week', 'url', 'tel', 'color'];
+const ML_TEXTFIELD_TYPES = ['text', 'password', 'date', 'datetime-local', 'month', 'time', 'week', 'url', 'tel',
+  'color', 'number'];
 
 @Component({
 selector: 'ml-textfield',
@@ -70,16 +72,16 @@ template:`
   registerOnTouched(fn: any): void { this.onTouch = fn }
 
   ngOnInit() {
-    if( !ml.isAttributeValid(this.type.toLowerCase(), MlTextfieldTypes) ){
+    if( !ml.isAttributeValid(this.type.toLowerCase(), ML_TEXTFIELD_TYPES) ){
         console.warn(`<ml-textfield> Wrong attribute: type="${this.type}"`);
     }
     !this.id && (this.id = ml.randomStr());
     ml.isDefined(this.floatingLabel) && ml.setClass(this.host, 'mdl-textfield--floating-label', this.ren);
-
-    if (this.disabled === 'true'){
-      this.mdlTextfield.disable();
-    }
+    this.disabled === 'true' && this.mdlTextfield.disable();
     this.mdlTextfield = new MdlTextfield(this.host.nativeElement);
+  }
+  ngAfterViewInit(){
+    this.type === 'number' && this.mdlTextfield.input_.classList.remove('mdl-textfield__input');
   }
   get model() {
     return this._model;

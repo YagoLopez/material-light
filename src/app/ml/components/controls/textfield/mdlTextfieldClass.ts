@@ -1,6 +1,7 @@
 import MdlElement from "../../element/mdl_element";
 
 export default class MdlTextfield extends MdlElement{
+  input_: HTMLElement;
   maxRows: number = -1;
   onKeyDown_: Function;
   onFocus_: Function;

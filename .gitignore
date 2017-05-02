@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 
-# transpiled_files
+# transpiled files
 /src/**/*.js
 /src/**/*.map
 

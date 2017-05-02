@@ -24,6 +24,7 @@
 //todo: footer component
 //todo: crear un componente para visualizar gist en angular 2
 //todo: separar page-loader component en un repositorio diferente, hacer 2: page-loader y progressbar-loader
+//todo: polyfill dialog component
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
@@ -64,7 +65,7 @@ const APP_ROUTES: Routes = [
 {path: 'slider',     loadChildren: basePath + 'slider/pagSliderMod#PagSliderMod'},
 {path: 'dialog',     loadChildren: basePath + 'dialog/pagDialogMod#PagDialogMod'},
 {path: 'table',      loadChildren: basePath + 'table/pagTableMod#PagTableMod'},
-{path: '**',         redirectTo: 'layout'}
+{path: '**',         redirectTo: 'button'}
 ];
 
 @NgModule({
