@@ -281,7 +281,7 @@ MdlMenu.prototype.show = function (evt: any) {
     this.container_.style.width = width + 'px';
     /* modifications */
     if (this.userDefinedHeight){
-      this.container_.style.height = this.userDefinedHeight + 'px';
+      this.container_.style.height = this.userDefinedHeight;
     } else {
       this.container_.style.height = height + 'px';
     }

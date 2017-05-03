@@ -35,10 +35,10 @@ import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {App} from "./app.layout";
 
 // Relative paths for SystemJS
-// const basePath = '.app/pages/';
+const basePath = '.app/pages/';
 
 // Absolute paths for Webpack
-const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
+// const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
 
 const APP_ROUTES: Routes = [
 {path: '',           redirectTo: 'button', pathMatch: 'full'},

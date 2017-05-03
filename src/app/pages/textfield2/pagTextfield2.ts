@@ -39,14 +39,14 @@ template:`
     <ml-error [validateControl]="week" validator="required">Required field</ml-error>
   </ml-textfield>
   
-  <!-- Number -------------------------------------------------------------------------------------------------------- -->
+  <!-- Number ------------------------------------------------------------------------------------------------------ -->
   
   <div class="field-header"><strong>Number textfield: </strong>(Validated)</div>
   <ml-textfield type="number" [formControl]="number" class="pad-top">
     <ml-error [validateControl]="number" validator="required">Number required</ml-error>
   </ml-textfield>
   
-  <!-- Color -------------------------------------------------------------------------------------------------------- -->
+  <!-- Color ------------------------------------------------------------------------------------------------------- -->
   
   <div class="field-header"><strong>Color textfield: </strong>(Validated)</div>
   <ml-textfield type="color" [formControl]="color" class="pad-top color-field">

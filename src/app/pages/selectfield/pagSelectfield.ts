@@ -4,10 +4,7 @@ import {FormGroup, FormControl, Validators} from "@angular/forms";
 @Component({
 template:`
 
-<style>
-  .validationError{color: red; padding-bottom: 20px}
-  strong {display: block}
-</style>
+<style>.validationError{color: red; padding-bottom: 20px}</style>
 
 <h5>Select Field</h5>
 <p>Reactive Forms only</p>
@@ -15,7 +12,7 @@ template:`
 
   <!-- Selectfield1 ------------------------------------------------------------------------------------------------ -->
   
-  <strong>Selectfield1</strong>
+  <div><strong>Selectfield1</strong> (Validated)</div>
   
   <ml-selectfield [formControl]="selectfield1">
     <ml-sf-item>one</ml-sf-item>
@@ -35,11 +32,11 @@ template:`
     Required field
   </ml-error>
   
-  <p>(With validators ↑)</p><br>
+  <br>
   
   <!-- Selectfield2 ------------------------------------------------------------------------------------------------ -->
   
-  <strong>Selectfield2</strong>
+  <div><strong>Selectfield2</strong> (No validated + ripple)</div>
   
   <ml-selectfield [formControl]="selectfield2" label="Choose another option..." ripple>
     <ml-sf-item ripple>alpha</ml-sf-item>
@@ -47,7 +44,7 @@ template:`
     <ml-sf-item ripple>gamma</ml-sf-item>
   </ml-selectfield>
   
-  <p>(No validators + ripple ↑)</p><br>
+  <br>
 
   <!-- /Selectfield2 ----------------------------------------------------------------------------------------------- -->
   

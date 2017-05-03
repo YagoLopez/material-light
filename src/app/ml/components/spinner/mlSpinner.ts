@@ -14,8 +14,7 @@ changeDetection: ChangeDetectionStrategy.OnPush,
 host: {class: 'mdl-spinner is-active'},
 template:``,
 moduleId: module.id
-})
-export class MlSpinner {
+}) export class MlSpinner {
 
   @Input('single-color') singleColor: string;
   @Input('multicolor') multicolor: string;

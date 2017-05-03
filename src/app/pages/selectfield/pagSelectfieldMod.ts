@@ -8,6 +8,6 @@ import {DebugFormMod} from "../../ml/lib/debug_form/debugFormMod";
 import {ViewSourceMod} from "../view-source/viewSourceMod";
 import {PagSelectfield} from "./pagSelectfield";
 @NgModule({
-imports: [DebugFormMod, MlButtonMod, MlValidationErrorMod, MlSelectfieldMod, ReactiveFormsModule, ViewSourceMod, 
+imports: [ReactiveFormsModule, DebugFormMod, MlButtonMod, MlValidationErrorMod, MlSelectfieldMod, ViewSourceMod,
 RouterModule.forChild([{path: '', component: PagSelectfield}])], declarations: [PagSelectfield]})
 export class PagSelectfieldMod{}

@@ -1,8 +1,7 @@
-//todo: testar textfield con tipo: file, color, etc.
 //todo: (general) usar esta nomenclatura para componentes (Ej: MlTextfieldCmp)
 
 // NOTE: this component ("MlSelectfield") is based on "MlButton", "MdlMenu" and "MdlTextfield"
-// For this reason it uses files from these components
+// For this reason it uses files from those components
 
 import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation, forwardRef,
  ChangeDetectionStrategy} from "@angular/core";
@@ -65,9 +64,9 @@ template:`
 
   /**
    * Toggle state of clicked selectfield
-   * @param $event
    */
   onClickInput(){
+    debugger;
     this.mdlMenu.toggle();
     this.closeSelectfields();
   }
@@ -83,6 +82,7 @@ template:`
     this.mdlTextfield = new MdlTextfield(this.input.nativeElement);
 
     // if user defines a selectfield height from @Input => enable selectfield content overflow and scrollbars
+    debugger;
     if(this.height){
       this.mdlMenu.userDefinedHeight = this.height;
       this.mdlMenu.container_.style.overflow = 'auto';

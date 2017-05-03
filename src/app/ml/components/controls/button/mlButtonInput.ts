@@ -1,4 +1,4 @@
-// NOTE: for maximum compatibility between browsers when using html5 controls it is recommended to define aditional
+// NOTE: for maximum compatibility between browsers, when using html5 controls it is recommended to define aditional
 // validators. For example, when using <input type="date"> it is recommended to defined a validator with a regexp
 // validating the date string
 
