@@ -37,6 +37,7 @@ template:`
     !this.disabled ? this.enable() : this.disable();
     return null;
   }
+  showError: boolean;
   constructor(private ren: Renderer){}
 
   ngOnInit(){

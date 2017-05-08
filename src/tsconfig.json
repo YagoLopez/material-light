@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "lib": ["ES6", "DOM"],
+    "target": "es5",
+    "lib": ["es6", "dom"],
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
@@ -13,6 +13,6 @@
     "sourceMap": false,
     "typeRoots": ["../node_modules/@types"]
   },
-  "exclude": ["/assets, /temp"],
+  "exclude": ["/node_modules/, /assets, /temp"],
   "include": ["**/*.ts"]
 }

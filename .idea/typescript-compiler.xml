@@ -7,6 +7,7 @@
     <option name="mainFilePath" value="C:\Users\Yago\WebstormProjects\material-light\src\main.ts" />
     <option name="useMainFile" value="true" />
     <option name="useConfig" value="true" />
+    <option name="showAllErrors" value="true" />
     <option name="versionType" value="SERVICE_DIRECTORY" />
   </component>
 </project>

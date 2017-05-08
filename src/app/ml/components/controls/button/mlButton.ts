@@ -6,9 +6,11 @@ import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angula
 import MdlButton from "./mdlButtonClass";
 import * as ml from "../../../lib/ml_lib";
 
-// Input attribute values are case-sensitive
-// aspect="colored" => background blue, font-color white
-// aspect="accent" => background magenta, font-color white
+/**
+* Input attribute values are case-sensitive
+* @Input.aspect="colored" => background blue, font-color white
+* @Input.aspect="accent" => background magenta, font-color white
+*/
 
 const ML_BUTTON_ASPECTS = ['raised, colored, accent'];
 const ML_BUTTON_VARIANTS = ['fab', 'minifab', 'icon'];

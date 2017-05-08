@@ -1,10 +1,10 @@
 {
-  "name": "material-light",
-  "version": "1.0.0",
+  "name": "material_light",
+  "version": "1.2.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "ng_serve": "ng serve --open",
+    "ng_serve": "ng serve --host 192.168.0.14 --open",
     "webpack_help": "webpack -h",
     "webpack_config_file": "webpack-dev-server --config ./src/webpack.config.js --content-base=src --open",
     "ng_build": "ng build",
@@ -15,32 +15,28 @@
     "ng_serve_prod": "ng serve --prod",
     "ng_serve_prod_aot": "ng serve --prod --aot",
     "lint": "tslint \"src/**/*.ts\""
-
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^2.4.7",
-    "@angular/compiler": "^2.4.7",
-    "@angular/core": "^2.4.7",
-    "@angular/forms": "^2.4.7",
-    "@angular/http": "^2.4.7",
-    "@angular/platform-browser": "^2.4.7",
-    "@angular/platform-browser-dynamic": "^2.4.7",
-    "@angular/router": "^3.4.7",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
-    "rxjs": "^5.1.1",
-    "systemjs": "^0.20.7",
-    "ts-helpers": "^1.1.1",
-    "zone.js": "^0.7.7"
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "^2.4.7",
-    "@types/node": "^6.0.42",
-    "angular-cli": "^1.0.0-beta.28.3",
-    "codelyzer": "~2.0.0-beta.1",
-    "html-webpack-plugin": "^2.28.0",
-    "ts-node": "1.2.1",
-    "tslint": "^4.4.2",
-    "typescript": "~2.0.3"
+    "@angular/cli": "1.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@types/node": "~6.0.60",
+    "systemjs": "^0.20.12",
+    "ts-node": "~2.0.0",
+    "tslint": "~4.5.0",
+    "typescript": "~2.2.0"
   }
 }

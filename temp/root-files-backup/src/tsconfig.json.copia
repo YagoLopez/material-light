@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["ES6", "DOM"],
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "typeRoots": ["../node_modules/@types"]
+  },
+  "exclude": ["/assets, /temp"],
+  "include": ["**/*.ts"]
+}

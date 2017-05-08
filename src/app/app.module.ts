@@ -1,5 +1,5 @@
+//todo: actualizar a renderer2
 //todo: atributo "fixed" en <ml-drawer>. mas intuitivo
-//todo: migracion a angular 4
 //todo: usar enums para posibles valores de inputs
 //todo: eventos drawer y obfuscator
 //todo: probar a eliminar atributos id en elementos 'label'. revisar docs angular
@@ -35,10 +35,10 @@ import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {App} from "./app.layout";
 
 // Relative paths for SystemJS
-const basePath = '.app/pages/';
+// const basePath = './app/pages/';
 
 // Absolute paths for Webpack
-// const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
+const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
 
 const APP_ROUTES: Routes = [
 {path: '',           redirectTo: 'button', pathMatch: 'full'},

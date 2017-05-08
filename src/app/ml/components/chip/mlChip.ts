@@ -26,9 +26,9 @@ template:`
   @Input() background: string = 'teal';
   @Input('delete-action') action: Function;
 
-  private visible: boolean = true;
+  visible: boolean = true;
 
-  public deleteChip($event: any): boolean {
+  deleteChip($event: any): boolean {
     //todo: remove from dom?
     this.visible = !this.visible;
     this.action ? this.action() : console.log('Chip deleted. No further action defined.');

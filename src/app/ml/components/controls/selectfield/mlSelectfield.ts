@@ -66,7 +66,6 @@ template:`
    * Toggle state of clicked selectfield
    */
   onClickInput(){
-    debugger;
     this.mdlMenu.toggle();
     this.closeSelectfields();
   }
@@ -82,7 +81,6 @@ template:`
     this.mdlTextfield = new MdlTextfield(this.input.nativeElement);
 
     // if user defines a selectfield height from @Input => enable selectfield content overflow and scrollbars
-    debugger;
     if(this.height){
       this.mdlMenu.userDefinedHeight = this.height;
       this.mdlMenu.container_.style.overflow = 'auto';

@@ -113,7 +113,7 @@ template:`
     this.isLoading = $event;
   }
 
-  appName = `MATERIAL LIGHT: Free, fast and easy to use Angular 2.x UI components`;
+  appName = `MATERIAL LIGHT: Free, fast and easy to use Angular UI components`;
   msgShare = `Link of interest shared from ${this.appName}: `;
   urlApp = 'https://github.com/YagoLopez/material-light';
   shareTwitter = `http://twitter.com/share?url=${this.urlApp}&text=${this.msgShare}`;

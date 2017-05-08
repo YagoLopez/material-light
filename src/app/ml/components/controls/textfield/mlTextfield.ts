@@ -8,13 +8,13 @@
 //es posible que se puedan sustituir por logica de templates en component
 //todo: intentar simplificar tomando como referencia MlSelectfield, aunque igual no funcionan template forms
 
-import {Component, ViewEncapsulation, ElementRef, Renderer, Input, forwardRef,
-  ChangeDetectionStrategy} from "@angular/core";
+import {Component, ViewEncapsulation, ElementRef, Renderer, Input, forwardRef, ChangeDetectionStrategy, ViewChild}
+  from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import MdlTextfield from "./mdlTextfieldClass";
 import * as ml from "../../../lib/ml_lib";
 
-// <ml-textfield type> attribute must be restricted to the following values:
+// @Input.type must be restricted to the following values:
 const ML_TEXTFIELD_TYPES = ['text', 'password', 'date', 'datetime-local', 'month', 'time', 'week', 'url', 'tel',
   'color', 'number'];
 
@@ -28,9 +28,9 @@ changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlTextfield), multi: true}],
 template:`
 
+<label class="mdl-textfield__label" [attr.for]="id"><ng-content select="ml-textfield-label"></ng-content></label>
 <input [type]="type" class="mdl-textfield__input" [attr.id]="id" [name]="name" [(ngModel)]="model" 
 (focus)="onFocus()" (keyup)="onKeyup()" (blur)="onBlur()">
-<label class="mdl-textfield__label" [attr.for]="id"><ng-content select="ml-textfield-label"></ng-content></label>
 <div *ngIf="showError" class="mdl-textfield__error"><ng-content select="ml-error"></ng-content></div>
 
 `//template
@@ -41,6 +41,7 @@ template:`
   @Input() disabled: string;
   @Input() name: string;
   @Input('floating-label') floatingLabel: string;
+  @Input() elevated: string;
   @Input() id: string;
   @Input() formControl: FormControl;
 
@@ -49,7 +50,6 @@ template:`
   public showError: boolean;
   private onTouch = () => {};
   private onChange = (_: any) => {};
-
   constructor(private host: ElementRef, private ren: Renderer){}
 
   checkValidity(){

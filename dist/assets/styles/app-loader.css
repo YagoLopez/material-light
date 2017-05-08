@@ -1,7 +1,4 @@
-body{
-  background: lightskyblue;
-  color: white
-}
+body{background: lightskyblue; color: white}
 .loading-text{
   position: absolute;
   margin: auto;

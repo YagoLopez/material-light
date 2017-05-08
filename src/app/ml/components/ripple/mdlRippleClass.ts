@@ -164,7 +164,6 @@ MdlRipple.prototype.init = function () {
                     var scale: any;
                     var size: any;
                     var offset = 'translate(' + this.x_ + 'px, ' + this.y_ + 'px)';
-                    // debugger;
                     if (start) {
                         scale = this.Constant_.INITIAL_SCALE;
                         size = this.Constant_.INITIAL_SIZE;

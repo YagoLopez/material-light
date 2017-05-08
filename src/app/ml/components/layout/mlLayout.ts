@@ -12,7 +12,7 @@ import * as ml from "../../lib/ml_lib";
 @Component({
 selector: 'ml-layout',
 changeDetection: ChangeDetectionStrategy.OnPush,
-styleUrls: ['./mlLayout.css', '../ripple/mlRipple.css', '../icon/mlIicon.css'],
+styleUrls: ['./mlLayout.css', '../ripple/mlRipple.css'],
 host: {class: 'mdl-layout mdl-layout__container'},
 encapsulation: ViewEncapsulation.None,
 template: '<ng-content></ng-content>',

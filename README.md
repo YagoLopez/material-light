@@ -2,7 +2,7 @@
 
 <h1><p align="center">Material Light</p></h1>
 
-**Material Designt UI components for Angular 2 +**
+**Material Designt UI components for Angular (versions 2 +, 4 +)**
 
 There are other adaptations of Material Design Lite and other UI frameworks like the official Material Design 2, 
 but this library has the following features:
@@ -22,10 +22,10 @@ but this library has the following features:
 
 ## Objective
 
-The main goal was to achieve minimalism and great performance, not to encompass all posible kind of options or UI components (this is the philosophy of
+The main goal was to achieve minimalism and performance, not to encompass all posible kind of options or UI components (this is the philosophy of
 Material Design Light too). You can always add other components from other sources.
 
-If you find this project useful and are going to use it, please give a star in the repo and credits in your work to the author 
+If you find this project useful and are going to use it, please give a star in the repo and credits to the author 
 and to <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>
 
 Terms of use under <a href="LICENSE.txt">MIT</a> license.
@@ -49,7 +49,7 @@ Yago López:
 - Until it will be available as an NPM package, clone or download the repository.
 - Copy the `ml` folder (where the components are) into your project
 - Copy and paste the contents of the `assets` folder into the **exact same path** in your angular-cli project
-- If you are cloning this project and goint to run it, adjust the path in `app.module.ts`
+- If you are cloning this project to run it, adjust the path in `app.module.ts`
 - Use the components following the examples in the `pages` directory. The components use `ml` as namespace. For example: `<ml-icon>email</ml-icon>` places an email icon component in a template.
 - There are two ways of using this library:
   1. **As components**. For example, import `MlButton` and `MlIcon` in your component and put `<ml-button>` and `<ml-icon>` in your template.
@@ -63,7 +63,7 @@ Yago López:
 
 ## Used for running this demo:
 
-- Angular 2+
+- Angular 4.0.0
 - Angular Command Line (angular-cli)
 - Typescript
 - Webpack for production builds
@@ -75,4 +75,3 @@ Yago López:
 - This project is based on <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>. It is an adaptation of Javascript MDL components to Angular Typscript components with the permission of the MDL team.
 - Material Design is a Google's registered trade mark probably.
 - This is an open-source project without commercial or profit intention.
-- Tested on Angular version 2.4.7.
