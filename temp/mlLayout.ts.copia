@@ -4,8 +4,7 @@
 //todo: implementar MlLayout usando slots
 
 import {
-  Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy, ViewChild
-} from "@angular/core";
+  Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy} from "@angular/core";
 import MdlLayout from "./mdlLayoutClass";
 import * as ml from "../../lib/ml_lib";
 
@@ -36,18 +35,15 @@ export class MlLayout {
   }
 
   ngAfterViewInit() {
-/*
     if (this.drawer === 'fixed'){
       ml.setClass(this.host, 'mdl-layout--fixed-drawer', this.ren);
     }
-*/
     // if (this.tabs === 'fixed'){
     //   ml.setClass(this.host, 'mdl-layout--fixed-header', this.ren);
     //   ml.setClass(this.host, 'mdl-layout--fixed-tabs', this.ren);
     // }
     if(ml.isDefined(this.background)){
       this.host.nativeElement.style.background = `url('${this.background}') 0 0 / cover`;
-      //todo: quitar any
       const mlContent: any = document.querySelector('ml-content');
       mlContent && (mlContent.style.backgroundColor = 'transparent');
     }
@@ -128,14 +124,8 @@ selector: 'ml-drawer',
 template: '<ng-content></ng-content>'
 })
 export class MlDrawer {
-  @Input() fixed: string;
-
   constructor(private host: ElementRef, private ren: Renderer){}
   ngOnInit() {
-    const mlLayout: HTMLElement = document.querySelector('ml-layout') as HTMLElement;
-    if( mlLayout && ml.isDefined(this.fixed) ){
-      mlLayout.classList.add('mdl-layout--fixed-drawer');
-    }
    // Hides drawer and obfuscator when clicking item menu on drawer
    this.ren.listen(this.host.nativeElement, 'click', () => {
      this.host.nativeElement.classList.remove('is-visible');

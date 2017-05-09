@@ -7,6 +7,7 @@ export function isDefined(value: any): boolean { return typeof value !== 'undefi
 export function setClass(elementRef: ElementRef, className: string, renderer: Renderer): void {
   renderer.setElementClass(elementRef.nativeElement, className, true)
 }
+
 export function setAttribute(elementRef: ElementRef, attrName: string, attrValue: string, renderer: Renderer): void {
   renderer.setElementAttribute(elementRef.nativeElement, attrName, attrValue)
 }
@@ -23,4 +24,3 @@ export function isSubstring(subStr: string, bigStr: string): boolean {
 export function isAttributeValid(attribute: string, validValues: string[]): boolean {
   return validValues.indexOf(attribute) >= 0;
 }
-

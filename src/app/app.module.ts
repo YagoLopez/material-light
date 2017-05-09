@@ -1,12 +1,13 @@
+//todo: hacer prueba de empaquetado e instalacion con npm y angular-cli
+//todo: drawer dragabble
+//todo: themes: (1) estudiar como pasar estilos css a componentes
+//todo: themes: (2) revisar sitios donde es posible eliminar encapsulation.none usando :host /deep/
+//todo: themes: (3) investigar lo de quitar el 'encapsulation: ViewEncapsulation.None' en cada componente (funciono en ml-radio)
 //todo: actualizar a renderer2
-//todo: atributo "fixed" en <ml-drawer>. mas intuitivo
 //todo: usar enums para posibles valores de inputs
 //todo: eventos drawer y obfuscator
 //todo: probar a eliminar atributos id en elementos 'label'. revisar docs angular
 //todo: probar a quitar "mdl-layout__container" de ml-layout => (cabcera+contenido) scrollable. hacer tests
-//todo: themes: (1) estudiar como pasar estilos css a componentes
-//todo: themes: (2) revisar sitios donde es posible eliminar encapsulation.none usando :host /deep/
-//todo: themes: (3) investigar lo de quitar el 'encapsulation: ViewEncapsulation.None' en cada componente (funciono en ml-radio)
 //todo: comprobar consola usando chrome remote debugging por usb en el movil
 //todo: crear paquete npm
 //todo: ponerse en contacto con f7 para hacer otros componentes. ej: acordeon
@@ -18,13 +19,12 @@
 // (ref: https://toddmotto.com/dynamic-page-titles-angular-2-router-events)
 // Se podría pensar en hacer una directiva o un componente
 //todo: abrir issue en repo angular sobre los warnings en controles
-//todo: drawer dragabble
 //todo: travis
 //todo: completar tests con browserstack
 //todo: footer component
 //todo: crear un componente para visualizar gist en angular 2
 //todo: separar page-loader component en un repositorio diferente, hacer 2: page-loader y progressbar-loader
-//todo: polyfill dialog component
+//todo: polyfill dialog component (w3s.js)
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
@@ -35,10 +35,10 @@ import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {App} from "./app.layout";
 
 // Relative paths for SystemJS
-// const basePath = './app/pages/';
+const basePath = './app/pages/';
 
 // Absolute paths for Webpack
-const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
+// const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
 
 const APP_ROUTES: Routes = [
 {path: '',           redirectTo: 'button', pathMatch: 'full'},

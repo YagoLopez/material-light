@@ -1,6 +1,6 @@
 //todo: hacer componente MlLoaderProgressbar
 //todo: posibilidad de sustituir ml-content-loader por gif animado para mas rendimiento
-import {Component, Output, EventEmitter, ViewChild, ElementRef, Input} from '@angular/core';
+import {Component, Output, EventEmitter, ViewChild, ElementRef, Input} from "@angular/core";
 import {Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError} from "@angular/router";
 
 @Component({
@@ -34,8 +34,8 @@ template:`
       }
       if (event instanceof NavigationError){
         this.divLoader.nativeElement.remove();
-        window.alert(`Navigation error: couldn't load route ${event.url}`);
-        console.error('MlContentLoader > navigation error:', event.error);
+        window.alert(`Navigation error. Couldn't load route: ${event.url}`);
+        throw Error('MlContentLoader > Navigation Error > '+ event.error);
      }
     });
   }

@@ -18,7 +18,7 @@ template:`
     [checked]="checked"
     (click)="onClick($event)">
   <span class="mdl-radio__label"><ng-content></ng-content></span>
-  <span class="mdl-radio__outer-circle"></span> 
+  <span class="mdl-radio__outer-circle"></span>
   <span class="mdl-radio__inner-circle"></span>
   <span class="mdl-radio__ripple-container mdl-ripple--center">
     <span class="mdl-ripple"></span>

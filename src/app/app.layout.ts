@@ -18,8 +18,7 @@ template:`
   .drawer-img {width: 25%; text-align: center; margin: 30px auto auto; display: block;}
 </style>
 
-<!-- todo: atributo "fixed" en <ml-drawer>. mas intuitivo -->
-<ml-layout drawer="fixed"> 
+<ml-layout> 
 
   <!-- Header ------------------------------------------------------------------------------------------------------ -->
 
@@ -54,7 +53,7 @@ template:`
 
   <!-- Drawer ------------------------------------------------------------------------------------------------------ -->
   
-  <ml-drawer>
+  <ml-drawer fixed>
     <div class="drawer-top-img">
       <img src="assets/img/logo.png" class="drawer-img">
       <div class="drawer-title">Material Light</div>

@@ -1,10 +1,15 @@
 {
-  "name": "material_light",
+  "name": "Material Light",
+  "description": "Fast, light and easy to use Material Design UI components for Angular",
+  "author": "Yago Lopez <yago.lopez@gmail.com> (https://yagolopez.github.io)",
+  "repository": {"type": "git", "url": "https://github.com/YagoLopez/material-light"},
+  "main": "/src/main.ts",
   "version": "1.2.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "ng_serve": "ng serve --host 192.168.0.14 --open",
+    "ng_serve": "ng serve --open",
+    "ng_serve_lan": "ng serve --host 192.168.0.14 --open",
     "webpack_help": "webpack -h",
     "webpack_config_file": "webpack-dev-server --config ./src/webpack.config.js --content-base=src --open",
     "ng_build": "ng build",
