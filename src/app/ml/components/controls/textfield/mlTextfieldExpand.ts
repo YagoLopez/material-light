@@ -1,6 +1,4 @@
-//todo: intentar que funcione sin usar un formulario (en template driven forms)
 //todo: revisar las classes de error en IE
-
 import {Component, ViewEncapsulation, ElementRef, Renderer, Input, forwardRef,
   ChangeDetectionStrategy} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
@@ -18,15 +16,14 @@ template:`
 
 <label class="mdl-button mdl-button--icon" [attr.for]="id"><ml-icon>{{icon}}</ml-icon></label>
 <div class="mdl-textfield__expandable-holder">
-  <input type="text" class="mdl-textfield__input" [attr.id]="id" [name]="name" [(ngModel)]="model" 
-    (focus)="onFocus()" (keyup)="onKeyup()">
-  <label class="mdl-textfield__label" [attr.for]="id"></label>
+<input type="text" class="mdl-textfield__input" [attr.id]="id" [name]="name" [(ngModel)]="model" 
+  (focus)="onFocus()" (keyup)="onKeyup()">
+<label class="mdl-textfield__label" [attr.for]="id"></label>
 </div>
 <div *ngIf="showError" class="mdl-textfield-expand-error"><ng-content select="ml-error"></ng-content></div>
 
 `//template
-})
-export class MlTextfieldExpand implements ControlValueAccessor{
+}) export class MlTextfieldExpand implements ControlValueAccessor{
 
   @Input() errors: any;
   @Input() disabled: string;

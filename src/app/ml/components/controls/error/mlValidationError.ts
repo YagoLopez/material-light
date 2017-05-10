@@ -1,5 +1,4 @@
 //todo: eliminar @Input() validateControl, pasando el control padre
-
 import {Component, Input} from "@angular/core";
 
 @Component({
@@ -16,7 +15,6 @@ export class MlValidationError {
       return ( this.validateControl.hasError(this.validator) && this.validateControl.touched );
     }
   }
-
   ngOnInit() {
     // cause of hack: validateControl.errors.minLength != validateControl.errors['minLength'] for example
     this.validator = this.validator.toLowerCase();

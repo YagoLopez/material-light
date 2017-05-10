@@ -1,11 +1,12 @@
 {
-  "name": "Material Light",
+  "name": "Material_Light",
   "description": "Fast, light and easy to use Material Design UI components for Angular",
   "author": "Yago Lopez <yago.lopez@gmail.com> (https://yagolopez.github.io)",
-  "repository": {"type": "git", "url": "https://github.com/YagoLopez/material-light"},
+  "repository": {"type": "git", "url": "git+https://github.com/YagoLopez/material-light.git"},
   "main": "/src/main.ts",
   "version": "1.2.0",
   "license": "MIT",
+  "keywords": ["material desing components", "angular components", "angular 2", "angular 4"],
   "angular-cli": {},
   "scripts": {
     "ng_serve": "ng serve --open",

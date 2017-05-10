@@ -4,9 +4,7 @@ import {Component} from '@angular/core';
 selector: 'page-tooltip',
 template:`
 
-<style>
-.paragraph{display:inline-block}
-</style>
+<style>.paragraph{display:inline-block}</style>
 
 <h5>Tooltip</h5>
 
@@ -16,9 +14,10 @@ template:`
 </div>
 <hr>
 <div>
-  <div id="tooltip2" class="paragraph">Tooltip multiline</div>
-  <ml-tooltip for="tooltip2">
-    Tooltip line 1<br>Tooltip line 2
+  <div id="tooltip2" class="paragraph">Tooltip multiline, position right</div>
+  <ml-tooltip for="tooltip2" position="right">
+    Tooltip line 1<br>
+    Tooltip line 2
   </ml-tooltip>
 </div>
 <hr>

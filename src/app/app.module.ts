@@ -1,4 +1,6 @@
+//todo: subscribe to values in forms (use valueChanges) to simplify controls
 //todo: hacer prueba de empaquetado e instalacion con npm y angular-cli
+//todo: actualizar dependencias npm
 //todo: drawer dragabble
 //todo: themes: (1) estudiar como pasar estilos css a componentes
 //todo: themes: (2) revisar sitios donde es posible eliminar encapsulation.none usando :host /deep/

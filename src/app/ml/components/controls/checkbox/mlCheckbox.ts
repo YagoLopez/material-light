@@ -1,12 +1,5 @@
 // [attr.id]= "id+'mdl'" => adds sufix 'mdl' to avoid collision width <ml-checkbox id> attribute
-
 // Options groups checkboxes not supported?
-
-//todo: una forma de arreglar lo de no cargar varias veces 'ml_ripple.css' es poniendo los estilos mdl-ripple en
-//el fichero general 'material.css' pero puede haber problemas con la encapsulacion
-
-//todo: otra forma: si el attributo de entrada RIPPLE esta definido, cargar la hoja de estilos 'ml_ripple.css'
-
 import {Component, ElementRef, ViewChild, Input, forwardRef, ViewEncapsulation} from "@angular/core";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import MdlCheckbox from './mdlCheckboxClass';
@@ -28,8 +21,7 @@ template:`
 </label>
 
 `//template
-})
-export class MlCheckbox implements ControlValueAccessor {
+}) export class MlCheckbox implements ControlValueAccessor {
 
   @ViewChild('label') label: ElementRef;
   @Input() id: string;

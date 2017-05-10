@@ -1,10 +1,10 @@
 //todo: comprobar si se aplica bien esta directiva a los botones del dialogo
-//todo: convertir ml de namespace a mudule. de esta forma se pueden cargar las funciones auxiliares una a una
-
+//todo: convertir ml de namespace a module. de esta forma se pueden cargar las funciones auxiliares una a una
 import {Directive, ElementRef, Renderer} from "@angular/core";
 import MdlRipple from "./mdlRippleClass";
 
-// Note: in complex elements where is not enough to use the "ripple" attribute, a "<label>" container must be used
+// Internal note: in complex elements where is not enough to use one "ripple" attribute,
+// a "<label>" container is used
 @Directive({selector: '[ripple]'})
 export class MlRipple{
 

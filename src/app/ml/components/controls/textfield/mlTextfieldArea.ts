@@ -15,17 +15,14 @@ template:`
 
 <textarea type="text" class="mdl-textfield__input" [attr.rows]="rows" [attr.maxrows]="maxrows" [attr.id]="id" 
 [name]="name" [(ngModel)]="model" (focus)="onFocus()" (keyup)="onKeyup()"></textarea>
-
-<!--<label class="mdl-textfield__label" [attr.for]="id"><ng-content select="mdl-textfield-label"></ng-content></label>-->
 <label class="mdl-textfield__label" [attr.for]="id"><ng-content select="ml-textfield-label"></ng-content></label>
-
 <div *ngIf="showError" class="mdl-textfield__error"><ng-content select="ml-error"></ng-content></div>
 
 `//template
 })
 export class MlTextfieldArea implements ControlValueAccessor{
 
-  @Input() errors: any; //todo: igual se puede restringir a object
+  @Input() errors: Object | any;
   @Input() disabled: string;
   @Input() name: string;
   @Input('floating-label') floatingLabel: string;

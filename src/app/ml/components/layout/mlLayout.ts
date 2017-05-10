@@ -1,11 +1,10 @@
-//todo: poder poner ml-header en cada pagina (como en ionic)
+//todo: poder usar una ml-header distinta en cada pagina (como en ionic)
 //todo: poder definir colores, temas, fuentes, etc. Consultar colores en mlLayout.css
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
 //todo: implementar MlLayout usando slots
 
-import {
-  Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy, ViewChild
-} from "@angular/core";
+import {Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy}
+  from "@angular/core";
 import MdlLayout from "./mdlLayoutClass";
 import * as ml from "../../lib/ml_lib";
 
@@ -21,9 +20,6 @@ moduleId: module.id,
 })
 export class MlLayout {
 
-  // Input vales must be in lowercase
-  // todo: estaria bien poder definir el drawer como fixed en la propia etiqueta <ml-drawer> en lugar de aqui
-  @Input() drawer: string;
   @Input() tabs: string;
   @Input() background: string;
   mdlLayout: MdlLayout;
@@ -36,19 +32,15 @@ export class MlLayout {
   }
 
   ngAfterViewInit() {
-/*
-    if (this.drawer === 'fixed'){
-      ml.setClass(this.host, 'mdl-layout--fixed-drawer', this.ren);
-    }
-*/
+    // Fixed (non scrollable tabs)
+    // this.tabs && ( this.tabs = this.tabs.toLowerCase() );
     // if (this.tabs === 'fixed'){
     //   ml.setClass(this.host, 'mdl-layout--fixed-header', this.ren);
     //   ml.setClass(this.host, 'mdl-layout--fixed-tabs', this.ren);
     // }
     if(ml.isDefined(this.background)){
       this.host.nativeElement.style.background = `url('${this.background}') 0 0 / cover`;
-      //todo: quitar any
-      const mlContent: any = document.querySelector('ml-content');
+      const mlContent: HTMLElement = document.querySelector('ml-content') as HTMLElement;
       mlContent && (mlContent.style.backgroundColor = 'transparent');
     }
     this.mdlLayout = new MdlLayout(this.host.nativeElement);
@@ -97,7 +89,7 @@ export class MlHeaderRow {}
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-spacer', template:'',
-styles: ['.mdl-layout-spacer {-webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1;}'],
+styles: ['.mdl-layout-spacer {-webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1}'],
 encapsulation: ViewEncapsulation.None,
 host: {class: 'mdl-layout-spacer'}})
 export class MlSpacer{}
@@ -129,8 +121,8 @@ template: '<ng-content></ng-content>'
 })
 export class MlDrawer {
   @Input() fixed: string;
-
   constructor(private host: ElementRef, private ren: Renderer){}
+
   ngOnInit() {
     const mlLayout: HTMLElement = document.querySelector('ml-layout') as HTMLElement;
     if( mlLayout && ml.isDefined(this.fixed) ){

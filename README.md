@@ -63,7 +63,7 @@ Yago López:
 
 ## Used for running this demo:
 
-- Angular 4.0.0
+- Angular 4.1.1
 - Angular Command Line (angular-cli)
 - Typescript
 - Webpack for production builds
@@ -72,6 +72,6 @@ Yago López:
 
 ## Disclaimers:
 
-- This project is based on <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>. It is an adaptation of Javascript MDL components to Angular Typscript components with the permission of the MDL team.
+- This project is based on <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>. It is an adaptation of MDL JavaScript components to Angular components with the permission of the MDL team.
 - Material Design is a Google's registered trade mark probably.
 - This is an open-source project without commercial or profit intention.

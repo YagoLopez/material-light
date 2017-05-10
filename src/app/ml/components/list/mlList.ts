@@ -1,43 +1,35 @@
-import {Component, ViewEncapsulation, ElementRef, Renderer, ViewChild, Input} from '@angular/core';
+import {Component, ViewEncapsulation, ElementRef, Renderer, ViewChild, Input, Directive} from '@angular/core';
 import * as ml from "../../lib/ml_lib";
 
-// ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-list',
+moduleId: module.id,
 encapsulation: ViewEncapsulation.None,
 styleUrls: ['./mlList.css'],
-template: '<ul class="mdl-list" #ulElement><ng-content></ng-content></ul>',
-moduleId: module.id})
-export class MlList {
+template: '<ul #ulElement class="mdl-list"><ng-content></ng-content></ul>'
+}) export class MlList {
 
   @ViewChild('ulElement') ulElement: ElementRef;
-
-  constructor(private componentElm: ElementRef){}
+  constructor(private host: ElementRef, private ren: Renderer){}
 
   ngOnInit(){
-    //todo: revisar esto bien
-    const componentClasses: string = this.componentElm.nativeElement.className;
-    this.ulElement.nativeElement.className += ' ' + componentClasses;
+    const hostCssClasses: string = this.host.nativeElement.className;
+    this.ulElement.nativeElement.classList.add(hostCssClasses);
   }
 }
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-item',
-template: '<li class="mdl-list__item" #liElement><ng-content></ng-content></li>',})
-export class MlItem {
+template: '<li class="mdl-list__item" #liElement><ng-content></ng-content></li>'
+}) export class MlItem {
 
   @ViewChild('liElement') liElement: ElementRef;
   @Input() lines: string = '';
-
   constructor(private ren: Renderer){}
 
   ngOnInit(){
-    if (this.lines === '2'){
-      ml.setClass(this.liElement, 'mdl-list__item--two-line', this.ren);
-    }
-    if (this.lines === '3'){
-      ml.setClass(this.liElement, 'mdl-list__item--three-line', this.ren);
-    }
+    (this.lines === '2') && ml.setClass(this.liElement, 'mdl-list__item--two-line', this.ren);
+    (this.lines === '3') && ml.setClass(this.liElement, 'mdl-list__item--three-line', this.ren);
   }
 }
 // ---------------------------------------------------------------------------------------------------------------------
@@ -53,25 +45,28 @@ host: {class: 'mdl-list__item-secondary-action'},
 template: '<ng-content></ng-content>'})
 export class MlItemAction {}
 // ---------------------------------------------------------------------------------------------------------------------
-@Component({
-selector: 'ml-item-icon',
-template: '<i class="material-icons" #icon><ng-content></ng-content></i>'})
-export class MlItemIcon {
-
-  @ViewChild('icon') private icon: ElementRef;
-  @Input() type: string;
-
-  constructor(private ren: Renderer){}
-
+@Directive({selector: '[avatar]'})
+export class MlIconAvatar{
+  constructor(private host: ElementRef){}
   ngOnInit(){
-    if(this.type === 'avatar'){
-      ml.setClass(this.icon, 'mdl-list__item-avatar', this.ren)
-    }
-    if(this.type === 'normal'){
-      ml.setClass(this.icon, 'mdl-list__item-icon', this.ren)
-    }
+    const icon: HTMLElement = this.host.nativeElement.querySelector('i') as HTMLElement;
+    icon.classList.add('mdl-list__item-avatar');
   }
 }
+// ---------------------------------------------------------------------------------------------------------------------
+@Directive({selector: '[list]'})
+export class MlIconItem{
+  constructor(private host: ElementRef){}
+  ngOnInit(){
+    const icon: HTMLElement = this.host.nativeElement.querySelector('i') as HTMLElement;
+    icon.classList.add('mdl-list__item-icon');
+  }
+}
+// ---------------------------------------------------------------------------------------------------------------------
+@Component({
+selector: 'ml-item-icon',
+template: '<i class="material-icons"><ng-content></ng-content></i>'
+}) export class MlItemIcon {}
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({selector: 'ml-item-title', template: '<span><ng-content></ng-content></span>'})
 export class MlItemTitle {}
@@ -83,4 +78,3 @@ export class MlItemSubtitle {}
 @Component({selector: 'ml-item-desc',
 template: '<span class="mdl-list__item-text-body"><ng-content></ng-content></span>'})
 export class MlItemDesc {}
-// ---------------------------------------------------------------------------------------------------------------------

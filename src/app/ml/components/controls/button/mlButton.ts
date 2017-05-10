@@ -1,20 +1,17 @@
-//todo: comprobar validez atributos aspect
-//todo: control de excepciones en angular 2
+//todo: (general) control de excepciones en angular 2
 //todo: usar enums
 
 import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angular/core";
 import MdlButton from "./mdlButtonClass";
 import * as ml from "../../../lib/ml_lib";
 
-/**
-* Input attribute values are case-sensitive
-* @Input.aspect="colored" => background blue, font-color white
-* @Input.aspect="accent" => background magenta, font-color white
-*/
-
 const ML_BUTTON_ASPECTS = ['raised, colored, accent'];
 const ML_BUTTON_VARIANTS = ['fab', 'minifab', 'icon'];
 
+/**
+ * @Input.aspect="colored" => background blue, font-color white
+ * @Input.aspect="accent" => background magenta, font-color white
+ */
 @Component({
 selector: 'ml-button',
 moduleId: module.id,
@@ -31,11 +28,13 @@ export class MlButton{
 
   ngOnInit(){
     // Input "aspect" --------------------------------------------------------------------------------------------------
+    this.aspect && ( this.aspect = this.aspect.toLowerCase() );
     ml.isSubstring('raised', this.aspect) && ml.setClass(this.host, 'mdl-button--raised', this.ren);
     ml.isSubstring('colored', this.aspect) && ml.setClass(this.host, 'mdl-button--colored', this.ren);
     ml.isSubstring('accent', this.aspect) && ml.setClass(this.host, 'mdl-button--accent', this.ren);
 
    // Input "variant" --------------------------------------------------------------------------------------------------
+    this.variant && ( this.variant = this.variant.toLowerCase() );
     if( this.variant && !ml.isAttributeValid(this.variant, ML_BUTTON_VARIANTS) ){
       console.warn(`<ml-button> Wrong attribute: variant="${this.variant}"`);
     }

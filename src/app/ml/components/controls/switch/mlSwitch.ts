@@ -1,7 +1,4 @@
-//todo: crear programaticamente el contenedor de ripple en otros componentes
-//      en lugar de crear el contenedor en la platilla. Parece mas eficiente.
 //todo: en vez de renderer usar @HostBinding(class.classname) para poner clases en el host de una directiva
-
 import {Component, ViewChild, ElementRef, Input, ViewEncapsulation, forwardRef, Renderer} from "@angular/core";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import MdlSwitch from "./mdlSwitchClass";
@@ -61,7 +58,7 @@ template:`
 
   registerOnChange(fn: any): void { this.onChange = fn }
   registerOnTouched(fn: any): void { this.onTouch = fn }
-  
+
   isChecked(){ return this.model == true }
   on(){ this.mdlSwitch.on() }
   off(){ this.mdlSwitch.off() }

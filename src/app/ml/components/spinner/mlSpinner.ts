@@ -1,7 +1,5 @@
-//todo: hay que revisar como se pueden añadir estilos al componnente. por ejemplo definir el añcho de la barra globalmente
 //todo: repensar lo de los atributos sin valor especifico de cara al comportamiento de angular en data-binding:
 //todo: [attributo]="valor". Si no hay valor puede que haya problemas
-
 import {Component, ElementRef, Input, Renderer, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
 import MdlSpinner from "./mdlSpinnerClass";
 import * as ml from "../../lib/ml_lib";

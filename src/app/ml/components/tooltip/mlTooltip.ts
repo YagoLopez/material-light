@@ -1,6 +1,3 @@
-//todo: nota. probablemente no haya que usar host en el componente padre para poder encapsular los estilos y no
-// tener que usar viewencapsulation.none; sin embargo si puede ser util usar host en componentes hijos
-
 import {Component, ElementRef, Input, Renderer, ViewChild} from '@angular/core';
 import MdlTooltip from "./mdlTooltipClass";
 import * as ml from "../../lib/ml_lib";
@@ -8,34 +5,28 @@ import * as ml from "../../lib/ml_lib";
 @Component({
 selector: 'ml-tooltip',
 styleUrls: ['./mlTooltip.css'],
-template: '<span [attr.for]="for" class="mdl-tooltip" #spanTooltip><ng-content></ng-content></span>',
+template: '<span #spanTooltip [attr.for]="for" class="mdl-tooltip"><ng-content></ng-content></span>',
 moduleId: module.id
 })
 export class MlTooltip {
 
   @ViewChild('spanTooltip') spanTooltip: ElementRef;
   @Input() for: string;
-  @Input() position: string;  // todo: revisar position values: [right, left, top, bottom]
+  @Input() position: string;  // todo: revisar valores de las posiciones: [right, left, top, bottom]
   @Input() large: string;
-
   constructor(private ren: Renderer){}
 
   ngAfterViewInit(){
+    this.position && ( this.position = this.position.toLowerCase() );
+    if(this.position && !ml.isAttributeValid(this.position, ['right', 'left', 'top', 'bottom']) ){
+      console.warn('Invalid position name:', this.position);
+    }
     ml.isDefined(this.large) && ml.setClass(this.spanTooltip, 'mdl-tooltip--large', this.ren);
-
-    if (this.position === 'right')
-      ml.setClass(this.spanTooltip, 'mdl-tooltip--right', this.ren);
-
-    if (this.position === 'left')
-      ml.setClass(this.spanTooltip, 'mdl-tooltip--left', this.ren);
-
-    if (this.position === 'top')
-      ml.setClass(this.spanTooltip, 'mdl-tooltip--top', this.ren);
-
-    if (this.position === 'bottom')
-      ml.setClass(this.spanTooltip, 'mdl-tooltip--bottom', this.ren);
+    (this.position === 'right') && ml.setClass(this.spanTooltip, 'mdl-tooltip--right', this.ren);
+    (this.position === 'left') && ml.setClass(this.spanTooltip, 'mdl-tooltip--left', this.ren);
+    (this.position === 'top') && ml.setClass(this.spanTooltip, 'mdl-tooltip--top', this.ren);
+    (this.position === 'bottom') && ml.setClass(this.spanTooltip, 'mdl-tooltip--bottom', this.ren);
 
     new MdlTooltip(this.spanTooltip.nativeElement);
   }
-
 }

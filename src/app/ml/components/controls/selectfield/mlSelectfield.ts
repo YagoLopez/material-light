@@ -1,8 +1,6 @@
 //todo: (general) usar esta nomenclatura para componentes (Ej: MlTextfieldCmp)
-
 // NOTE: this component ("MlSelectfield") is based on "MlButton", "MdlMenu" and "MdlTextfield"
 // For this reason it uses files from those components
-
 import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation, forwardRef,
  ChangeDetectionStrategy} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
@@ -10,7 +8,7 @@ import {MlButton} from "../button/mlButton";
 import MdlMenu from "../../menu/mdlMenuClass";
 import MdlTextfield from "../textfield/mdlTextfieldClass";
 import * as ml from "../../../lib/ml_lib";
-// ---------------------------------------------------------------------------------------------------------------------
+
 @Component({
 selector: 'ml-selectfield',
 moduleId: module.id,
@@ -80,7 +78,7 @@ template:`
     this.mdlMenu = new MdlMenu(this.menuList.nativeElement);
     this.mdlTextfield = new MdlTextfield(this.input.nativeElement);
 
-    // if user defines a selectfield height from @Input => enable selectfield content overflow and scrollbars
+    // if user defines a selectfield height as @Input => enable selectfield content overflow and scrollbars
     if(this.height){
       this.mdlMenu.userDefinedHeight = this.height;
       this.mdlMenu.container_.style.overflow = 'auto';
@@ -107,7 +105,6 @@ export class MlSelectfieldItem {
   @ViewChild('selectfieldItem') selectfieldItem: ElementRef;
   @Input('with-divider') divider: string;
   @Input() disabled: string;
-
   constructor(private ren: Renderer){}
 
   ngOnInit() {
