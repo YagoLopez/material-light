@@ -55,7 +55,7 @@ template:`
   
   <ml-drawer fixed>
     <div class="drawer-top-img">
-      <img src="/src/assets/img/logo.png" class="drawer-img">
+      <img src="assets/img/logo.png" class="drawer-img">
       <div class="drawer-title">Material Light</div>
     </div>
     <ml-nav>

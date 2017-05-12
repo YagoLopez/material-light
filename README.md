@@ -55,7 +55,7 @@ Yago López:
 - There are two ways of using this library:
   1. **As components**. For example, import `MlButton` and `MlIcon` in your root app module and put `<ml-button>` and `<ml-icon>` in your template.
   2. **As modules**: You will need to import the modules `MlButtonMod` and `MlIconMod` into your own module. The use of modules is indicated for lazy-loading.
-  3. Use `<ml-layout>` as base component to place inside all other components
+  3. Use `<ml-layout>` as base component to place inside it all other components
 
 ## Testing
 
