@@ -15,7 +15,7 @@ template:`
   @ViewChild('divLoader') divLoader: ElementRef;
   @Output() onLoading: EventEmitter<boolean> = new EventEmitter();
   @Input() spinner: string;
-  isLoading = true;
+  isLoading: boolean;
   constructor (private router: Router) {}
 
   public ngOnInit() {
@@ -35,8 +35,8 @@ template:`
       if (event instanceof NavigationError){
         this.divLoader.nativeElement.remove();
         window.alert(`Navigation error. Couldn't load route: ${event.url}`);
-        throw Error('MlContentLoader > Navigation Error > '+ event.error);
+        throw Error(`MlContentLoader > Navigation Error > ${event.error}`);
      }
-    });
+    })
   }
 }

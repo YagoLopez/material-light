@@ -9,24 +9,23 @@ export default class MdlRipple extends MdlElement{
   }
 }
 MdlRipple.prototype.Constant_ = {
-    INITIAL_SCALE: 'scale(0.0001, 0.0001)',
-    INITIAL_SIZE: '1px',
-    INITIAL_OPACITY: '0.4',
-    FINAL_OPACITY: '0',
-    FINAL_SCALE: ''
+  INITIAL_SCALE: 'scale(0.0001, 0.0001)',
+  INITIAL_SIZE: '1px',
+  INITIAL_OPACITY: '0.4',
+  FINAL_OPACITY: '0',
+  FINAL_SCALE: ''
 };
 MdlRipple.prototype.CssClasses_ = {
-    RIPPLE_CENTER: 'mdl-ripple--center',
-    RIPPLE_EFFECT_IGNORE_EVENTS: 'mdl-js-ripple-effect--ignore-events',
-    RIPPLE: 'mdl-ripple',
-    IS_ANIMATING: 'is-animating',
-    IS_VISIBLE: 'is-visible'
+  RIPPLE_CENTER: 'mdl-ripple--center',
+  RIPPLE_EFFECT_IGNORE_EVENTS: 'mdl-js-ripple-effect--ignore-events',
+  RIPPLE: 'mdl-ripple',
+  IS_ANIMATING: 'is-animating',
+  IS_VISIBLE: 'is-visible'
 };
 /**
    * Handle mouse / finger down on element.
    *
    * @param {Event | any} event The event that fired.
-   * @private
    */
 MdlRipple.prototype.downHandler_ = function (event: Event | any) {
 
@@ -76,11 +75,11 @@ MdlRipple.prototype.downHandler_ = function (event: Event | any) {
     }
 };
 /**
-   * Handle mouse / finger up on element.
-   *
-   * @param {Event | any} event The event that fired.
-   * @private
-   */
+* Handle mouse / finger up on element.
+*
+* @param {Event | any} event The event that fired.
+* @private
+*/
 MdlRipple.prototype.upHandler_ = function (event: Event | any) {
 
     // modificaciones
@@ -101,8 +100,8 @@ MdlRipple.prototype.upHandler_ = function (event: Event | any) {
     }
 };
 /**
-   * Initialize element.
-   */
+* Initialize element.
+*/
 MdlRipple.prototype.init = function () {
     if (this.element_) {
         var recentering = this.element_.classList.contains(this.CssClasses_.RIPPLE_CENTER);

@@ -23,7 +23,7 @@
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  vertical-align: middle; }
+  vertical-align: middle}
 .mdl-button::-moz-focus-inner{border: 0}
 .mdl-button:hover{background-color: rgba(158,158,158, 0.20)}
 .mdl-button:focus:not(:active){background-color: rgba(0,0,0, 0.12)}
@@ -31,13 +31,13 @@
 .mdl-button.mdl-button--colored{color: rgb(63,81,181)}
 .mdl-button.mdl-button--colored:focus:not(:active){background-color: rgba(0,0,0, 0.12)}
 .mdl-button--raised{background: rgba(158,158,158, 0.20);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)}
 .mdl-button--raised:active{
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  background-color: rgba(158,158,158, 0.40); }
+  background-color: rgba(158,158,158, 0.40)}
 .mdl-button--raised:focus:not(:active){
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
-  background-color: rgba(158,158,158, 0.40); }
+  background-color: rgba(158,158,158, 0.40)}
 .mdl-button--raised.mdl-button--colored{background: rgb(63,81,181); color: rgb(255,255,255)}
 .mdl-button--raised.mdl-button--colored:hover{background-color: rgb(63,81,181)}
 .mdl-button--raised.mdl-button--colored:active{background-color: rgb(63,81,181)}
@@ -56,7 +56,7 @@
   background: rgba(158,158,158, 0.20);
   box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
   position: relative;
-  line-height: normal; }
+  line-height: normal}
 .mdl-button--fab .material-icons{
   position: absolute;
   top: 50%;
@@ -64,17 +64,17 @@
   -webkit-transform: translate(-12px, -12px);
   transform: translate(-12px, -12px);
   line-height: 24px;
-  width: 24px; }
+  width: 24px}
 .mdl-button--fab.mdl-button--mini-fab{height: 40px; min-width: 40px; width: 40px}
 .mdl-button--fab .mdl-button__ripple-container{
   border-radius: 50%;
-  -webkit-mask-image: -webkit-radial-gradient(circle, white, black); }
+  -webkit-mask-image: -webkit-radial-gradient(circle, white, black)}
 .mdl-button--fab:active{
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  background-color: rgba(158,158,158, 0.40); }
+  background-color: rgba(158,158,158, 0.40)}
 .mdl-button--fab:focus:not(:active){
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
-  background-color: rgba(158,158,158, 0.40); }
+  background-color: rgba(158,158,158, 0.40)}
 .mdl-button--fab.mdl-button--colored{background: rgb(255,64,129); color: rgb(255,255,255)}
 .mdl-button--fab.mdl-button--colored:hover{background-color: rgb(255,64,129)}
 .mdl-button--fab.mdl-button--colored:focus:not(:active){background-color: rgb(255,64,129)}
@@ -92,7 +92,7 @@
   padding: 0;
   overflow: hidden;
   color: inherit;
-  line-height: normal; }
+  line-height: normal}
 .mdl-button--icon .material-icons{
   position: absolute;
   top: 50%;
@@ -100,11 +100,11 @@
   -webkit-transform: translate(-12px, -12px);
   transform: translate(-12px, -12px);
   line-height: 24px;
-  width: 24px; }
+  width: 24px}
 .mdl-button--icon.mdl-button--mini-icon{height: 24px; min-width: 24px; width: 24px}
 .mdl-button--icon.mdl-button--mini-icon .material-icons{top: 0; left: 0}
 .mdl-button--icon .mdl-button__ripple-container{
-  border-radius: 50%; -webkit-mask-image: -webkit-radial-gradient(circle, white, black); }
+  border-radius: 50%; -webkit-mask-image: -webkit-radial-gradient(circle, white, black)}
 
 .mdl-button__ripple-container{
   display: block;
@@ -114,7 +114,7 @@
   top: 0;
   width: 100%;
   z-index: 0;
-  overflow: hidden; }
+  overflow: hidden}
 .mdl-button[disabled] .mdl-button__ripple-container .mdl-ripple,
 .mdl-button.mdl-button--disabled .mdl-button__ripple-container .mdl-ripple{background-color: transparent}
 
@@ -127,15 +127,15 @@
 .mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab{
   color: rgb(255,255,255); background-color: rgb(255,64,129)}
 .mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled{
-  color: rgba(0,0,0, 0.26); cursor: default; background-color: transparent }
+  color: rgba(0,0,0, 0.26); cursor: default; background-color: transparent}
 .mdl-button--fab[disabled][disabled], .mdl-button--fab.mdl-button--disabled.mdl-button--disabled{
   background-color: rgba(0,0,0, 0.12); color: rgba(0,0,0, 0.26)}
 .mdl-button--raised[disabled][disabled], .mdl-button--raised.mdl-button--disabled.mdl-button--disabled{
   background-color: rgba(0,0,0, 0.12); color: rgba(0,0,0, 0.26); box-shadow: none}
 .mdl-button--colored[disabled][disabled], .mdl-button--colored.mdl-button--disabled.mdl-button--disabled{
-  color: rgba(0,0,0, 0.26) }
+  color: rgba(0,0,0, 0.26)}
 .mdl-button .material-icons{vertical-align: middle}
 /*
 input.mdl-button[type="submit"]{
-  -webkit-appearance: none; }
+  -webkit-appearance: none}
 */

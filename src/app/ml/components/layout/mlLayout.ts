@@ -120,6 +120,7 @@ selector: 'ml-drawer',
 template: '<ng-content></ng-content>'
 })
 export class MlDrawer {
+
   @Input() fixed: string;
   constructor(private host: ElementRef, private ren: Renderer){}
 

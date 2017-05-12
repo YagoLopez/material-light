@@ -1,5 +1,4 @@
-//todo: comprobar si se aplica bien esta directiva a los botones del dialogo
-//todo: convertir ml de namespace a module. de esta forma se pueden cargar las funciones auxiliares una a una
+//todo: (general) convertir mllib de namespace a module. de esta forma se pueden cargar las funciones auxiliares una a una
 import {Directive, ElementRef, Renderer} from "@angular/core";
 import MdlRipple from "./mdlRippleClass";
 

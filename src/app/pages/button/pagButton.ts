@@ -7,7 +7,7 @@ template:`
 
 <p><ml-button ripple>Flat Button + Ripple Effect</ml-button></p>
 
-<p><ml-button aspect="COLORED">Flat Button Colored</ml-button></p>
+<p><ml-button aspect="colored">Flat Button Colored</ml-button></p>
 
 <p><ml-button aspect="raised" ripple>Raised Button + Ripple</ml-button></p>
 
@@ -33,5 +33,4 @@ template:`
 <view-source uri="button/pagButton.ts"></view-source>
 
 `//template
-})
-export class PagButton {}
+}) export class PagButton {}

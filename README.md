@@ -45,16 +45,17 @@ Yago López:
 
 ## Use
 
-- This project is meant to be used with the **angular-cli** although not mandatory.
-- Until it will be available as an NPM package, clone or download the repository.
+- This project is meant to be used with the **angular-cli** although not mandatory. Until it will be available as an NPM package:
+- Clone or download the repository.
 - Copy the `ml` folder (where the components are) into your project
 - Copy and paste the contents of the `assets` folder into the **exact same path** in your angular-cli project
-- If you are cloning this project to run it, adjust the path in `app.module.ts`
+- Include Material Icons `assets/fonts/mlIcons.css` in `index.html`
+- If you are cloning this project to run it, adjust the `basePath` in `app.module.ts` to your environment
 - Use the components following the examples in the `pages` directory. The components use `ml` as namespace. For example: `<ml-icon>email</ml-icon>` places an email icon component in a template.
 - There are two ways of using this library:
-  1. **As components**. For example, import `MlButton` and `MlIcon` in your component and put `<ml-button>` and `<ml-icon>` in your template.
+  1. **As components**. For example, import `MlButton` and `MlIcon` in your root app module and put `<ml-button>` and `<ml-icon>` in your template.
   2. **As modules**: You will need to import the modules `MlButtonMod` and `MlIconMod` into your own module. The use of modules is indicated for lazy-loading.
-
+  3. Use `<ml-layout>` as base component to place inside all other components
 
 ## Testing
 

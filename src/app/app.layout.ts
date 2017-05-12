@@ -12,10 +12,10 @@ template:`
     {cursor: default; background-color: transparent !important; color: cornflowerblue; font-weight: 500}
   .drawer-top-img
     {margin: auto; display: block; width: 100%; height: 150px; background: url('assets/img/bg1.jpg') 0 0 / cover;}
-  .bg-grey {background: lightgrey}
   .active-route {background: darkgrey; color: white !important}
   .drawer-title {color: white; text-align: center}
-  .drawer-img {width: 25%; text-align: center; margin: 30px auto auto; display: block;}
+  .drawer-img {width: 25%; text-align: center; margin: 30px auto auto; display: block}
+  /*:host /deep/ .my-theme {background: cornflowerblue; color: darkblue}*/
 </style>
 
 <ml-layout> 
@@ -50,12 +50,12 @@ template:`
       <a header-tab href="#tab6" ripple>Tab 6</a>
     </ml-header-tabs>
   </ml-header>
-
+  
   <!-- Drawer ------------------------------------------------------------------------------------------------------ -->
   
   <ml-drawer fixed>
     <div class="drawer-top-img">
-      <img src="assets/img/logo.png" class="drawer-img">
+      <img src="/src/assets/img/logo.png" class="drawer-img">
       <div class="drawer-title">Material Light</div>
     </div>
     <ml-nav>

@@ -1,5 +1,5 @@
 {
-  "name": "Material_Light",
+  "name": "material-light-demo",
   "description": "Fast, light and easy to use Material Design UI components for Angular",
   "author": "Yago Lopez <yago.lopez@gmail.com> (https://yagolopez.github.io)",
   "repository": {"type": "git", "url": "git+https://github.com/YagoLopez/material-light.git"},
@@ -24,25 +24,25 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/compiler": "^4.0.0",
-    "@angular/core": "^4.0.0",
-    "@angular/forms": "^4.0.0",
-    "@angular/http": "^4.0.0",
-    "@angular/platform-browser": "^4.0.0",
-    "@angular/platform-browser-dynamic": "^4.0.0",
-    "@angular/router": "^4.0.0",
+    "@angular/common": "^4.1.2",
+    "@angular/compiler": "^4.1.2",
+    "@angular/core": "^4.1.2",
+    "@angular/forms": "^4.1.2",
+    "@angular/http": "^4.1.2",
+    "@angular/platform-browser": "^4.1.2",
+    "@angular/platform-browser-dynamic": "^4.1.2",
+    "@angular/router": "^4.1.2",
     "core-js": "^2.4.1",
-    "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
+    "rxjs": "^5.4.0",
+    "zone.js": "^0.8.10"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.0",
-    "@angular/compiler-cli": "^4.0.0",
-    "@types/node": "~6.0.60",
+    "@angular/cli": "1.0.3",
+    "@angular/compiler-cli": "^4.1.2",
+    "@types/node": "~7.0.18",
     "systemjs": "^0.20.12",
-    "ts-node": "~2.0.0",
-    "tslint": "~4.5.0",
-    "typescript": "~2.2.0"
+    "ts-node": "~3.0.4",
+    "tslint": "~5.2.0",
+    "typescript": "~2.3.2"
   }
 }

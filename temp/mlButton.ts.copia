@@ -1,5 +1,6 @@
 //todo: (general) control de excepciones en angular 2
 //todo: usar enums
+
 import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angular/core";
 import MdlButton from "./mdlButtonClass";
 import * as ml from "../../../lib/ml_lib";
@@ -7,9 +8,11 @@ import * as ml from "../../../lib/ml_lib";
 const ML_BUTTON_ASPECTS = ['raised, colored, accent'];
 const ML_BUTTON_VARIANTS = ['fab', 'minifab', 'icon'];
 
+type ButtonAspect = 'raised' | 'colored' | 'accent';
+
 /**
- * @Input.aspect ="colored" => background blue, font-color white
- * @Input.aspect ="accent" => background magenta, font-color white
+ * @Input.aspect="colored" => background blue, font-color white
+ * @Input.aspect="accent" => background magenta, font-color white
  */
 @Component({
 selector: 'ml-button',
@@ -26,10 +29,6 @@ template: `<ng-content></ng-content>
   @Input() variant: string;
   constructor(public host: ElementRef, private ren: Renderer){}
 
-  checkVariantInput(arg: any): arg is string {
-    debugger;
-    return arg !== undefined;
-  }
   ngOnInit(){
     // @Input "aspect" --------------------------------------------------------------------------------------------------
     this.aspect && ( this.aspect = this.aspect.toLowerCase() );
