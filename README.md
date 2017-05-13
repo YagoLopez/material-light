@@ -54,7 +54,6 @@ Yago López:
 - For example, if you want to use `MlButton` component, import `MlButtonMod.ts` in your module and place `<ml-button>my button</ml-button>` in your template
 - Use the components following the examples in the `{project-folder}/node_modules/material-light/src/app/pages` directory.
 - Use `<ml-layout>` as base component to place inside it all other components
-- If you get compile errors, assure you have `module: commonjs` in `tsconfig.json`
 
 ## Runnin the demo
 
