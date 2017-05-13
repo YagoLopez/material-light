@@ -30,7 +30,6 @@ template:`
   @Input() shadow: string;
   @Input() img: string;
   @ViewChild('cardTitle') cardTitle: ElementRef;
-
   constructor(private host: ElementRef, private ren: Renderer){}
 
   ngOnInit(){

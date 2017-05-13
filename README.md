@@ -47,11 +47,14 @@ Yago López:
 
 - This project can be used with the **angular-cli** although not mandatory.
 - Run: `npm install YagoLopez/material-light`
-- Include Material Icons from `{project-folder}/node_modules/material-light/src/assets/fonts/mlIcons.css` in your `index.html`
-- Import the component modules from `{project-folder}/node_modules/material-light/src/app/ml/components` in your own module. Component modules have `*Mod.ts` file name
-- For example if you want to use `MlButton` component, import `MlButtonMod.ts` in your module and place `<ml-button>my button</ml-button>` in your template
-- Use the components following the examples in the `pages` directory.
+- Copy `{project-folder}/node_modules/material-light/src/app/ml/` folder to your `/src/` folder
+- Copy `{project-folder}/node_modules/material-light/src/assets/` folder to your `/src/` folder
+- Include Material Icons from `{project-folder}/src/assets/fonts/mlIcons.css` in your `index.html`
+- Import the component modules from `{project-folder}/src/app/ml/components` in your own module. Component modules have `*Mod.ts` file name
+- For example, if you want to use `MlButton` component, import `MlButtonMod.ts` in your module and place `<ml-button>my button</ml-button>` in your template
+- Use the components following the examples in the `{project-folder}/node_modules/material-light/src/app/pages` directory.
 - Use `<ml-layout>` as base component to place inside it all other components
+- If you get compile errors, assure you have `module: commonjs` in `tsconfig.json`
 
 ## Runnin the demo
 
