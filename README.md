@@ -43,19 +43,20 @@ Yago López:
 - <a href="http://mobt.me/Xf27" target="_blank">Mobile Simulator (For Desktop)</a>
 - <a href="https://yagolopez.github.io/material-light/dist/index.html" target="_blank">Full Screen (For Mobile)</a>
 
-## Use
+## Insallation and Use
 
-- This project is meant to be used with the **angular-cli** although not mandatory. Until it will be available as an NPM package:
-- Clone or download the repository.
-- Copy the `ml` folder (where the components are) into your project
-- Copy and paste the contents of the `assets` folder into the **exact same path** in your angular-cli project
-- Include Material Icons `assets/fonts/mlIcons.css` in `index.html`
-- If you are cloning this project to run it, adjust the `basePath` in `app.module.ts` to your environment
-- Use the components following the examples in the `pages` directory. The components use `ml` as namespace. For example: `<ml-icon>email</ml-icon>` places an email icon component in a template.
-- There are two ways of using this library:
-  1. **As components**. For example, import `MlButton` and `MlIcon` in your root app module and put `<ml-button>` and `<ml-icon>` in your template.
-  2. **As modules**: You will need to import the modules `MlButtonMod` and `MlIconMod` into your own module. The use of modules is indicated for lazy-loading.
-  3. Use `<ml-layout>` as base component to place inside it all other components
+- This project can be used with the **angular-cli** although not mandatory.
+- Run: `npm install YagoLopez/material-light`
+- Include Material Icons from `{project-folder}/node_modules/material-light/src/assets/fonts/mlIcons.css` in your `index.html`
+- Import the component modules from `{project-folder}/node_modules/material-light/src/app/ml/components` in your own module. Component modules have `*Mod.ts` file name
+- For example if you want to use `MlButton` component, import `MlButtonMod.ts` in your module and place `<ml-button>my button</ml-button>` in your template
+- Use the components following the examples in the `pages` directory.
+- Use `<ml-layout>` as base component to place inside it all other components
+
+## Runnin the demo
+
+- You can run the compiled demo pointing a web server to `{project-folder}/node_modules/material-light/dist/index.html`
+- If you want to compile the project, clone or download the repo, adjust the `basePath` in `app.module.ts` to your environment and run it with `ng serve`
 
 ## Testing
 
@@ -64,9 +65,9 @@ Yago López:
 
 ## Used for running this demo:
 
-- Angular 4.1.1
+- Angular latest versions
 - Angular Command Line (angular-cli)
-- Typescript
+- Typescript latest versions
 - Webpack for production builds
 - SystemJS as module loader during development time
 - Node/Npm latest versions

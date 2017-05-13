@@ -2,13 +2,11 @@
 //todo: poder definir colores, temas, fuentes, etc. Consultar colores en mlLayout.css
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
 //todo: implementar MlLayout usando slots
-
 import {Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy}
   from "@angular/core";
 import MdlLayout from "./mdlLayoutClass";
 import * as ml from "../../lib/ml_lib";
 
-// ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-layout',
 changeDetection: ChangeDetectionStrategy.OnPush,

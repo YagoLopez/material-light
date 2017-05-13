@@ -41,16 +41,16 @@ template:`
   constructor(private ren: Renderer){}
 
   ngOnInit(){
-    // @Input "type" ----------------------------------------------------------------------------------------------------
+    // @Input "type" ---------------------------------------------------------------------------------------------------
     if( !ml.isAttributeValid(this.type.toLowerCase(), ML_BUTTON_INPUT_TYPES) ){
       console.warn(`<ml-button-input> Invalid attribute: type="${this.type}"`);
     }
-    // @Input "aspect" --------------------------------------------------------------------------------------------------
+    // @Input "aspect" -------------------------------------------------------------------------------------------------
     ml.isSubstring('raised', this.aspect) && ml.setClass(this.label, 'mdl-button--raised', this.ren);
     ml.isSubstring('colored', this.aspect) && ml.setClass(this.label, 'mdl-button--colored', this.ren);
     ml.isSubstring('accent', this.aspect) && ml.setClass(this.label, 'mdl-button--accent', this.ren);
 
-    // @Input "variant" -------------------------------------------------------------------------------------------------
+    // @Input "variant" ------------------------------------------------------------------------------------------------
     if( this.variant && !ml.isAttributeValid(this.variant, ML_BUTTON_INPUT_VARIANTS) ){
       console.warn(`<ml-button> Wrong attribute: variant="${this.variant}"`);
     }

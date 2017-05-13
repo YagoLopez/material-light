@@ -1,5 +1,5 @@
 {
-  "name": "material-light-demo",
+  "name": "material-light",
   "description": "Fast, light and easy to use Material Design UI components for Angular",
   "author": "Yago Lopez <yago.lopez@gmail.com> (https://yagolopez.github.io)",
   "repository": {"type": "git", "url": "git+https://github.com/YagoLopez/material-light.git"},

@@ -1,16 +1,11 @@
+//todo: probar a simplificar controles input usango ng-content
 //todo: subscribe to values in forms (use valueChanges) to simplify controls
-//todo: hacer prueba de empaquetado e instalacion con npm y angular-cli
 //todo: drawer dragabble
-//todo: themes: (1) estudiar como pasar estilos css a componentes
-//todo: themes: (2) revisar sitios donde es posible eliminar encapsulation.none usando :host /deep/
-//todo: themes: (3) investigar lo de quitar el 'encapsulation: ViewEncapsulation.None' en cada componente (funciono en ml-radio)
 //todo: actualizar a renderer2
-//todo: usar enums para posibles valores de inputs
 //todo: eventos drawer y obfuscator
 //todo: probar a eliminar atributos id en elementos 'label'. revisar docs angular
 //todo: probar a quitar "mdl-layout__container" de ml-layout => (cabcera+contenido) scrollable. hacer tests
 //todo: comprobar consola usando chrome remote debugging por usb en el movil
-//todo: crear paquete npm
 //todo: ponerse en contacto con f7 para hacer otros componentes. ej: acordeon
 //todo: hacer documentacion de api para cada componente
 //todo: que se puedan usar diferentes cabeceras y menus laterales (<ml-header>) en cada pagina (usar named router-outlet?)
@@ -35,11 +30,20 @@ import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {App} from "./app.layout";
 
-// Relative paths for SystemJS
-// const basePath = './app/pages/';
+function getUrlParameter(name) {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  let results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
 
 // Absolute paths for Webpack
-const basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
+let basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
+
+if(getUrlParameter('serve') === 'systemjs'){
+  // Relative paths for SystemJS
+  basePath = './app/pages/';
+}
 
 const APP_ROUTES: Routes = [
 {path: '',           redirectTo: 'button', pathMatch: 'full'},
