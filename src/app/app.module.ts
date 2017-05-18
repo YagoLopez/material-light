@@ -28,7 +28,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {MlPageLoaderMod} from "./ml/components/loader/mlContentLoaderMod";
 import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
-import {App} from "./app.layout";
+import {MlDemoApp} from "./app.layout";
 
 function getUrlParameter(name) {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -75,6 +75,6 @@ const APP_ROUTES: Routes = [
 @NgModule({
   imports: [BrowserModule, MlPageLoaderMod, MlLayoutMod, MlMenuMod,
     RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
-  declarations: [App], bootstrap: [App]
+  declarations: [MlDemoApp], bootstrap: [MlDemoApp]
 })
 export class AppModule {}

@@ -103,7 +103,7 @@ template:`
 </ml-layout>
 
 `//template
-}) export class App {
+}) export class MlDemoApp {
 
   isLoading = false;
 

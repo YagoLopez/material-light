@@ -4,7 +4,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 @Component({
 template:`
 
-<style>.ico-aligned{vertical-align: middle; margin-top: -4px; padding-right: 5px}</style>
+<style>.ico-aligned {vertical-align: middle; margin-top: -4px; padding-right: 5px}</style>
 
 <h5>Text Controls</h5>
 
@@ -51,7 +51,8 @@ template:`
   
   <p><ml-button-input type="submit" [disabled]="textfieldForm.invalid" aspect="raised" ripple>
     Submit to console</ml-button-input></p>                      
-  
+  <ml-button-input type="reset" aspect="raised" ripple>
+    Reset form</ml-button-input>  
   <!-- /submit button ---------------------------------------------------------------------------------------------- -->
 
 </form>

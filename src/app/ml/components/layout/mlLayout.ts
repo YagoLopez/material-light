@@ -140,7 +140,7 @@ export class MlContent {
   constructor(private host: ElementRef, private ren: Renderer){}
 
   isHeaderScrollable(): boolean {
-    return document.querySelector('ml-header[scrollable]') !== null;
+    return document.querySelector('ml-header[waterfall]') !== null;
   }
 
   isIE(): boolean {
@@ -152,6 +152,7 @@ export class MlContent {
     // This hack is due to IE repaints bad the left header-tab button after scrolling
     const mlHeaderTabs: HTMLElement = document.querySelector('ml-header-tabs') as HTMLElement;
     if(this.isHeaderScrollable() && this.isIE()){
+      console.log('isIE');
       this.ren.listen(this.host.nativeElement, 'scroll', () => {
         if(this.host.nativeElement.scrollTop == 0){
           mlHeaderTabs.style.display = 'none';
