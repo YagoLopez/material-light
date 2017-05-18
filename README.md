@@ -55,6 +55,41 @@ Yago López:
 - Use the components following the examples in the `{project-folder}/node_modules/material-light/src/app/pages` directory.
 - Use `<ml-layout>` as base component to place inside it all other components
 
+## Theming
+
+- Basisc theming can be achieved using Angular special selectors in the root component:
+
+```
+<style>
+  /* Header theme */
+  :host /deep/ ml-header {
+    background: cornflowerblue;
+    color: yellow;
+   }
+   
+  /* Content theme */
+  :host /deep/ ml-content {
+    background: lightblue;
+  }
+</style>
+```
+
+- For advanced theming, CSS selectors must be used. Inspect the DOM using developer tools. For example:
+
+```
+<style>
+  /* Button colored theme */
+  :host /deep/ ml-button.mdl-button--raised.mdl-button--colored {
+    background: brown;
+  }
+  
+  /* Button accent theme */
+  :host /deep/ ml-button.mdl-button--raised.mdl-button--accent {
+    background: green;
+  }
+</style>  
+```
+
 ## Runnin the demo
 
 - You can run the compiled demo pointing a web server to `{project-folder}/node_modules/material-light/dist/index.html`

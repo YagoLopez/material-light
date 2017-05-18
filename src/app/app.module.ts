@@ -1,5 +1,7 @@
+//todo: renderer2
+//todo: themes
 //todo: probar a simplificar controles input usando ng-content
-//todo: subscribe to values in forms (use valueChanges) to simplify controls
+//todo: suscribirse a los valores observables de los forms (use valueChanges) para simplificar los controles
 //todo: drawer dragabble
 //todo: actualizar a renderer2
 //todo: eventos drawer y obfuscator
@@ -20,7 +22,7 @@
 //todo: footer component
 //todo: crear un componente para visualizar gist en angular 2
 //todo: separar page-loader component en un repositorio diferente, hacer 2: page-loader y progressbar-loader
-//todo: polyfill dialog component (w3s.js)
+//todo: polyfill dialog component (usar w3s.js ó f7)
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";

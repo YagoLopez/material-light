@@ -53,10 +53,10 @@ export class MlHeader {
   ngOnInit() {
     ml.isDefined(this.seamed) && ml.setClass(this.host, 'mdl-layout__header--seamed', this.ren);
     ml.isDefined(this.waterfall) && ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
-    // if (this.scrollable === 'hide-top-header'){
-    //   ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
-    //   ml.setClass(this.host, 'mdl-layout__header--waterfall-hide-top', this.ren);
-    // }
+    if (this.waterfall === 'hide-top-header-row'){
+      ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
+      ml.setClass(this.host, 'mdl-layout__header--waterfall-hide-top', this.ren);
+    }
     // todo: Header scrollable no funciona
     // todo: mdl-layout__content hace que la cabecera sea scrollable (en concreto position: absolute/relative)
     // ml.setClass(this.host, 'mdl-layout__header--scroll', this.ren);
@@ -148,7 +148,7 @@ export class MlContent {
   }
 
   ngAfterViewInit(){
-    // If the header has tabs and is scrollable, it is needed to repaint it
+    // If the header has tabs and is scrollable and the navigator is IE, it is needed to repaint it
     // This hack is due to IE repaints bad the left header-tab button after scrolling
     const mlHeaderTabs: HTMLElement = document.querySelector('ml-header-tabs') as HTMLElement;
     if(this.isHeaderScrollable() && this.isIE()){
