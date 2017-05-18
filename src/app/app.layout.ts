@@ -22,7 +22,7 @@ template:`
 
   <!-- Header ------------------------------------------------------------------------------------------------------ -->
 
-  <ml-header scrollable>
+  <ml-header waterfall>
     <ml-header-row>
       <ml-title>Material Light Demo</ml-title>
       <ml-spacer></ml-spacer>
@@ -64,7 +64,6 @@ template:`
       <a nav-item routerLink="card" routerLinkActive="active-route">Card</a>
       <a nav-item routerLink="selectfield" routerLinkActive="active-route">SelectField</a>
       <a nav-item routerLink="textfield" routerLinkActive="active-route">TextField</a>
-      <a nav-item routerLink="textfield2" routerLinkActive="active-route">TextField2</a>
       <a nav-item routerLink="checkbox" routerLinkActive="active-route">Checkbox</a>
       <a nav-item routerLink="radio" routerLinkActive="active-route">RadioButton</a>
       <a nav-item routerLink="switch" routerLinkActive="active-route">SwitchButton</a>

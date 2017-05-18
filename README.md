@@ -8,8 +8,8 @@ There are other adaptations of Material Design Lite and other UI frameworks like
 but this library has the following features:
 
 - 100% Free forever.
-- Light
 - Fast
+- Light
 - Easy and fun to use
 - True library of componentes encapsulating typescipt code, CSS and HTML as atomic units
 - Easy and quick form validation
@@ -17,7 +17,7 @@ but this library has the following features:
 - Responsive content adaptable to desktop and mobile
 - Components available also as Angular Modules allowing Code-Splitting/Lazy-loading. This implies loading only the components needed at runtime
 - Ready for Ahead of Time Compilation (AOT)
-- Tested in main desktop/mobile browsers: Chrome (Android, IOS, desktop), FF, Edge, IE, Opera.
+- Tested in main desktop/mobile browsers: Chrome (Android, IOS, desktop), FF, Edge, IE, Opera. <a href="https://angular.io/docs/ts/latest/guide/browser-support.html" target="_blank">(Browsers supported)</a>
 - No dependencies of other libraries like JQuery or Bootstrap.
 
 ## Objective
@@ -45,13 +45,13 @@ Yago López:
 
 ## Insallation and Use
 
+- Run: `npm install YagoLopez/material-light --save-dev`
 - This project can be used with the **angular-cli** although not mandatory.
-- Run: `npm install YagoLopez/material-light`
 - Copy `{project-folder}/node_modules/material-light/src/app/ml/` folder to your `/src/` folder
 - Copy `{project-folder}/node_modules/material-light/src/assets/` folder to your `/src/` folder
 - Include Material Icons from `{project-folder}/src/assets/fonts/mlIcons.css` in your `index.html`
 - Import the component modules from `{project-folder}/src/app/ml/components` in your own module. Component modules have `*Mod.ts` file name
-- For example, if you want to use `MlButton` component, import `MlButtonMod.ts` in your module and place `<ml-button>my button</ml-button>` in your template
+- For example, if you want to use `MlButton`, import `MlButtonMod.ts` in your module and place `<ml-button>my button</ml-button>` in your template
 - Use the components following the examples in the `{project-folder}/node_modules/material-light/src/app/pages` directory.
 - Use `<ml-layout>` as base component to place inside it all other components
 

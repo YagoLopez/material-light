@@ -4,7 +4,7 @@ import {FormGroup, FormControl, Validators} from "@angular/forms";
 @Component({
 template:`
 
-<style>.validationError{color: red; padding-bottom: 20px}</style>
+<style>.validationError {color: red; padding-bottom: 20px}</style>
 
 <h5>Select Field</h5>
 <p>Reactive Forms only</p>

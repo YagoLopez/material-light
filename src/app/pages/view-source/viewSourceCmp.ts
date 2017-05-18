@@ -20,6 +20,6 @@ export class ViewSourceCmp{
   urlBaseRaw = 'https://raw.githubusercontent.com/YagoLopez/material-light/master/src/app/pages';
   urlBaseFormated = 'https://github.com/YagoLopez/material-light/blob/master/src/app/pages';
   features = 'resizable,scrollbars=yes,status=0,toolbar=0,menubar=0';
-  viewRawSource(){ window.open(`${this.urlBaseRaw}/${this.uri}`, '_blank', this.features); }
-  viewFormatedSource(){ window.open(`${this.urlBaseFormated}/${this.uri}`, '_blank', this.features); }
+  viewRawSource(){ window.open(`${this.urlBaseRaw}/${this.uri}`, '_blank', this.features) }
+  viewFormatedSource(){ window.open(`${this.urlBaseFormated}/${this.uri}`, '_blank', this.features) }
 }

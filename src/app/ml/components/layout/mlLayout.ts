@@ -21,7 +21,6 @@ export class MlLayout {
   @Input() tabs: string;
   @Input() background: string;
   mdlLayout: MdlLayout;
-
   constructor(private host: ElementRef, private ren: Renderer){}
 
   hideDrawer(){
@@ -30,12 +29,6 @@ export class MlLayout {
   }
 
   ngAfterViewInit() {
-    // Fixed (non scrollable tabs)
-    // this.tabs && ( this.tabs = this.tabs.toLowerCase() );
-    // if (this.tabs === 'fixed'){
-    //   ml.setClass(this.host, 'mdl-layout--fixed-header', this.ren);
-    //   ml.setClass(this.host, 'mdl-layout--fixed-tabs', this.ren);
-    // }
     if(ml.isDefined(this.background)){
       this.host.nativeElement.style.background = `url('${this.background}') 0 0 / cover`;
       const mlContent: HTMLElement = document.querySelector('ml-content') as HTMLElement;
@@ -52,22 +45,21 @@ template: '<ng-content></ng-content>'
 })
 export class MlHeader {
 
-  @Input() scrollable: string;
+  @Input() waterfall: string;
   @Input() transparent: string;
   @Input() seamed: string;
-
   constructor(public host: ElementRef, private ren: Renderer){}
 
   ngOnInit() {
     ml.isDefined(this.seamed) && ml.setClass(this.host, 'mdl-layout__header--seamed', this.ren);
-    ml.isDefined(this.scrollable) && ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
-    if (this.scrollable === 'hide-top-header'){
-      ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
-      ml.setClass(this.host, 'mdl-layout__header--waterfall-hide-top', this.ren);
-    }
+    ml.isDefined(this.waterfall) && ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
+    // if (this.scrollable === 'hide-top-header'){
+    //   ml.setClass(this.host, 'mdl-layout__header--waterfall', this.ren);
+    //   ml.setClass(this.host, 'mdl-layout__header--waterfall-hide-top', this.ren);
+    // }
     // todo: Header scrollable no funciona
     // todo: mdl-layout__content hace que la cabecera sea scrollable (en concreto position: absolute/relative)
-    // ml.setClass(this.host,'mdl-layout__header--scroll', this.ren);
+    // ml.setClass(this.host, 'mdl-layout__header--scroll', this.ren);
   }
 
   ngAfterViewInit(){
@@ -127,12 +119,14 @@ export class MlDrawer {
     if( mlLayout && ml.isDefined(this.fixed) ){
       mlLayout.classList.add('mdl-layout--fixed-drawer');
     }
+
    // Hides drawer and obfuscator when clicking item menu on drawer
    this.ren.listen(this.host.nativeElement, 'click', () => {
      this.host.nativeElement.classList.remove('is-visible');
      const obfuscator = document.querySelector('div.mdl-layout__obfuscator.is-visible');
      obfuscator && obfuscator.classList.remove('is-visible');
    });
+
    ml.setClass(this.host,'mdl-layout__drawer', this.ren);
   }
 }
@@ -141,7 +135,35 @@ export class MlDrawer {
 selector: 'ml-content',
 host: {class: 'mdl-layout__content'},
 template: '<ng-content></ng-content>'})
-export class MlContent {}
+export class MlContent {
+
+  constructor(private host: ElementRef, private ren: Renderer){}
+
+  isHeaderScrollable(): boolean {
+    return document.querySelector('ml-header[scrollable]') !== null;
+  }
+
+  isIE(): boolean {
+    return !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g);
+  }
+
+  ngAfterViewInit(){
+    // If the header has tabs and is scrollable, it is needed to repaint it
+    // This hack is due to IE repaints bad the left header-tab button after scrolling
+    const mlHeaderTabs: HTMLElement = document.querySelector('ml-header-tabs') as HTMLElement;
+    if(this.isHeaderScrollable() && this.isIE()){
+      this.ren.listen(this.host.nativeElement, 'scroll', () => {
+        if(this.host.nativeElement.scrollTop == 0){
+          mlHeaderTabs.style.display = 'none';
+          setTimeout(function(){
+            mlHeaderTabs.offsetHeight; // no need to store this anywhere, the reference is enough for repainting
+            mlHeaderTabs.style.display = 'inline-block';
+          }, 100);
+        }
+      })
+    }
+  }
+}
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-header-tabs',
@@ -154,7 +176,7 @@ selector: '[header-tab]',
 host: {class: 'mdl-layout__tab'}})
 export class MlHeaderTab {
   constructor(private host: ElementRef){}
-  ngOnInit(){
+  ngAfterViewInit(){
     this.host.nativeElement.innerHTML += `
       <span class="mdl-layout__tab-ripple-container">
         <span class="mdl-ripple"></span>

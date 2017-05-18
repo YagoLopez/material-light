@@ -340,6 +340,7 @@ MdlLayout.prototype.init = function () {
       // Add and remove tab buttons depending on scroll position and total
       // window size.
       var tabUpdateHandler = function () {
+        console.log('scroll event');
         if (this.tabBar_.scrollLeft > 0) {
           leftButton.classList.add(this.CssClasses_.IS_ACTIVE);
         } else {

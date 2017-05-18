@@ -17,19 +17,18 @@ moduleId: module.id,
 encapsulation: ViewEncapsulation.None,
 styleUrls: ['./mlButton.css'],
 host: {class: 'mdl-button'},
-template: `<ng-content></ng-content>
-<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating"></span></span>
-`//template
+template: '<ng-content></ng-content>'
 }) export class MlButton{
 
   @Input() aspect: string;
   @Input() variant: string;
   constructor(public host: ElementRef, private ren: Renderer){}
 
-  checkVariantInput(arg: any): arg is string {
-    debugger;
-    return arg !== undefined;
-  }
+  //todo: borrar
+  // checkVariantInput(arg: any): arg is string {
+  //   return arg !== undefined;
+  // }
+
   ngOnInit(){
     // @Input "aspect" --------------------------------------------------------------------------------------------------
     this.aspect && ( this.aspect = this.aspect.toLowerCase() );

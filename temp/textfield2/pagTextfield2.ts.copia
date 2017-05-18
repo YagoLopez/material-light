@@ -5,7 +5,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 template:`
 <style>
   .pad-top {padding-top: 0}
-  .pad-top-10 {padding-top: 10px}
+  /*.pad-top-10 {padding-top: 10px}*/
   .field-header {padding-top: 10px; padding-bottom: 10px}
   .color-field {width: 50px}
   :host /deep/ ml-button-input > label {width: 200px}
@@ -27,17 +27,21 @@ template:`
   
   <!-- Date -------------------------------------------------------------------------------------------------------- -->
   
+<!--
   <div class="field-header"><strong>Date textfield: </strong>(Validated)</div>
   <ml-textfield type="date" [formControl]="date" class="pad-top">
     <ml-error [validateControl]="date" validator="required">Required field</ml-error>
   </ml-textfield>
+-->
   
   <!-- Week -------------------------------------------------------------------------------------------------------- -->
   
+<!--
   <div class="field-header"><strong>Week textfield: </strong>(Validated)</div>
   <ml-textfield type="week" [formControl]="week" class="pad-top">
     <ml-error [validateControl]="week" validator="required">Required field</ml-error>
   </ml-textfield>
+-->
   
   <!-- Number ------------------------------------------------------------------------------------------------------ -->
   
@@ -48,10 +52,12 @@ template:`
   
   <!-- Color ------------------------------------------------------------------------------------------------------- -->
   
+<!--
   <div class="field-header"><strong>Color textfield: </strong>(Validated)</div>
   <ml-textfield type="color" [formControl]="color" class="pad-top color-field">
     <ml-error [validateControl]="color" validator="required">Required</ml-error>
   </ml-textfield>
+-->
   
   <!-- Submit and reset input buttons ------------------------------------------------------------------------------ -->
   

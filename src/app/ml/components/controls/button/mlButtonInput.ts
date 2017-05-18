@@ -1,7 +1,6 @@
 // NOTE: for maximum compatibility between browsers, when using html5 controls it is recommended to define aditional
 // validators. For example, when using <input type="date"> it is recommended to defined a validator with a regexp
 // validating the date string
-
 import {Component, ElementRef, Input, Renderer, ViewChild, ChangeDetectionStrategy,
   HostBinding} from "@angular/core";
 import MdlButton from "./mdlButtonClass";
@@ -20,8 +19,8 @@ changeDetection: ChangeDetectionStrategy.OnPush,
 template:`
 
 <label #label class="mdl-button"><ng-content></ng-content>
-<input [type]="type" style="display: none">
-<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+<span class="mdl-button__ripple-container">
+<input [type]="type" style="display: none"><span class="mdl-ripple"></span></span>
 </label>
 <div *ngIf="showError" class="mdl-textfield__error"><ng-content select="ml-error"></ng-content></div>
 

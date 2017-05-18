@@ -1,4 +1,4 @@
-//todo: probar a simplificar controles input usango ng-content
+//todo: probar a simplificar controles input usando ng-content
 //todo: subscribe to values in forms (use valueChanges) to simplify controls
 //todo: drawer dragabble
 //todo: actualizar a renderer2
@@ -52,7 +52,6 @@ const APP_ROUTES: Routes = [
 {path: 'card',       loadChildren: basePath + 'card/pagCardMod#PagCardMod'},
 {path: 'selectfield',loadChildren: basePath + 'selectfield/pagSelectfieldMod#PagSelectfieldMod'},
 {path: 'textfield',  loadChildren: basePath + 'textfield/pagTextfieldMod#PagTextfieldMod'},
-{path: 'textfield2', loadChildren: basePath + 'textfield2/pagTextfield2Mod#PagTextfiel2dMod'},
 {path: 'checkbox',   loadChildren: basePath + 'checkbox/pagCheckboxMod#PagCheckboxMod'},
 {path: 'radio',      loadChildren: basePath + 'radio/pagRadioMod#PagRadioMod'},
 {path: 'switch',     loadChildren: basePath + 'switch/pagSwitchMod#PagSwitchMod'},

@@ -2,7 +2,7 @@
 // NOTE: this component ("MlSelectfield") is based on "MlButton", "MdlMenu" and "MdlTextfield"
 // For this reason it uses files from those components
 import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation, forwardRef,
- ChangeDetectionStrategy} from "@angular/core";
+  ChangeDetectionStrategy, HostListener} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import {MlButton} from "../button/mlButton";
 import MdlMenu from "../../menu/mdlMenuClass";
@@ -18,9 +18,9 @@ changeDetection: ChangeDetectionStrategy.OnPush,
 providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MlSelectfield), multi: true}],
 template:`
 <div class="mdl-textfield">
-  <input #input type="text" class="mdl-textfield__input input-field" (click)="onClickInput()" readonly>
+  <input #input type="text" class="mdl-textfield__input input-field" (click)="onClick()" readonly>
   <label #label class="mdl-textfield__label input-label">{{ labelText }}</label>
-  <ml-button #mdlButton variant="icon" [attr.id]="idBtn" class="menu-btn" (click)="onClickInput()">
+  <ml-button #mdlButton variant="icon" [attr.id]="idBtn" class="menu-btn" (click)="onClick()">
     <ml-icon>keyboard_arrow_down</ml-icon>
   </ml-button>
   <ul #menuList [attr.for]="idBtn" class="mdl-menu" (click)="onItemSelected($event)">
@@ -34,10 +34,14 @@ template:`
   @ViewChild('mdlButton') mdlButton: MlButton;
   @ViewChild('input') input: ElementRef;
   @ViewChild('label') label: ElementRef;
+  @ViewChild('menuIcon') menuIcon: ElementRef;
   @Input() formControl: FormControl;
   @Input() ripple: string;
   @Input('label') labelText = 'Choose one option...';
   @Input() height: string;
+  @HostListener('document:click') clickOutside(){
+    this.closeSelectfields();
+  }
   idBtn: string;
   mdlTextfield: MdlTextfield;
   mdlMenu: MdlMenu;
@@ -52,7 +56,7 @@ template:`
   }
 
   /**
-   * Close open selectfields. Used to have only one selectfield open at time
+   * Close open selectfields. Used to have only one selectfield open at time or when clicking outside
    */
   closeSelectfields(){
     const openSelects: NodeListOf<HTMLElement> =
@@ -61,16 +65,17 @@ template:`
   }
 
   /**
-   * Toggle state of clicked selectfield
+   * OnClick event: toggle state of selectfield
    */
-  onClickInput(){
+  onClick(){
     this.mdlMenu.toggle();
     this.closeSelectfields();
   }
 
   ngOnInit(){
     this.idBtn = ml.randomStr();
-    if (this.ripple === ''){
+    // if (this.ripple === ''){
+    if (ml.isDefined(this.ripple)){
       ml.setClass(this.mdlButton.host, 'mdl-js-ripple-effect', this.ren);
       ml.setClass(this.menuList, 'mdl-js-ripple-effect', this.ren);
     }

@@ -29,7 +29,7 @@ template:`
   constructor(private host: ElementRef){}
 
   deleteChip(): boolean {
-    this.host.nativeElement.remove();
+    this.host.nativeElement.parentNode.removeChild(this.host.nativeElement);
     this.action ? this.action() : console.log('Chip deleted. No further action defined.');
     return false;
   }

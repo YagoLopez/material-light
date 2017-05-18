@@ -33,10 +33,10 @@ template:`
         this.onLoading.emit(this.isLoading);
       }
       if (event instanceof NavigationError){
-        this.divLoader.nativeElement.remove();
+        this.divLoader.nativeElement.parentNode.removeChild(this.divLoader.nativeElement);
         window.alert(`Navigation error. Couldn't load route: ${event.url}`);
         throw Error(`MlContentLoader > Navigation Error > ${event.error}`);
-     }
+      }
     })
   }
 }
