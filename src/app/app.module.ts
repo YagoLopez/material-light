@@ -2,6 +2,7 @@
 //todo: hacer documentacion de api para cada componente
 //todo: instalar polyfill classList.js para svg e IE?
 //todo: probar a simplificar controles input usando ng-content (transclusion)
+//todo: sombra inferior en header
 //todo: suscribirse a los valores observables de los forms (usar valueChanges) para simplificar los controles
 //todo: drawer dragabble
 //todo: eventos drawer y obfuscator

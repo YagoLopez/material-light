@@ -11,9 +11,9 @@ but this library has the following features:
 - Fast
 - Light
 - Easy and fun to use
-- True library of componentes encapsulating typescipt code, CSS and HTML as atomic units
+- Library of true componentes encapsulating typescipt code, CSS and HTML as atomic units
 - Easy and quick form validation
-- Great performance on mobile UI interfaces.
+- Great performance on mobile apps.
 - Responsive content adaptable to desktop and mobile
 - Components available also as Angular Modules allowing Code-Splitting/Lazy-loading. This implies loading only the components needed at runtime
 - Ready for Ahead of Time Compilation (AOT)
@@ -45,7 +45,7 @@ Yago López:
 
 ## Insallation and Use
 
-- Run: `npm install YagoLopez/material-light --save-dev`
+- To install, run: `npm install YagoLopez/material-light --save-dev`
 - This project can be used with the **angular-cli** although not mandatory.
 - Copy `{project-folder}/node_modules/material-light/src/app/ml/` folder to your `/src/` folder
 - Copy `{project-folder}/node_modules/material-light/src/assets/` folder to your `/src/` folder
@@ -57,7 +57,7 @@ Yago López:
 
 ## Theming
 
-- Basisc theming can be achieved using Angular special selectors in the root component:
+Basisc theming can be achieved using Angular special selectors in the root component:
 
 ```CSS
 <style>
@@ -74,7 +74,7 @@ Yago López:
 </style>
 ```
 
-- For advanced theming, CSS selectors must be used. Inspect the DOM using developer tools. For example:
+For advanced theming, CSS selectors must be used. Inspect the DOM using developer tools. For example:
 
 ```CSS
 <style>
@@ -90,7 +90,7 @@ Yago López:
 </style>  
 ```
 
-## Runnin the demo
+## Running the demo
 
 - You can run the compiled demo pointing a web server to `{project-folder}/node_modules/material-light/dist/index.html`
 - If you want to compile the project, clone or download the repo, adjust the `basePath` in `app.module.ts` to your environment and run it with `ng serve`
