@@ -59,7 +59,7 @@ Yago López:
 
 - Basisc theming can be achieved using Angular special selectors in the root component:
 
-```
+```CSS
 <style>
   /* Header theme */
   :host /deep/ ml-header {
@@ -76,7 +76,7 @@ Yago López:
 
 - For advanced theming, CSS selectors must be used. Inspect the DOM using developer tools. For example:
 
-```
+```CSS
 <style>
   /* Button colored theme */
   :host /deep/ ml-button.mdl-button--raised.mdl-button--colored {
