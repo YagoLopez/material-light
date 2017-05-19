@@ -47,9 +47,10 @@ Yago López:
 
 - To install, run: `npm install YagoLopez/material-light --save-dev`
 - This project can be used with the **angular-cli** although not mandatory.
-- Copy `{project-folder}/node_modules/material-light/src/app/ml/` folder to your `/src/` folder
-- Copy `{project-folder}/node_modules/material-light/src/assets/` folder to your `/src/` folder
 - Include Material Icons from `{project-folder}/src/assets/fonts/mlIcons.css` in your `index.html`
+- To have AOT working you must execute the following steps:
+1. Copy `{project-folder}/node_modules/material-light/src/app/ml/` folder to your `/src/` folder
+2. Copy `{project-folder}/node_modules/material-light/src/assets/` folder to your `/src/` folder
 - Import the component modules from `{project-folder}/src/app/ml/components` in your own module. Component modules have `*Mod.ts` file name
 - For example, if you want to use `MlButton`, import `MlButtonMod.ts` in your module and place `<ml-button>my button</ml-button>` in your template
 - Use the components following the examples in the `{project-folder}/node_modules/material-light/src/app/pages` directory.
