@@ -1,17 +1,14 @@
-//todo: renderer2
-//todo: themes
-//todo: probar a simplificar controles input usando ng-content
-//todo: suscribirse a los valores observables de los forms (use valueChanges) para simplificar los controles
+//todo: reset button debe quitar errores de validacion en controles
+//todo: hacer documentacion de api para cada componente
+//todo: instalar polyfill classList.js para svg e IE?
+//todo: probar a simplificar controles input usando ng-content (transclusion)
+//todo: suscribirse a los valores observables de los forms (usar valueChanges) para simplificar los controles
 //todo: drawer dragabble
-//todo: actualizar a renderer2
 //todo: eventos drawer y obfuscator
 //todo: probar a eliminar atributos id en elementos 'label'. revisar docs angular
-//todo: probar a quitar "mdl-layout__container" de ml-layout => (cabcera+contenido) scrollable. hacer tests
 //todo: comprobar consola usando chrome remote debugging por usb en el movil
 //todo: ponerse en contacto con f7 para hacer otros componentes. ej: acordeon
-//todo: hacer documentacion de api para cada componente
 //todo: que se puedan usar diferentes cabeceras y menus laterales (<ml-header>) en cada pagina (usar named router-outlet?)
-//todo: hacer ML starter project
 //todo: habilitar webpack.config.js en angular-cli para poder usar local paths en router
 //todo: animaciones en transiciones de estado usando eventos de router
 // (ref: https://toddmotto.com/dynamic-page-titles-angular-2-router-events)

@@ -4,7 +4,10 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 @Component({
 template:`
 
-<style>.ico-aligned {vertical-align: middle; margin-top: -4px; padding-right: 5px}</style>
+<style>
+.ico-aligned {vertical-align: middle; margin-top: -4px; padding-right: 5px}
+:host /deep/ ml-button-input > label {width: 150px}
+</style>
 
 <h5>Text Controls</h5>
 
@@ -45,15 +48,16 @@ template:`
     <ml-error [validateControl]="textArea" validator="required">Required</ml-error>
     <ml-error [validateControl]="textArea" validator="minLength">Min length 2</ml-error>
   </ml-textfield-area>
-  <br><br>
+  <br>
   
-  <!-- submit button ----------------------------------------------------------------------------------------------- -->
+  <!-- Submit and reset btns --------------------------------------------------------------------------------------- -->
   
   <p><ml-button-input type="submit" [disabled]="textfieldForm.invalid" aspect="raised" ripple>
     Submit to console</ml-button-input></p>                      
-  <ml-button-input type="reset" aspect="raised" ripple>
-    Reset form</ml-button-input>  
-  <!-- /submit button ---------------------------------------------------------------------------------------------- -->
+  <p><ml-button-input type="reset" aspect="raised" ripple>
+    Reset form</ml-button-input></p>
+    
+  <!-- /Submit and reset btns -------------------------------------------------------------------------------------- -->
 
 </form>
 

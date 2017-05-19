@@ -1,5 +1,5 @@
 //todo: (global) probar a sacar factor comun en una factoria a los constructores para evitar repetir tanto codigo
-import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angular/core";
+import {Component, ElementRef, Input, Renderer2, ViewEncapsulation} from "@angular/core";
 import MdlProgress from "./mdlPprogressClass"
 import * as ml from "../../lib/ml_lib";
 
@@ -17,7 +17,7 @@ export class MlProgressbar {
   @Input('buffer') bufferValue: string; // BUFFER must be greater than PROGRESS to be visible
   @Input() indeterminate: string;
   mdlProgress: MdlProgress;
-  constructor(private host: ElementRef, private ren: Renderer){}
+  constructor(private host: ElementRef, private ren: Renderer2){}
 
   setProgress(value: string){
     this.progressValue = value;

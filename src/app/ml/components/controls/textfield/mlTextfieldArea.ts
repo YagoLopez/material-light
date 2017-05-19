@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation, ElementRef, Renderer, Input, forwardRef,
+import {Component, ViewEncapsulation, ElementRef, Renderer2, Input, forwardRef,
   ChangeDetectionStrategy} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import MdlTextfield from "./mdlTextfieldClass";
@@ -37,7 +37,7 @@ export class MlTextfieldArea implements ControlValueAccessor{
   private onTouch = () => {};
   private onChange = (_: any) => {};
 
-  constructor (private host: ElementRef, private ren: Renderer){}
+  constructor (private host: ElementRef, private ren: Renderer2){}
 
   checkValidity(){
     if (this.formControl && this.formControl.invalid){

@@ -1,6 +1,6 @@
 //todo: (general) control de excepciones en angular 2
 //todo: usar enums
-import {Component, ElementRef, Input, Renderer, ViewEncapsulation} from "@angular/core";
+import {Component, ElementRef, Input, Renderer2, ViewEncapsulation} from "@angular/core";
 import MdlButton from "./mdlButtonClass";
 import * as ml from "../../../lib/ml_lib";
 
@@ -22,7 +22,7 @@ template: '<ng-content></ng-content>'
 
   @Input() aspect: string;
   @Input() variant: string;
-  constructor(public host: ElementRef, private ren: Renderer){}
+  constructor(public host: ElementRef, private ren: Renderer2){}
 
   //todo: borrar
   // checkVariantInput(arg: any): arg is string {

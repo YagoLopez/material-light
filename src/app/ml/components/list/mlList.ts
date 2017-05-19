@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation, ElementRef, Renderer, ViewChild, Input, Directive} from '@angular/core';
+import {Component, ViewEncapsulation, ElementRef, Renderer2, ViewChild, Input, Directive} from '@angular/core';
 import * as ml from "../../lib/ml_lib";
 
 @Component({
@@ -10,7 +10,7 @@ template: '<ul #ulElement class="mdl-list"><ng-content></ng-content></ul>'
 }) export class MlList {
 
   @ViewChild('ulElement') ulElement: ElementRef;
-  constructor(private host: ElementRef, private ren: Renderer){}
+  constructor(private host: ElementRef, private ren: Renderer2){}
 
   ngOnInit(){
     const hostCssClasses: string = this.host.nativeElement.className;
@@ -25,7 +25,7 @@ template: '<li class="mdl-list__item" #liElement><ng-content></ng-content></li>'
 
   @ViewChild('liElement') liElement: ElementRef;
   @Input() lines: string = '';
-  constructor(private ren: Renderer){}
+  constructor(private ren: Renderer2){}
 
   ngOnInit(){
     (this.lines === '2') && ml.setClass(this.liElement, 'mdl-list__item--two-line', this.ren);

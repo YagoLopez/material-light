@@ -1,4 +1,4 @@
-import {Component, Directive, ElementRef, Input, Renderer, ViewEncapsulation, ViewChild} from "@angular/core";
+import {Component, Directive, ElementRef, Input, Renderer2, ViewEncapsulation, ViewChild} from "@angular/core";
 import * as ml from "../../lib/ml_lib";
 
 @Component({
@@ -30,7 +30,7 @@ template:`
   @Input() shadow: string;
   @Input() img: string;
   @ViewChild('cardTitle') cardTitle: ElementRef;
-  constructor(private host: ElementRef, private ren: Renderer){}
+  constructor(private host: ElementRef, private ren: Renderer2){}
 
   ngOnInit(){
       this.cardTitle.nativeElement.style.background = `url('${this.img}')`;

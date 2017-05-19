@@ -1,15 +1,15 @@
 //todo: hacer una funcion factoria (mdlConstructor) que elimine repeticion de codigo en los constructores
 //todo: convertir esto en modulo typscript para poder importar solo las funciones requeridas, no todas a la vez
-import {Renderer, ElementRef} from "@angular/core";
+import {Renderer2, ElementRef} from "@angular/core";
 
 export function isDefined(value: any): boolean { return typeof value !== 'undefined' }
 
-export function setClass(elementRef: ElementRef, className: string, renderer: Renderer): void {
-  renderer.setElementClass(elementRef.nativeElement, className, true)
+export function setClass(elementRef: ElementRef, className: string, renderer: Renderer2): void {
+  renderer.addClass(elementRef.nativeElement, className)
 }
 
-export function setAttribute(elementRef: ElementRef, attrName: string, attrValue: string, renderer: Renderer): void {
-  renderer.setElementAttribute(elementRef.nativeElement, attrName, attrValue)
+export function setAttribute(elementRef: ElementRef, attrName: string, attrValue: string, renderer: Renderer2): void {
+  renderer.setAttribute(elementRef.nativeElement, attrName, attrValue)
 }
 
 export function randomStr(): string{ return Math.random().toString(36).substr(2, 5) }

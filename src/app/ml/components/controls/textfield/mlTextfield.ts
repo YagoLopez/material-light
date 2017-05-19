@@ -8,7 +8,7 @@
 //es posible que se puedan sustituir por logica de templates en component
 //todo: intentar simplificar tomando como referencia MlSelectfield, aunque igual no funcionan template forms
 
-import {Component, ViewEncapsulation, ElementRef, Renderer, Input, forwardRef, ChangeDetectionStrategy, ViewChild}
+import {Component, ViewEncapsulation, ElementRef, Renderer2, Input, forwardRef, ChangeDetectionStrategy, ViewChild}
   from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import MdlTextfield from "./mdlTextfieldClass";
@@ -50,7 +50,7 @@ template:`
   public showError: boolean;
   private onTouch = () => {};
   private onChange = (_: any) => {};
-  constructor(private host: ElementRef, private ren: Renderer){}
+  constructor(private host: ElementRef, private ren: Renderer2){}
 
   checkValidity(){
     if (this.formControl && this.formControl.invalid){

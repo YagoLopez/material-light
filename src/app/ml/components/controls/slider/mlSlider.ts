@@ -1,4 +1,4 @@
-import {Component, ElementRef, Renderer, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
+import {Component, ElementRef, Renderer2, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
 import MdlSlider from "./mdlSliderClass";
 import * as ml from "../../../lib/ml_lib";
 
@@ -15,7 +15,7 @@ export class MlSlider{
 
   private mdlSlider: MdlSlider;
 
-  constructor(private host: ElementRef, private ren: Renderer){}
+  constructor(private host: ElementRef, private ren: Renderer2){}
 
   change(value: number): void {
     this.mdlSlider.change(value)

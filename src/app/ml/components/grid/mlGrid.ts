@@ -1,4 +1,4 @@
-import {Component, Renderer, ElementRef, Input, ViewEncapsulation} from '@angular/core';
+import {Component, Renderer2, ElementRef, Input, ViewEncapsulation} from '@angular/core';
 import * as ml from "../../lib/ml_lib";
 
 @Component({
@@ -16,7 +16,7 @@ template:'<ng-content></ng-content>'
 export class MlGrid {
 
   @Input('no-space') noSpace: string;
-  constructor (private host: ElementRef, private ren: Renderer){}
+  constructor (private host: ElementRef, private ren: Renderer2){}
 
   ngOnInit(){
     ml.isDefined(this.noSpace) && ml.setClass(this.host, 'mdl-grid--no-spacing', this.ren);
@@ -50,7 +50,7 @@ export class MlGridCell{
   @Input('tablet-width') tabletWidth: string;
   @Input('desktop-width') desktopWidth: string;
 
-  constructor (private host: ElementRef, private ren: Renderer){}
+  constructor (private host: ElementRef, private ren: Renderer2){}
 
   ngOnInit(){
     const widthClass = 'mdl-cell--'+this.width+'-col';

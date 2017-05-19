@@ -1,7 +1,7 @@
 //todo: (general) usar esta nomenclatura para componentes (Ej: MlTextfieldCmp)
 // NOTE: this component ("MlSelectfield") is based on "MlButton", "MdlMenu" and "MdlTextfield"
 // For this reason it uses files from those components
-import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation, forwardRef,
+import {Component, ElementRef, ViewChild, Input, Renderer2, ViewEncapsulation, forwardRef,
   ChangeDetectionStrategy, HostListener} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import {MlButton} from "../button/mlButton";
@@ -46,7 +46,7 @@ template:`
   mdlTextfield: MdlTextfield;
   mdlMenu: MdlMenu;
 
-  constructor(private ren: Renderer, private host: ElementRef){}
+  constructor(private ren: Renderer2, private host: ElementRef){}
 
   onItemSelected($event){
     this.label.nativeElement.textContent = '';
@@ -110,7 +110,7 @@ export class MlSelectfieldItem {
   @ViewChild('selectfieldItem') selectfieldItem: ElementRef;
   @Input('with-divider') divider: string;
   @Input() disabled: string;
-  constructor(private ren: Renderer){}
+  constructor(private ren: Renderer2){}
 
   ngOnInit() {
     ml.isDefined(this.divider) && ml.setClass(this.selectfieldItem, 'mdl-menu__item--full-bleed-divider', this.ren);

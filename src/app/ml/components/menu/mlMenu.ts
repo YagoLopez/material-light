@@ -1,4 +1,4 @@
-import {Component, ElementRef, ViewChild, Input, Renderer, ViewEncapsulation} from "@angular/core";
+import {Component, ElementRef, ViewChild, Input, Renderer2, ViewEncapsulation} from "@angular/core";
 import {MlButton} from "../controls/button/mlButton";
 import MdlMenu from "./mdlMenuClass";
 import * as ml from "../../lib/ml_lib";
@@ -32,7 +32,7 @@ template:`
     TOP_RIGHT: 'mdl-menu--top-right',
   };
 
-  constructor(private ren: Renderer){}
+  constructor(private ren: Renderer2){}
 
   ngOnInit(){
     !this.id && (this.id = ml.randomStr());
@@ -86,7 +86,7 @@ export class MlMenuItem {
   @Input('with-divider') divider: string;
   @Input() disabled: string;
 
-  constructor(private ren: Renderer){}
+  constructor(private ren: Renderer2){}
 
   ngOnInit() {
     ml.isDefined(this.divider) && ml.setClass(this.menuItem, 'mdl-menu__item--full-bleed-divider', this.ren);

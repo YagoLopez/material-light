@@ -2,7 +2,7 @@
 
 <h1><p align="center">Material Light</p></h1>
 
-**Material Designt UI components for Angular (versions 2 +, 4 +)**
+**Material Designt UI components for Angular (versions 4 +)**
 
 There are other adaptations of Material Design Lite and other UI frameworks like the official Material Design 2, 
 but this library has the following features:

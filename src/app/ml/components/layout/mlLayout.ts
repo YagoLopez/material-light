@@ -2,10 +2,11 @@
 //todo: poder definir colores, temas, fuentes, etc. Consultar colores en mlLayout.css
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
 //todo: implementar MlLayout usando slots
-import {Component, ElementRef, Renderer, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy}
+import {Component, ElementRef, Renderer2, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy}
   from "@angular/core";
 import MdlLayout from "./mdlLayoutClass";
 import * as ml from "../../lib/ml_lib";
+
 
 @Component({
 selector: 'ml-layout',
@@ -21,7 +22,7 @@ export class MlLayout {
   @Input() tabs: string;
   @Input() background: string;
   mdlLayout: MdlLayout;
-  constructor(private host: ElementRef, private ren: Renderer){}
+  constructor(private host: ElementRef, private ren: Renderer2){}
 
   hideDrawer(){
     this.mdlLayout.drawer_.classList.remove('is-visible');
@@ -48,7 +49,7 @@ export class MlHeader {
   @Input() waterfall: string;
   @Input() transparent: string;
   @Input() seamed: string;
-  constructor(public host: ElementRef, private ren: Renderer){}
+  constructor(public host: ElementRef, private ren: Renderer2){}
 
   ngOnInit() {
     ml.isDefined(this.seamed) && ml.setClass(this.host, 'mdl-layout__header--seamed', this.ren);
@@ -112,7 +113,7 @@ template: '<ng-content></ng-content>'
 export class MlDrawer {
 
   @Input() fixed: string;
-  constructor(private host: ElementRef, private ren: Renderer){}
+  constructor(private host: ElementRef, private ren: Renderer2){}
 
   ngOnInit() {
     const mlLayout: HTMLElement = document.querySelector('ml-layout') as HTMLElement;
@@ -137,7 +138,7 @@ host: {class: 'mdl-layout__content'},
 template: '<ng-content></ng-content>'})
 export class MlContent {
 
-  constructor(private host: ElementRef, private ren: Renderer){}
+  constructor(private host: ElementRef, private ren: Renderer2){}
 
   isHeaderScrollable(): boolean {
     return document.querySelector('ml-header[waterfall]') !== null;

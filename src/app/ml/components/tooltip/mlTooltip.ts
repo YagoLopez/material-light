@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, Renderer, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, Renderer2, ViewChild} from '@angular/core';
 import MdlTooltip from "./mdlTooltipClass";
 import * as ml from "../../lib/ml_lib";
 
@@ -14,7 +14,7 @@ export class MlTooltip {
   @Input() for: string;
   @Input() position: string;  // todo: revisar valores de las posiciones: [right, left, top, bottom]
   @Input() large: string;
-  constructor(private ren: Renderer){}
+  constructor(private ren: Renderer2){}
 
   ngAfterViewInit(){
     this.position && ( this.position = this.position.toLowerCase() );

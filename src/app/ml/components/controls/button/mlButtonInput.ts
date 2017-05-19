@@ -1,7 +1,7 @@
 // NOTE: for maximum compatibility between browsers, when using html5 controls it is recommended to define aditional
 // validators. For example, when using <input type="date"> it is recommended to defined a validator with a regexp
 // validating the date string
-import {Component, ElementRef, Input, Renderer, ViewChild, ChangeDetectionStrategy,
+import {Component, ElementRef, Input, Renderer2, ViewChild, ChangeDetectionStrategy,
   HostBinding} from "@angular/core";
 import MdlButton from "./mdlButtonClass";
 import * as ml from "../../../lib/ml_lib";
@@ -37,7 +37,7 @@ template:`
     return null;
   }
   showError: boolean;
-  constructor(private ren: Renderer){}
+  constructor(private ren: Renderer2){}
 
   ngOnInit(){
     // @Input "type" ---------------------------------------------------------------------------------------------------

@@ -1,17 +1,17 @@
 //todo: repensar lo de los atributos sin valor especifico de cara al comportamiento de angular en data-binding:
 //todo: [attributo]="valor". Si no hay valor puede que haya problemas
-import {Component, ElementRef, Input, Renderer, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
+import {Component, ElementRef, Input, Renderer2, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
 import MdlSpinner from "./mdlSpinnerClass";
 import * as ml from "../../lib/ml_lib";
 
 @Component({
 selector: 'ml-spinner',
+moduleId: module.id,
 styleUrls: ['./mlSpinner.css'],
 encapsulation: ViewEncapsulation.None,
 changeDetection: ChangeDetectionStrategy.OnPush,
 host: {class: 'mdl-spinner is-active'},
-template:``,
-moduleId: module.id
+template:''
 }) export class MlSpinner {
 
   @Input('single-color') singleColor: string;
@@ -19,7 +19,7 @@ moduleId: module.id
   @Input('inactive') inactive: string;
   mdlSpinner: MdlSpinner;
 
-  constructor(private host: ElementRef, private ren: Renderer){}
+  constructor(private host: ElementRef, private ren: Renderer2){}
   start(){ this.mdlSpinner.start() }
   stop(){ this.mdlSpinner.stop() }
 

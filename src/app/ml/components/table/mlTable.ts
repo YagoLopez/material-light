@@ -1,4 +1,4 @@
-import {Component, Renderer, ElementRef, ViewEncapsulation, Directive, Input} from '@angular/core';
+import {Component, Renderer2, ElementRef, ViewEncapsulation, Directive, Input} from '@angular/core';
 import * as ml from '../../lib/ml_lib'
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -16,7 +16,7 @@ export class MlTable {
   @Input() selectable: string;
   @Input() order: string;
 
-  constructor(private host: ElementRef, private ren: Renderer) {}
+  constructor(private host: ElementRef, private ren: Renderer2) {}
 
   private shadowClassName(shadowValue: string): string {
     return `mdl-shadow--${shadowValue}dp`;

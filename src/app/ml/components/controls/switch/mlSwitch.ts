@@ -1,5 +1,5 @@
 //todo: en vez de renderer usar @HostBinding(class.classname) para poner clases en el host de una directiva
-import {Component, ViewChild, ElementRef, Input, ViewEncapsulation, forwardRef, Renderer} from "@angular/core";
+import {Component, ViewChild, ElementRef, Input, ViewEncapsulation, forwardRef, Renderer2} from "@angular/core";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import MdlSwitch from "./mdlSwitchClass";
 
@@ -31,7 +31,7 @@ template:`
   mdlSwitch: MdlSwitch;
   _model: any;
 
-  constructor(private host: ElementRef, private ren: Renderer){}
+  constructor(private host: ElementRef, private ren: Renderer2){}
 
   ngOnInit() {
     this.mdlSwitch = new MdlSwitch(this.label.nativeElement);

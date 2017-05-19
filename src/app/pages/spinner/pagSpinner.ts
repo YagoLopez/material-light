@@ -1,6 +1,7 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild, ViewEncapsulation} from '@angular/core';
 
 @Component({
+encapsulation: ViewEncapsulation.None,
 template:`
 <h5>Spinner</h5>
 
