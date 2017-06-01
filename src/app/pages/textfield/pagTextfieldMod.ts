@@ -10,6 +10,5 @@ import {ViewSourceMod} from "../view-source/viewSourceMod";
 import {PagTextfield} from "./pagTextfield";
 @NgModule({
 imports: [MlIconMod, MlValidationErrorMod, MlButtonMod, DebugFormMod, FormsModule, ReactiveFormsModule, MlTextfieldMod,
-ViewSourceMod, RouterModule.forChild([{path: '', component: PagTextfield}])],
-declarations: [PagTextfield]})
+ViewSourceMod, RouterModule.forChild([{path: '', component: PagTextfield}])], declarations: [PagTextfield]})
 export class PagTextfieldMod{}

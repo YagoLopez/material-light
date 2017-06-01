@@ -25,7 +25,7 @@ but this library has the following features:
 The main goal was to achieve minimalism and performance, not to encompass all posible kind of options or UI components (this is the philosophy of
 Material Design Light too). You can always add other components from other sources.
 
-If you find this project useful and are going to use it, please give a star in the repo and credits to the author 
+If you find this project useful and are going to use it, please **give a star in the repo** and credits to the author 
 and to <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>
 
 Terms of use under <a href="LICENSE.txt">MIT</a> license.
@@ -40,17 +40,21 @@ Yago López:
 ## Demo
 
 <!-- - <a href="http://yagolopez.github.io/material-light/iframe/iframe.html" target="_blank">Desktop PC</a> -->
-- <a href="http://mobt.me/Xf27" target="_blank">Mobile Simulator (For Desktop)</a>
-- <a href="https://yagolopez.github.io/material-light/dist/index.html" target="_blank">Full Screen (For Mobile)</a>
+- <a href="http://mobt.me/Xf27" target="_blank">Mobile Simulator (For Desktop)</a>.
+- <a href="https://yagolopez.github.io/material-light/dist" target="_blank">Full Screen (For Mobile)</a>
+
+** Warning **:
+When cross domain content is used in iframes some javascript features are disabled for
+security reasons (i. e. alert dialogs). Run the desktop version for full features.
 
 ## Insallation and Use
 
-- To install, run: `npm install YagoLopez/material-light --save-dev`
+- To install, run: `npm install YagoLopez/material-light --save`
 - This project can be used with the **angular-cli** although not mandatory.
 - Include Material Icons from `{project-folder}/src/assets/fonts/mlIcons.css` in your `index.html`
 - To have AOT working you must execute the following steps:
-1. Copy `{project-folder}/node_modules/material-light/src/app/ml/` folder to your `/src/` folder
-2. Copy `{project-folder}/node_modules/material-light/src/assets/` folder to your `/src/` folder
+  - Copy `{project-folder}/node_modules/material-light/src/app/ml/` folder to your `/src/app` folder
+  - Copy `{project-folder}/node_modules/material-light/src/assets/` folder to your `/src/` folder
 - Import the component modules from `{project-folder}/src/app/ml/components` in your own module. Component modules have `*Mod.ts` file name
 - For example, if you want to use `MlButton`, import `MlButtonMod.ts` in your module and place `<ml-button>my button</ml-button>` in your template
 - Use the components following the examples in the `{project-folder}/node_modules/material-light/src/app/pages` directory.
@@ -93,25 +97,21 @@ For advanced theming, CSS selectors must be used. Inspect the DOM using develope
 
 ## Running the demo
 
-- You can run the compiled demo pointing a web server to `{project-folder}/node_modules/material-light/dist/index.html`
-- If you want to compile the project, clone or download the repo, adjust the `basePath` in `app.module.ts` to your environment and run it with `ng serve`
+You can run the compiled demo pointing a web server to `{project-folder}/node_modules/material-light/dist/index.html`
+If you want to compile the project:
+- Clone or download the repo
+- Inside the project folder run `npm install`
+- Adjust the `basePath` in `app.module.ts` to your environment and run it with `ng serve`
 
 ## Testing
 
 <div>Tests with the colaboration of:</div>
 <a href="https://www.browserstack.com/" target="_blank"><img src="browserstack-logo.png" height="90px"></a>
 
-## Used for running this demo:
-
-- Angular latest versions
-- Angular Command Line (angular-cli)
-- Typescript latest versions
-- Webpack for production builds
-- SystemJS as module loader during development time
-- Node/Npm latest versions
-
 ## Disclaimers:
 
 - This project is based on <a href="http://getmdl.io" target="_blank">Material Design Lite from Google</a>. It is an adaptation of MDL JavaScript components to Angular components with the permission of the MDL team.
 - Material Design is a Google's registered trade mark probably.
 - This is an open-source project without commercial or profit intention.
+
+<p><a href="#">Back to top &uparrow;</a>

@@ -1,5 +1,5 @@
 import {Component, Directive, ElementRef, Input, Renderer2, ViewEncapsulation, ViewChild} from "@angular/core";
-import * as ml from "../../lib/ml_lib";
+import * as ml from "../../lib/mlLib";
 
 @Component({
 selector: 'ml-card',
@@ -10,7 +10,7 @@ host: {class: 'mdl-card'},
 template:`
 
 <div #cardTitle class="mdl-card__title mdl-card--expand">
-  <h2 class="mdl-card__title-text">
+  <h2 #cardTitleHeader class="mdl-card__title-text">
     <ng-content select="ml-card-title"></ng-content>
   </h2>
 </div>
@@ -30,17 +30,27 @@ template:`
   @Input() shadow: string;
   @Input() img: string;
   @ViewChild('cardTitle') cardTitle: ElementRef;
+  @ViewChild('cardTitleHeader') cardTitleHeader: ElementRef;
   constructor(private host: ElementRef, private ren: Renderer2){}
 
   ngOnInit(){
-      this.cardTitle.nativeElement.style.background = `url('${this.img}')`;
+    // If there is no <ml-card-title> content (cardTitleHeader), delete it to avoid blank space in <ml-card>
+    if(this.cardTitleHeader.nativeElement.children.length == 0){
+      this.host.nativeElement.removeChild(this.cardTitle.nativeElement);
+    }
+    if(this.cardTitle){
+      this.img && (this.cardTitle.nativeElement.style.background = `url('${this.img}')`);
       this.cardTitle.nativeElement.style.color= "#fff";
       this.cardTitle.nativeElement.style.backgroundSize = "cover";
-
-      if (this.shadow){
-        this.shadow = `mdl-shadow--${this.shadow}dp`;
-        ml.setClass(this.host, this.shadow, this.ren);
-     }
+    }
+    if (this.shadow){
+      if(isNaN(+this.shadow) ){
+        console.warn('<ml-card> -> Attribute [shadow] must be a number: ', this.shadow);
+        return;
+      }
+      this.shadow = `mdl-shadow--${this.shadow}dp`;
+      ml.setClass(this.host, this.shadow, this.ren);
+    }
   }
 }
 @Directive({selector: 'ml-card-title'}) export class MlCardTitle{}

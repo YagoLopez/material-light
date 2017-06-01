@@ -829,7 +829,7 @@ body{
 ::-webkit-scrollbar-corner {background-color: #999;}
 ::-webkit-resizer {background-color: #666;}
 
-/* RESPONSIVE MAIN CONTENT ------------------------------------------------------------- */
+/* RESPONSIVE MAIN CONTENT ----------------------------------------------------------- */
 
 @media (min-width: 700px){
   ml-content{

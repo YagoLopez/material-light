@@ -5,13 +5,12 @@
 import {Component, ElementRef, Renderer2, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy}
   from "@angular/core";
 import MdlLayout from "./mdlLayoutClass";
-import * as ml from "../../lib/ml_lib";
-
+import * as ml from "../../lib/mlLib";
 
 @Component({
 selector: 'ml-layout',
 changeDetection: ChangeDetectionStrategy.OnPush,
-styleUrls: ['./mlLayout.css', '../ripple/mlRipple.css'],
+styleUrls: ['mlLayout.css', '../ripple/mlRipple.css'],
 host: {class: 'mdl-layout mdl-layout__container'},
 encapsulation: ViewEncapsulation.None,
 template: '<ng-content></ng-content>',
@@ -149,7 +148,7 @@ export class MlContent {
   }
 
   ngAfterViewInit(){
-    // If the header has tabs and is scrollable and the navigator is IE, it is needed to repaint it
+    // If the header has tabs and is scrollable, and the navigator is IE, it is needed to repaint it
     // This hack is due to IE repaints bad the left header-tab button after scrolling
     const mlHeaderTabs: HTMLElement = document.querySelector('ml-header-tabs') as HTMLElement;
     if(this.isHeaderScrollable() && this.isIE()){

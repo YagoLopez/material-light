@@ -1,14 +1,14 @@
-body{background: lightskyblue; color: white}
 .loading-text{
+  color: white;
   position: absolute;
   margin: auto;
   left: 0;
-  right: 0;
   top: 37%;
-  bottom: 0;
+  width: 100%;
   text-align: center;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 17px}
+  font-family: "Arial", sans-serif;
+  letter-spacing: 1px;
+  font-variant: small-caps}
 .loading-logo {
   position: absolute;
   margin: auto;

@@ -12,13 +12,14 @@ export function setAttribute(elementRef: ElementRef, attrName: string, attrValue
   renderer.setAttribute(elementRef.nativeElement, attrName, attrValue)
 }
 
-export function randomStr(): string{ return Math.random().toString(36).substr(2, 5) }
+export function randomStr(): string { return Math.random().toString(36).substr(2, 5) }
 
 export function isSubstring(subStr: string, bigStr: string): boolean {
-  if (bigStr)
+  if (bigStr){
     return bigStr.indexOf(subStr) > -1;
-  else
+  } else {
     return false;
+  }
 }
 
 export function isAttributeValid(attribute: string, validValues: string[]): boolean {

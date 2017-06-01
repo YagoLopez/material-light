@@ -15,7 +15,8 @@ template:`
   .active-route {background: darkgrey; color: white !important}
   .drawer-title {color: white; text-align: center}
   .drawer-img {width: 25%; text-align: center; margin: 30px auto auto; display: block}
-  /*:host /deep/ .my-theme {background: cornflowerblue; color: darkblue}*/
+  /* for future theming feature */
+  /* :host /deep/ .my-theme {background: cornflowerblue; color: darkblue} */
 </style>
 
 <ml-layout> 

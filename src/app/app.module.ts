@@ -1,3 +1,8 @@
+//todo: poner los estilos "loader" en index.html para que no haya flickering extraño en logo y texto
+//todo: arreglar lo del router y las tabs (usar named routes?)
+//todo: aplicar zone.runOutsideAngular() a los construcores new Mdl*() y ver si se reduce la deteccion de cambios
+//todo: relativo a lo anterior, probar a hacer esto de forma centralizada en el constructor de MdlElement
+//todo: probar a quitar './' en @Component.styleUrls
 //todo: reset button debe quitar errores de validacion en controles
 //todo: hacer documentacion de api para cada componente
 //todo: instalar polyfill classList.js para svg e IE?
@@ -30,12 +35,12 @@ import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {MlDemoApp} from "./app.layout";
 
-function getUrlParameter(name) {
+const getUrlParameter = (name: string) => {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
   let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
   let results = regex.exec(location.search);
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-}
+};
 
 // Absolute paths for Webpack
 let basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
