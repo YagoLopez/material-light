@@ -18,7 +18,7 @@ but this library has the following features:
 - Components available also as Angular Modules allowing Code-Splitting/Lazy-loading. This implies loading only the components needed at runtime
 - Ready for Ahead of Time Compilation (AOT)
 - Tested in main desktop/mobile browsers: Chrome (Android, IOS, desktop), FF, Edge, IE, Opera. <a href="https://angular.io/docs/ts/latest/guide/browser-support.html" target="_blank">(Browsers supported)</a>
-- No dependencies of other libraries like JQuery or Bootstrap.
+- No dependencies from other libraries like JQuery or Bootstrap.
 
 ## Objective
 
@@ -39,8 +39,10 @@ Yago López:
 
 ## Demo
 
-<!-- - <a href="http://yagolopez.github.io/material-light/iframe/iframe.html" target="_blank">Desktop PC</a> -->
 - <a href="http://mobt.me/Xf27" target="_blank">Mobile Simulator (For Desktop)</a>.
+<h4 style="color: red">Warning:</h4> Content in external iframes may have javascript restrictions for 
+security reasons (i. e. alert dialogs). Run the full screen version for unrestricted features.
+
 - <a href="https://yagolopez.github.io/material-light/dist" target="_blank">Full Screen (For Mobile)</a>
 
 ** Warning **:
@@ -114,4 +116,4 @@ If you want to compile the project:
 - Material Design is a Google's registered trade mark probably.
 - This is an open-source project without commercial or profit intention.
 
-<p><a href="#">Back to top &uparrow;</a>
+<p><a href="#">Back to top</a>

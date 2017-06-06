@@ -33,6 +33,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {MlPageLoaderMod} from "./ml/components/loader/mlContentLoaderMod";
 import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
+import {YagoFullscreenMod} from "./ml/lib/fullscreen/yagoFullscreenMod";
 import {MlDemoApp} from "./app.layout";
 
 const getUrlParameter = (name: string) => {
@@ -78,7 +79,7 @@ const APP_ROUTES: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, MlPageLoaderMod, MlLayoutMod, MlMenuMod,
+  imports: [BrowserModule, MlPageLoaderMod, MlLayoutMod, MlMenuMod, YagoFullscreenMod,
     RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
   declarations: [MlDemoApp], bootstrap: [MlDemoApp]
 })

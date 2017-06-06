@@ -4,8 +4,8 @@ import {Component} from '@angular/core';
 template:`
 
 <style>
-ml-card {width: 100%; height: 300px}
-ml-menu {color: white}
+  ml-card {width: 100%; height: 300px}
+  ml-menu {color: white}
 </style>
 
 <h5>Card</h5>

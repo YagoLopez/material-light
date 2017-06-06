@@ -6,7 +6,7 @@ import {Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationErro
 @Component({
 selector: 'ml-content-loader',
 template:`
-<div #divLoader *ngIf="isLoading" style="position:absolute;width:95%;top:40%;text-align:center">
+<div #divLoader *ngIf="isLoading" style="position:absolute;width:95%;top:40%;text-align:center; z-index: 1000;">
 <ml-spinner *ngIf="spinner === ''" single-color></ml-spinner>
 <div><ng-content></ng-content></div>
 </div>
