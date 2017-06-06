@@ -39,7 +39,7 @@ Yago López:
 
 ## Demo
 
-- <a href="http://mobt.me/Xf27" target="_blank">Mobile Simulator (For Desktop)</a>. <b>>Warning:</b> Content in 
+- <a href="http://mobt.me/Xf27" target="_blank">Mobile Simulator (For Desktop)</a>. <b>Warning:</b> Content in 
 external iframes may have javascript restrictions for security reasons (i. e. alert dialogs). Run the full screen 
 version for unrestricted features.
 - <a href="https://yagolopez.github.io/material-light/dist" target="_blank">Full Screen (For Mobile)</a>
