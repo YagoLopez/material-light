@@ -4,22 +4,16 @@ import {Component} from '@angular/core';
 @Component({
 selector: 'yago-fullscreen',
 template: `
-
 <style>
-  .cyan {color: cyan}
-  /*
-  html:-moz-full-screen {background: navy}
-  html:-webkit-full-screen {background: navy}
-  html:-ms-fullscreen {background: navy; width: 100% !* needed to center contents in IE *! }
-  html:fullscreen {background: navy}
-  */
+.cyan {color: cyan}
+/*html:-moz-full-screen {background: navy}*/
+/*html:-webkit-full-screen {background: navy}*/
+/*html:-ms-fullscreen {background: navy; width: 100% !* needed to center contents in IE *! }*/
+/*html:fullscreen {background: navy}*/
 </style>
-
 <i (click)="toggleFullScreen()" class="material-icons" style="vertical-align: text-top; cursor: pointer">settings_overscan</i>
-
 `//template
-})
-export class YagoFullscreenCmp {
+}) export class YagoFullscreenCmp {
 
   goFullScreen(): void {
     if(!this.isFullScreenAvailable()){
@@ -59,14 +53,24 @@ export class YagoFullscreenCmp {
   }
 
   toggleFullScreen(): void {
-    document.webkitIsFullScreen ? this.exitFullScreen() : this.goFullScreen();
-    (document as any).mozIsFullScreen ? this.exitFullScreen() : this.goFullScreen();
-    (document as any).msIsFullScreen ? this.exitFullScreen() : this.goFullScreen();
+    const docElm: any = document.documentElement;
+    if (docElm.msRequestFullscreen) {
+      (document as any).msFullscreenElement ? this.exitFullScreen() : this.goFullScreen();
+    }
+    else if (docElm.mozRequestFullScreen) {
+      (document as any).mozIsFullScreen ? this.exitFullScreen() : this.goFullScreen();
+    }
+    else if (docElm.webkitRequestFullScreen) {
+      document.webkitIsFullScreen ? this.exitFullScreen() : this.goFullScreen();
+    } else {
+      console.warn('toggleFullScreen(): operation not supported by browser');
+    }
   }
 
   isFullScreenAvailable(): boolean {
     return document.fullscreenEnabled ||
-      (document as any).mozFullScreenEnabled ||
-      document.documentElement.webkitRequestFullScreen;
+          (document as any).mozFullScreenEnabled ||
+          (document as any).msFullscreenEnabled ||
+           document.documentElement.webkitRequestFullScreen;
   }
 }
