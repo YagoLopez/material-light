@@ -68,9 +68,7 @@ template: `
   }
 
   isFullScreenAvailable(): boolean {
-    return document.fullscreenEnabled ||
-          (document as any).mozFullScreenEnabled ||
-          (document as any).msFullscreenEnabled ||
-           document.documentElement.webkitRequestFullScreen;
+    return document.fullscreenEnabled || (document as any).mozFullScreenEnabled ||
+          (document as any).msFullscreenEnabled || document.documentElement.webkitRequestFullScreen;
   }
 }
