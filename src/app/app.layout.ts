@@ -1,4 +1,8 @@
-import {Component} from '@angular/core';
+//todo: cambiar el nombre ml-content-tabheader por ml-header-tab-content
+
+import {Component, ViewChild} from '@angular/core';
+import {MlLayout} from "./ml/components/layout/mlLayout";
+import {Router, NavigationStart} from "@angular/router";
 
 @Component({
 selector: 'ml-demo-app',
@@ -45,7 +49,7 @@ template:`
       </ml-menu>
     </ml-header-row>
     <ml-header-tabs>
-      <a header-tab href="#tab1" ripple active>Tab 1</a>
+      <a header-tab href="#tab1" active ripple>Tab 1</a>
       <a header-tab href="#tab2" ripple>Tab 2</a>
       <a header-tab href="#tab3" ripple>Tab 3</a>
       <a header-tab href="#tab4" ripple>Tab 4</a>
@@ -91,9 +95,7 @@ template:`
   
   <ml-content>
     <ml-content-loader spinner (onLoading)="onLoading($event)"></ml-content-loader>
-    <ml-content-tabheader id="tab1" active [hidden]="isLoading">
-      <router-outlet></router-outlet>
-    </ml-content-tabheader>
+    <ml-content-tabheader id="tab1" active><router-outlet></router-outlet></ml-content-tabheader>
     <ml-content-tabheader id="tab2"><ml-title>Empty tab 2. Back to tab 1</ml-title></ml-content-tabheader>
     <ml-content-tabheader id="tab3"><ml-title>Empty tab 3. Back to tab 1</ml-title></ml-content-tabheader>
     <ml-content-tabheader id="tab4"><ml-title>Empty tab 4. Back to tab 1</ml-title></ml-content-tabheader>
@@ -108,9 +110,49 @@ template:`
 `//template
 }) export class MlDemoApp {
 
+  @ViewChild(MlLayout) layout: MlLayout;
   isLoading = false;
+  constructor(private router: Router){}
 
-  onLoading($event){
+  ngOnInit(){
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.activateTab('tab1');
+      }
+    })
+  }
+
+  activateTab(idTab: string): void {
+    const tabsBar: HTMLElement = document.querySelector('ml-header-tabs') as HTMLElement;
+    const tabheaderContent: HTMLCollection = document.querySelectorAll('ml-content-tabheader') as HTMLCollection;
+    this.layout.mdlLayout.resetTabState_(tabsBar.children);
+    this.layout.mdlLayout.resetPanelState_(tabheaderContent);
+    const tabToActivate = this.getTab(idTab);
+    if(tabToActivate){
+      this.setTabActive(tabToActivate);
+      this.setTabContentActive(idTab);
+    }
+  }
+
+  getTab(href: string): HTMLElement | void {
+    const tabs: HTMLCollection = document.querySelectorAll('ml-header-tabs > *') as HTMLCollection;
+    const tabsArray = Array.from(tabs);
+    for( let i = 0; i < tabsArray.length; i++){
+      if( (tabsArray[i] as HTMLAnchorElement).hash === '#'+href){
+        return tabsArray[i] as HTMLElement;
+      }
+    }
+  }
+
+  setTabActive(tab: HTMLElement): void{
+    tab.classList.add('is-active');
+  }
+
+  setTabContentActive(id: string): void {
+    (document.getElementById(id) as HTMLElement).classList.add('is-active');
+  }
+
+  onLoading($event: boolean){
     this.isLoading = $event;
   }
 

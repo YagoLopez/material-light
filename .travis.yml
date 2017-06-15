@@ -6,5 +6,9 @@ node_js:
 install:
   - npm install
 
+cache:
+  directories:
+    - "node_modules"
+
 script:
-  - npm build_prod_aot
+  - ng build

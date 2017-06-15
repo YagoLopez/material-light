@@ -1,7 +1,10 @@
 import MdlElement from "../element/mdl_element";
 
 export default class MdlLayout extends MdlElement{
+  header_: HTMLElement;
   drawer_: HTMLElement;
+  content_: HTMLElement;
+  tabBar_: HTMLElement;
   obfuscator_: HTMLElement;
   Keycodes_: Object;
   Mode_: Object;
@@ -212,6 +215,7 @@ MdlLayout.prototype.init = function () {
         }
     }
     /modifications */
+    //todo: usar querySelector()
     this.header_ = this.element_.getElementsByTagName('ml-header')[0];
     this.drawer_ = this.element_.getElementsByTagName('ml-drawer')[0];
     this.content_ = this.element_.getElementsByTagName('ml-content')[0];

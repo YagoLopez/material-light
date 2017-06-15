@@ -36,7 +36,7 @@ import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {YagoFullscreenMod} from "./ml/lib/fullscreen/yagoFullscreenMod";
 import {MlDemoApp} from "./app.layout";
 
-const getUrlParameter = (name: string) => {
+export const getUrlParameter = (name: string) => {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
   let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
   let results = regex.exec(location.search);
