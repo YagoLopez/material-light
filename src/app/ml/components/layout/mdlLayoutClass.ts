@@ -6,19 +6,23 @@ export default class MdlLayout extends MdlElement{
   content_: HTMLElement;
   tabBar_: HTMLElement;
   obfuscator_: HTMLElement;
-  Keycodes_: Object;
-  Mode_: Object;
-  contentScrollHandler_: Function;
-  keyboardEventHandler_: Function;
-  screenSizeHandler_: Function;
-  drawerToggleHandler_: Function;
-  // headerTransitionHandler_: Function;
-  headerClickHandler_: Function;
-  headerTransitionEndHandler_: Function;
-  resetTabState_: Function;
-  resetPanelState_: Function;
-  toggleDrawer: Function;
+  Keycodes_: {ENTER: number, ESCAPE: number, SPACE: number};
+  Mode_: {STANDARD: number, SEAMED: number, WATERFALL: number, SCROLL: number};
+  contentScrollHandler_: () => void;
+  keyboardEventHandler_: (evt: KeyboardEvent) => void;
+  screenSizeHandler_: () => void;
+  drawerToggleHandler_: (evt: KeyboardEvent) => void;
+  headerClickHandler_: () => void;
+  headerTransitionEndHandler_: () => void;
+  resetTabState_: (tabBar:any) => void;
+  resetPanelState_: (panels:any) => void;
+  toggleDrawer: () => void;
+  activateTab: (idTab: string) => void;
+  getTab: (href: string) => HTMLElement | void;
+  setTabActive: (tab: HTMLElement) => void;
+  setTabContentActive: (id: string) => void;
   constructor(el: HTMLElement){super(el)}
+  // headerTransitionHandler_: Function;
 }
 MdlLayout.prototype.Constant_ = {
   MAX_WIDTH: '(max-width: 1024px)',
@@ -199,7 +203,7 @@ MdlLayout.prototype.init = function () {
     if (focusedElement) {
       focusedElement.focus();
     }
-    /* modifications
+    /*
     var directChildren = this.element_.childNodes;
     var numChildren = directChildren.length;
     for (var c = 0; c < numChildren; c++) {
@@ -214,12 +218,12 @@ MdlLayout.prototype.init = function () {
             this.content_ = child;
         }
     }
-    /modifications */
-    //todo: usar querySelector()
-    this.header_ = this.element_.getElementsByTagName('ml-header')[0];
-    this.drawer_ = this.element_.getElementsByTagName('ml-drawer')[0];
-    this.content_ = this.element_.getElementsByTagName('ml-content')[0];
-    /* end of modifications */
+    */
+
+    this.header_ = this.element_.querySelector('ml-header');
+    this.drawer_ = this.element_.querySelector('ml-drawer');
+    this.content_ = this.element_.querySelector('ml-content');
+
     window.addEventListener('pageshow', function (e:any) {
       if (e.persisted) {
         // when page is loaded from back/forward cache
@@ -383,6 +387,7 @@ MdlLayout.prototype.init = function () {
     this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
   }
 };
+//todo: añadir tipos a parametros
 /**
  * Factory for an individual tab.
  *
@@ -392,7 +397,7 @@ MdlLayout.prototype.init = function () {
  * @param {!Array<HTMLElement>} panels Array with HTML elements for all panels.
  * @param {MaterialLayout} layout The MdlLayout object that owns the tab.
  */
-export function MaterialLayoutTab(tab:any, tabs:any, panels:any, layout:any) {
+export function MaterialLayoutTab(tab, tabs, panels, layout) {
   /**
    * Auxiliary method to programmatically select a tab in the UI.
    */
@@ -423,3 +428,32 @@ export function MaterialLayoutTab(tab:any, tabs:any, panels:any, layout:any) {
   tab.show = selectTab;
 }
 
+MdlLayout.prototype.activateTab = function(idTab: string): void {
+  const tabsBar: HTMLElement = document.querySelector('ml-header-tabs') as HTMLElement;
+  const tabheaderContent: HTMLCollection = document.querySelectorAll('ml-content-tabheader') as HTMLCollection;
+  this.resetTabState_(tabsBar.children);
+  this.resetPanelState_(tabheaderContent);
+  const tabToActivate = this.getTab(idTab);
+  if(tabToActivate){
+    this.setTabActive(tabToActivate);
+    this.setTabContentActive(idTab);
+  }
+};
+
+MdlLayout.prototype.getTab = function(href: string): HTMLElement | void {
+  const tabs: HTMLCollection = document.querySelectorAll('ml-header-tabs > *') as HTMLCollection;
+  const tabsArray = Array.from(tabs);
+  for( let i = 0; i < tabsArray.length; i++){
+    if( (tabsArray[i] as HTMLAnchorElement).hash === '#'+href){
+      return tabsArray[i] as HTMLElement;
+    }
+  }
+};
+
+MdlLayout.prototype.setTabActive = function(tab: HTMLElement): void {
+  tab.classList.add('is-active');
+};
+
+MdlLayout.prototype.setTabContentActive = function(id: string): void {
+(document.getElementById(id) as HTMLElement).classList.add('is-active');
+};

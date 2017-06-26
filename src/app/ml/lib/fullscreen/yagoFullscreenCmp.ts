@@ -1,4 +1,4 @@
-//todo: fullscreen parametrizable. parametro dom element
+//todo: fullscreen parametrizable. parametro: dom element
 import {Component} from '@angular/core';
 
 @Component({
@@ -23,7 +23,7 @@ html:fullscreen {background: navy}
 
   goFullScreen(): void {
     if(!this.isFullScreenAvailable()){
-      window.alert('Full Screen not available in browser');
+      window.alert('Full Screen not supported by browser');
       return;
     }
     const docElm: any = document.documentElement;

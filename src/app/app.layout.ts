@@ -110,46 +110,16 @@ template:`
 `//template
 }) export class MlDemoApp {
 
-  @ViewChild(MlLayout) layout: MlLayout;
+  @ViewChild(MlLayout) mlLayout: MlLayout;
   isLoading = false;
   constructor(private router: Router){}
 
   ngOnInit(){
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
-        this.activateTab('tab1');
+        this.mlLayout.mdlLayout.activateTab('tab1');
       }
     })
-  }
-
-  activateTab(idTab: string): void {
-    const tabsBar: HTMLElement = document.querySelector('ml-header-tabs') as HTMLElement;
-    const tabheaderContent: HTMLCollection = document.querySelectorAll('ml-content-tabheader') as HTMLCollection;
-    this.layout.mdlLayout.resetTabState_(tabsBar.children);
-    this.layout.mdlLayout.resetPanelState_(tabheaderContent);
-    const tabToActivate = this.getTab(idTab);
-    if(tabToActivate){
-      this.setTabActive(tabToActivate);
-      this.setTabContentActive(idTab);
-    }
-  }
-
-  getTab(href: string): HTMLElement | void {
-    const tabs: HTMLCollection = document.querySelectorAll('ml-header-tabs > *') as HTMLCollection;
-    const tabsArray = Array.from(tabs);
-    for( let i = 0; i < tabsArray.length; i++){
-      if( (tabsArray[i] as HTMLAnchorElement).hash === '#'+href){
-        return tabsArray[i] as HTMLElement;
-      }
-    }
-  }
-
-  setTabActive(tab: HTMLElement): void{
-    tab.classList.add('is-active');
-  }
-
-  setTabContentActive(id: string): void {
-    (document.getElementById(id) as HTMLElement).classList.add('is-active');
   }
 
   onLoading($event: boolean){

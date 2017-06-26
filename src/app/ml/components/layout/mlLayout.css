@@ -317,7 +317,7 @@ address {
 
 ul, ol {font-size: 14px; font-weight: 400; line-height: 24px; letter-spacing: 0}
 
-/* ANIMATIONS --------------------------------------------------------------------- */
+/* MDL ANIMATIONS ----------------------------------------------------------------- */
 .mdl-animation--default { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) }
 
 .mdl-animation--fast-out-slow-in { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) }
@@ -434,9 +434,7 @@ ul, ol {font-size: 14px; font-weight: 400; line-height: 24px; letter-spacing: 0}
         -ms-flex-align: stretch;
                 -ms-grid-row-align: stretch;
             align-items: stretch;
-    /* modificaciones */
     /* padding-top: 16px; */
-    /* fin modificaciones */
   }
     .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
       display: block;
@@ -821,13 +819,13 @@ body{
   scrollbar-shadow-color: #C0C0C0;
   scrollbar-dark-shadow-color: #C0C0C0;
 }
-::-webkit-scrollbar {width: 5px; height: 3px;}
-::-webkit-scrollbar-button {background-color: darkgrey;}
-::-webkit-scrollbar-track {background-color: lightgrey;}
-::-webkit-scrollbar-track-piece {background-color: lightgrey;}
-::-webkit-scrollbar-thumb {height: 50px; background-color: darkgrey; border-radius: 3px;}
-::-webkit-scrollbar-corner {background-color: #999;}
-::-webkit-resizer {background-color: #666;}
+::-webkit-scrollbar {width: 5px; height: 3px}
+::-webkit-scrollbar-button {background-color: darkgrey}
+::-webkit-scrollbar-track {background-color: lightgrey}
+::-webkit-scrollbar-track-piece {background-color: lightgrey}
+::-webkit-scrollbar-thumb {height: 50px; background-color: darkgrey; border-radius: 3px}
+::-webkit-scrollbar-corner {background-color: #999}
+::-webkit-resizer {background-color: #666}
 
 /* RESPONSIVE MAIN CONTENT ----------------------------------------------------------- */
 

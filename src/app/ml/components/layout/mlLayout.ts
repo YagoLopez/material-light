@@ -97,7 +97,7 @@ export class MlLargeScreenOnly{}
 // ---------------------------------------------------------------------------------------------------------------------
 @Directive({
 selector: '[small-screen-only]',
-host: {class: 'mdl-layout--small-screen-ongly'}})
+host: {class: 'mdl-layout--small-screen-only'}})
 export class MlSmallScreenOnly{}
 // ---------------------------------------------------------------------------------------------------------------------
 @Directive({
