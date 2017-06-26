@@ -18,15 +18,9 @@ moduleId: module.id,
 })
 export class MlLayout {
 
-  @Input() tabs: string;
   @Input() background: string;
   mdlLayout: MdlLayout;
-  constructor(private host: ElementRef, private ren: Renderer2){}
-
-  hideDrawer(){
-    this.mdlLayout.drawer_.classList.remove('is-visible');
-    this.mdlLayout.obfuscator_.classList.remove('is-visible');
-  }
+  constructor(private host: ElementRef){}
 
   ngAfterViewInit() {
     if(ml.isDefined(this.background)){
@@ -120,7 +114,7 @@ export class MlDrawer {
       mlLayout.classList.add('mdl-layout--fixed-drawer');
     }
 
-   // Hides drawer and obfuscator when clicking item menu on drawer
+   // Hides drawer and obfuscator when clicking item-menu on drawer
    this.ren.listen(this.host.nativeElement, 'click', () => {
      this.host.nativeElement.classList.remove('is-visible');
      const obfuscator = document.querySelector('div.mdl-layout__obfuscator.is-visible');

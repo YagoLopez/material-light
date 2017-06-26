@@ -8,7 +8,6 @@ template: `
 <!--
 FULLSCREEN STYLES. For posible future use
 <style>
-.cyan {color: cyan}
 html:-moz-full-screen {background: navy}
 html:-webkit-full-screen {background: navy}
 html:-ms-fullscreen {background: navy; width: 100% /* needed to center contents in IE */ }
