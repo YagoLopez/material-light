@@ -1,7 +1,6 @@
 //todo: poder usar una ml-header distinta en cada pagina (como en ionic)
-//todo: poder definir colores, temas, fuentes, etc. Consultar colores en mlLayout.css
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
-//todo: implementar MlLayout usando slots
+
 import {Component, ElementRef, Renderer2, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy}
   from "@angular/core";
 import MdlLayout from "./mdlLayoutClass";
@@ -180,7 +179,7 @@ export class MlHeaderTab {
 }
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
-selector: 'ml-content-tabheader',
+selector: 'ml-header-tab-content',
 host: {class: 'mdl-layout__tab-panel'},
 template: '<ng-content></ng-content>'})
 export class MlHeaderTabContent {}

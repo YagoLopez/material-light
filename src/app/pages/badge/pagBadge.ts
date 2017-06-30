@@ -9,7 +9,7 @@ template:`
 
 <p><ml-badge value="4" overlap>Badge overlap</ml-badge></p>
 
-<p><ml-badge value="4" background="false">Badge no background</ml-badge></p>
+<p><ml-badge value="4" transparent>Badge transparent background</ml-badge></p>
 
 <p>Icon Badge <ml-badge value="4" icon><ml-icon>account_box</ml-icon></ml-badge></p>
 

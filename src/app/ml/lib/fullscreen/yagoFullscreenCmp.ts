@@ -74,6 +74,6 @@ html:fullscreen {background: navy}
 
   isFullScreenAvailable(): boolean {
     return document.fullscreenEnabled || (document as any).mozFullScreenEnabled ||
-          (document as any).msFullscreenEnabled || document.documentElement.webkitRequestFullScreen;
+      (document as any).msFullscreenEnabled || document.documentElement.webkitRequestFullScreen;
   }
 }

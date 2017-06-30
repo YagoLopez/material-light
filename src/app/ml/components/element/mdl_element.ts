@@ -7,8 +7,8 @@
 export default class MdlElement{
   init: Function;
   element_: HTMLElement;
-  Constant_: Object;
-  CssClasses_: Object | any;
+  Constant_: {};
+  CssClasses_: {} | any;
   updateClasses_: Function;
   constructor (el: HTMLElement) {this.element_ = el; this.init()}
 }

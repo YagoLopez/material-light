@@ -1,6 +1,4 @@
-//todo: cambiar el nombre ml-content-tabheader por ml-header-tab-content
-
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild} from "@angular/core";
 import {MlLayout} from "./ml/components/layout/mlLayout";
 import {Router, NavigationStart} from "@angular/router";
 
@@ -95,12 +93,12 @@ template:`
   
   <ml-content>
     <ml-content-loader spinner (onLoading)="onLoading($event)"></ml-content-loader>
-    <ml-content-tabheader id="tab1" active><router-outlet></router-outlet></ml-content-tabheader>
-    <ml-content-tabheader id="tab2"><ml-title>Empty tab 2. Back to tab 1</ml-title></ml-content-tabheader>
-    <ml-content-tabheader id="tab3"><ml-title>Empty tab 3. Back to tab 1</ml-title></ml-content-tabheader>
-    <ml-content-tabheader id="tab4"><ml-title>Empty tab 4. Back to tab 1</ml-title></ml-content-tabheader>
-    <ml-content-tabheader id="tab5"><ml-title>Empty tab 5. Back to tab 1</ml-title></ml-content-tabheader>
-    <ml-content-tabheader id="tab6"><ml-title>Empty tab 6. Back to tab 1</ml-title></ml-content-tabheader>
+    <ml-header-tab-content id="tab1" active><router-outlet></router-outlet></ml-header-tab-content>
+    <ml-header-tab-content id="tab2"><ml-title>Empty tab 2. Back to tab 1</ml-title></ml-header-tab-content>
+    <ml-header-tab-content id="tab3"><ml-title>Empty tab 3. Back to tab 1</ml-title></ml-header-tab-content>
+    <ml-header-tab-content id="tab4"><ml-title>Empty tab 4. Back to tab 1</ml-title></ml-header-tab-content>
+    <ml-header-tab-content id="tab5"><ml-title>Empty tab 5. Back to tab 1</ml-title></ml-header-tab-content>
+    <ml-header-tab-content id="tab6"><ml-title>Empty tab 6. Back to tab 1</ml-title></ml-header-tab-content>
   </ml-content>
     
   <!-- /Content ---------------------------------------------------------------------------------------------------- -->

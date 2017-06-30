@@ -5,6 +5,7 @@
     "lib": ["es6", "dom"],
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
+    "noImplicitAny": true,
     "strictNullChecks": true,
     "declaration": false,
     "emitDecoratorMetadata": true,

@@ -27,11 +27,11 @@ template:`
 `//template
 }) export class MlCard{
 
-  @Input() shadow: string;
-  @Input() img: string;
   @ViewChild('cardTitle') cardTitle: ElementRef;
   @ViewChild('cardTitleHeader') cardTitleHeader: ElementRef;
   @ViewChild('cardActions') cardActions: ElementRef;
+  @Input() shadow: string;
+  @Input() img: string;
   constructor(private host: ElementRef, private ren: Renderer2){}
 
   ngOnInit(){

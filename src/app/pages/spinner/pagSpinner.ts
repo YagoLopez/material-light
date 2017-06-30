@@ -1,4 +1,6 @@
 import {Component, ViewChild, ViewEncapsulation} from '@angular/core';
+import {MlSpinner} from "../../ml/components/spinner/mlSpinner";
+import {MlButton} from "../../ml/components/controls/button/mlButton";
 
 @Component({
 encapsulation: ViewEncapsulation.None,
@@ -22,8 +24,8 @@ Single color: <ml-spinner single-color></ml-spinner>
 `//template
 }) export class PagSpinner {
 
-  @ViewChild('btn1') btn1;
-  @ViewChild('spinner1') spinner1;
+  @ViewChild('btn1') btn1: MlButton;
+  @ViewChild('spinner1') spinner1: MlSpinner;
 
   clickBtn1(){
     this.spinner1.stop();

@@ -34,7 +34,7 @@ import {MlPageLoaderMod} from "./ml/components/loader/mlContentLoaderMod";
 import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {YagoFullscreenMod} from "./ml/lib/fullscreen/yagoFullscreenMod";
-import {MlDemoApp} from "./app.layout";
+import {MlDemoApp} from "./mlDemoAppCmp";
 
 export const getUrlParameter = (name: string) => {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');

@@ -387,17 +387,16 @@ MdlLayout.prototype.init = function () {
     this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
   }
 };
-//todo: añadir tipos a parametros
 /**
  * Factory for an individual tab.
  *
  * @constructor
- * @param {HTMLElement} tab The HTML element for the tab.
- * @param {!Array<HTMLElement>} tabs Array with HTML elements for all tabs.
- * @param {!Array<HTMLElement>} panels Array with HTML elements for all panels.
- * @param {MaterialLayout} layout The MdlLayout object that owns the tab.
+ * @param tab The HTML element for the tab.
+ * @param tabs Array with HTML elements for all tabs.
+ * @param panels Array with HTML elements for all panels.
+ * @param layout The MdlLayout element that owns the tab.
  */
-export function MaterialLayoutTab(tab, tabs, panels, layout) {
+export function MaterialLayoutTab(tab: any, tabs: any, panels: any, layout: any) {
   /**
    * Auxiliary method to programmatically select a tab in the UI.
    */
@@ -430,7 +429,7 @@ export function MaterialLayoutTab(tab, tabs, panels, layout) {
 
 MdlLayout.prototype.activateTab = function(idTab: string): void {
   const tabsBar: HTMLElement = document.querySelector('ml-header-tabs') as HTMLElement;
-  const tabheaderContent: HTMLCollection = document.querySelectorAll('ml-content-tabheader') as HTMLCollection;
+  const tabheaderContent: HTMLCollection = document.querySelectorAll('ml-header-tab-content') as HTMLCollection;
   this.resetTabState_(tabsBar.children);
   this.resetPanelState_(tabheaderContent);
   const tabToActivate = this.getTab(idTab);

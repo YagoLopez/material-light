@@ -32,7 +32,10 @@ template:`
 
   public ngOnInit() {
     this.router.events.subscribe(event => {
+
       if (event instanceof NavigationStart){
+        const mlContent = document.querySelector('ml-content') as HTMLElement;
+        mlContent && (mlContent.scrollTop = 0);
         this.isLoading = true;
         this.onLoading.emit(this.isLoading);
       }

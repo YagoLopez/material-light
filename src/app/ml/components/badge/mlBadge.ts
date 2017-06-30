@@ -12,7 +12,7 @@ template: '<ng-content></ng-content>'
 export class MlBadge{
 
   @Input() value: string = '0';
-  @Input() background: string;
+  @Input() transparent: string;
   @Input() overlap: string;
   @Input() icon: string;
 
@@ -20,7 +20,7 @@ export class MlBadge{
 
   ngOnInit() {
     ml.setAttribute(this.host, 'data-badge', this.value, this.ren);
-    ml.isDefined(this.background) && ml.setClass(this.host, 'mdl-badge--no-background', this.ren);
+    ml.isDefined(this.transparent) && ml.setClass(this.host, 'mdl-badge--no-background', this.ren);
     ml.isDefined(this.overlap) && ml.setClass(this.host, 'mdl-badge--overlap', this.ren);
 
     if(ml.isDefined(this.icon)){

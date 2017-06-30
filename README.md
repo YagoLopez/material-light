@@ -99,7 +99,7 @@ You can run the compiled demo pointing a web server to `{project-folder}/node_mo
 If you want to compile the project:
 - Clone or download the repo
 - Inside the project folder run `npm install`
-- Adjust the `basePath` in `app.module.ts` to your environment and run it with `ng serve`
+- Adjust the `basePath` in `mlDemoAppMod.ts` to your environment and run it with `ng serve`
 
 ## Testing
 

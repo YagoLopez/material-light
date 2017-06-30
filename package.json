@@ -1,18 +1,16 @@
 {
   "name": "material-light",
   "description": "Fast, light and easy to use Material Design UI components for Angular",
-  "author": "Yago Lopez <yago.lopez@gmail.com> (https://yagolopez.github.io)",
+  "author": "Yago Lopez <yago.lopez@gmail.com> (https://yagolopez.js.org)",
   "repository": {"type": "git", "url": "git+https://github.com/YagoLopez/material-light.git"},
   "main": "/src/main.ts",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "license": "MIT",
-  "keywords": ["material desing components", "angular components", "angular 2", "angular 4"],
+  "keywords": ["angular", "material", "design", "material desing", "components", "angular 2", "angular 4", "ui"],
   "angular-cli": {},
   "scripts": {
     "ng_serve": "ng serve --open",
     "ng_serve_lan": "ng serve --host 192.168.0.14 --open",
-    "webpack_help": "webpack -h",
-    "webpack_config_file": "webpack-dev-server --config ./src/webpack.config.js --content-base=src --open",
     "ng_serve_prod": "ng serve --prod",
     "ng_serve_prod_aot": "ng serve --prod --aot",
     "ng_build": "ng build",
@@ -20,29 +18,31 @@
     "ng_build_prod_no_hashes": "ng build --prod --output-hashing none",
     "ng_build_prod_aot": "ng build --prod --aot",
     "ng_build_prod_aot_no_hashes": "ng build --prod --aot --output-hashing none",
-    "lint": "tslint \"src/**/*.ts\""
+    "lint": "tslint \"src/**/*.ts\"",
+    "webpack_help": "webpack -h",
+    "webpack_config_file": "webpack-dev-server --config ./src/webpack.config.js --content-base=src --open"
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^4.1.2",
-    "@angular/compiler": "^4.1.2",
-    "@angular/core": "^4.1.2",
-    "@angular/forms": "^4.1.2",
-    "@angular/http": "^4.1.2",
-    "@angular/platform-browser": "^4.1.2",
-    "@angular/platform-browser-dynamic": "^4.1.2",
-    "@angular/router": "^4.1.2",
+    "@angular/common": "4.2.4",
+    "@angular/compiler": "4.2.4",
+    "@angular/core": "4.2.4",
+    "@angular/forms": "4.2.4",
+    "@angular/http": "4.2.4",
+    "@angular/platform-browser": "4.2.4",
+    "@angular/platform-browser-dynamic": "4.2.4",
+    "@angular/router": "4.2.4",
     "core-js": "^2.4.1",
-    "rxjs": "^5.4.0",
-    "zone.js": "^0.8.10"
+    "rxjs": "5.4.1",
+    "zone.js": "0.8.12"
   },
   "devDependencies": {
     "@angular/cli": "1.0.3",
-    "@angular/compiler-cli": "^4.1.2",
-    "@types/node": "~7.0.18",
-    "systemjs": "^0.20.12",
-    "ts-node": "~3.0.4",
+    "@angular/compiler-cli": "4.2.4",
+    "@types/node": "7.0.32",
+    "systemjs": "0.20.14",
+    "ts-node": "3.1.0",
     "tslint": "~5.2.0",
-    "typescript": "~2.3.2"
+    "typescript": "2.3.4"
   }
 }
