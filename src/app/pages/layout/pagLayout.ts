@@ -40,7 +40,7 @@ router-outlets. This feature is experimental and still has not been tested</p>
 Meanwhile take a look at the examples and the code.</p>
 
 <div>Here is the source code of this layout demo:</div>
-<view-source uri="../app.layout.ts"></view-source>
+<view-source uri="../mlDemoAppCmp.ts"></view-source>
 
 `//template
 }) export class PagLayout{

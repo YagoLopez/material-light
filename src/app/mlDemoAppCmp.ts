@@ -14,11 +14,11 @@ template:`
     {cursor: default; background-color: transparent !important; color: cornflowerblue; font-weight: 500}
   .drawer-top-img
     {margin: auto; display: block; width: 100%; height: 150px; background: url('assets/img/bg1.jpg') 0 0 / cover;}
-  .active-route {background: darkgrey; color: white !important}
   .drawer-title {color: white; text-align: center}
   .drawer-img {width: 25%; text-align: center; margin: 30px auto auto; display: block}
   .ico-fullscreen {padding-right: 10px; padding-left: 10px}
-  /* for future theming feature */
+  .active-route {background: darkgrey; color: white !important}
+  /* for future theming featnure */
   /* :host /deep/ .my-theme {background: cornflowerblue; color: darkblue} */
 </style>
 
