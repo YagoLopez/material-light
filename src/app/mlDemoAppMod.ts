@@ -23,7 +23,6 @@
 //todo: travis
 //todo: completar tests con browserstack
 //todo: footer component
-//todo: crear un componente para visualizar gist en angular 2
 //todo: separar page-loader component en un repositorio diferente, hacer 2: page-loader y progressbar-loader
 //todo: polyfill dialog component (usar w3s.js ó f7)
 
@@ -36,6 +35,10 @@ import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {YagoFullscreenMod} from "./ml/lib/fullscreen/yagoFullscreenMod";
 import {MlDemoApp} from "./mlDemoAppCmp";
 
+/**
+ * Used to load the app with webpack or systemjs based on a parameter passed in the url
+ * @param name {string} parameter name
+ */
 export const getUrlParameter = (name: string) => {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
   let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');

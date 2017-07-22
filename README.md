@@ -47,9 +47,18 @@ version for unrestricted features.
 
 ## Insallation and Use
 
-- To install, run: `npm install YagoLopez/material-light --save`
+```shell
+npm install YagoLopez/material-light --save
+cd material-light
+npm install
+```
+- <b>IMPORTANT</b>: Adjust the `basePath` in 
+  <a href="https://github.com/YagoLopez/material-light/blob/master/src/app/mlDemoAppMod.ts#L47" target="_blank">
+  mlDemoAppMod.ts</a> to your environment
+- Run: `ng serve` from project directory
+
 - This project can be used with the **angular-cli** although not mandatory.
-- Include Material Icons from `{project-folder}/src/assets/fonts/mlIcons.css` in your `index.html`
+- Material Icons must be included from `{project-folder}/src/assets/fonts/mlIcons.css` into your `index.html`
 - To have AOT working you must execute the following steps:
   - Copy `{project-folder}/node_modules/material-light/src/app/ml/` folder to your `/src/app` folder
   - Copy `{project-folder}/node_modules/material-light/src/assets/` folder to your `/src/` folder
@@ -57,6 +66,7 @@ version for unrestricted features.
 - For example, if you want to use `MlButton`, import `MlButtonMod.ts` in your module and place `<ml-button>my button</ml-button>` in your template
 - Use the components following the examples in the `{project-folder}/node_modules/material-light/src/app/pages` directory.
 - Use `<ml-layout>` as base component to place inside it all other components
+- This project does not work in full strict Typescript mode. (`strict` flag must be `false` in `tsconfig.json`)
 
 ## Theming
 

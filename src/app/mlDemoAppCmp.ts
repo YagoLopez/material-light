@@ -18,7 +18,7 @@ template:`
   .drawer-img {width: 25%; text-align: center; margin: 30px auto auto; display: block}
   .ico-fullscreen {padding-right: 10px; padding-left: 10px}
   .active-route {background: darkgrey; color: white !important}
-  /* for future theming featnure */
+  /* for future theming feature */
   /* :host /deep/ .my-theme {background: cornflowerblue; color: darkblue} */
 </style>
 

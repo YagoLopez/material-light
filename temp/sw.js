@@ -11,20 +11,50 @@ var filesToCache = [
   'favicon.ico',
 
   // app files
-  'inline.d41d8cd98f00b204e980.bundle.js',
-  'vendor.bf5dda6f310fec820727.bundle.js',
-  'main.708c16106474c1fb3674.bundle.js',
+  'sw.js',
+  'inline.bundle.js',
+  'vendor.bundle.js',
+  'main..bundle.js',
+  'polyfills.bundle.js',
+  '0.chink.js',
+  '1.chink.js',
+  '2.chink.js',
+  '3.chink.js',
+  '4.chink.js',
+  '5.chink.js',
+  '6.chink.js',
+  '7.chink.js',
+  '8.chink.js',
+  '9.chink.js',
+  '10.chink.js',
+  '11.chink.js',
+  '12.chink.js',
+  '13.chink.js',
+  '14.chink.js',
+  '15.chink.js',
+  '16.chink.js',
+  '17.chink.js',
+  '18.chink.js',
+  '19.chink.js',
+  '20.chink.js',
+  '21.chink.js',
+  '22.chink.js',
+
+  // styles
   'assets/styles/app-loader.css',
   'assets/img/logo.png',
   'assets/fonts/material-icons.css',
+
+  // fonts
   'assets/fonts/material-icons.woff2',
   'assets/fonts/roboto-v15-latin-regular.woff2',
   'assets/fonts/roboto-v15-latin-500.woff2',
   'assets/fonts/roboto-v15-latin-regular.woff',
   'assets/fonts/roboto-v15-latin-500.woff',
+
+  // images
   'assets/img/user.jpg',
   'assets/img/welcome_card.jpg',
-  'sw.js'
 
 ];
 
