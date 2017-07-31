@@ -39,7 +39,7 @@ Yago López:
 
 ## Demo
 
-- <a href="http://mobt.me/Xf27" target="_blank">Mobile Simulator (For Desktop)</a>. <b>Warning:</b> Content in 
+- <a href="http://mobiletest.me/htc_one_m7/5189093" target="_blank">Mobile Simulator (For Desktop)</a>. <b>Warning:</b> Content in 
 external iframes may have javascript restrictions for security reasons (i. e. alert dialogs). Run the full screen 
 version for unrestricted features.
 - <a href="https://yagolopez.github.io/material-light/dist" target="_blank">Full Screen (For Mobile)</a>
@@ -53,7 +53,7 @@ cd material-light
 npm install
 ```
 - <b>IMPORTANT</b>: Adjust the `basePath` in 
-  <a href="https://github.com/YagoLopez/material-light/blob/master/src/app/mlDemoAppMod.ts#L47" target="_blank">
+  <a href="https://github.com/YagoLopez/material-light/blob/master/src/app/mlDemoAppMod.ts#L50" target="_blank">
   mlDemoAppMod.ts</a> to your environment
 - Run: `ng serve` from project directory
 
