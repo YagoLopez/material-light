@@ -54,8 +54,8 @@ version for unrestricted features.
   mlDemoAppMod.ts</a> to your environment
 5. Run: `ng serve` from project directory
 
-# Notes
-#
+## Notes
+
 - This project can be used with the **angular-cli** although not mandatory.
 - Material Icons must be included from `{project-folder}/src/assets/fonts/mlIcons.css` into your `index.html`
 - To have AOT working you must execute the following steps:
