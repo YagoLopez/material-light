@@ -2,7 +2,7 @@
 
 <h1><p align="center">Material Light</p></h1>
 
-**Material Designt UI components for Angular (versions 4 +)**
+<div align="center">**Material Designt UI components for Angular (versions 4 +)**</div>
 
 There are other adaptations of Material Design Lite and other UI frameworks like the official Material Design 2, 
 but this library has the following features:
@@ -47,12 +47,12 @@ version for unrestricted features.
 
 ## Insallation and Use
 
-1. Using Node/Npm/Yarn, in a project generated with Angular-CLI, run: `npm install YagoLopez/material-light --save`
-2. Whitout Node/Npm: Clone or fork the repository
-3. Install dependencies with `npm install`
-4. <b>IMPORTANT</b>: Adjust the `basePath` in <a href="https://github.com/YagoLopez/material-light/blob/master/src/app/mlDemoAppMod.ts#L50" target="_blank">
+- Using Node/Npm/Yarn, in a project generated with Angular-CLI, run: `npm install YagoLopez/material-light --save`
+-  Whitout Node/Npm: Clone or fork the repository
+-  Install dependencies with `npm install`
+-  <b>IMPORTANT</b>: Adjust the `basePath` in <a href="https://github.com/YagoLopez/material-light/blob/master/src/app/mlDemoAppMod.ts#L50" target="_blank">
   mlDemoAppMod.ts</a> to your environment
-5. Run: `ng serve` from project directory
+-  Run: `ng serve` from project directory
 
 ## Notes
 
