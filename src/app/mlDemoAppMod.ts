@@ -1,5 +1,5 @@
+//todo: usar nodemon
 //todo: poner los estilos "loader" en index.html para que no haya flickering extraño en logo y texto
-//todo: arreglar lo del router y las tabs (usar named routes?)
 //todo: aplicar zone.runOutsideAngular() a los construcores new Mdl*() y ver si se reduce la deteccion de cambios
 //todo: relativo a lo anterior, probar a hacer esto de forma centralizada en el constructor de MdlElement
 //todo: probar a quitar './' en @Component.styleUrls
@@ -10,7 +10,7 @@
 //todo: sombra inferior en header
 //todo: suscribirse a los valores observables de los forms (usar valueChanges) para simplificar los controles
 //todo: drawer dragabble
-//todo: eventos drawer y obfuscator
+//todo: revisar eventos drawer y obfuscator
 //todo: probar a eliminar atributos id en elementos 'label'. revisar docs angular
 //todo: comprobar consola usando chrome remote debugging por usb en el movil
 //todo: ponerse en contacto con f7 para hacer otros componentes. ej: acordeon

@@ -50,13 +50,12 @@ version for unrestricted features.
 1. Using Node/Npm/Yarn, in a project generated with Angular-CLI, run: `npm install YagoLopez/material-light --save`
 2. Whitout Node/Npm: Clone or fork the repository
 3. Install dependencies with `npm install`
-4. <b>IMPORTANT</b>: Adjust the `basePath` in 
-  <a href="https://github.com/YagoLopez/material-light/blob/master/src/app/mlDemoAppMod.ts#L50" target="_blank">
+4. <b>IMPORTANT</b>: Adjust the `basePath` in <a href="https://github.com/YagoLopez/material-light/blob/master/src/app/mlDemoAppMod.ts#L50" target="_blank">
   mlDemoAppMod.ts</a> to your environment
 5. Run: `ng serve` from project directory
 
 # Notes
-
+#
 - This project can be used with the **angular-cli** although not mandatory.
 - Material Icons must be included from `{project-folder}/src/assets/fonts/mlIcons.css` into your `index.html`
 - To have AOT working you must execute the following steps:
