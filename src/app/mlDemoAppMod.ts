@@ -36,7 +36,7 @@ import {YagoFullscreenMod} from "./ml/lib/fullscreen/yagoFullscreenMod";
 import {MlDemoApp} from "./mlDemoAppCmp";
 
 /**
- * Used to load the app with webpack or systemjs based on a parameter passed in the url
+ * Used to load the app with webpack or systemjs based on a url query parameter
  * @param name {string} parameter name
  */
 export const getUrlParameter = (name: string) => {
@@ -45,6 +45,11 @@ export const getUrlParameter = (name: string) => {
   let results = regex.exec(location.search);
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
+
+/** Reference for future use
+I use process.cwd() in my projects. For example:
+  var Foo = require(process.cwd() + '/common/foo.js');
+*/
 
 // Absolute paths for Webpack
 let basePath = 'C:/Users/UsuarioAurora/Documents/WebstormProjects/material-light/src/app/pages/';
